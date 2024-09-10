@@ -1,10 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import React, { useCallback, useRef } from "react";
+import React, { RefObject, useCallback, useRef } from "react";
 import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardFooter, CardHeader } from "@/components/ui/card";
+
+interface HeroButtonProps {
+  heroRef: RefObject<HTMLElement>;
+}
 
 const scrollBackgroundMotion = {
   initial: {},
@@ -29,18 +33,17 @@ const scrollArrowHoverMotion = {
   },
 };
 
-export default function HeroButton() {
+export default function HeroButton({ heroRef }: HeroButtonProps) {
   const ref = useRef<HTMLDivElement>(null);
-
   const scrollSection = useCallback(() => {
-    if (ref.current) {
-      const { bottom } = ref.current.getBoundingClientRect();
+    if (heroRef.current) {
+      const { height } = heroRef.current.getBoundingClientRect();
       window.scrollTo({
-        top: bottom,
+        top: height,
         behavior: "smooth",
       });
     }
-  }, []);
+  }, [heroRef]);
 
   return (
     <div ref={ref}>
@@ -74,8 +77,8 @@ export default function HeroButton() {
           </div>
         </div>
       </motion.button>
-      <div className=" absolute bottom-0 w-full xl:hidden mb-4 flex items-center justify-center">
-        <Card className=" border-0 bg-background/80 backdrop-blur-lg ">
+      <div className=" absolute bottom-0 w-full xl:hidden mb-12 flex items-center justify-center z-30">
+        <Card className=" border-0 shadow-none bg-transparent">
           <CardHeader className="p-3">
             <p className="text-xl text-center">
               We create impactful digital experiences & deliver digital products

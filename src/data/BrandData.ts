@@ -4,7 +4,7 @@ const brandData: brandDataType[] = [
   {
     id: "tech",
     title: "Lazyre Tech",
-    image: "/images/brand/lazyre_tech_test.png",
+    image: "/images/brand/lazyre_tech_cover.webp",
     services: [
       { id: "webdev", name: "Web Development" },
       { id: "appdev", name: "App Development" },
@@ -43,7 +43,7 @@ const brandData: brandDataType[] = [
   {
     id: "design",
     title: "Lazyre Design",
-    image: "/images/brand/design.jpg",
+    image: "/images/brand/lazyre_design_cover.webp",
     services: [
       { id: "webdev", name: "Web Development" },
       { id: "appdev", name: "App Development" },
@@ -82,7 +82,7 @@ const brandData: brandDataType[] = [
   {
     id: "build",
     title: "Lazyre Build",
-    image: "/images/brand/build.jpg",
+    image: "/images/brand/lazyre_build_cover.webp",
     services: [
       { id: "webdev", name: "Web Development" },
       { id: "appdev", name: "App Development" },
@@ -119,48 +119,9 @@ const brandData: brandDataType[] = [
     relatedWork: ["work1", "work3", "work5"],
   },
   {
-    id: "mechatronics",
-    title: "Lazyre Mechatronics",
-    image: "/images/brand/mechatronics.jpg",
-    services: [
-      { id: "webdev", name: "Web Development" },
-      { id: "appdev", name: "App Development" },
-      { id: "uiux", name: "UI/UX Design" },
-      { id: "branding", name: "Branding" },
-      { id: "logodesign", name: "Logo Design" },
-      { id: "cloudcomputing", name: "Cloud Computing" },
-      { id: "networksecurity", name: "Network Security" },
-    ],
-    lightAccentColor: "#80ffc3",
-    darkAccentColor: "#008044",
-    subtitle:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget molestie justo,  sit amet luctus velit. In pellentesque vel erat.",
-    subHeading: "Lorem ipsum dolor sit amet.",
-    subDescription:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tortor orci, vulputate sed nisi ac, pharetra consectetur lorem. In a ante feugiat, pulvinar mi et, bibendum quam. Phasellus mi ipsum, rutrum in enim a, efficitur sollicitudin lectus. ",
-    coverImage: "/images/brand/tech.jpg",
-    toolsHeading: "Lorem ipsum dolor sit amet.",
-    toolsDescription:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tortor orci, vulputate sed nisi ac, pharetra consectetur lorem. In a ante feugiat, pulvinar mi et, bibendum quam. Phasellus mi ipsum, rutrum in enim a, efficitur sollicitudin lectus. ",
-    tools: [
-      {
-        category: "web",
-        toolList: ["tool1", "tool2", "tool3", "tool4", "tool5"],
-      },
-      {
-        category: "mobile",
-        toolList: ["tool6", "tool7", "tool8", "tool9"],
-      },
-    ],
-    workHeading: "Discover Some Of Our Best Design Work Yet.",
-    workDescription:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tortor orci, vulputate sed nisi ac, pharetra consectetur lorem. In a ante feugiat, pulvinar mi et, bibendum quam. Phasellus mi ipsum, rutrum in enim a, efficitur sollicitudin lectus. ",
-    relatedWork: ["work1", "work3", "work5"],
-  },
-  {
     id: "web",
     title: "Lazyre Web",
-    image: "/images/brand/web.jpg",
+    image: "/images/brand/lazyre_web_cover.webp",
     services: [
       { id: "webdev", name: "Web Development" },
       { id: "appdev", name: "App Development" },
@@ -199,7 +160,7 @@ const brandData: brandDataType[] = [
   {
     id: "digitalytics",
     title: "Lazyre Digitalytics",
-    image: "/images/brand/digitalytics.jpg",
+    image: "/images/brand/lazyre_digitalytics_cover.webp",
     services: [
       { id: "webdev", name: "Web Development" },
       { id: "appdev", name: "App Development" },
@@ -236,9 +197,9 @@ const brandData: brandDataType[] = [
     relatedWork: ["work1", "work3", "work5"],
   },
   {
-    id: "studio",
-    title: "Lazyre Studio",
-    image: "/images/brand/studio.jpg",
+    id: "studios",
+    title: "Lazyre Studios",
+    image: "/images/brand/lazyre_studios_cover.webp",
     services: [
       { id: "webdev", name: "Web Development" },
       { id: "appdev", name: "App Development" },
@@ -277,7 +238,7 @@ const brandData: brandDataType[] = [
   {
     id: "lab",
     title: "Lazyre Lab",
-    image: "/images/brand/lab.jpg",
+    image: "/images/brand/lazyre_lab_cover.webp",
     services: [
       { id: "webdev", name: "Web Development" },
       { id: "appdev", name: "App Development" },

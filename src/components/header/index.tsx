@@ -8,6 +8,8 @@ import { useAnimate, useInView, motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { ArrowUpRight, ChevronRight } from "lucide-react";
 import TransitionLink from "../TransitionLink";
+import ToggleThemeButton from "../buttons/ToggleThemeButton";
+import { useTheme } from "next-themes";
 
 const menuItems = [
   { href: "/", label: "Home" },
@@ -76,6 +78,7 @@ const Header = () => {
   const scope = useAnimation(isOpen);
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref);
+  const { theme } = useTheme();
 
   useEffect(() => {
     setOpen(false);
@@ -126,7 +129,8 @@ const Header = () => {
         <div
           className={cn(
             containerClasses,
-            "h-12 bg-white/[0.08] border border-white/[0.08] backdrop-blur-lg"
+            "h-12 bg-white/[0.08] border border-white/[0.08] backdrop-blur-lg",
+            theme === "light" && "bg-white/80"
           )}
         ></div>
       </motion.nav>
@@ -173,6 +177,7 @@ const Header = () => {
                 </TransitionLink>
               </motion.li>
             ))}
+            <ToggleThemeButton />
           </motion.ul>
           <button
             className={hamburgerClasses}
@@ -208,7 +213,7 @@ const Header = () => {
           isInView ? "" : "pointer-events-none"
         )}
       >
-        <div className="lg:w-1/2 w-full h-screen fixed top-0 right-0 overflow-y-auto lg:overflow-y-hidden ">
+        <div className="lg:w-1/2 w-full h-screen fixed top-0 right-0 overflow-y-auto lg:overflow-y-hidden text-white">
           <AnimatePresence>
             {isOpen && (
               <motion.div

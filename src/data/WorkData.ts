@@ -6,8 +6,8 @@ const workData: workDataType[] = [
     title: "ABC Website",
     client: "ABC Company",
     tags: ["Web Development", "Responsive Design", "E-commerce"],
-    image: "/images/brand/build.jpg",
-    coverImage: "/images/brand/build.jpg",
+    image: "/images/work/work1.webp",
+    coverImage: "/images/work/work1.webp",
     lightAccentColor: "#FFFFFF",
     darkAccentColor: "#000000",
     overview: {
@@ -127,8 +127,8 @@ const workData: workDataType[] = [
     title: "Client Website",
     client: "XYZ Corporation",
     tags: ["Web Design", "User Experience", "Content Management"],
-    image: "/images/brand/tech.jpg",
-    coverImage: "/images/brand/tech.jpg",
+    image: "/images/work/work2.webp",
+    coverImage: "/images/work/work2.webp",
     lightAccentColor: "#FFC107",
     darkAccentColor: "#263238",
     overview: {
@@ -178,8 +178,8 @@ const workData: workDataType[] = [
     title: "Client Branding",
     client: "PQR Enterprises",
     tags: ["Brand Strategy", "Logo Design", "Visual Identity"],
-    image: "/images/brand/mechatronics.jpg",
-    coverImage: "/images/brand/mechatronics.jpg",
+    image: "/images/work/work3.webp",
+    coverImage: "/images/work/work3.webp",
     lightAccentColor: "#4CAF50",
     darkAccentColor: "#263238",
     overview: {
@@ -232,8 +232,8 @@ const workData: workDataType[] = [
     title: "Client Social Media Marketing",
     client: "LMN Company",
     tags: ["Social Media Strategy", "Content Creation", "Campaign Management"],
-    image: "/images/brand/design.jpg",
-    coverImage: "/images/brand/design.jpg",
+    image: "/images/work/work4.webp",
+    coverImage: "/images/work/work4.webp",
     lightAccentColor: "#2196F3",
     darkAccentColor: "#FFFFFF",
     overview: {
@@ -287,8 +287,8 @@ const workData: workDataType[] = [
     title: "Nature Photography",
     client: "Nature Explorers",
     tags: ["Photography", "Nature", "Landscape"],
-    image: "/images/brand/lab.jpg",
-    coverImage: "/images/brand/lab.jpg",
+    image: "/images/work/work5.webp",
+    coverImage: "/images/work/work5.webp",
     lightAccentColor: "#8BC34A",
     darkAccentColor: "#263238",
     overview: {
@@ -342,8 +342,8 @@ const workData: workDataType[] = [
     title: "Ecommerce Website Development",
     client: "XYZ Store",
     tags: ["Ecommerce", "Online Retail", "Web Development"],
-    image: "/images/brand/studio.jpg",
-    coverImage: "/images/brand/studio.jpg",
+    image: "/images/work/work6.webp",
+    coverImage: "/images/work/work6.webp",
     lightAccentColor: "#FF9800",
     darkAccentColor: "#263238",
     overview: {
@@ -397,8 +397,8 @@ const workData: workDataType[] = [
     title: "Network Security Solutions",
     client: "ABC Corporation",
     tags: ["Network Security", "Cybersecurity", "Risk Assessment"],
-    image: "/images/brand/web.jpg",
-    coverImage: "/images/brand/web.jpg",
+    image: "/images/work/work7.webp",
+    coverImage: "/images/work/work7.webp",
     lightAccentColor: "#607D8B",
     darkAccentColor: "#FFFFFF",
     overview: {
@@ -444,61 +444,6 @@ const workData: workDataType[] = [
         "The network security solutions provided by your team have been instrumental in safeguarding our digital assets. We now have peace of mind knowing that our network is protected against potential threats and vulnerabilities.",
       designation: "CTO, ABC Corporation",
       link: "https://example.com/testimonial7",
-    },
-    nextWorkId: "work8",
-  },
-  {
-    id: "work8",
-    title: "UI/UX Design for Mobile App",
-    client: "Mobile Solutions Ltd.",
-    tags: ["UI Design", "UX Design", "Mobile App"],
-    image: "/images/brand/digitalytics.jpg",
-    coverImage: "/images/brand/digitalytics.jpg",
-    lightAccentColor: "#03A9F4",
-    darkAccentColor: "#FFFFFF",
-    overview: {
-      heading: "Enhancing User Experience",
-      description:
-        "Intuitive and visually appealing UI/UX design for Mobile Solutions Ltd.'s mobile app, ensuring a seamless and engaging user experience.",
-      links: ["https://example.com", "https://example.com/portfolio"],
-    },
-    section: [
-      {
-        type: "HEADING",
-        name: "Introduction",
-        sectionDetails: {
-          title: "Welcome to ABC Website",
-          subtitle: "Explore our products and services",
-        },
-      },
-      {
-        type: "COVERIMAGE",
-        name: "Cover Image",
-        sectionDetails: {
-          title: "Stunning Cover Image",
-          subtitle: "Discover the beauty of our website",
-        },
-      },
-      {
-        type: "CARASOUEL",
-        name: "Featured Products",
-        sectionDetails: {
-          title: "Featured Products",
-          subtitle: "Check out our top offerings",
-          images: [
-            { imageSrc: "/images/brand/build.jpg" },
-            { imageSrc: "/images/brand/tech.jpg" },
-            { imageSrc: "/images/brand/studio.jpg" },
-          ],
-        },
-      },
-    ],
-    testimonial: {
-      author: "Jessica Carter",
-      content:
-        "The UI/UX design for our mobile app by your team has greatly enhanced the overall user experience. Our users find the app visually appealing, easy to navigate, and enjoyable to use. It has resulted in increased user engagement and positive feedback.",
-      designation: "Product Manager, Mobile Solutions Ltd.",
-      link: "https://example.com/testimonial8",
     },
     nextWorkId: "work1",
   },

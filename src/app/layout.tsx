@@ -9,6 +9,7 @@ import { TransitionProvider } from "@/contexts/TransitionContext";
 import FullScreenTransition from "@/components/FullScreenTransition";
 import { CursorProvider } from "@/contexts/CursorContext";
 import CustomCursor from "@/components/CustomCursor";
+import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
   title: "Your App Name",
@@ -36,6 +37,7 @@ export default function RootLayout({
             <CursorProvider>
               <Header />
               <Suspense fallback={<Loading />}>{children}</Suspense>
+              <Footer />
               <CustomCursor />
             </CursorProvider>
           </TransitionProvider>
