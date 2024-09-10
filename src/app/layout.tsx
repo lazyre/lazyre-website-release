@@ -7,6 +7,8 @@ import Loading from "./loading";
 import Header from "@/components/header";
 import { TransitionProvider } from "@/contexts/TransitionContext";
 import FullScreenTransition from "@/components/FullScreenTransition";
+import { CursorProvider } from "@/contexts/CursorContext";
+import CustomCursor from "@/components/CustomCursor";
 
 export const metadata: Metadata = {
   title: "Your App Name",
@@ -31,8 +33,11 @@ export default function RootLayout({
         >
           <TransitionProvider>
             <FullScreenTransition />
-            <Header />
-            <Suspense fallback={<Loading />}>{children}</Suspense>
+            <CursorProvider>
+              <Header />
+              <Suspense fallback={<Loading />}>{children}</Suspense>
+              <CustomCursor />
+            </CursorProvider>
           </TransitionProvider>
         </ThemeProvider>
       </body>
