@@ -40,7 +40,8 @@ export default function HeroBackground() {
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme } = useTheme();
   const [videoLoaded, setVideoLoaded] = useState(false);
-  const [videoError, setVideoError] = useState(false);
+  //! Change this to false
+  const [videoError, setVideoError] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
   const [currentSource, setCurrentSource] = useState<VideoSource | null>(null);
   const [isFirstPlay, setIsFirstPlay] = useState(true);
@@ -161,8 +162,8 @@ export default function HeroBackground() {
         <Image
           src={imageSources[theme].small}
           alt="Hero background"
-          layout="fill"
-          objectFit="cover"
+          fill
+          style={{ objectFit: "cover" }}
           priority
         />
       </picture>

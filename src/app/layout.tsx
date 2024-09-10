@@ -4,6 +4,9 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Suspense } from "react";
 import Loading from "./loading";
+import Header from "@/components/header";
+import { TransitionProvider } from "@/contexts/TransitionContext";
+import FullScreenTransition from "@/components/FullScreenTransition";
 
 export const metadata: Metadata = {
   title: "Your App Name",
@@ -26,7 +29,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Suspense fallback={<Loading />}>{children}</Suspense>
+          <TransitionProvider>
+            <FullScreenTransition />
+            <Header />
+            <Suspense fallback={<Loading />}>{children}</Suspense>
+          </TransitionProvider>
         </ThemeProvider>
       </body>
     </html>
