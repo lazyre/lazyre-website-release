@@ -340,8 +340,8 @@ export default function ContactForm() {
   const [openCountryPopover, setOpenCountryPopover] = useState(false);
 
   return (
-    <div className="bg-white text-black h-full p-6 xl:p-20 font-bold overflow-y-hidden">
-      <h2 className="text-black text-4xl lg:text-6xl xl:text-6xl">
+    <div className="bg-foreground h-full p-6 xl:p-20 font-bold overflow-y-hidden">
+      <h2 className="text-background text-4xl lg:text-6xl xl:text-6xl">
         Lets begin something great together
       </h2>
       <Form {...form}>
@@ -428,7 +428,7 @@ export default function ContactForm() {
                                 role="combobox"
                                 aria-expanded={openCountryPopover}
                                 className={cn(
-                                  "text-black h-16 xl:w-[200px] justify-between rounded-none",
+                                  " h-16 xl:w-[200px] justify-between",
                                   !field.value?.country &&
                                     "text-muted-foreground"
                                 )}
@@ -478,7 +478,7 @@ export default function ContactForm() {
                               </Button>
                             </FormControl>
                           </PopoverTrigger>
-                          <PopoverContent className="w-[200px] p-0 z-[60] rounded-none">
+                          <PopoverContent className="w-[200px] p-0 z-[60] ">
                             <Command>
                               <CommandInput placeholder="Search country..." />
                               <CommandList>
@@ -530,14 +530,14 @@ export default function ContactForm() {
                         </Popover>
                         <FormControl>
                           <div className="flex-1 flex relative h-16">
-                            <div className="bg-muted text-slate-500 border-b-2 border-slate-200 px-3 py-2 flex items-center">
+                            <div className="bg-muted  text-slate-500 border-b-transparent border-b-2  rounded-l-md px-3 py-2 flex items-center">
                               {countries.find(
                                 (c) => c.value === field.value?.country
                               )?.code || <span className="opacity-0">+</span>}
                             </div>
                             <Input
                               placeholder="Mobile"
-                              className="h-16 border-slate-200"
+                              className="h-16 bg-background border-l-0 border-b-transparent focus-visible:border-b-primary border-b-2 rounded-l-none"
                               value={field.value?.number || ""}
                               onChange={(e) => {
                                 form.setValue(
@@ -563,8 +563,9 @@ export default function ContactForm() {
                 />
 
                 <Button
+                  data-cursor-text="RightIcon"
                   type="button"
-                  className="disabled:bg-slate-500 disabled:cursor-not-allowed"
+                  className="disabled:bg-slate-500 disabled:cursor-not-allowed h-16"
                   onClick={() => setStep(2)}
                   disabled={!isFirstStepValid}
                 >
@@ -581,11 +582,12 @@ export default function ContactForm() {
                 animate={{ x: 0, opacity: 1 }}
                 exit={{ x: "100%", opacity: 0 }}
                 transition={{ duration: 0.3 }}
-                className="space-y-8"
+                className="space-y-4"
               >
                 <Button
+                  data-cursor-text="LeftIcon"
                   type="button"
-                  className="bg-slate-300 text-gray-700"
+                  className="bg-slate-300 text-gray-700 h-16 mt-2"
                   onClick={() => setStep(1)}
                 >
                   <ChevronLeft className="mr-2" />
@@ -596,10 +598,12 @@ export default function ContactForm() {
                   name="projectIdea"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Explain your idea</FormLabel>
+                      <FormLabel className="text-background">
+                        Explain your idea*
+                      </FormLabel>
                       <FormControl>
                         <Textarea
-                          className="border-b-2 border-b-slate-200"
+                          className="border-b-2 border-b-slate-200 text-background"
                           {...field}
                           rows={4}
                         />
@@ -611,17 +615,18 @@ export default function ContactForm() {
 
                 <FormItem>
                   <FormLabel className="flex flex-col space-y-4">
-                    <span className="text-lg font-semibold text-primary">
+                    <span className="text-lg font-semibold text-background">
                       Upload
                     </span>
                     <label
+                      data-cursor="none"
                       htmlFor="fileUpload"
-                      className="cursor-pointer rounded-md p-4 space-y-2 text-slate-600 flex justify-center items-center flex-col border-slate-200 border-2 border-dotted transition-colors duration-200 focus-within:border-primary hover:border-primary"
+                      className="cursor-pointer rounded-md p-4 space-y-2 text-slate-500 flex justify-center items-center flex-col border-background border-2 border-dotted transition-colors duration-200 focus-within:border-primary hover:border-primary"
                       onDragOver={handleDragOver}
                       onDragLeave={handleDragLeave}
                       onDrop={handleDrop}
                     >
-                      <CirclePlus className="h-6 w-6 text-primary" />
+                      <CirclePlus className="h-6 w-6 text-background" />
                       <p className="text-sm">
                         Drag & drop or click to upload files
                       </p>
@@ -657,25 +662,26 @@ export default function ContactForm() {
                         {files.map((file, index) => (
                           <motion.li
                             key={file.name}
-                            className="flex justify-between items-center gap-2 border py-2 px-4 rounded-md bg-background"
+                            className="flex items-center justify-between gap-2 border py-2 px-4 rounded-md bg-background"
                             initial={{ opacity: 0, y: -20 }}
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -20 }}
                             transition={{ duration: 0.2 }}
                           >
-                            <FileIcon className="h-6 w-6 text-primary" />
                             <div className="flex items-center gap-2">
+                              <FileIcon className="h-6 w-6 text-primary" />
                               <div>
-                                <div className="text-xs font-normal text-slate-800">
+                                <div className="text-base font-normal">
                                   {file.name.split(".")[0]}
                                 </div>
-                                <div className="text-xs font-light text-slate-500">
+                                <div className="text-xs font-light">
                                   .{file.name.split(".")[1]} |{" "}
                                   {formatFileSize(file.size)}
                                 </div>
                               </div>
                             </div>
                             <Button
+                              data-cursor="none"
                               type="button"
                               variant="destructive"
                               className="rounded-full h-12 w-12"
@@ -729,8 +735,8 @@ export default function ContactForm() {
                   name="services"
                   render={() => (
                     <FormItem>
-                      <FormLabel className="text-base mb-4">
-                        Services Needed
+                      <FormLabel className="text-base mb-4 text-background">
+                        Services Needed*
                       </FormLabel>
                       <div className="flex flex-wrap gap-2">
                         {(
@@ -782,7 +788,9 @@ export default function ContactForm() {
                   name="deadline"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-base mb-4">Deadline</FormLabel>
+                      <FormLabel className="text-base mb-4 text-background">
+                        Deadline*
+                      </FormLabel>
                       <div className="flex flex-wrap gap-2">
                         {(
                           [
@@ -814,7 +822,7 @@ export default function ContactForm() {
                   name="referral"
                   render={() => (
                     <FormItem>
-                      <FormLabel className="text-base mb-4">
+                      <FormLabel className="text-base mb-4 text-background">
                         Where did you hear about us?
                       </FormLabel>
                       <div className="flex flex-wrap gap-2">
@@ -857,8 +865,13 @@ export default function ContactForm() {
                     </FormItem>
                   )}
                 />
-
-                <Button type="submit" disabled={isSubmitting}>
+                <div></div>
+                <Button
+                  data-cursor-text="Send"
+                  className="h-16 px-8 hover:bg-transparent shadow-none"
+                  type="submit"
+                  disabled={isSubmitting}
+                >
                   {isSubmitting ? "Submitting..." : "Send"}
                 </Button>
               </motion.div>

@@ -23,7 +23,7 @@ export const FloatingLabelInput = forwardRef<
   }, [props.value]);
 
   return (
-    <div className="relative h-16">
+    <div className="relative h-16 rounded-md overflow-hidden">
       <Input
         {...props}
         ref={ref}

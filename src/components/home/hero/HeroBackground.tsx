@@ -10,16 +10,18 @@ interface VideoSource {
   loopStart: number;
 }
 
+//! Fix timing, cover pages and add webM format. (also recompress dark mode videos)
+
 const videoSources = {
   dark: {
-    large: { src: "/videos/mascot/mascot_large_dark.mp4", loopStart: 23.5 },
-    medium: { src: "/videos/mascot/mascot_medium_dark.mp4", loopStart: 23.5 },
-    small: { src: "/videos/mascot/mascot_small_dark.mp4", loopStart: 23.5 },
+    large: { src: "/videos/mascot/mascot_large_dark.mp4", loopStart: 22.5 },
+    medium: { src: "/videos/mascot/mascot_medium_dark.mp4", loopStart: 22.5 },
+    small: { src: "/videos/mascot/mascot_small_dark.mp4", loopStart: 22.5 },
   },
   light: {
-    large: { src: "/videos/mascot/mascot_large_light.mp4", loopStart: 23.5 },
-    medium: { src: "/videos/mascot/mascot_medium_light.mp4", loopStart: 23.5 },
-    small: { src: "/videos/mascot/mascot_small_light.mp4", loopStart: 23.5 },
+    large: { src: "/videos/mascot/mascot_large_light.mp4", loopStart: 22.5 },
+    medium: { src: "/videos/mascot/mascot_medium_light.mp4", loopStart: 22.5 },
+    small: { src: "/videos/mascot/mascot_small_light.mp4", loopStart: 22.5 },
   },
 };
 

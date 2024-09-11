@@ -3,8 +3,8 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
+import { useTheme } from "next-themes";
 
 const logoSets = [
   [
@@ -50,7 +50,20 @@ const logoSets = [
 ];
 
 const ClientLogos: React.FC = () => {
-  const { theme } = useTheme();
+  const { theme, resolvedTheme } = useTheme();
+
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const currentTheme = mounted
+    ? theme === "system"
+      ? resolvedTheme
+      : theme
+    : "dark"; // Default to 'light' for SSR
+
   // Start with a fixed initial state
   const [currentLogoArray, setCurrentLogoArray] = useState<string[]>(() =>
     logoSets.map((set) => set[0])
@@ -81,7 +94,7 @@ const ClientLogos: React.FC = () => {
     <div
       className={cn(
         "grid grid-cols-1 sm:grid-cols-2 gap-6 w-full justify-center items-center sm:gap-12 lg:gap-24 xl:gap-12 xl:px-24 md:grid-cols-3 xl:grid-cols-4 rounded-xl p-6 md:p-8 lg:p-12",
-        theme === "dark" ? "bg-black/50" : "bg-black"
+        currentTheme === "dark" ? "bg-black/50" : "bg-black"
       )}
     >
       {currentLogoArray.map((logo, index) => (

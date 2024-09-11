@@ -21,7 +21,19 @@ export default function WorkContainer() {
   const carouselRef = useRef<HTMLUListElement>(null);
   const { data } = useData("work");
   const workData = (data as workDataType[]) || [];
-  const { theme } = useTheme();
+  const { theme, resolvedTheme } = useTheme();
+
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const currentTheme = mounted
+    ? theme === "system"
+      ? resolvedTheme
+      : theme
+    : "dark"; // Default to 'light' for SSR
 
   const selectedWorkDetails =
     workData.find((work) => work.id === selectedWork) || null;
@@ -71,7 +83,7 @@ export default function WorkContainer() {
     <section
       className={cn(
         "flex flex-col min-h-full xl:pl-32 relative overflow-hidden bg-transparent",
-        theme === "dark" ? "xl:bg-black/50" : "xl:bg-black"
+        currentTheme === "dark" ? "xl:bg-black/50" : "xl:bg-black"
       )}
     >
       <AnimatePresence mode="wait">
@@ -131,7 +143,7 @@ export default function WorkContainer() {
                 <h2
                   className={cn(
                     "text-3xl mt-6 xl:text-4xl font-bold",
-                    theme === "dark" ? "" : "text-white"
+                    currentTheme === "dark" ? "" : "text-background"
                   )}
                 >
                   {selectedWorkDetails.title}
@@ -140,7 +152,10 @@ export default function WorkContainer() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.2 }}
-                  className={cn("mt-6", theme === "dark" ? "" : "text-white")}
+                  className={cn(
+                    "mt-6",
+                    currentTheme === "dark" ? "" : "text-background"
+                  )}
                 >
                   {selectedWorkDetails.overview.description}
                 </motion.p>
@@ -150,7 +165,7 @@ export default function WorkContainer() {
                   transition={{ duration: 0.5, delay: 0.4 }}
                   className={cn(
                     "mt-6 w-full flex flex-wrap text-lg text-text/80 font-light list-none",
-                    theme === "dark" ? "" : "text-white"
+                    currentTheme === "dark" ? "" : "text-background"
                   )}
                 >
                   {selectedWorkDetails.tags.slice(0, 4).map((tag, index) => (
@@ -176,7 +191,7 @@ export default function WorkContainer() {
                 <h2
                   className={cn(
                     "text-5xl 2xl:text-7xl font-bold",
-                    theme === "dark" ? "" : "xl:text-white"
+                    currentTheme === "dark" ? "" : "xl:text-background"
                   )}
                 >
                   Unveiling Our Digital Legacy, Inspiring
@@ -185,7 +200,7 @@ export default function WorkContainer() {
                 <p
                   className={cn(
                     "mt-6 text-xl max-w-sm md:max-w-md lg:max-w-lg",
-                    theme === "dark" ? "" : "xl:text-white"
+                    currentTheme === "dark" ? "" : "xl:text-background"
                   )}
                 >
                   Discover our digital portfolio, a testament to our expertise
@@ -214,7 +229,7 @@ export default function WorkContainer() {
                     index={index}
                     isActive={index === activeIndex - 1}
                     onClick={() => setActiveIndex(index + 1)}
-                    theme={theme}
+                    theme={currentTheme}
                   />
                 ))}
                 <MoreWorkButton />

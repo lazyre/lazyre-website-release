@@ -78,7 +78,19 @@ const Header = () => {
   const scope = useAnimation(isOpen);
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref);
-  const { theme } = useTheme();
+  const { theme, resolvedTheme } = useTheme();
+
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const currentTheme = mounted
+    ? theme === "system"
+      ? resolvedTheme
+      : theme
+    : "dark"; // Default to 'light' for SSR
 
   useEffect(() => {
     setOpen(false);
@@ -124,13 +136,13 @@ const Header = () => {
         style={{
           opacity: isOpen ? 0 : 1,
         }}
-        className={cn(navClasses, "z-40 pointer-events-none")}
+        className={cn(navClasses, isOpen && "z-40 pointer-events-none")}
       >
         <div
           className={cn(
             containerClasses,
             "h-12 bg-white/[0.08] border border-white/[0.08] backdrop-blur-lg",
-            theme === "light" && "bg-white/80"
+            currentTheme === "light" && "bg-white/80"
           )}
         ></div>
       </motion.nav>
@@ -213,7 +225,12 @@ const Header = () => {
           isInView ? "" : "pointer-events-none"
         )}
       >
-        <div className="lg:w-1/2 w-full h-screen fixed top-0 right-0 overflow-y-auto lg:overflow-y-hidden text-white">
+        <div
+          className={cn(
+            "lg:w-1/2 w-full h-screen fixed top-0 right-0 overflow-y-auto lg:overflow-y-hidden text-white",
+            !isOpen && "pointer-events-none"
+          )}
+        >
           <AnimatePresence>
             {isOpen && (
               <motion.div

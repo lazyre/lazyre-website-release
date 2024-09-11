@@ -40,7 +40,19 @@ const About: React.FC<AboutProps> = () => {
   const [isVideoPaused, setIsVideoPaused] = useState(true);
   const [isVideoVisible, setIsVideoVisible] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
-  const { theme } = useTheme();
+  const { theme, resolvedTheme } = useTheme();
+
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const currentTheme = mounted
+    ? theme === "system"
+      ? resolvedTheme
+      : theme
+    : "dark"; // Default to 'light' for SSR
 
   const [scope, animate] = useAnimate();
 
@@ -134,7 +146,7 @@ const About: React.FC<AboutProps> = () => {
           videoRef={videoRef}
           handleVideoClick={handleVideoClick}
           isVideoPaused={isVideoPaused}
-          theme={theme}
+          theme={currentTheme}
         />
         <DesktopView
           headingData={headingData}
@@ -142,7 +154,7 @@ const About: React.FC<AboutProps> = () => {
           isHovered={isHovered}
           setIsHovered={setIsHovered}
           handleVideoExpand={handleVideoExpand}
-          theme={theme}
+          theme={currentTheme}
         />
       </div>
     </HomeContentWrapper>
@@ -279,7 +291,7 @@ const DesktopView: React.FC<DesktopViewProps> = ({
             id="AboutTitle"
             className={cn(
               "relative text-5xl xl:text-7xl font-bold",
-              theme === "dark" ? "" : "text-white"
+              theme === "dark" ? "" : "text-background"
             )}
           >
             {headingData.title
@@ -297,7 +309,7 @@ const DesktopView: React.FC<DesktopViewProps> = ({
             id="AboutSubtitle"
             className={cn(
               "relative mt-12 text-xl leading-normal min-w-[250px] w-full lg:max-w-2xl xl:max-w-5xl",
-              theme === "dark" ? "" : "text-white"
+              theme === "dark" ? "" : "text-background"
             )}
           >
             {headingData.subtitle}
