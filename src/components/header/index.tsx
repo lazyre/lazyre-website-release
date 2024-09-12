@@ -127,7 +127,10 @@ const Header = () => {
 
   const hamburgerClasses = cn(
     "bg-black/80 p-4 border border-white/[0.08] hover:border-transparent hover:bg-primary rounded-full cursor-pointer transition-colors h-12",
-    isOpen && "hover:bg-white/[0.08] border-transparent"
+    isOpen &&
+      `border-transparent ${
+        currentTheme === "light" ? "hover:bg-black" : "hover:bg-white/[0.08]"
+      }`
   );
 
   const paths = pathname.split("/").filter((path) => path);
@@ -224,7 +227,7 @@ const Header = () => {
       <div className={cn(navClasses, "z-[60]")} ref={scope}>
         <div
           id="open-nav"
-          className="fixed inset-0 -z-10 bg-black"
+          className="fixed inset-0 -z-10 bg-background"
           style={{ clipPath: "inset(0 0 0 100%)" }}
           aria-hidden="true"
         />
@@ -238,7 +241,7 @@ const Header = () => {
       >
         <div
           className={cn(
-            "lg:w-1/2 w-full h-screen fixed top-0 right-0 overflow-y-auto lg:overflow-y-hidden text-white",
+            "lg:w-1/2 w-full h-screen fixed top-0 right-0 overflow-y-auto lg:overflow-y-hidden",
             !isOpen && "pointer-events-none"
           )}
         >
@@ -248,7 +251,7 @@ const Header = () => {
                 className="flex flex-col h-full w-full pt-24 lg:pt-24"
                 initial="hidden"
                 animate="visible"
-                exit="hidden"
+                // exit="hidden" removed exit animation
                 variants={textRevealVariants}
               >
                 <div className="flex-grow flex flex-col-reverse lg:flex-row gap-6 p-6 lg:px-12 py-6">

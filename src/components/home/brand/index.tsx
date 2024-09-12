@@ -1,14 +1,13 @@
-"use client";
 import SectionHeading from "@/components/SectionHeading";
 import SectionHeadingWrapper from "@/components/SectionHeadingWrapper";
-import useData from "@/hooks/useData";
 import { sectionHeadingDataType } from "@/types/types";
 import React from "react";
 import BrandContainer from "./BrandContainer";
 import HomeContentWrapper from "@/components/HomeContentWrapper";
+import { getData } from "@/lib/getData";
 
 export default function Brand() {
-  const { data: headingData } = useData("sectionHeading", "brand");
+  const headingData = getData("sectionHeading", "brand");
 
   return (
     <section aria-labelledby="brand-section-heading" className="xl:mb-0">
@@ -18,7 +17,7 @@ export default function Brand() {
           <SectionHeading {...(headingData as sectionHeadingDataType)} />
         )}
       </SectionHeadingWrapper>
-      <HomeContentWrapper>
+      <HomeContentWrapper home>
         <BrandContainer />
       </HomeContentWrapper>
     </section>

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useInView } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -25,7 +25,19 @@ export default function BrandItem({
 }: BrandItemProps) {
   const ref = useRef<HTMLAnchorElement>(null);
   const isInView = useInView(ref, { amount: 0.5 });
-  const { theme } = useTheme();
+  const { theme, resolvedTheme } = useTheme();
+
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const currentTheme = mounted
+    ? theme === "system"
+      ? resolvedTheme
+      : theme
+    : "dark"; // Default to 'light' for SSR
 
   const { setCursorType, setCursorText } = useCursor();
 
@@ -49,7 +61,9 @@ export default function BrandItem({
       ref={ref}
       className={cn(
         "relative flex flex-col items-center w-full min-h-[unset] xl:min-h-[calc(100vh-12rem)]",
-        theme === "dark" ? "bg-black/50" : "bg-foreground text-background",
+        currentTheme === "dark"
+          ? "bg-black/50"
+          : "bg-foreground text-background",
         "rounded-xl p-6 xl:p-12 group cursor-pointer overflow-hidden"
       )}
       aria-labelledby={`brand-title-${id}`}
@@ -91,11 +105,11 @@ export default function BrandItem({
               <li
                 key={service.id}
                 className="text-[var(--light-accent-color)]"
-                style={
-                  {
-                    "--light-accent-color": lightAccentColor,
-                  } as React.CSSProperties
-                }
+                // style={
+                //   {
+                //     "--light-accent-color": lightAccentColor,
+                //   } as React.CSSProperties
+                // }
               >
                 {service.name}
               </li>

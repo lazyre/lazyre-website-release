@@ -132,7 +132,7 @@ const About: React.FC<AboutProps> = () => {
   )!;
 
   return (
-    <HomeContentWrapper>
+    <HomeContentWrapper home>
       <div
         ref={scope}
         className=" xl:mt-0 relative xl:min-h-screen overflow-hidden flex justify-center items-center"

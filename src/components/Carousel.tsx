@@ -4,6 +4,7 @@ import React, { useRef, useEffect, useState, ReactNode } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useResizeObserver } from "@/hooks/useResizeObserver";
+import { useCursor } from "@/contexts/CursorContext";
 
 interface CarouselProps {
   children: ReactNode;
@@ -14,6 +15,7 @@ export default function Carousel({ children }: CarouselProps) {
   const [firstItemRef, firstItemSize] = useResizeObserver<HTMLLIElement>();
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
+  const { setCursorType, setCursorText, setCursorSticky } = useCursor();
 
   useEffect(() => {
     const scrollContainer = scrollContainerRef.current;
@@ -67,22 +69,42 @@ export default function Carousel({ children }: CarouselProps) {
       </ul>
       <div className="flex gap-6 justify-end items-center pt-12 pr-6 sm:pr-12 xl:pr-36">
         <Button
+          onMouseEnter={(e: React.MouseEvent<HTMLElement>) => {
+            setCursorType("text");
+            setCursorText("LeftIcon");
+            setCursorSticky(true, e.currentTarget);
+          }}
+          onMouseLeave={() => {
+            setCursorType("default");
+            setCursorText("");
+            setCursorSticky(false);
+          }}
           onClick={() => scroll("left")}
           disabled={!canScrollLeft}
           aria-label="Previous items"
           variant="outline"
           size="icon"
-          className="h-24 w-24 rounded-full"
+          className="h-24 w-24 rounded-full border-2 border-foreground"
         >
           <ChevronLeft className="h-8 w-8" aria-hidden="true" />
         </Button>
         <Button
+          onMouseEnter={(e: React.MouseEvent<HTMLElement>) => {
+            setCursorType("text");
+            setCursorText("RightIcon");
+            setCursorSticky(true, e.currentTarget);
+          }}
+          onMouseLeave={() => {
+            setCursorType("default");
+            setCursorText("");
+            setCursorSticky(false);
+          }}
           onClick={() => scroll("right")}
           disabled={!canScrollRight}
           aria-label="Next items"
           variant="outline"
           size="icon"
-          className="h-24 w-24 rounded-full"
+          className="h-24 w-24 rounded-full border-2 border-foreground"
         >
           <ChevronRight className="h-8 w-8" aria-hidden="true" />
         </Button>

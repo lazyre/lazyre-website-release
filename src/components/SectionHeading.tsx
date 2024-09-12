@@ -47,7 +47,7 @@ const SectionHeading: React.FC<SectionHeadingProps> = ({
             id={titleId}
             className={cn(
               workHeading
-                ? "text-lg sm:text-xl md:text-2xl text-white/80"
+                ? "text-lg sm:text-xl md:text-2xl opacity-80"
                 : "text-5xl lg:text-6xl xl:text-7xl font-bold"
             )}
           >

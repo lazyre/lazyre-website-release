@@ -3,15 +3,14 @@ import React, { useState, useEffect } from "react";
 import BrandItem from "./BrandItem";
 import BrandImage from "./BrandImage";
 import { brandDataType } from "@/types/types";
-import useData from "@/hooks/useData";
+import { getData } from "@/lib/getData";
 
 export default function BrandContainer() {
   const [brandInView, setBrandInView] = useState("");
   const [activeBrand, setActiveBrand] = useState<brandDataType | null>(null);
   const [prevBrand, setPrevBrand] = useState<brandDataType | null>(null);
   const [nextBrand, setNextBrand] = useState<brandDataType | null>(null);
-  const { data } = useData("brand");
-  const brandData = (data as brandDataType[]) || []; // Provide a default empty array
+  const brandData = getData("brand") as brandDataType[];
 
   useEffect(() => {
     if (brandData.length > 0) {

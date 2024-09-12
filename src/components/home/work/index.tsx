@@ -1,10 +1,9 @@
-"use client";
-import useData from "@/hooks/useData";
 import React from "react";
 import WorkContainer from "./WorkContainer";
+import { getData } from "@/lib/getData";
 
 export default function Brand() {
-  const { data: headingData } = useData("sectionHeading", "work");
+  const headingData = getData("sectionHeading", "work");
 
   return (
     <section aria-labelledby="work-section-heading" className="xl:mb-0">

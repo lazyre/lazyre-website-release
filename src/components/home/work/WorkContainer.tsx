@@ -4,7 +4,6 @@ import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import useData from "@/hooks/useData";
 import ArrowButton from "@/components/buttons/ArrowButton";
 import { workDataType } from "@/types/types";
 import { MoreWorkButton } from "./MoreWorkButton";
@@ -14,14 +13,16 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
 import { useCursor } from "@/contexts/CursorContext";
+import { getData } from "@/lib/getData";
 
 export default function WorkContainer() {
   const [selectedWork, setSelectedWork] = useState<string | null>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const [prevSelectedWork, setPrevSelectedWork] = useState<string | null>(null);
   const carouselRef = useRef<HTMLUListElement>(null);
-  const { data } = useData("work");
-  const workData = (data as workDataType[]) || [];
+  // const { data } = useData("work");
+  // const workData = (data as workDataType[]) || [];
+  const workData = getData("work") as workDataType[];
   const { theme, resolvedTheme } = useTheme();
 
   const [mounted, setMounted] = useState(false);
