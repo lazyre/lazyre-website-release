@@ -13,6 +13,7 @@ import TransitionLink from "@/components/TransitionLink";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
+import { useCursor } from "@/contexts/CursorContext";
 
 export default function WorkContainer() {
   const [selectedWork, setSelectedWork] = useState<string | null>(null);
@@ -24,6 +25,8 @@ export default function WorkContainer() {
   const { theme, resolvedTheme } = useTheme();
 
   const [mounted, setMounted] = useState(false);
+
+  const { setCursorType, setCursorText, setCursorSticky } = useCursor();
 
   useEffect(() => {
     setMounted(true);
@@ -237,6 +240,16 @@ export default function WorkContainer() {
             </div>
             <div className="hidden xl:flex gap-6 items-center py-12 px-12">
               <button
+                onMouseEnter={(e: React.MouseEvent<HTMLElement>) => {
+                  setCursorType("text");
+                  setCursorText("LeftIcon");
+                  setCursorSticky(true, e.currentTarget);
+                }}
+                onMouseLeave={() => {
+                  setCursorType("default");
+                  setCursorText("");
+                  setCursorSticky(false);
+                }}
                 onClick={() => moveCarousel("left")}
                 aria-label="Previous work"
                 className="h-24 w-24 border-2 rounded-full flex justify-center items-center text-white"
@@ -245,6 +258,16 @@ export default function WorkContainer() {
                 <ChevronLeft className="text-lg" />
               </button>
               <button
+                onMouseEnter={(e: React.MouseEvent<HTMLElement>) => {
+                  setCursorType("text");
+                  setCursorText("RightIcon");
+                  setCursorSticky(true, e.currentTarget);
+                }}
+                onMouseLeave={() => {
+                  setCursorType("default");
+                  setCursorText("");
+                  setCursorSticky(false);
+                }}
                 onClick={() => moveCarousel("right")}
                 aria-label="Next work"
                 className="h-24 w-24 border-2 rounded-full flex justify-center items-center text-white"
@@ -288,8 +311,19 @@ function WorkItem({
   isActive,
   theme,
 }: WorkItemProps) {
+  const { setCursorType, setCursorText } = useCursor();
   return (
-    <li className="group w-full cursor-pointer" data-cursor-text="Uncover">
+    <li
+      className="group w-full cursor-pointer"
+      onMouseEnter={() => {
+        setCursorType("text");
+        setCursorText("LinkIcon");
+      }}
+      onMouseLeave={() => {
+        setCursorType("default");
+        setCursorText("");
+      }}
+    >
       <TransitionLink href={`/work/${id}`} className="block w-full h-full">
         <motion.div
           className={cn(

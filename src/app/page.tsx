@@ -8,11 +8,11 @@ import Work from "@/components/home/work";
 export default function Home() {
   return (
     <main>
-      <Hero />
+      {/* <Hero />
       <Brand />
       <About />
       <Work />
-      <Client />
+      <Client /> */}
       <Blog />
     </main>
   );

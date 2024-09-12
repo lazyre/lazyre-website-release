@@ -9,6 +9,7 @@ import TransitionLink from "@/components/TransitionLink";
 import ArrowButton from "@/components/buttons/ArrowButton";
 import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
+import { useCursor } from "@/contexts/CursorContext";
 
 interface BrandItemProps extends brandDataType {
   setBrandInView: React.Dispatch<React.SetStateAction<string>>;
@@ -26,6 +27,8 @@ export default function BrandItem({
   const isInView = useInView(ref, { amount: 0.5 });
   const { theme } = useTheme();
 
+  const { setCursorType, setCursorText } = useCursor();
+
   useEffect(() => {
     if (isInView) {
       setBrandInView(id);
@@ -34,7 +37,14 @@ export default function BrandItem({
 
   return (
     <TransitionLink
-      data-cursor="none"
+      onMouseEnter={(e: React.MouseEvent<HTMLElement>) => {
+        setCursorType("text");
+        setCursorText("LinkIcon");
+      }}
+      onMouseLeave={() => {
+        setCursorType("default");
+        setCursorText("");
+      }}
       href={`/brand/${id}`}
       ref={ref}
       className={cn(
