@@ -10,6 +10,7 @@ import { ArrowUpRight, ChevronRight } from "lucide-react";
 import TransitionLink from "../TransitionLink";
 import ToggleThemeButton from "../buttons/ToggleThemeButton";
 import { useTheme } from "next-themes";
+import { useCursor } from "@/contexts/CursorContext";
 
 const menuItems = [
   { href: "/", label: "Home" },
@@ -81,6 +82,8 @@ const Header = () => {
   const { theme, resolvedTheme } = useTheme();
 
   const [mounted, setMounted] = useState(false);
+
+  const { setCursorType, setCursorSticky } = useCursor();
 
   useEffect(() => {
     setMounted(true);
@@ -180,10 +183,18 @@ const Header = () => {
                   closed: { opacity: 1, y: "0rem" },
                 }}
                 transition={{ duration: 0.2 }}
+                onMouseEnter={(e: React.MouseEvent<HTMLElement>) => {
+                  setCursorType("text");
+                  setCursorSticky(true, e.currentTarget);
+                }}
+                onMouseLeave={() => {
+                  setCursorType("default");
+                  setCursorSticky(false);
+                }}
               >
                 <TransitionLink
                   href={href}
-                  className="h-12 text-center flex items-center justify-center"
+                  className="h-12 text-center flex items-center justify-center hover:text-background"
                 >
                   {label}
                 </TransitionLink>

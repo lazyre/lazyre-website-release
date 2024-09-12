@@ -10,9 +10,18 @@ import {
   ChevronLeft,
   ChevronRight,
   ChevronUp,
+  Pause,
+  Play,
 } from "lucide-react";
 
-type CursorIcon = "UpIcon" | "DownIcon" | "LeftIcon" | "RightIcon" | "LinkIcon";
+type CursorIcon =
+  | "UpIcon"
+  | "DownIcon"
+  | "LeftIcon"
+  | "RightIcon"
+  | "LinkIcon"
+  | "PlayIcon"
+  | "PauseIcon";
 
 export default function CustomCursor() {
   const {
@@ -31,6 +40,8 @@ export default function CustomCursor() {
     "LeftIcon",
     "RightIcon",
     "LinkIcon",
+    "PlayIcon",
+    "PauseIcon",
   ];
 
   const iconMap: Record<CursorIcon, React.ReactElement> = {
@@ -39,6 +50,8 @@ export default function CustomCursor() {
     LeftIcon: <ChevronLeft className="w-6 h-6" />,
     RightIcon: <ChevronRight className="w-6 h-6" />,
     LinkIcon: <ArrowUpRight className="w-6 h-6" />,
+    PlayIcon: <Play className="w-6 h-6" />,
+    PauseIcon: <Pause className="w-6 h-6" />,
   };
   return (
     <motion.div

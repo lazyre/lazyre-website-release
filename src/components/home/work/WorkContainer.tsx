@@ -83,7 +83,7 @@ export default function WorkContainer() {
     <section
       className={cn(
         "flex flex-col min-h-full xl:pl-32 relative overflow-hidden bg-transparent",
-        currentTheme === "dark" ? "xl:bg-black/50" : "xl:bg-black"
+        currentTheme === "dark" ? "xl:bg-black/50" : "xl:bg-foreground"
       )}
     >
       <AnimatePresence mode="wait">

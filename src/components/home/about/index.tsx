@@ -175,7 +175,7 @@ const MobileView: React.FC<MobileViewProps> = ({
   <div
     className={cn(
       "xl:hidden w-full",
-      theme === "dark" ? "bg-black/50" : " bg-black",
+      theme === "dark" ? "bg-black/50" : " bg-foreground",
       "rounded-xl p-6 flex flex-col justify-center"
     )}
   >

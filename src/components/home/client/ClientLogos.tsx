@@ -94,7 +94,7 @@ const ClientLogos: React.FC = () => {
     <div
       className={cn(
         "grid grid-cols-1 sm:grid-cols-2 gap-6 w-full justify-center items-center sm:gap-12 lg:gap-24 xl:gap-12 xl:px-24 md:grid-cols-3 xl:grid-cols-4 rounded-xl p-6 md:p-8 lg:p-12",
-        currentTheme === "dark" ? "bg-black/50" : "bg-black"
+        currentTheme === "dark" ? "bg-black/50" : "bg-foreground"
       )}
     >
       {currentLogoArray.map((logo, index) => (

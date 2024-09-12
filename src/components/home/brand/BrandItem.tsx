@@ -39,7 +39,7 @@ export default function BrandItem({
       ref={ref}
       className={cn(
         "relative flex flex-col items-center w-full min-h-[unset] xl:min-h-[calc(100vh-12rem)]",
-        theme === "dark" ? "bg-black/50" : "bg-black text-background",
+        theme === "dark" ? "bg-black/50" : "bg-foreground text-background",
         "rounded-xl p-6 xl:p-12 group cursor-pointer overflow-hidden"
       )}
       aria-labelledby={`brand-title-${id}`}
