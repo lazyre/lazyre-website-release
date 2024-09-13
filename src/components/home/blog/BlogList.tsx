@@ -3,19 +3,20 @@
 import React from "react";
 import BlogItem from "./BlogItem";
 import { blogDataType } from "@/types/types";
-import Carousel from "@/components/Carousel";
+import Carousel from "@/components/CarouselLegacy";
 import { getData } from "@/lib/getData";
+import CustomCarousel from "@/components/CustomCarousel";
 
 export default function BlogList() {
   const blogData = getData("blog") as blogDataType[];
 
   return (
     <div className="mb-24">
-      <Carousel>
+      <CustomCarousel loop={false} basis="BlogBasis">
         {blogData.map((blog: blogDataType) => (
           <BlogItem key={blog.id} {...blog} />
         ))}
-      </Carousel>
+      </CustomCarousel>
     </div>
   );
 }

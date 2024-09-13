@@ -34,23 +34,33 @@ const workData: workDataType[] = [
         },
       },
       {
-        type: "CARASOUEL",
+        type: "CAROUSEL",
         name: "Featured Products",
         sectionDetails: {
           title: "Featured Products",
           subtitle: "Check out our top offerings",
           images: [
             {
-              imageSrc: "/images/work/work-device-portrait.png",
+              imageSrc: "/images/brand/lazyre_build_cover.webp",
               fit: "contain",
               bgColor: "pink",
               paddingValue: "20px",
             },
-            { imageSrc: "/images/brand/tech.jpg" },
-            { imageSrc: "/images/brand/studio.jpg" },
-            { imageSrc: "/images/brand/build.jpg" },
-            { imageSrc: "/images/brand/tech.jpg" },
-            { imageSrc: "/images/brand/studio.jpg" },
+            {
+              imageSrc: "/images/brand/lazyre_tech_cover.webp",
+            },
+            {
+              imageSrc: "/images/brand/lazyre_tech_cover.webp",
+            },
+            {
+              imageSrc: "/images/brand/lazyre_tech_cover.webp",
+            },
+            {
+              imageSrc: "/images/brand/lazyre_tech_cover.webp",
+            },
+            {
+              imageSrc: "/images/brand/lazyre_tech_cover.webp",
+            },
           ],
         },
       },
@@ -64,23 +74,33 @@ const workData: workDataType[] = [
         },
       },
       {
-        type: "FULLCARASOUEL",
+        type: "FULLCAROUSEL",
         name: "Featured Products",
         sectionDetails: {
           title: "Featured Products",
           subtitle: "Check out our top offerings",
           images: [
             {
-              imageSrc: "/images/work/work-test.png",
+              imageSrc: "/images/brand/lazyre_build_cover.webp",
               fit: "contain",
               bgColor: "pink",
               paddingValue: "20px",
             },
-            { imageSrc: "/images/brand/tech.jpg" },
-            { imageSrc: "/images/brand/studio.jpg" },
-            { imageSrc: "/images/brand/build.jpg" },
-            { imageSrc: "/images/brand/tech.jpg" },
-            { imageSrc: "/images/brand/studio.jpg" },
+            {
+              imageSrc: "/images/brand/lazyre_tech_cover.webp",
+            },
+            {
+              imageSrc: "/images/brand/lazyre_tech_cover.webp",
+            },
+            {
+              imageSrc: "/images/brand/lazyre_tech_cover.webp",
+            },
+            {
+              imageSrc: "/images/brand/lazyre_tech_cover.webp",
+            },
+            {
+              imageSrc: "/images/brand/lazyre_tech_cover.webp",
+            },
           ],
         },
       },

@@ -44,7 +44,7 @@ export interface workDataType {
       images?: Array<{
         imageSrc: string;
         description?: string;
-        fit?: string;
+        fit?: "cover" | "contain";
         bgColor?: string;
         paddingValue?: string;
       }>;

@@ -2,7 +2,18 @@ import CoverImage from "@/components/CoverImage";
 import FixedHero from "@/components/FixedHero";
 import HomeContentWrapper from "@/components/HomeContentWrapper";
 import ImageGrid from "@/components/ImageGrid";
+import RoundedImage from "@/components/RoundedImage";
+import RoundedPanes from "@/components/RoundedPanes";
 import SectionHeading from "@/components/SectionHeading";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import VideoPlayer from "@/components/VideoPlayer";
+import WorkCarouselSection from "@/components/Work/WorkCarouselSection";
 import { workDataType } from "@/types/types";
 import React from "react";
 
@@ -42,67 +53,74 @@ const WorkDetails: React.FC<workDetailsProps> = ({ work }) => {
                 <CoverImage src={coverImage} alt={`${client} cover image`} />
               </div>
             );
-          //   case "CARASOUEL":
-          //   case "FULLCARASOUEL":
-          //     if (section.sectionDetails.images) {
-          //       const imageArray = section.sectionDetails.images.map((item) => ({
-          //         src: item.imageSrc,
-          //         alt: `${client} carousel image`,
-          //         fit: item.fit,
-          //         bgColor: item.bgColor,
-          //         paddingValue: item.paddingValue,
-          //       }));
-          //       return (
-          //         <WorkSection
-          //           key={`carousel-${index}`}
-          //           title={section.sectionDetails.title}
-          //           subtitle={section.sectionDetails.subtitle}
-          //           images={imageArray}
-          //           portrait={section.type === "CARASOUEL"}
-          //         />
-          //       );
-          //     }
-          //     break;
-          case "IMAGEGRID":
+          case "CAROUSEL":
+          case "FULLCAROUSEL":
             if (section.sectionDetails.images) {
               const imageArray = section.sectionDetails.images.map((item) => ({
                 src: item.imageSrc,
-                alt: `${client} grid image`,
+                alt: `${client} carousel image`,
+                fit: item.fit,
+                bgColor: item.bgColor,
+                paddingValue: item.paddingValue,
               }));
               return (
-                <HomeContentWrapper key={`imagegrid-${index}`}>
-                  <ImageGrid images={imageArray} />
-                </HomeContentWrapper>
+                <WorkCarouselSection
+                  key={`carousel-${index}`}
+                  title={section.sectionDetails.title}
+                  subtitle={section.sectionDetails.subtitle}
+                  images={imageArray}
+                  portrait={section.type === "CAROUSEL"}
+                />
               );
             }
             break;
+          //!fine
+          //   case "IMAGEGRID":
+          //     if (section.sectionDetails.images) {
+          //       const imageArray = section.sectionDetails.images.map((item) => ({
+          //         src: item.imageSrc,
+          //         alt: `${client} grid image`,
+          //       }));
+          //       return (
+          //         <HomeContentWrapper key={`imagegrid-${index}`}>
+          //           <ImageGrid images={imageArray} />
+          //         </HomeContentWrapper>
+          //       );
+          //     }
+          //     break;
           //   case "INFOPANE":
           //     if (section.sectionDetails.images) {
           //       return (
-          //         <RoundedPanes
-          //           key={`infopane-${index}`}
-          //           image={section.sectionDetails.images[0].imageSrc}
-          //           imageAlt={`${client} info pane image`}
-          //           content={{
-          //             title: section.sectionDetails.title,
-          //             subtitle: section.sectionDetails.subtitle,
-          //           }}
-          //         />
+          //         <HomeContentWrapper key={`infopane-${index}`}>
+          //           <RoundedPanes
+          //             image={section.sectionDetails.images[0].imageSrc}
+          //             imageAlt={`${client} info pane image`}
+          //             content={{
+          //               title: section.sectionDetails.title,
+          //               subtitle: section.sectionDetails.subtitle,
+          //             }}
+          //           />
+          //         </HomeContentWrapper>
           //       );
           //     }
           //     break;
           //   case "VIDEOSHOWCASE":
-          //     return (
-          //       <div
-          //         key={`videoshowcase-${index}`}
-          //         className="container max-w-[100rem]"
-          //       >
-          //         <RoundedVideo
-          //           video={section.sectionDetails.video?.videoSrc}
-          //           autoplay={section.sectionDetails.video?.autoplay}
-          //         />
-          //       </div>
-          //     );
+          //     if (section.sectionDetails.video) {
+          //       return (
+          //         <div
+          //           key={`videoshowcase-${index}`}
+          //           className="container max-w-[100rem]"
+          //         >
+          //           <VideoPlayer
+          //             src={section.sectionDetails.video.videoSrc}
+          //             autoPlay={section.sectionDetails.video.autoplay}
+          //             loop={false}
+          //             muted={true}
+          //             className="w-full"
+          //           />
+          //         </div>
+          //       );
+          //     }
           default:
             return null;
         }
