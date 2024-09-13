@@ -3,7 +3,6 @@
 import React from "react";
 import BlogItem from "./BlogItem";
 import { blogDataType } from "@/types/types";
-import Carousel from "@/components/CarouselLegacy";
 import { getData } from "@/lib/getData";
 import CustomCarousel from "@/components/CustomCarousel";
 

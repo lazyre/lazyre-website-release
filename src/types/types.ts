@@ -41,6 +41,7 @@ export interface workDataType {
     sectionDetails: {
       title: string;
       subtitle: string;
+      description?: Array<string>;
       images?: Array<{
         imageSrc: string;
         description?: string;

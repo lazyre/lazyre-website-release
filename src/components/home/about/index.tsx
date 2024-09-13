@@ -6,7 +6,7 @@ import sectionHeadingData from "@/data/SectionHeadingData";
 import ClippedVideoPlayer from "./ClippedVideoPlayer";
 import { sectionHeadingDataType } from "@/types/types";
 import { Pause, Play } from "lucide-react";
-import HomeContentWrapper from "@/components/HomeContentWrapper";
+import ContentWrapper from "@/components/ContentWrapper";
 import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
 
@@ -132,7 +132,7 @@ const About: React.FC<AboutProps> = () => {
   )!;
 
   return (
-    <HomeContentWrapper home>
+    <ContentWrapper home>
       <div
         ref={scope}
         className=" xl:mt-0 relative xl:min-h-screen overflow-hidden flex justify-center items-center"
@@ -157,7 +157,7 @@ const About: React.FC<AboutProps> = () => {
           theme={currentTheme}
         />
       </div>
-    </HomeContentWrapper>
+    </ContentWrapper>
   );
 };
 

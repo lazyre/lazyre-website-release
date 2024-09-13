@@ -3,7 +3,7 @@ import SectionHeadingWrapper from "@/components/SectionHeadingWrapper";
 import { sectionHeadingDataType } from "@/types/types";
 import React from "react";
 import BrandContainer from "./BrandContainer";
-import HomeContentWrapper from "@/components/HomeContentWrapper";
+import ContentWrapper from "@/components/ContentWrapper";
 import { getData } from "@/lib/getData";
 
 export default function Brand() {
@@ -17,9 +17,9 @@ export default function Brand() {
           <SectionHeading {...(headingData as sectionHeadingDataType)} />
         )}
       </SectionHeadingWrapper>
-      <HomeContentWrapper home>
+      <ContentWrapper home>
         <BrandContainer />
-      </HomeContentWrapper>
+      </ContentWrapper>
     </section>
   );
 }

@@ -6,7 +6,7 @@ import BrandRelatedWork from "@/components/Brand/BrandRelatedWork";
 import FixedHero from "@/components/FixedHero";
 import CoverImage from "@/components/CoverImage";
 import { brandDataType } from "@/types/types";
-import HomeContentWrapper from "@/components/HomeContentWrapper";
+import ContentWrapper from "@/components/ContentWrapper";
 
 type BrandDetailsProps = {
   brand: brandDataType;
@@ -31,7 +31,7 @@ const BrandDetails: React.FC<BrandDetailsProps> = ({ brand }) => {
 
   return (
     <>
-      <HomeContentWrapper>
+      <ContentWrapper>
         <FixedHero
           title={title}
           subtitle={subtitle}
@@ -39,19 +39,19 @@ const BrandDetails: React.FC<BrandDetailsProps> = ({ brand }) => {
           altText={`${title} hero image`}
           workHero
         />
-      </HomeContentWrapper>
-      <HomeContentWrapper>
+      </ContentWrapper>
+      <ContentWrapper>
         <SectionHeading title={subHeading} subtitle={subDescription} />
-      </HomeContentWrapper>
+      </ContentWrapper>
       <div className="xl:py-12">
         <CoverImage src={coverImage} alt={`${title} cover image`} />
       </div>
       <BrandServices services={services} />
-      <HomeContentWrapper>
+      <ContentWrapper>
         <SectionHeading title={toolsHeading} subtitle={toolsDescription} />
-      </HomeContentWrapper>
+      </ContentWrapper>
       <BrandTools tools={tools} />
-      <HomeContentWrapper>
+      <ContentWrapper>
         <SectionHeading
           title={workHeading}
           subtitle={workDescription}
@@ -60,7 +60,7 @@ const BrandDetails: React.FC<BrandDetailsProps> = ({ brand }) => {
         <div className="mt-12">
           <BrandRelatedWork relatedWork={relatedWork} />
         </div>
-      </HomeContentWrapper>
+      </ContentWrapper>
     </>
   );
 };

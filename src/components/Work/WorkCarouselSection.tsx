@@ -1,4 +1,4 @@
-import HomeContentWrapper from "../HomeContentWrapper";
+import ContentWrapper from "../ContentWrapper";
 import CustomCarousel from "../CustomCarousel";
 import SectionHeading from "../SectionHeading";
 import { Card, CardContent } from "../ui/card";
@@ -25,10 +25,10 @@ export default function WorkCarouselSection({
   portrait,
 }: WorkCarouselSectionProps) {
   return (
-    <section aria-labelledby="work-carousel-title">
-      <HomeContentWrapper>
+    <section aria-labelledby="work-carousel-title" className="mb-12">
+      <ContentWrapper>
         <SectionHeading title={title} subtitle={subtitle} workHeading />
-      </HomeContentWrapper>
+      </ContentWrapper>
       <CustomCarousel
         loop={false}
         navControls={true}

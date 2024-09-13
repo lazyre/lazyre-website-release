@@ -10,7 +10,7 @@ import ImageGrid from "@/components/ImageGrid";
 import PortfolioShowcase from "@/components/PortfolioShowcase";
 import FeatureList from "@/components/FeatureList";
 import FAQSection from "@/components/FAQSection";
-import HomeContentWrapper from "@/components/HomeContentWrapper";
+import ContentWrapper from "@/components/ContentWrapper";
 type PageProps = {
   params: { id: string };
 };
@@ -167,7 +167,7 @@ const faqData = {
 const Page: React.FC<PageProps> = ({ params }) => {
   return (
     <>
-      <HomeContentWrapper>
+      <ContentWrapper>
         <FixedHero
           title={"About Us"}
           subtitle={
@@ -177,8 +177,8 @@ const Page: React.FC<PageProps> = ({ params }) => {
           altText={"lazyre logo reveal"}
           workHero
         />
-      </HomeContentWrapper>
-      {/* <HomeContentWrapper>
+      </ContentWrapper>
+      {/* <ContentWrapper>
         <SectionHeading
           title={"Our Goal"}
           subtitle={
@@ -186,26 +186,26 @@ const Page: React.FC<PageProps> = ({ params }) => {
           }
           workHeading
         />
-      </HomeContentWrapper> */}
-      <HomeContentWrapper>
+      </ContentWrapper> */}
+      <ContentWrapper>
         <CompanyIntro {...introData} />
-      </HomeContentWrapper>
+      </ContentWrapper>
       <div className="xl:py-12">
         <CoverImage
           src={"/images/brand/lazyre_build_cover.webp"}
           alt={`About us cover image`}
         />
       </div>
-      <HomeContentWrapper>
+      <ContentWrapper>
         <FeatureList features={features} />
-      </HomeContentWrapper>
-      <HomeContentWrapper>
+      </ContentWrapper>
+      <ContentWrapper>
         <ShowcaseGrid items={showcaseItems} />
-      </HomeContentWrapper>
-      <HomeContentWrapper>
+      </ContentWrapper>
+      <ContentWrapper>
         <PortfolioShowcase {...portfolioData} />
-      </HomeContentWrapper>
-      {/* <HomeContentWrapper> */}
+      </ContentWrapper>
+      {/* <ContentWrapper> */}
       <div className="min-h-screen flex justify-center items-center bg-black text-white">
         <div className="container">
           <OverviewGrid
@@ -216,7 +216,7 @@ const Page: React.FC<PageProps> = ({ params }) => {
           />
         </div>
       </div>
-      {/* </HomeContentWrapper> */}
+      {/* </ContentWrapper> */}
 
       {/* <div className="xl:py-12"> */}
       <ImageGrid

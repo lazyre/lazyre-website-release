@@ -70,7 +70,19 @@ const workData: workDataType[] = [
         sectionDetails: {
           title: "Comprehensive Protection",
           subtitle: "Explore our security features",
-          images: [{ imageSrc: "/images/brand/web.jpg" }],
+          images: [{ imageSrc: "/images/brand/lazyre_lab_cover.webp" }],
+        },
+      },
+      {
+        type: "OVERVIEWGRID",
+        name: "Grid Test",
+        sectionDetails: {
+          title: "Comprehensive Protection",
+          subtitle: "Explore our security features",
+          description: [
+            "After the success that was Disney Upfront 2022 for both Disney and Raxo, we had the joy of collaborating again with the company for its Disney Upfront 2023 event, a gala that showcases and celebrates the many brands, shows, movies, characters and IPs that live under the vast, magical Disney umbrella.",
+            "The goal of the Upfront is to celebrate Disney's distinctive, innovative approach to dynamic storytelling backed by technology. For this purpose, they were missing the visual compass and identity for the event, which included branding and brand guidelines, logo and key visuals, such as backgrounds, transitions and video assets.",
+          ],
         },
       },
       {
@@ -111,12 +123,12 @@ const workData: workDataType[] = [
           title: "Featured Products",
           subtitle: "Check out our top offerings",
           images: [
-            { imageSrc: "/images/brand/build.jpg" },
-            { imageSrc: "/images/brand/tech.jpg" },
-            { imageSrc: "/images/brand/studio.jpg" },
-            { imageSrc: "/images/brand/build.jpg" },
-            { imageSrc: "/images/brand/tech.jpg" },
-            { imageSrc: "/images/brand/studio.jpg" },
+            { imageSrc: "/images/brand/lazyre_lab_cover.webp" },
+            { imageSrc: "/images/brand/lazyre_lab_cover.webp" },
+            { imageSrc: "/images/brand/lazyre_lab_cover.webp" },
+            { imageSrc: "/images/brand/lazyre_lab_cover.webp" },
+            { imageSrc: "/images/brand/lazyre_lab_cover.webp" },
+            { imageSrc: "/images/brand/lazyre_lab_cover.webp" },
           ],
         },
       },
@@ -127,7 +139,7 @@ const workData: workDataType[] = [
           title: "Securing Your Digital Future",
           subtitle: "Watch our security overview video",
           video: {
-            videoSrc: "/videos/Lazyre_Final_Logo_Pc_Final_abyie3.mp4",
+            videoSrc: "/videos/logo/lazyre_logo_cubic.mp4",
             autoplay: true,
           },
         },
