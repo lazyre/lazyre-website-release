@@ -2,20 +2,24 @@
 
 import { cn } from "@/lib/utils";
 import { motion, useScroll, useTransform } from "framer-motion";
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 
 type HeroHeadingProps = {
   title: string;
   subtitle: string;
   workHero?: boolean;
+  className?: string;
 };
 
 export default function HeroHeading({
   title,
   subtitle,
   workHero = false,
+  className,
 }: HeroHeadingProps) {
   const targetRef = useRef<HTMLDivElement>(null);
+  const [isMounted, setIsMounted] = useState(false);
+
   const { scrollYProgress } = useScroll({
     target: targetRef,
     offset: ["end end", "end start"],
@@ -27,56 +31,51 @@ export default function HeroHeading({
     pos === 1 ? "relative" : "fixed"
   );
 
-  // useEffect(() => {
-  //   if (targetRef.current) {
-  //     const observer = new IntersectionObserver(
-  //       ([entry]) => {
-  //         if (entry.isIntersecting) {
-  //           entry.target.classList.add("in-view");
-  //         } else {
-  //           entry.target.classList.remove("in-view");
-  //         }
-  //       },
-  //       { threshold: 0.1 }
-  //     );
-  //     observer.observe(targetRef.current);
-  //     return () => observer.disconnect();
-  //   }
-  // }, []);
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   return (
     <section
       ref={targetRef}
-      className="h-[80vh] w-full flex"
+      className={cn(
+        "min-h-[80vh] w-full flex items-center justify-center overflow-hidden pointer-events-none",
+        className
+      )}
       aria-labelledby="hero-title"
     >
-      <motion.div
-        className={cn(
-          "flex h-full top-1/2 flex-col justify-center gap-12 p-4",
-          workHero
-            ? "flex-col-reverse"
-            : "xl:flex-row xl:justify-between xl:items-center"
-        )}
-        style={{ opacity, scale, y: "-60%", position }}
-      >
-        <h1
-          id="hero-title"
+      {isMounted && (
+        <motion.div
           className={cn(
-            "text-4xl sm:text-5xl xl:text-7xl font-bold",
-            workHero ? "xl:w-full" : "xl:w-1/2"
+            "flex flex-col justify-center gap-6 sm:gap-8 md:gap-12 w-full px-4 sm:px-6 lg:px-8 max-w-7xl",
+            workHero
+              ? "flex-col-reverse"
+              : "lg:flex-row lg:justify-between lg:items-center"
           )}
+          style={{ opacity, scale, position }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
         >
-          {title}
-        </h1>
-        <p
-          className={cn(
-            "text-lg sm:text-xl xl:mt-0 w-full sm:w-[80%]",
-            workHero ? "xl:w-full" : "xl:w-1/2"
-          )}
-        >
-          {subtitle}
-        </p>
-      </motion.div>
+          <h1
+            id="hero-title"
+            className={cn(
+              "text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight",
+              workHero ? "lg:w-full" : "lg:w-1/2"
+            )}
+          >
+            {title}
+          </h1>
+          <p
+            className={cn(
+              "text-base sm:text-lg md:text-xl lg:text-2xl mt-4 sm:mt-6",
+              workHero ? "lg:w-full" : "lg:w-1/2"
+            )}
+          >
+            {subtitle}
+          </p>
+        </motion.div>
+      )}
     </section>
   );
 }

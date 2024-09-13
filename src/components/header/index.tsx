@@ -108,6 +108,21 @@ const Header = () => {
     document.body.style.overflow = isOpen ? "" : "hidden";
   }, [isOpen]);
 
+  // const toggleMenu = useCallback(() => {
+  //   setOpen((prev) => {
+  //     const newState = !prev;
+  //     document.body.style.overflow = newState ? "hidden" : "";
+  //     return newState;
+  //   });
+  // }, []);
+
+  const handleLinkClick = useCallback(() => {
+    if (isOpen) {
+      // setOpen(false);
+      document.body.style.overflow = "";
+    }
+  }, [isOpen]);
+
   useEffect(() => {
     return () => {
       document.body.style.overflow = "";
@@ -268,6 +283,7 @@ const Header = () => {
                           <TransitionLink
                             href={href}
                             className="hover:underline"
+                            onCustomClick={handleLinkClick}
                           >
                             <span className="text-xl lg:3xl">{label}</span>
                           </TransitionLink>
@@ -286,6 +302,7 @@ const Header = () => {
                           <TransitionLink
                             href={href}
                             className="group hover:underline"
+                            onCustomClick={handleLinkClick}
                           >
                             <span className="text-4xl lg:text-6xl xl:text-7xl font-bold">
                               {label}
