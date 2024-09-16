@@ -152,7 +152,7 @@ const Header = () => {
 
   return (
     <header>
-      <div ref={ref} className="absolute h-36 w-full" />
+      <div ref={ref} className="absolute h-36 w-full top-0" />
       <motion.nav
         style={{
           opacity: isOpen ? 0 : 1,
@@ -380,7 +380,7 @@ const Header = () => {
         </motion.div>
       )}
       {pathname !== "/" && !isOpen && (
-        <div className="absolute top-24 xl:top-36 z-[90] w-screen px-8 md:px-20">
+        <div className="absolute top-24 xl:top-36 z-[90] w-screen px-8 md:px-20 ">
           <ul className="flex text-base">
             <BreadcrumbItem href="/" label="Home" />
             {paths.map((path, index) => {
