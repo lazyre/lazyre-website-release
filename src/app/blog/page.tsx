@@ -6,6 +6,7 @@ import Loading from "../loading";
 import { BlogPageData } from "@/types/blog";
 import { Metadata } from "next";
 import ContentWrapper from "@/components/ContentWrapper";
+import { AllArticleLoadingState } from "./loading";
 
 export const revalidate = 3600; // Revalidate every hour
 
@@ -62,10 +63,8 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
     return (
       <main className="my-16 xl:my-44">
         <ContentWrapper home>
-          <Suspense fallback={<Loading />}>
-            <CategoryList />
-          </Suspense>
-          <Suspense fallback={<Loading />}>
+          <CategoryList />
+          <Suspense fallback={<AllArticleLoadingState />}>
             <BlogContent
               initialData={initialData}
               pageSize={pageSize}

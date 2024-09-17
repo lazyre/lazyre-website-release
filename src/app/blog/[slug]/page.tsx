@@ -7,6 +7,8 @@ import TableOfContents from "./TableOfContents";
 import { formatDate } from "@/utils/dateFormatter";
 import { Badge } from "@/components/ui/badge";
 import ShareLinks from "./ShareLinks";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 export const revalidate = 3600; // Revalidate every hour
 
@@ -61,7 +63,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     const shareUrl = `https://lazyre.com/blog/${article.slug}`;
 
     return (
-      <>
+      <Suspense fallback={<Loading />}>
         <main id="main-content" className="my-16 xl:my-24">
           <ContentWrapper>
             <article className="prose prose-lg prose-indigo mx-auto">
@@ -83,7 +85,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             </article>
           </ContentWrapper>
         </main>
-      </>
+      </Suspense>
     );
   } catch (error) {
     console.error("Error in ArticlePage:", error);

@@ -17,6 +17,7 @@ import { getCategories } from "@/utils/api";
 import { Category } from "@/types/blog";
 import ContentWrapper from "@/components/ContentWrapper";
 import { useCursor } from "@/contexts/CursorContext";
+import { CategoryLoadingState } from "./loading";
 
 export default function CategoryList() {
   const router = useRouter();
@@ -57,7 +58,7 @@ export default function CategoryList() {
 
   const { setCursorType, setCursorText } = useCursor();
 
-  if (isLoading) return <LoadingState />;
+  if (isLoading) return <CategoryLoadingState />;
   if (error) return <ErrorState error={error} />;
 
   return (
@@ -134,19 +135,6 @@ function CategoryButton({
     >
       {children}
     </Button>
-  );
-}
-
-function LoadingState() {
-  return (
-    <div className="space-y-8 pt-6">
-      <Skeleton className="h-10 w-full" />
-      <div className="flex space-x-2">
-        {[...Array(5)].map((_, i) => (
-          <Skeleton key={i} className="h-10 w-24" />
-        ))}
-      </div>
-    </div>
   );
 }
 
