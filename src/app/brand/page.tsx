@@ -4,12 +4,11 @@ import { brandDataType } from "@/types/types";
 import { Metadata } from "next";
 import AllBrand from "./AllBrand";
 
-export async function generateMetadata(): Promise<Metadata> {
-  return {
-    title: `Our brands`,
-    description: "Our Brand Page",
-  };
-}
+export const metadata: Metadata = {
+  title: "Our Brands",
+  description:
+    "Discover Lazyre's seven specialized brands: Lazyre Design, Lazyre Tech, Lazyre Web, Lazyre Digitalytics, Lazyre Build, Lazyre Studios, and Lazyre Lab. Each brand offers unique expertise in areas such as design, technology, web development, digital marketing, brand creation, multimedia, and experimental technologies like AR, VR, AI, and blockchain.",
+};
 
 export default function workPage() {
   const allBrandData = getData("brand") as brandDataType[];

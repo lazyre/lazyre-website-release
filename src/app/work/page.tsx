@@ -4,12 +4,11 @@ import { workDataType } from "@/types/types";
 import { Metadata } from "next";
 import AllWork from "./AllWork";
 
-export async function generateMetadata(): Promise<Metadata> {
-  return {
-    title: `Our works`,
-    description: "Our Work Page",
-  };
-}
+export const metadata: Metadata = {
+  title: "Our Work",
+  description:
+    "Discover the impactful digital experiences and products created by Lazyre's brands, offering cutting-edge solutions across design and technology for clients worldwide.",
+};
 
 export default function workPage() {
   const allWorkData = getData("work") as workDataType[];

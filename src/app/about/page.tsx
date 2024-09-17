@@ -15,14 +15,11 @@ type PageProps = {
   params: { id: string };
 };
 
-export async function generateMetadata({
-  params,
-}: PageProps): Promise<Metadata> {
-  return {
-    title: `About Us`,
-    description: "About us",
-  };
-}
+export const metadata: Metadata = {
+  title: "About Us",
+  description:
+    "We are humans creating remarkable digital products and brands for other humans.",
+};
 
 const showcaseItems = [
   {

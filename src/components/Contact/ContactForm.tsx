@@ -10,28 +10,15 @@ import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Checkbox } from "@/components/ui/checkbox";
 import { Progress } from "@/components/ui/progress";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { cn } from "@/lib/utils";
 import {
   Check,
@@ -60,6 +47,7 @@ import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { FloatingLabelInput } from "../FloatingInput";
 import { CustomInputButton } from "../CustomInputButton";
+import { useToast } from "@/hooks/use-toast";
 
 const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
 const ACCEPTED_FILE_TYPES = [
@@ -142,10 +130,11 @@ export default function ContactForm() {
   const [step, setStep] = useState<number>(1);
   const [files, setFiles] = useState<FileInfo[]>([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitResult, setSubmitResult] = useState<{
-    success: boolean;
-    message: string;
-  } | null>(null);
+  // const [submitResult, setSubmitResult] = useState<{
+  //   success: boolean;
+  //   message: string;
+  // } | null>(null);
+  const { toast } = useToast();
   const [uploadProgress, setUploadProgress] = useState<{
     [key: string]: number;
   }>({});
@@ -264,16 +253,25 @@ export default function ContactForm() {
         };
 
         const result = await submitForm(formDataWithFiles);
-        setSubmitResult(result);
+        // setSubmitResult(result);
 
         if (result.success) {
-          await new Promise((resolve) => setTimeout(resolve, 2000));
+          toast({
+            title: "Thank you!",
+            description: "Your form has been submitted successfully.",
+          });
+          await new Promise((resolve) => setTimeout(resolve, 1000));
           router.push("/");
         }
       } catch (error) {
-        setSubmitResult({
-          success: false,
-          message: "An error occurred while submitting the form",
+        // setSubmitResult({
+        //   success: false,
+        //   message: "An error occurred while submitting the form",
+        // });
+        toast({
+          title: "Error",
+          variant: "destructive",
+          description: "An error occurred while submitting the form.",
         });
       }
       setIsSubmitting(false);
@@ -891,21 +889,21 @@ export default function ContactForm() {
               </motion.li>
             ))}
 
-          {submitResult && submitResult.success && (
+          {/* {submitResult && submitResult.success && (
             <Alert>
               <AlertTitle>Thank You!</AlertTitle>
               <AlertDescription>
                 Your form has been submitted successfully.
               </AlertDescription>
             </Alert>
-          )}
+          )} */}
 
-          {submitResult && !submitResult.success && (
+          {/* {submitResult && !submitResult.success && (
             <Alert variant="destructive">
               <AlertTitle>Error</AlertTitle>
               <AlertDescription>{submitResult.message}</AlertDescription>
             </Alert>
-          )}
+          )} */}
         </form>
       </Form>
     </div>
