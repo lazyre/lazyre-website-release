@@ -1,5 +1,4 @@
 import { useMemo } from "react";
-import Link from "next/link";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { Article } from "@/types/blog";
@@ -25,13 +24,13 @@ export default function FeaturedArticles({
     const gridClassName = cn(
       "grid gap-6",
       count === 1 ? "grid-cols-1 h-96" : "grid-cols-1 sm:grid-cols-2",
-      count > 2 && "sm:grid-rows-[repeat(3,_minmax(0,_1fr))]"
+      count > 2 && "xl:grid-rows-[repeat(3,_minmax(0,_1fr))]"
     );
 
     const getArticleClassName = (index: number) =>
       cn(
         "relative flex flex-col  overflow-hidden transition-shadow hover:shadow-lg h-96 xl:h-auto",
-        count > 2 && index === 0 && "sm:row-span-2 sm:col-span-1",
+        count > 2 && index === 0 && "xl:row-span-2 xl:col-span-1",
         index === 0 ? "bg-transparent justify-end" : "bg-card justify-between"
       );
 
@@ -44,7 +43,7 @@ export default function FeaturedArticles({
 
   return (
     <>
-      <h2 className="text-3xl font-bold mb-6">Featured Articles</h2>
+      <h2 className="text-3xl font-bold my-8">Featured Articles</h2>
       <div className={gridClassName}>
         {featuredArticles.map((article, index) => (
           <Card
@@ -60,7 +59,7 @@ export default function FeaturedArticles({
             }}
           >
             <TransitionLink
-              href={`/article/${article.slug}`}
+              href={`/blog/${article.slug}`}
               className="group h-full"
             >
               {article.featured_image_url && index === 0 && (

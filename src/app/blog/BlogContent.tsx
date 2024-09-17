@@ -1,9 +1,7 @@
 "use client";
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { useMemo } from "react";
-import Link from "next/link";
 import Image from "next/image";
-import ContentWrapper from "@/components/ContentWrapper";
 import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -13,7 +11,8 @@ import { Article, BlogPageData } from "@/types/blog";
 import FeaturedArticles from "./FeaturedArticles";
 import { Card, CardContent } from "@/components/ui/card";
 import TransitionLink from "@/components/TransitionLink";
-import { useCursor } from "@/contexts/CursorContext";
+import { useCursor, CursorType } from "@/contexts/CursorContext";
+import { Skeleton } from "@/components/ui/skeleton";
 
 interface BlogContentProps {
   initialData: BlogPageData;
@@ -69,7 +68,6 @@ export default function BlogContent({
 
   const { setCursorType, setCursorText } = useCursor();
 
-  if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error: {error.message}</div>;
 
   return (
@@ -78,50 +76,18 @@ export default function BlogContent({
       <h2 className="text-3xl font-bold mt-12 mb-6">Latest Articles</h2>
       <Separator className="mb-8" />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {articles.map((article: Article) => (
-          <Card
-            key={article.id}
-            className="overflow-hidden"
-            onMouseEnter={() => {
-              setCursorType("text");
-              setCursorText("LinkIcon");
-            }}
-            onMouseLeave={() => {
-              setCursorType("default");
-              setCursorText("");
-            }}
-          >
-            <TransitionLink href={`/article/${article.slug}`} className="group">
-              <CardContent className="p-0">
-                {article.featured_image_url && (
-                  <div className="relative aspect-video w-full overflow-hidden">
-                    <Image
-                      src="/images/brand/lazyre_lab_cover.webp"
-                      alt={article.featured_image_alt || ""}
-                      fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      className="object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
-                    />
-                  </div>
-                )}
-                <div className="p-4">
-                  <Badge variant="secondary" className="mb-2">
-                    {article.category.name}
-                  </Badge>
-                  <h3 className="text-xl font-semibold mb-2 group-hover:underline">
-                    {article.title}
-                  </h3>
-                  <p className="text-muted-foreground line-clamp-2 mb-4">
-                    {article.excerpt}
-                  </p>
-                  <p className="text-sm text-muted-foreground">
-                    {formatDate(article.published_at)}
-                  </p>
-                </div>
-              </CardContent>
-            </TransitionLink>
-          </Card>
-        ))}
+        {isLoading
+          ? Array.from({ length: pageSize }).map((_, index) => (
+              <ArticleSkeleton key={index} />
+            ))
+          : articles.map((article: Article) => (
+              <ArticleCard
+                key={article.id}
+                article={article}
+                setCursorType={setCursorType}
+                setCursorText={setCursorText}
+              />
+            ))}
       </div>
       {hasNextPage && (
         <div className="flex justify-center mt-8">
@@ -137,5 +103,77 @@ export default function BlogContent({
         </p>
       )}
     </>
+  );
+}
+
+interface ArticleCardProps {
+  article: Article;
+  setCursorType: (type: CursorType) => void;
+  setCursorText: (text: string) => void;
+}
+
+function ArticleCard({
+  article,
+  setCursorType,
+  setCursorText,
+}: ArticleCardProps) {
+  return (
+    <Card
+      className="overflow-hidden"
+      onMouseEnter={() => {
+        setCursorType("text");
+        setCursorText("LinkIcon");
+      }}
+      onMouseLeave={() => {
+        setCursorType("default");
+        setCursorText("");
+      }}
+    >
+      <TransitionLink href={`/blog/${article.slug}`} className="group">
+        <CardContent className="p-0">
+          {article.featured_image_url && (
+            <div className="relative aspect-video w-full overflow-hidden">
+              <Image
+                src="/images/brand/lazyre_lab_cover.webp"
+                alt={article.featured_image_alt || ""}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                className="object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
+              />
+            </div>
+          )}
+          <div className="p-4">
+            <Badge variant="secondary" className="mb-2">
+              {article.category.name}
+            </Badge>
+            <h3 className="text-xl font-semibold mb-2 group-hover:underline">
+              {article.title}
+            </h3>
+            <p className="text-muted-foreground line-clamp-2 mb-4">
+              {article.excerpt}
+            </p>
+            <p className="text-sm text-muted-foreground">
+              {formatDate(article.published_at)}
+            </p>
+          </div>
+        </CardContent>
+      </TransitionLink>
+    </Card>
+  );
+}
+
+function ArticleSkeleton() {
+  return (
+    <Card className="overflow-hidden">
+      <CardContent className="p-0">
+        <Skeleton className="aspect-video w-full" />
+        <div className="p-4">
+          <Skeleton className="h-6 w-20 mb-2" />
+          <Skeleton className="h-6 w-full mb-2" />
+          <Skeleton className="h-4 w-full mb-4" />
+          <Skeleton className="h-4 w-1/2" />
+        </div>
+      </CardContent>
+    </Card>
   );
 }

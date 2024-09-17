@@ -21,11 +21,30 @@ export async function generateMetadata({
 
   return {
     title: category
-      ? `${category.name} Articles | Your Blog Name`
-      : "Latest Articles | Your Blog Name",
+      ? `${category.name} Articles | Lazyre Blog`
+      : "Latest Articles | Lazyre Blog",
     description: category
       ? `Read our latest articles about ${category.name}.`
       : "Read our latest articles on various topics.",
+    openGraph: {
+      title: category
+        ? `${category.name} Articles | Lazyre Blog`
+        : "Latest Articles | Lazyre Blog",
+      description: category
+        ? `Read our latest articles about ${category.name}.`
+        : "Read our latest articles on various topics.",
+      type: "website",
+      url: "https://lazyre.com/blog",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: category
+        ? `${category.name} Articles | Lazyre Blog`
+        : "Latest Articles | Lazyre Blog",
+      description: category
+        ? `Read our latest articles about ${category.name}.`
+        : "Read our latest articles on various topics.",
+    },
   };
 }
 
@@ -41,7 +60,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
     );
 
     return (
-      <main className="mt-40 mb-20">
+      <main className="my-16 xl:my-44">
         <ContentWrapper home>
           <Suspense fallback={<Loading />}>
             <CategoryList />
@@ -59,8 +78,9 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
   } catch (error) {
     console.error("Error in BlogPage:", error);
     return (
-      <div>
-        An error occurred while loading the blog. Please try again later.
+      <div className="text-center py-10">
+        <h2 className="text-2xl font-bold mb-4">Oops! Something went wrong.</h2>
+        <p>We're having trouble loading the blog. Please try again later.</p>
       </div>
     );
   }

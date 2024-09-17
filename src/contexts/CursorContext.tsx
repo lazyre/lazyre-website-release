@@ -238,7 +238,7 @@ import React, {
 import { useSpring, useMotionValue } from "framer-motion";
 import { usePathname } from "next/navigation";
 
-type CursorType = "default" | "none" | "pointer" | "text";
+export type CursorType = "default" | "none" | "pointer" | "text";
 
 type CursorContextType = {
   isVisible: boolean;

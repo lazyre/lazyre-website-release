@@ -61,27 +61,25 @@ export default function CategoryList() {
   if (error) return <ErrorState error={error} />;
 
   return (
-    <nav
-      aria-label="Blog categories"
-      className="space-y-4 my-12"
-      onMouseEnter={() => {
-        setCursorType("text");
-        setCursorText("Drag");
-      }}
-      onMouseLeave={() => {
-        setCursorType("default");
-        setCursorText("");
-      }}
-    >
+    <nav aria-label="Blog categories" className="space-y-8">
       <h2 className="sr-only">Categories</h2>
       <Input
         type="text"
         placeholder="Search categories..."
         value={filter}
         onChange={(e) => setFilter(e.target.value)}
-        className="mb-4"
+        className="shadow-none border-0 border-b-2 border-b-foreground rounded-none focus-visible:border-b-primary focus-visible:ring-0"
       />
-      <Carousel>
+      <Carousel
+        onMouseEnter={() => {
+          setCursorType("text");
+          setCursorText("Drag");
+        }}
+        onMouseLeave={() => {
+          setCursorType("default");
+          setCursorText("");
+        }}
+      >
         <CarouselContent>
           <CarouselItem key="all" className="basis-auto">
             <CategoryButton
@@ -141,25 +139,23 @@ function CategoryButton({
 
 function LoadingState() {
   return (
-    <ContentWrapper>
-      <div className="space-y-4">
-        <Skeleton className="h-10 w-full" />
-        <div className="flex space-x-2">
-          {[...Array(5)].map((_, i) => (
-            <Skeleton key={i} className="h-10 w-24" />
-          ))}
-        </div>
+    <div className="space-y-8 pt-6">
+      <Skeleton className="h-10 w-full" />
+      <div className="flex space-x-2">
+        {[...Array(5)].map((_, i) => (
+          <Skeleton key={i} className="h-10 w-24" />
+        ))}
       </div>
-    </ContentWrapper>
+    </div>
   );
 }
 
 function ErrorState({ error }: { error: Error }) {
   return (
-    <ContentWrapper>
+    <div className="space-y-4">
       <div role="alert" className="text-red-500">
         Error loading categories: {error.message}
       </div>
-    </ContentWrapper>
+    </div>
   );
 }
