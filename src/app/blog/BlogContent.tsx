@@ -5,7 +5,6 @@ import Image from "next/image";
 import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { format } from "date-fns";
 import { getBlogPageData } from "@/utils/api";
 import { Article, BlogPageData } from "@/types/blog";
 import FeaturedArticles from "./FeaturedArticles";
@@ -13,17 +12,13 @@ import { Card, CardContent } from "@/components/ui/card";
 import TransitionLink from "@/components/TransitionLink";
 import { useCursor, CursorType } from "@/contexts/CursorContext";
 import { Skeleton } from "@/components/ui/skeleton";
+import { formatDate } from "@/utils/dateFormatter";
 
 interface BlogContentProps {
   initialData: BlogPageData;
   pageSize: number;
   categoryId: string | null;
 }
-
-export const formatDate = (dateString: string | null): string => {
-  if (!dateString) return "";
-  return format(new Date(dateString), "dd MMMM yyyy");
-};
 
 export default function BlogContent({
   initialData,

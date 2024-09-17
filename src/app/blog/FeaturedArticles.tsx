@@ -4,9 +4,9 @@ import { cn } from "@/lib/utils";
 import { Article } from "@/types/blog";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { formatDate } from "./BlogContent";
 import TransitionLink from "@/components/TransitionLink";
 import { useCursor } from "@/contexts/CursorContext";
+import { formatDate } from "@/utils/dateFormatter";
 
 interface FeaturedArticlesProps {
   featuredArticles: Article[] | null;
