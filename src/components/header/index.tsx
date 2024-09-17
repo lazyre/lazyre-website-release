@@ -1,16 +1,31 @@
 "use client";
 
-import React, { useEffect, useRef, useState, useCallback } from "react";
-import HamburgerMenu from "./HamburgerMenu";
+import React, {
+  useEffect,
+  useRef,
+  useState,
+  useCallback,
+  useMemo,
+} from "react";
 import Image from "next/image";
-import { cn } from "@/lib/utils";
-import { useAnimate, useInView, motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
+import { useAnimate, useInView, motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight, ChevronRight } from "lucide-react";
-import TransitionLink from "../TransitionLink";
-import ToggleThemeButton from "../buttons/ToggleThemeButton";
 import { useTheme } from "next-themes";
+
+import { cn } from "@/lib/utils";
 import { useCursor } from "@/contexts/CursorContext";
+import TransitionLink from "../TransitionLink";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
+import HamburgerMenu from "./HamburgerMenu";
+import ToggleThemeButton from "../buttons/ToggleThemeButton";
 
 const menuItems = [
   { href: "/", label: "Home" },
@@ -18,7 +33,7 @@ const menuItems = [
   { href: "/work", label: "Work" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
-];
+] as const;
 
 const brandItems = [
   { href: "/brand/tech", label: "Lazyre Tech" },
@@ -29,7 +44,7 @@ const brandItems = [
   { href: "/brand/digitalytics", label: "Lazyre Digitalytics" },
   { href: "/brand/studio", label: "Lazyre Studio" },
   { href: "/brand/lab", label: "Lazyre Lab" },
-];
+] as const;
 
 function useAnimation(isOpen: boolean) {
   const [scope, animate] = useAnimate();
@@ -71,29 +86,24 @@ const itemVariants = {
   },
 };
 
-const Header = () => {
+const Header: React.FC = () => {
   const pathname = usePathname();
-
   const [isOpen, setOpen] = useState(false);
   const [isThreshold, setThreshold] = useState(false);
   const scope = useAnimation(isOpen);
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref);
   const { theme, resolvedTheme } = useTheme();
-
   const [mounted, setMounted] = useState(false);
-
   const { setCursorType, setCursorSticky } = useCursor();
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  const currentTheme = mounted
-    ? theme === "system"
-      ? resolvedTheme
-      : theme
-    : "dark"; // Default to 'light' for SSR
+  const currentTheme = useMemo(() => {
+    return mounted ? (theme === "system" ? resolvedTheme : theme) : "dark";
+  }, [mounted, theme, resolvedTheme]);
 
   useEffect(() => {
     setOpen(false);
@@ -108,17 +118,8 @@ const Header = () => {
     document.body.style.overflow = isOpen ? "" : "hidden";
   }, [isOpen]);
 
-  // const toggleMenu = useCallback(() => {
-  //   setOpen((prev) => {
-  //     const newState = !prev;
-  //     document.body.style.overflow = newState ? "hidden" : "";
-  //     return newState;
-  //   });
-  // }, []);
-
   const handleLinkClick = useCallback(() => {
     if (isOpen) {
-      // setOpen(false);
       document.body.style.overflow = "";
     }
   }, [isOpen]);
@@ -129,30 +130,47 @@ const Header = () => {
     };
   }, []);
 
-  const navClasses = cn(
-    "fixed top-0 inset-x-0 h-24 xl:h-36 z-40 px-6 md:px-12 flex justify-center items-center transition-all duration-500",
-    isThreshold && "xl:h-24"
+  const navClasses = useMemo(
+    () =>
+      cn(
+        "fixed top-0 inset-x-0 h-24 xl:h-36 z-40 px-6 md:px-12 flex justify-center items-center transition-all duration-500",
+        isThreshold && "xl:h-24"
+      ),
+    [isThreshold]
   );
 
-  const containerClasses = cn(
-    "pl-6 w-full max-w-2xl xl:max-w-[100rem] flex items-center justify-between rounded-full transition-all",
-    isOpen && "bg-transparent backdrop-blur-none border-transparent",
-    !isThreshold && "xl:max-w-full"
+  const containerClasses = useMemo(
+    () =>
+      cn(
+        "pl-6 w-full max-w-2xl xl:max-w-[100rem] flex items-center justify-between rounded-full transition-all",
+        isOpen && "bg-transparent backdrop-blur-none border-transparent",
+        !isThreshold && "xl:max-w-full"
+      ),
+    [isOpen, isThreshold]
   );
 
-  const hamburgerClasses = cn(
-    "bg-black/80 p-4 border border-white/[0.08] hover:border-transparent hover:bg-primary rounded-full cursor-pointer transition-colors h-12",
-    isOpen &&
-      `border-transparent ${
-        currentTheme === "light" ? "hover:bg-black" : "hover:bg-white/[0.08]"
-      }`
+  const hamburgerClasses = useMemo(
+    () =>
+      cn(
+        "bg-black/80 p-4 border border-white/[0.08] hover:border-transparent hover:bg-primary rounded-full cursor-pointer transition-colors h-12",
+        isOpen &&
+          `border-transparent ${
+            currentTheme === "light"
+              ? "hover:bg-black"
+              : "hover:bg-white/[0.08]"
+          }`
+      ),
+    [isOpen, currentTheme]
   );
 
-  const paths = pathname.split("/").filter((path) => path);
+  const paths = useMemo(
+    () => pathname.split("/").filter((path) => path),
+    [pathname]
+  );
 
   return (
     <header>
-      <div ref={ref} className="absolute h-36 w-full" />
+      <div ref={ref} className="absolute h-36 w-full top-0" />
       <motion.nav
         style={{
           opacity: isOpen ? 0 : 1,
@@ -172,7 +190,7 @@ const Header = () => {
           <TransitionLink href="/" aria-label="Home">
             <Image
               src="https://res.cloudinary.com/lazyre/image/upload/v1596660652/Lazyre/logo/lazyre_tech_logo_light_ciuerh.svg"
-              alt="lazyre logo"
+              alt="Lazyre logo"
               width={100}
               height={100}
               style={{ objectFit: "contain", objectPosition: "center" }}
@@ -225,7 +243,7 @@ const Header = () => {
             onClick={toggleMenu}
             aria-expanded={isOpen}
             aria-controls="menu"
-            aria-label="Toggle menu"
+            aria-label={isOpen ? "Close menu" : "Open menu"}
           >
             <HamburgerMenu
               isOpen={isOpen}
@@ -266,12 +284,11 @@ const Header = () => {
                 className="flex flex-col h-full w-full pt-24 lg:pt-24"
                 initial="hidden"
                 animate="visible"
-                // exit="hidden" removed exit animation
                 variants={textRevealVariants}
               >
                 <div className="flex-grow flex flex-col-reverse lg:flex-row gap-6 p-6 lg:px-12 py-6">
                   <motion.div
-                    className=" lg:w-1/3 p-4 flex flex-col"
+                    className="lg:w-1/3 p-4 flex flex-col"
                     variants={itemVariants}
                   >
                     <h2 className="text-xl font-bold mb-4 opacity-50">
@@ -320,7 +337,7 @@ const Header = () => {
                   </motion.div>
                 </div>
                 <motion.div
-                  className=" p-4 mx-6 lg:mx-12"
+                  className="p-4 mx-6 lg:mx-12"
                   variants={itemVariants}
                 >
                   <h2 className="text-xl font-bold mb-4 opacity-50">
@@ -334,7 +351,7 @@ const Header = () => {
                       <p className="mb-2">
                         Email us at: <br />
                         <a
-                          href="mailto:contact@a.com"
+                          href="mailto:contact@lazyre.com"
                           className="text-xl font-bold hover:text-white transition-colors"
                         >
                           contact@lazyre.com
@@ -365,7 +382,7 @@ const Header = () => {
       {isOpen && (
         <motion.div
           onClick={() => setOpen(false)}
-          className="fixed inset-0 z-50 bg-black/50 "
+          className="fixed inset-0 z-50 bg-black/50"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.2 }}
@@ -381,21 +398,38 @@ const Header = () => {
       )}
       {pathname !== "/" && !isOpen && (
         <div className="absolute top-24 xl:top-36 z-[90] w-screen px-8 md:px-20">
-          <ul className="flex text-base">
-            <BreadcrumbItem href="/" label="Home" />
-            {paths.map((path, index) => {
-              const fullPath = `/${paths.slice(0, index + 1).join("/")}`;
-              const isLast = index === paths.length - 1;
-              return (
-                <BreadcrumbItem
-                  key={index}
-                  href={fullPath}
-                  label={capitalizeWords(path)}
-                  isLast={isLast}
-                />
-              );
-            })}
-          </ul>
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/">Home</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator>
+                <ChevronRight className="h-4 w-4" aria-hidden="true" />
+              </BreadcrumbSeparator>
+              {paths.map((path, index) => {
+                const fullPath = `/${paths.slice(0, index + 1).join("/")}`;
+                const isLast = index === paths.length - 1;
+                return (
+                  <React.Fragment key={index}>
+                    <BreadcrumbItem>
+                      {isLast ? (
+                        <BreadcrumbPage>{capitalizeWords(path)}</BreadcrumbPage>
+                      ) : (
+                        <BreadcrumbLink href={fullPath}>
+                          {capitalizeWords(path)}
+                        </BreadcrumbLink>
+                      )}
+                    </BreadcrumbItem>
+                    {!isLast && (
+                      <BreadcrumbSeparator>
+                        <ChevronRight className="h-4 w-4" aria-hidden="true" />
+                      </BreadcrumbSeparator>
+                    )}
+                  </React.Fragment>
+                );
+              })}
+            </BreadcrumbList>
+          </Breadcrumb>
         </div>
       )}
     </header>
@@ -403,31 +437,6 @@ const Header = () => {
 };
 
 export default React.memo(Header);
-
-interface BreadcrumbProps {
-  pathname: string;
-}
-
-interface BreadcrumbItemProps {
-  href: string;
-  label: string;
-  isLast?: boolean;
-}
-
-function BreadcrumbItem({ href, label, isLast }: BreadcrumbItemProps) {
-  return (
-    <li className={`flex items-center ${isLast ? "opacity-50" : "font-bold"}`}>
-      {!isLast ? (
-        <>
-          <TransitionLink href={href}>{label}</TransitionLink>
-          <ChevronRight className="mx-2" />
-        </>
-      ) : (
-        label
-      )}
-    </li>
-  );
-}
 
 // Utility function to capitalize words
 function capitalizeWords(str: string): string {
