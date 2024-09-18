@@ -26,6 +26,7 @@ import {
 } from "@/components/ui/breadcrumb";
 import HamburgerMenu from "./HamburgerMenu";
 import ToggleThemeButton from "../buttons/ToggleThemeButton";
+import { capitalizeWords } from "@/utils/capitalizeWord";
 
 const menuItems = [
   { href: "/", label: "Home" },
@@ -163,10 +164,22 @@ const Header: React.FC = () => {
     [isOpen, currentTheme]
   );
 
-  const paths = useMemo(
-    () => pathname.split("/").filter((path) => path),
-    [pathname]
-  );
+  // const paths = useMemo(
+  //   () => pathname.split("/").filter((path) => path),
+  //   [pathname]
+  // );
+
+  const paths = useMemo(() => {
+    const pathArray = pathname.split("/").filter((path) => path);
+
+    // Check if the path starts with /blog/tag/
+    if (pathArray[0] === "blog" && pathArray[1] === "tag") {
+      // Remove the "tag" part
+      return ["blog", ...pathArray.slice(2)];
+    }
+
+    return pathArray;
+  }, [pathname]);
 
   return (
     <header>
@@ -437,8 +450,3 @@ const Header: React.FC = () => {
 };
 
 export default React.memo(Header);
-
-// Utility function to capitalize words
-function capitalizeWords(str: string): string {
-  return str.replace(/\b\w/g, (char) => char.toUpperCase());
-}

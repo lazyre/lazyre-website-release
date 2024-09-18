@@ -1,5 +1,5 @@
-import { notFound } from "next/navigation";
-import { getArticleBySlug } from "@/utils/api";
+import { notFound, redirect } from "next/navigation";
+import { getArticleBySlug, getArticlesByCategory } from "@/utils/api";
 import { Metadata } from "next";
 import ContentWrapper from "@/components/ContentWrapper";
 import ArticleContent from "./ArticleContent";
@@ -9,6 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import ShareLinks from "./ShareLinks";
 import { Suspense } from "react";
 import Loading from "./loading";
+import Link from "next/link";
 
 export const revalidate = 3600; // Revalidate every hour
 
@@ -19,6 +20,11 @@ interface ArticlePageProps {
 export async function generateMetadata({
   params,
 }: ArticlePageProps): Promise<Metadata> {
+  if (params.slug === "tag") {
+    return {
+      title: "All Tags",
+    };
+  }
   const article = await getArticleBySlug(params.slug);
 
   if (!article) {
@@ -54,12 +60,20 @@ export async function generateMetadata({
 }
 
 export default async function ArticlePage({ params }: ArticlePageProps) {
+  if (params.slug === "tag") {
+    redirect("/blog");
+  }
   try {
     const article = await getArticleBySlug(params.slug);
 
     if (!article) {
       notFound();
     }
+    const moreArticles = await getArticlesByCategory(
+      article.category_id as string,
+      article.id
+    );
+
     const shareUrl = `https://lazyre.com/blog/${article.slug}`;
 
     return (
@@ -82,6 +96,40 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
               )}
               <TableOfContents content={article.content} />
               <ArticleContent content={article.content} />
+              {article.tags.length > 0 && (
+                <div>
+                  <h3 className="text-foreground">Tags</h3>
+                  <ul className="flex gap-4 list-none p-0 m-0">
+                    {article.tags.map((tag, index) => (
+                      <li key={tag.id}>
+                        <Link
+                          href={`/blog/tag/${tag.slug}`}
+                          className="text-foreground opacity-80 hover:opacity-100 no-underline hover:text-primary hover:underline"
+                        >
+                          {tag.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+              {moreArticles && moreArticles.length > 0 && (
+                <div>
+                  <h3 className="text-foreground">You may also like</h3>
+                  <ul className="flex flex-row gap-4 underline">
+                    {moreArticles.map((article, index) => (
+                      <li key={article.id}>
+                        <Link
+                          href="#"
+                          className="text-foreground hover:text-primary hover:underline"
+                        >
+                          {article.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </article>
           </ContentWrapper>
         </main>
@@ -90,7 +138,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
   } catch (error) {
     console.error("Error in ArticlePage:", error);
     return (
-      <div className="text-center py-10">
+      <div className="text-center py-10 h-screen w-full flex justify-center flex-col">
         <h2 className="text-2xl font-bold mb-4">Oops! Something went wrong.</h2>
         <p>
           We're having trouble loading this article. Please try again later.

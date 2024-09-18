@@ -11,10 +11,10 @@ export default function Loading() {
           <Skeleton className="h-10 w-full my-8" />
           <div className="flex space-x-2">
             {[...Array(5)].map((_, i) => (
-              <Skeleton key={i} className="h-10 w-4" />
+              <Skeleton key={i} className="h-10 w-10" />
             ))}
-            <Skeleton className="w-full h-screen my-8" />
           </div>
+          <Skeleton className="w-full h-screen my-8" />
         </article>
       </ContentWrapper>
     </div>

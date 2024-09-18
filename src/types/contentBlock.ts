@@ -1,5 +1,3 @@
-// types/contentBlock.ts
-
 export type ContentBlock =
   | HeadingBlock
   | ParagraphBlock

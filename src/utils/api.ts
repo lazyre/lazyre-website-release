@@ -14,8 +14,6 @@ export async function getCategories(): Promise<Category[]> {
     .select("*")
     .order("name");
 
-  console.log("Get Category running");
-
   if (error) throw error;
   return data;
 }
@@ -85,13 +83,60 @@ export async function getArticleBySlug(slug: string): Promise<Article | null> {
   const { data, error } = await supabase
     .from("articles")
     .select(
-      "*, author:authors(*), category:categories(*), article_tags!inner(tag_id), tags:tags!inner(*)"
+      "*, author:authors(*), category:categories(*), article_tags(tag_id), tags:tags(*)"
     )
     .eq("slug", slug)
     .eq("status", "published")
     .single();
 
+  if (error) console.log(error);
+  return data;
+}
+
+export async function getArticlesByCategory(
+  categoryId: string,
+  currentArticleId?: string
+): Promise<Article[] | null> {
+  let query = supabase
+    .from("articles")
+    .select("*")
+    .eq("category_id", categoryId)
+    .eq("status", "published");
+
+  if (currentArticleId) {
+    query = query.neq("id", currentArticleId); // Exclude the current article if ID is provided
+  }
+
+  const { data, error } = await query
+    .order("published_at", { ascending: false }) // Sort by most recent
+    .limit(5);
+
   if (error) throw error;
+  return data;
+}
+
+export async function getArticlesByTag(tagSlug: string): Promise<Article[]> {
+  const { data, error } = await supabase
+    .from("articles")
+    .select(
+      `
+      *,
+      author:authors(*),
+      category:categories(*),
+      article_tags!inner(tag_id),
+      tags!inner(*)
+    `
+    )
+    .eq("tags.slug", tagSlug)
+    .eq("status", "published")
+    .order("published_at", { ascending: false })
+    .limit(10);
+
+  if (error) {
+    console.error("Error fetching articles by tag:", error);
+    throw error;
+  }
+
   return data;
 }
 

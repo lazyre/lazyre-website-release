@@ -77,9 +77,11 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
   } catch (error) {
     console.error("Error in BlogPage:", error);
     return (
-      <div className="text-center py-10">
+      <div className="text-center py-10 h-screen w-full flex justify-center flex-col">
         <h2 className="text-2xl font-bold mb-4">Oops! Something went wrong.</h2>
-        <p>We're having trouble loading the blog. Please try again later.</p>
+        <p>
+          We're having trouble loading this article. Please try again later.
+        </p>
       </div>
     );
   }

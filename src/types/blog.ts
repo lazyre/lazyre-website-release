@@ -8,6 +8,7 @@ export type Author = Database["public"]["Tables"]["authors"]["Row"];
 export type Article = Database["public"]["Tables"]["articles"]["Row"] & {
   author: Author;
   category: Category;
+  tags: Tag[];
 };
 export type FeaturedArticle =
   Database["public"]["Tables"]["featured_articles"]["Row"] & {
