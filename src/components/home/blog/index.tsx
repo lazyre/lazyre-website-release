@@ -4,6 +4,7 @@ import { sectionHeadingDataType } from "@/types/types";
 import React from "react";
 import BlogList from "./BlogList";
 import { getData } from "@/lib/getData";
+import BlogQueryWrapper from "./BlogQueryWrapper";
 
 export default function Brand() {
   const headingData = getData("sectionHeading", "client");
@@ -15,7 +16,7 @@ export default function Brand() {
           <SectionHeading {...(headingData as sectionHeadingDataType)} />
         )}
       </SectionHeadingWrapper>
-      <BlogList />
+      <BlogQueryWrapper />
     </section>
   );
 }

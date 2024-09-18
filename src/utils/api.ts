@@ -140,9 +140,7 @@ export async function getArticlesByTag(tagSlug: string): Promise<Article[]> {
   return data;
 }
 
-export async function getFeaturedArticles(
-  categoryId?: string
-): Promise<FeaturedArticle[]> {
+export async function getFeaturedArticles(): Promise<FeaturedArticle[]> {
   let query = supabase
     .from("featured_articles")
     .select(
@@ -154,11 +152,8 @@ export async function getFeaturedArticles(
     )
     .lte("start_date", new Date().toISOString())
     .or(`end_date.is.null, end_date.gt.${new Date().toISOString()}`)
-    .order("priority", { ascending: true });
-
-  if (categoryId) {
-    query = query.eq("category_id", categoryId);
-  }
+    .order("priority", { ascending: true })
+    .limit(5);
   console.log("Get Featured Article running");
 
   const { data, error } = await query;
@@ -166,6 +161,7 @@ export async function getFeaturedArticles(
   if (error) throw error;
   return data as FeaturedArticle[];
 }
+
 export async function getCategoryById(
   categoryId: string
 ): Promise<Category | null> {
