@@ -9,6 +9,9 @@ import VideoPlayer from "@/components/VideoPlayer";
 import WorkCarouselSection from "@/components/Work/WorkCarouselSection";
 import { workDataType } from "@/types/types";
 import React from "react";
+import FeatureList from "@/components/FeatureList";
+import ShowcaseGrid from "@/components/ShowcaseGrid";
+import NextWork from "@/components/Work/NextWork";
 
 type workDetailsProps = {
   work: workDataType;
@@ -36,16 +39,41 @@ const WorkDetails: React.FC<workDetailsProps> = ({ work }) => {
                 <SectionHeading
                   title={section.sectionDetails.title}
                   subtitle={section.sectionDetails.subtitle}
-                  workHeading
+                  workHeading={!section.sectionDetails.largeHeading}
                 />
               </ContentWrapper>
             );
           case "COVERIMAGE":
             return (
-              <div className="xl:py-12" key={`coverimage-${index}`}>
-                <CoverImage src={coverImage} alt={`${client} cover image`} />
+              <div key={`coverimage-${index}`}>
+                <CoverImage
+                  src={
+                    section.sectionDetails.sectionImage
+                      ? section.sectionDetails.sectionImage.imageSrc
+                      : coverImage
+                  }
+                  alt={`${client} cover image`}
+                />
               </div>
             );
+          case "FEATURES":
+            if (section.sectionDetails.features) {
+              return (
+                <ContentWrapper key={`feature-${index}`}>
+                  <FeatureList features={section.sectionDetails.features} />
+                </ContentWrapper>
+              );
+            }
+            break;
+          case "SHOWCASE":
+            if (section.sectionDetails.showcase) {
+              return (
+                <ContentWrapper key={`showcase-${index}`}>
+                  <ShowcaseGrid items={section.sectionDetails.showcase} />
+                </ContentWrapper>
+              );
+            }
+            break;
           case "CAROUSEL":
           case "FULLCAROUSEL":
             if (section.sectionDetails.images) {
@@ -79,12 +107,17 @@ const WorkDetails: React.FC<workDetailsProps> = ({ work }) => {
             }
             break;
           case "INFOPANE":
-            if (section.sectionDetails.images) {
+            if (section.sectionDetails.sectionImage) {
               return (
                 <ContentWrapper key={`infopane-${index}`}>
                   <RoundedPanes
-                    image={section.sectionDetails.images[0].imageSrc}
+                    image={section.sectionDetails.sectionImage.imageSrc}
                     imageAlt={`${client} info pane image`}
+                    bgColor={section.sectionDetails.sectionImage.bgColor}
+                    fit={section.sectionDetails.sectionImage.fit}
+                    paddingValue={
+                      section.sectionDetails.sectionImage.paddingValue
+                    }
                     content={{
                       title: section.sectionDetails.title,
                       subtitle: section.sectionDetails.subtitle,
@@ -131,14 +164,17 @@ const WorkDetails: React.FC<workDetailsProps> = ({ work }) => {
         }
       })}
       <ContentWrapper>
-        <SectionHeading
-          title="Feedback From The Client"
-          subtitle={testimonial.content}
-          testimonialAuthor={testimonial.author}
-          authorDesignation={testimonial.designation}
-          workHeading
-        />
+        <div className="min-h-screen flex justify-center items-center">
+          <SectionHeading
+            title="Feedback From The Client"
+            subtitle={testimonial.content}
+            testimonialAuthor={testimonial.author}
+            authorDesignation={testimonial.designation}
+            workHeading
+          />
+        </div>
       </ContentWrapper>
+      <NextWork workId={nextWorkId} />
     </>
   );
 };

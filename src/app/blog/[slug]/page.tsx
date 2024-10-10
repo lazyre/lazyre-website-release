@@ -89,7 +89,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
               <ShareLinks title={article.title} shareUrl={shareUrl} />
               {article.featured_image_url && (
                 <img
-                  src="/images/brand/lazyre_tech_cover.webp"
+                  src={article.featured_image_url}
                   alt={article.title}
                   className="w-full h-auto rounded-lg shadow-md"
                 />

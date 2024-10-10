@@ -130,7 +130,7 @@ function ArticleCard({
           {article.featured_image_url && (
             <div className="relative aspect-video w-full overflow-hidden">
               <Image
-                src="/images/brand/lazyre_lab_cover.webp"
+                src={article.featured_image_url}
                 alt={article.featured_image_alt || ""}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

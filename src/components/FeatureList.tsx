@@ -1,5 +1,5 @@
 interface FeatureItem {
-  number: string;
+  number?: string;
   title?: string;
   description: string;
 }

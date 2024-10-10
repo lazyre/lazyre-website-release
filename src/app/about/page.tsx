@@ -21,17 +21,23 @@ export const metadata: Metadata = {
     "We are humans creating remarkable digital products and brands for other humans.",
 };
 
-const showcaseItems = [
-  {
-    imageSrc: "/images/brand/lazyre_tech_cover.webp",
-    altText: "logo",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices maximus tortor eu posuere.",
-    isSquare: true,
-  },
+interface ShowcaseItemProps {
+  imageSrc: string;
+  altText: string;
+  description?: string;
+  isSquare?: boolean;
+  fit?: "cover" | "contain" | undefined;
+  bgColor?: string;
+  paddingValue?: string;
+}
+
+const showcaseItems: ShowcaseItemProps[] = [
   {
     imageSrc: "/images/brand/lazyre_build_cover.webp",
     altText: "card in hand",
+    fit: "contain",
+    bgColor: "#C8D5B9",
+    paddingValue: "20px",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices maximus tortor eu posuere.",
     isSquare: false,

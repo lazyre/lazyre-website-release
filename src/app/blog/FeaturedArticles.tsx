@@ -65,7 +65,7 @@ export default function FeaturedArticles({
               {article.featured_image_url && index === 0 && (
                 <div className="absolute top-0 left-0 inset-0 -z-10">
                   <Image
-                    src="/images/brand/lazyre_web_cover.webp"
+                    src={article.featured_image_url}
                     alt={article.featured_image_alt || ""}
                     fill
                     className="object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"

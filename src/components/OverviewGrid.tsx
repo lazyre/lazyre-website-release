@@ -12,7 +12,7 @@ export default function OverviewGrid({
   description2,
 }: OverviewGridProps) {
   return (
-    <section>
+    <section className="m-6 xl:m-0">
       <h2 className="text-sm font-semibold uppercase tracking-wider mb-6">
         {title}
       </h2>

@@ -42,9 +42,31 @@ export interface workDataType {
       title: string;
       subtitle: string;
       description?: Array<string>;
+      largeHeading?: boolean;
+      sectionImage?: {
+        imageSrc: string;
+        description?: string;
+        fit?: "cover" | "contain";
+        bgColor?: string;
+        paddingValue?: string;
+      };
       images?: Array<{
         imageSrc: string;
         description?: string;
+        fit?: "cover" | "contain";
+        bgColor?: string;
+        paddingValue?: string;
+      }>;
+      features?: Array<{
+        number?: string;
+        title?: string;
+        description: string;
+      }>;
+      showcase?: Array<{
+        imageSrc: string;
+        altText: string;
+        description?: string;
+        isSquare: boolean;
         fit?: "cover" | "contain";
         bgColor?: string;
         paddingValue?: string;

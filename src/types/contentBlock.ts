@@ -23,7 +23,7 @@ export interface ParagraphBlock extends BaseBlock {
   text?: string;
 }
 
-export type InlineContent = TextContent | LinkContent;
+export type InlineContent = TextContent | LinkContent | ImageContent;
 
 export interface TextContent {
   type: "text";
@@ -35,6 +35,13 @@ export interface LinkContent {
   text: string;
   href: string;
   inline: boolean;
+}
+
+export interface ImageContent {
+  type: "image";
+  src: string;
+  alt: string;
+  caption: string;
 }
 
 export interface ImageBlock extends BaseBlock {

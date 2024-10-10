@@ -23,6 +23,8 @@ function ArticleContent({ content }: Props) {
             {inlineContent.text}
           </a>
         );
+      case "image":
+        return null;
       default:
         return null;
     }
@@ -43,15 +45,34 @@ function ArticleContent({ content }: Props) {
         );
       case "paragraph":
         return (
-          <p key={index} className="text-foreground">
-            {block.content
-              ? block.content.map((inlineContent, i) => (
-                  <React.Fragment key={i}>
-                    {renderInlineContent(inlineContent)}
-                  </React.Fragment>
-                ))
-              : block.text}
-          </p>
+          <React.Fragment key={index}>
+            <p className="text-foreground">
+              {block.content
+                ? block.content.map((inlineContent, i) => (
+                    <React.Fragment key={i}>
+                      {renderInlineContent(inlineContent)}
+                    </React.Fragment>
+                  ))
+                : block.text}
+            </p>
+            {block.content?.map((inlineContent, i) =>
+              inlineContent.type === "image" ? (
+                <figure key={`image-${i}`} className="my-4 w-full">
+                  <img
+                    src={inlineContent.src}
+                    alt={inlineContent.alt}
+                    loading="lazy"
+                    className="w-full h-auto rounded-lg shadow-md"
+                  />
+                  {inlineContent.caption && (
+                    <figcaption className="mt-2 text-center text-sm text-foreground-muted">
+                      {inlineContent.caption}
+                    </figcaption>
+                  )}
+                </figure>
+              ) : null
+            )}
+          </React.Fragment>
         );
       case "image":
         return (

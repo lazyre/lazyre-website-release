@@ -152,6 +152,7 @@ export async function getFeaturedArticles(): Promise<FeaturedArticle[]> {
     )
     .lte("start_date", new Date().toISOString())
     .or(`end_date.is.null, end_date.gt.${new Date().toISOString()}`)
+    .eq("status", "published")
     .order("priority", { ascending: true })
     .limit(5);
   console.log("Get Featured Article running");
@@ -207,6 +208,7 @@ export async function getBlogPageData(
         category:categories(*)
       `
       )
+      .eq("status", "published")
       .lte("start_date", new Date().toISOString())
       .or(`end_date.is.null, end_date.gt.${new Date().toISOString()}`)
       .order("priority", { ascending: true })

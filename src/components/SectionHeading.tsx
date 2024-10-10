@@ -86,7 +86,7 @@ const SectionHeading: React.FC<SectionHeadingProps> = ({
               </h3>
             </div>
           )}
-          <div className={cn(testimonialAuthor ? "italic" : "")}>
+          <div>
             {testimonialAuthor && (
               <Quote
                 className="inline-block align-top mr-2 opacity-50"

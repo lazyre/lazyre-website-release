@@ -1,10 +1,14 @@
 import Image from "next/image";
+import RoundedImage from "./RoundedImage";
 
 interface ShowcaseItemProps {
   imageSrc: string;
   altText: string;
   description?: string;
   isSquare?: boolean;
+  fit?: "cover" | "contain" | undefined;
+  bgColor?: string;
+  paddingValue?: string;
 }
 
 function ShowcaseItem({
@@ -12,6 +16,9 @@ function ShowcaseItem({
   altText,
   description,
   isSquare = true,
+  fit,
+  bgColor,
+  paddingValue,
 }: ShowcaseItemProps) {
   return (
     <div
@@ -19,14 +26,21 @@ function ShowcaseItem({
         isSquare ? "aspect-square" : "aspect-[3/4]"
       }`}
     >
-      <div className="relative w-full h-full rounded-xl overflow-hidden">
+      {/* <div className="relative w-full h-full rounded-xl overflow-hidden">
         <Image
           src={imageSrc}
           alt={altText}
           fill
           style={{ objectFit: "cover" }}
         />
-      </div>
+      </div> */}
+      <RoundedImage
+        image={imageSrc}
+        alt={altText}
+        fit={fit}
+        bgColor={bgColor}
+        paddingValue={paddingValue}
+      />
       <div className="mt-4">
         <p className="text-xl">{description}</p>
       </div>
