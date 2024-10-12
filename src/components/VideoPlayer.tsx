@@ -6,7 +6,7 @@ import { Play, Pause } from "lucide-react";
 import { useCursor } from "../contexts/CursorContext";
 
 interface VideoPlayerProps {
-  src: string;
+  src: string | undefined;
   autoPlay?: boolean;
   loop?: boolean;
   muted?: boolean;

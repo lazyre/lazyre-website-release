@@ -1,227 +1,24 @@
 import { workDataType } from "@/types/types";
 
 const workData: workDataType[] = [
-  // {
-  //   id: "safe-shift",
-  //   title: "Safe Shift",
-  //   client: "Æon Enterprises",
-
-  //   tags: ["Web Development", "Responsive Design", "E-commerce"],
-  //   image: "/images/work/safe-shift/cover.png",
-  //   coverImage: "/images/work/safe-shift/cover2.png",
-  //   lightAccentColor: "#FFFFFF",
-  //   darkAccentColor: "#000000",
-  //   overview: {
-  //     heading: "Website for ABC Company",
-  //     description:
-  //       "A modern and user-friendly website designed to showcase ABC Company's products and services.",
-  //     links: ["https://example.com", "https://example.com/portfolio"],
-  //   },
-  //   section: [
-  //     {
-  //       type: "HEADING",
-  //       name: "Introduction",
-  //       sectionDetails: {
-  //         title: "Overview",
-  //         subtitle:
-  //           "Æon Enterprises Group, a leading irish based manufacturer with over 500 factory workers, faced unprecedented challenges during the COVID-19 pandemic. As lockdowns disrupted industrial operations, they needed an urgent solution to monitor the health of their workforce and maintain production continuity. Meridian partnered with Lazyre Tech to develop an internal COVID-19 Tracking App that ensured real-time safety monitoring across all their factory locations. The app combined health tracking, AI-driven self-diagnosis, and a digital access system to safeguard workers while ensuring compliance with evolving government regulations. ",
-  //       },
-  //     },
-  //     {
-  //       type: "COVERIMAGE",
-  //       name: "Cover Image",
-  //       sectionDetails: {
-  //         title: "Stunning Cover Image",
-  //         subtitle: "Discover the beauty of our website",
-  //       },
-  //     },
-  //     {
-  //       type: "FEATURES",
-  //       name: "Key Features",
-  //       sectionDetails: {
-  //         title: "Key Features",
-  //         subtitle: "Check out our top offerings",
-  //         features: [
-  //           {
-  //             title: "Real-Time Health Monitoring ",
-
-  //             description:
-  //               "SafeShift enabled daily health check-ins for workers, tracking symptoms and temperature data across all factory sites. This real-time monitoring system provided crucial insights that helped prevent COVID-19 outbreaks and ensured smooth factory operations. ",
-  //           },
-  //           {
-  //             title: "AI-Powered Self-Diagnosis & Incident Reporting ",
-  //             description:
-  //               "The app featured a self-diagnosis tool built with Python, empowering workers to report symptoms and receive instant advice on whether they could attend work or seek medical care. It also included a feature for incident reporting, allowing rapid response to potential COVID-19 exposure. ",
-  //           },
-  //           {
-  //             title: "Digital Access Pass System ",
-  //             description:
-  //               "Only employees who passed the daily health checks received a digital access pass, allowing safe entry into the factories. This feature significantly reduced the risk of COVID transmission, as symptomatic employees were denied access and instructed to self-isolate. ",
-  //           },
-  //         ],
-  //       },
-  //     },
-  //     {
-  //       type: "CAROUSEL",
-  //       name: "Featured Products",
-  //       sectionDetails: {
-  //         title: "Featured Products",
-  //         subtitle: "Check out our top offerings",
-  //         images: [
-  //           {
-  //             imageSrc: "/images/work/safe-shift/4.png",
-  //             fit: "contain",
-  //             bgColor: "#FFD1A9",
-  //             paddingValue: "20px",
-  //           },
-  //           {
-  //             imageSrc: "/images/work/safe-shift/3.png",
-  //             fit: "contain",
-  //             bgColor: "#D3C3F3",
-  //             paddingValue: "20px",
-  //           },
-  //           {
-  //             imageSrc: "/images/brand/lazyre_tech_cover.webp",
-  //           },
-  //           {
-  //             imageSrc: "/images/brand/lazyre_tech_cover.webp",
-  //           },
-  //           {
-  //             imageSrc: "/images/brand/lazyre_tech_cover.webp",
-  //           },
-  //           {
-  //             imageSrc: "/images/brand/lazyre_tech_cover.webp",
-  //           },
-  //         ],
-  //       },
-  //     },
-  //     {
-  //       type: "INFOPANE",
-  //       name: "Security Measures",
-  //       sectionDetails: {
-  //         title: "Comprehensive Protection",
-  //         subtitle: "Explore our security features",
-  //         images: [{ imageSrc: "/images/work/safe-shift/pass.png" }],
-  //       },
-  //     },
-  //     {
-  //       type: "OVERVIEWGRID",
-  //       name: "Grid Test",
-  //       sectionDetails: {
-  //         title: "Comprehensive Protection",
-  //         subtitle: "Explore our security features",
-  //         description: [
-  //           "After the success that was Disney Upfront 2022 for both Disney and Raxo, we had the joy of collaborating again with the company for its Disney Upfront 2023 event, a gala that showcases and celebrates the many brands, shows, movies, characters and IPs that live under the vast, magical Disney umbrella.",
-  //           "The goal of the Upfront is to celebrate Disney's distinctive, innovative approach to dynamic storytelling backed by technology. For this purpose, they were missing the visual compass and identity for the event, which included branding and brand guidelines, logo and key visuals, such as backgrounds, transitions and video assets.",
-  //         ],
-  //       },
-  //     },
-  //     {
-  //       type: "FULLCAROUSEL",
-  //       name: "Featured Products",
-  //       sectionDetails: {
-  //         title: "Featured Products",
-  //         subtitle: "Check out our top offerings",
-  //         images: [
-  //           {
-  //             imageSrc: "/images/brand/lazyre_build_cover.webp",
-  //             fit: "contain",
-  //             bgColor: "pink",
-  //             paddingValue: "20px",
-  //           },
-  //           {
-  //             imageSrc: "/images/brand/lazyre_tech_cover.webp",
-  //           },
-  //           {
-  //             imageSrc: "/images/brand/lazyre_tech_cover.webp",
-  //           },
-  //           {
-  //             imageSrc: "/images/brand/lazyre_tech_cover.webp",
-  //           },
-  //           {
-  //             imageSrc: "/images/brand/lazyre_tech_cover.webp",
-  //           },
-  //           {
-  //             imageSrc: "/images/brand/lazyre_tech_cover.webp",
-  //           },
-  //         ],
-  //       },
-  //     },
-  //     {
-  //       type: "IMAGEGRID",
-  //       name: "Featured Products",
-  //       sectionDetails: {
-  //         title: "Featured Products",
-  //         subtitle: "Check out our top offerings",
-  //         images: [
-  //           { imageSrc: "/images/brand/lazyre_lab_cover.webp" },
-  //           { imageSrc: "/images/brand/lazyre_lab_cover.webp" },
-  //           { imageSrc: "/images/brand/lazyre_lab_cover.webp" },
-  //           { imageSrc: "/images/brand/lazyre_lab_cover.webp" },
-  //           { imageSrc: "/images/brand/lazyre_lab_cover.webp" },
-  //           { imageSrc: "/images/brand/lazyre_lab_cover.webp" },
-  //         ],
-  //       },
-  //     },
-  //     {
-  //       type: "VIDEOSHOWCASE",
-  //       name: "Security Overview",
-  //       sectionDetails: {
-  //         title: "Securing Your Digital Future",
-  //         subtitle: "Watch our security overview video",
-  //         video: {
-  //           videoSrc: "/videos/logo/lazyre_logo_cubic.mp4",
-  //           autoplay: true,
-  //         },
-  //       },
-  //     },
-  //   ],
-  //   testimonial: {
-  //     author: "John Doe",
-  //     content:
-  //       "Working with the team was a fantastic experience. They delivered an outstanding website that exceeded our expectations.",
-  //     designation: "CEO, ABC Company",
-  //     link: "https://example.com/testimonial",
-  //   },
-  //   nextWorkId: "work2",
-  // },
   {
     id: "safe-shift",
     title: "Safe Shift",
     client: "Æon Enterprises",
 
-    tags: ["Web Development", "Responsive Design", "E-commerce"],
-    image: "/images/work/safe-shift/cover.png",
-    coverImage: "/images/work/safe-shift/cover2.png",
-    lightAccentColor: "#FFFFFF",
-    darkAccentColor: "#000000",
+    tags: ["App Development", "AI", "Responsive Design"],
+    image:
+      "https://cdn.lazyre.com/images/work/safe-shift/safeshift-work-image.webp",
+    coverImage:
+      "https://cdn.lazyre.com/images/work/safe-shift/safeshift-cover-image.webp",
     overview: {
-      heading: "Website for ABC Company",
+      heading: "Overview",
       description:
-        "A modern and user-friendly website designed to showcase ABC Company's products and services.",
-      links: ["https://example.com", "https://example.com/portfolio"],
+        "In 2020, during the height of the global pandemic, Æon Enterprises Group, a mid-sized manufacturer based in the UK, turned to us for a critical solution: a COVID-19 tracker to safeguard their workforce of over 500 factory workers. Faced with the challenge of maintaining employee health and ensuring operational continuity in a high-risk environment, we developed a comprehensive system that addressed these urgent needs. Our COVID-19 tracker featured real-time health monitoring, AI-powered self-diagnosis tools, and an intuitive digital access pass system to efficiently regulate factory entry. This robust solution not only protected the health of the workforce but also enabled Æon Enterprises Group to maintain uninterrupted production during a crucial time.",
     },
     section: [
       {
-        type: "HEADING",
-        name: "Introduction",
-        sectionDetails: {
-          title: "Overview",
-          subtitle:
-            "In 2020, during the height of the global pandemic, Æon Enterprises Group, a mid-sized manufacturer based in the UK, turned to us for a critical solution: a COVID-19 tracker to safeguard their workforce of over 500 factory workers. Faced with the challenge of maintaining employee health and ensuring operational continuity in a high-risk environment, we developed a comprehensive system that addressed these urgent needs. Our COVID-19 tracker featured real-time health monitoring, AI-powered self-diagnosis tools, and an intuitive digital access pass system to efficiently regulate factory entry. This robust solution not only protected the health of the workforce but also enabled Æon Enterprises Group to maintain uninterrupted production during a crucial time.",
-        },
-      },
-      {
-        type: "COVERIMAGE",
-        name: "Cover Image",
-        sectionDetails: {
-          title: "Stunning Cover Image",
-          subtitle: "Discover the beauty of our website",
-        },
-      },
-      {
         type: "FEATURES",
-        name: "Key Features",
         sectionDetails: {
           title: "Key Features",
           subtitle: "Check out our top offerings",
@@ -247,50 +44,63 @@ const workData: workDataType[] = [
       },
       {
         type: "CAROUSEL",
-        name: "How Are You Feeling Today?",
         sectionDetails: {
           title: "How Are You Feeling Today?",
           subtitle:
             "Our AI-powered self-diagnosis feature used an interactive approach to assess workers' health through a How Are You Feeling Today? section. A carousel of well crafted and animated emotions allowed employees to report their well-being in a simple, fun, intuitive manner.",
           images: [
             {
-              imageSrc: "/images/work/safe-shift/emotions/1.png",
+              imageSrc:
+                "https://cdn.lazyre.com/images/work/safe-shift/emotions/happy.webp",
+              altText: "Happy emotion",
               fit: "contain",
               bgColor: "#FFD1A9",
               paddingValue: "20px",
             },
             {
-              imageSrc: "/images/work/safe-shift/emotions/2.png",
+              imageSrc:
+                "https://cdn.lazyre.com/images/work/safe-shift/emotions/tired.webp",
+              altText: "Tired emotion",
               fit: "contain",
               bgColor: "#D3C3F3",
               paddingValue: "20px",
             },
             {
-              imageSrc: "/images/work/safe-shift/emotions/3.png",
+              imageSrc:
+                "https://cdn.lazyre.com/images/work/safe-shift/emotions/frustrated.webp",
+              altText: "Frustrated emotion",
               fit: "contain",
               bgColor: "#F7A59F",
               paddingValue: "20px",
             },
             {
-              imageSrc: "/images/work/safe-shift/emotions/4.png",
+              imageSrc:
+                "https://cdn.lazyre.com/images/work/safe-shift/emotions/scared.webp",
+              altText: "Scared emotion",
               fit: "contain",
               bgColor: "#B1D1E8",
               paddingValue: "20px",
             },
             {
-              imageSrc: "/images/work/safe-shift/emotions/5.png",
+              imageSrc:
+                "https://cdn.lazyre.com/images/work/safe-shift/emotions/neutral.webp",
+              altText: "Neutral emotion",
               fit: "contain",
               bgColor: "#C8D5B9",
               paddingValue: "20px",
             },
             {
-              imageSrc: "/images/work/safe-shift/emotions/6.png",
+              imageSrc:
+                "https://cdn.lazyre.com/images/work/safe-shift/emotions/sad.webp",
+              altText: "Sad emotion",
               fit: "contain",
               bgColor: "#A8C6D9",
               paddingValue: "20px",
             },
             {
-              imageSrc: "/images/work/safe-shift/emotions/7.png",
+              imageSrc:
+                "https://cdn.lazyre.com/images/work/safe-shift/emotions/angry.webp",
+              altText: "Angry emotion",
               fit: "contain",
               bgColor: "#F4A5A5",
               paddingValue: "20px",
@@ -300,14 +110,14 @@ const workData: workDataType[] = [
       },
       {
         type: "SHOWCASE",
-        name: "showcase",
         sectionDetails: {
-          title: "Comprehensive Protection",
-          subtitle: "Explore our security features",
+          title: "Health Monitoring Interface",
+          subtitle:
+            "Leveraging Interactive Tools for Employee Well-Being: Temperature, Sleep Quality, and Symptom Reporting",
           showcase: [
             {
               imageSrc:
-                "/images/work/safe-shift/safe-shift-body-temperature.png",
+                "https://cdn.lazyre.com/images/work/safe-shift/safe-shift-body-temperature.webp",
               altText: "Temperature Input",
               fit: "contain",
               bgColor: "#E80054",
@@ -317,7 +127,8 @@ const workData: workDataType[] = [
               isSquare: false,
             },
             {
-              imageSrc: "/images/work/safe-shift/safe-shift-sleep-level.png",
+              imageSrc:
+                "https://cdn.lazyre.com/images/work/safe-shift/safe-shift-sleep-level.webp",
               altText: "Sleep Level Rating",
               fit: "contain",
               bgColor: "#313159",
@@ -327,7 +138,8 @@ const workData: workDataType[] = [
               isSquare: false,
             },
             {
-              imageSrc: "/images/work/safe-shift/safe-shift-health-vitals.png",
+              imageSrc:
+                "https://cdn.lazyre.com/images/work/safe-shift/safe-shift-health-vitals.webp",
               altText: "Symptom Reporting",
               fit: "contain",
               bgColor: "#228B22",
@@ -341,28 +153,30 @@ const workData: workDataType[] = [
       },
       {
         type: "INFOPANE",
-        name: "Initial Digital Pass System",
         sectionDetails: {
           title: "Initial Digital Pass System",
           subtitle:
             "The digital access pass system was designed with versatility to cater to the diverse needs of employees, allowing them to request passes for various factory zones based on their health status and operational requirements. It included two types of passes: the Day Pass, which provided standard access to the general factory areas, and the Custom Pass, a specialized permit for high-security or restricted zones, granted according to job roles and individual health assessments. This innovative system played a crucial role in maintaining production safety by ensuring that workers could only enter designated areas after successfully passing a health check, thereby enhancing the overall safety and efficiency of factory operations.",
-          sectionImage: { imageSrc: "/images/work/safe-shift/pass.png" },
+          sectionImage: {
+            imageSrc: "https://cdn.lazyre.com/images/work/safe-shift/pass.webp",
+            altText: "Safe shift initial pass",
+          },
         },
       },
       {
         type: "COVERIMAGE",
-        name: "Cover Image",
         sectionDetails: {
-          title: "Stunning Cover Image",
-          subtitle: "Discover the beauty of our website",
+          title: "Safe shift vaccination integration",
+          subtitle: "Safe shift vaccination integration",
           sectionImage: {
-            imageSrc: "/images/work/safe-shift/vaccination-cover.png",
+            imageSrc:
+              "https://cdn.lazyre.com/images/work/safe-shift/vaccination-cover.webp",
+            altText: "Safe shift vaccination integration",
           },
         },
       },
       {
         type: "OVERVIEWGRID",
-        name: "Vaccine Integration",
         sectionDetails: {
           title: "Seamless Vaccine Verification for a Safer Workplace",
           subtitle: "Vaccine Integration: A Crucial Step Forward",
@@ -374,7 +188,6 @@ const workData: workDataType[] = [
       },
       {
         type: "HEADING",
-        name: "Moving Forward",
         sectionDetails: {
           largeHeading: true,
           title: "2024: Transitioning to a Digital Pass Application",
@@ -384,7 +197,6 @@ const workData: workDataType[] = [
       },
       {
         type: "FEATURES",
-        name: "Key Features",
         sectionDetails: {
           title: "Key Features",
           subtitle: "Check out our top offerings",
@@ -425,6 +237,689 @@ const workData: workDataType[] = [
       designation: " Head of Operations, Æon Enterprises Group",
       link: "https://example.com/testimonial",
     },
+    nextWorkId: "voxel-verse",
+  },
+  {
+    id: "voxel-verse",
+    title: "Voxel Verse",
+    client: "Kaleidoscope Digital Creations",
+    tags: ["3D Design", "Blockchain", "NFT"],
+    image:
+      "https://cdn.lazyre.com/images/work/voxel-verse/voxel-verse-cover.webp",
+    coverImage:
+      "https://cdn.lazyre.com/images/work/voxel-verse/voxel-verse-arab-showcase.webp",
+    overview: {
+      heading: "Overview",
+      description:
+        "At Lazyre Studios, we were commissioned to create VoxelVerse, a global collection of voxel-based 3D city models designed for the NFT boom. At the heart of this series was the Dubai Edition, the crown jewel of the collection, representing the UAE’s most iconic city. Commissioned by an influential Dubai-based art collector and NFT investor, this voxel model was meticulously crafted to capture the essence of Dubai’s vibrant skyline, cultural richness, and futuristic allure. Rendered using Blender, these digital art pieces became part of an exclusive NFT collection. The Dubai model stood as the centerpiece of the VoxelVerse collection, which featured cities such as New York, Paris, and Tokyo. Dubai’s unique combination of cultural heritage and cutting-edge modernity made it the focal point, embodying the client’s vision of showcasing world-class cities through the lens of voxel art. ",
+    },
+    section: [
+      {
+        type: "COVERIMAGE",
+        name: "Brand Identity",
+        sectionDetails: {
+          title: "Comprehensive Brand Identity",
+          subtitle: "Reflecting our values",
+        },
+      },
+      {
+        type: "FEATURES",
+        name: "Key Features",
+        sectionDetails: {
+          title: "Key Features",
+          subtitle: "Check out our top offerings",
+          features: [
+            {
+              title: "Cultural Essence in Voxel Form",
+
+              description:
+                "The Dubai model featured voxel depictions of Arab characters in traditional thobes, blending culture with modernity. This balance of heritage and innovation reflected the spirit of Dubai and connected deeply with the region’s cultural narrative. ",
+            },
+            {
+              title: "A Skyline of Global Icons",
+              description:
+                "Capturing the breathtaking Burj Khalifa and Burj Al Arab, the Dubai skyline voxel model was a work of art. The detailed high-rise buildings and the futuristic cityscape in one frame mirrored the grandeur that Dubai is known for, making it the perfect subject for NFT collectors. ",
+            },
+            {
+              title: "NFT-Ready for the Digital Art Market",
+              description:
+                "The models were rendered using Blender and optimized for NFT platforms, turning Dubai into a digital asset that could be owned and traded. The NFT-ready art pieces were part of a larger collection, making Dubai the centerpiece in a world tour of voxel art. ",
+            },
+          ],
+        },
+      },
+      {
+        type: "COVERIMAGE",
+        name: "Cover Image",
+        sectionDetails: {
+          title: "Stunning Cover Image",
+          subtitle: "Discover the beauty of our website",
+          sectionImage: {
+            imageSrc:
+              "https://cdn.lazyre.com/images/work/voxel-verse/voxel-verse-birds-eye-view-night.webp",
+            altText: "Dubai birds eye view",
+          },
+        },
+      },
+      {
+        type: "OVERVIEWGRID",
+        sectionDetails: {
+          title: "Where Tradition Meets Digital Innovation",
+          subtitle: "The NFT Centerpiece",
+          description: [
+            "Dubai is a city where tradition meets innovation, and VoxelVerse captured this juxtaposition in intricate voxel art. From the towering Burj Khalifa to the winding desert roads, each element of the city was recreated with an eye for detail and authenticity, turning the urban landscape into a visually captivating NFT series.",
+            "The use of MagicaVoxel allowed us to model everything from the smallest streetlights to the tallest buildings, offering a digital experience that was both immersive and highly detailed. These voxel models were later transformed using Blender into digital artworks, establishing VoxelVerse as a premium NFT collection that resonated with the growing digital art community.",
+          ],
+        },
+      },
+      {
+        type: "HEADING",
+        name: "Moving Forward",
+        sectionDetails: {
+          title: "A City at Night: Roads and Lights in Voxel Art",
+          subtitle:
+            "The first-person view of Dubai’s roads and lighting captures the city’s energy after dark. From the glowing streetlights to the intricate layout of the roads, this voxel model showcases Dubai’s infrastructure in stunning detail. The image below simulates the experience of walking down Dubai’s streets, with the skyscrapers casting long shadows across the city. Each voxel, carefully positioned, brings the city to life, merging digital art with real-world architecture.",
+        },
+      },
+      {
+        type: "COVERIMAGE",
+        name: "Cover Image",
+        sectionDetails: {
+          title: "Stunning Cover Image",
+          subtitle: "Discover the beauty of our website",
+          sectionImage: {
+            imageSrc:
+              "https://cdn.lazyre.com/images/work/voxel-verse/voxel-verse-street.webp",
+            altText: "Street view of the dubai model",
+          },
+        },
+      },
+      {
+        type: "HEADING",
+        name: "Moving Forward",
+        sectionDetails: {
+          title:
+            "Skyline Focus: Burj Khalifa, Burj Al Arab, and the High-Rises",
+          subtitle:
+            "In this striking voxel model, Dubai’s Burj Khalifa and Burj Al Arab rise majestically against the backdrop of high-rise buildings. The city's iconic skyline has been meticulously recreated, showing the gleaming towers that define Dubai’s global identity. As seen in the image below, this is not just a digital replica, but an artistic interpretation that captures the essence of Dubai's luxury and architectural ambition.",
+        },
+      },
+      {
+        type: "COVERIMAGE",
+        name: "Cover Image",
+        sectionDetails: {
+          title: "Stunning Cover Image",
+          subtitle: "Discover the beauty of our website",
+          sectionImage: {
+            imageSrc:
+              "https://cdn.lazyre.com/images/work/voxel-verse/voxel-verse-skyline.webp",
+            altText: "Dubai Skyline view",
+          },
+        },
+      },
+      {
+        type: "HEADING",
+        name: "Moving Forward",
+        sectionDetails: {
+          largeHeading: true,
+          title: "Cultural Icons and Global Characters",
+          subtitle:
+            "VoxelVerse also featured individual models that expanded beyond Dubai, bringing a diverse cast of characters and wildlife to life. Each model tells its own story, complementing the larger cityscape:",
+        },
+      },
+      {
+        type: "SHOWCASE",
+        name: "showcase",
+        sectionDetails: {
+          title: "Comprehensive Protection",
+          subtitle: "Explore our security features",
+          videoShowcase: [
+            {
+              videoSrc:
+                "https://cdn.lazyre.com/videos/work/voxel-verse/arab-male.mp4",
+              altText: "Arab Male Character in a Thobe",
+              description:
+                "This voxel figure represents Dubai’s rich culture, dressed in traditional Emirati attire.",
+              isSquare: false,
+            },
+            {
+              videoSrc:
+                "https://cdn.lazyre.com/videos/work/voxel-verse/falcon.mp4",
+              altText: "Falcon Sitting",
+              description:
+                "The falcon, an important symbol in UAE culture, is shown with great detail, highlighting its significance.",
+              isSquare: false,
+            },
+            {
+              videoSrc:
+                "https://cdn.lazyre.com/videos/work/voxel-verse/oryx.mp4",
+              altText: "Oryx",
+              description:
+                "The Arabian oryx, with its striking horns, symbolizes the region’s natural beauty and strength.",
+              isSquare: false,
+            },
+            {
+              videoSrc:
+                "https://cdn.lazyre.com/videos/work/voxel-verse/eagle.mp4",
+              altText: "Eagle",
+              description:
+                "This majestic eagle is portrayed beautifully, representing strength and grace in the desert.",
+              isSquare: false,
+            },
+            {
+              videoSrc:
+                "https://cdn.lazyre.com/videos/work/voxel-verse/cow.mp4",
+              altText: "Cow",
+              description:
+                "This voxel cow adds a simple, earthy touch to the collection.",
+              isSquare: false,
+            },
+            {
+              videoSrc:
+                "https://cdn.lazyre.com/videos/work/voxel-verse/vulture-sitting.mp4",
+              altText: "Vulture Sitting",
+              description:
+                "The sitting vulture, with its sharp gaze, captures a moment of stillness in nature.",
+              isSquare: false,
+            },
+            {
+              videoSrc:
+                "https://cdn.lazyre.com/videos/work/voxel-verse/andorra-male.mp4",
+              altText: "Male Character from Andorra",
+              description:
+                "This character showcases the unique cultural attire of Andorra, adding to the collection’s diversity.",
+              isSquare: false,
+            },
+            {
+              videoSrc:
+                "https://cdn.lazyre.com/videos/work/voxel-verse/vulture-flying.mp4",
+              altText: "Vulture Flying",
+              description:
+                "This flying vulture captures a moment of action, soaring gracefully above the landscape.",
+              isSquare: false,
+            },
+            {
+              videoSrc:
+                "https://cdn.lazyre.com/videos/work/voxel-verse/andorra-female.mp4",
+              altText: "Female Character from Andorra",
+              description:
+                "Dressed in traditional Andorran clothing, this character adds to the global appeal of the collection.",
+              isSquare: false,
+            },
+          ],
+        },
+      },
+    ],
+    testimonial: {
+      author: "Sahar Al mansoori",
+      content:
+        "Lazyre Studios delivered far beyond our expectations with VoxelVerse. Their intricate attention to detail, from the roads of Dubai to the soaring Burj Khalifa, transformed our vision into a breathtaking reality. The Dubai model became the centerpiece of our NFT collection, captivating collectors worldwide. Lazyre’s mastery of voxel art and digital rendering made VoxelVerse a pioneering project in the NFT space.",
+      designation: "Creative Director, Kaleidoscope Digital Creations",
+    },
+    nextWorkId: "revenue",
+  },
+
+  {
+    id: "revenue",
+    title: "Revenue Dashboard",
+    client: "PQR Enterprises",
+    tags: ["Brand Strategy", "Logo Design", "Visual Identity"],
+    image: "https://cdn.lazyre.com/images/work/revenue/revenue-cover.webp",
+    coverImage:
+      "https://cdn.lazyre.com/images/work/revenue/revenue-dashboard-cover.webp",
+    overview: {
+      heading: "Overview",
+      description:
+        "Revenue, an innovative internal web application developed to transform the way renewable energy is monitored and managed. This platform was designed for a prominent energy company based in Eindhoven, Netherlands, to centralize data collection from solar panels, wind turbines, IoT devices, and security cameras. Through a fully customizable interface, users can track key performance indicators (KPIs), view real-time weather conditions, and manage security, all while receiving instant alerts for critical events. Revenue bridges the gap between sustainability and cutting-edge technology by offering a card-like customizable dashboard that enables seamless navigation and powerful data visualization. Designed to scale, this solution not only optimizes energy production and security but also supports multilingual capabilities, including Dutch, for broader usability. It empowers stakeholders to make data-driven decisions, ensuring operational efficiency in real-time. ",
+    },
+    section: [
+      {
+        type: "COVERIMAGE",
+        sectionDetails: {
+          title: "Comprehensive Brand Identity",
+          subtitle: "Reflecting our values",
+        },
+      },
+      {
+        type: "FEATURES",
+        sectionDetails: {
+          title: "Key Features",
+          subtitle: "Check out our top offerings",
+          features: [
+            {
+              title: "Customizable Card-Based Layout",
+              description:
+                "The heart of the Revenue platform lies in its flexibility. Users can create their own dashboard views by arranging cards, each representing vital information like energy output, IoT device status, security feeds, and weather updates. Whether users prefer to track data trends or immediate real-time performance, the customizable layout adapts to their workflow.",
+            },
+            {
+              title: "Real-Time Energy & Device Monitoring",
+              description:
+                "Track solar and wind energy metrics in real time to ensure optimal energy generation and identify inefficiencies. IoT devices integrated into the platform provide crucial insights into system health, alerting users to potential maintenance issues or operational downtime.",
+            },
+            {
+              title: "Integrated Security Camera Feeds",
+              description:
+                "Revenue is not just about energy management; it integrates live security camera feeds directly into the dashboard. Users can view and monitor multiple locations, ensuring that both energy production and facility security are under constant surveillance.",
+            },
+            {
+              title: "Weather Report Integration",
+              description:
+                "Up-to-the-minute weather data is available to aid in forecasting energy production. With localized weather conditions at hand, the platform helps users make informed decisions on energy storage and deployment strategies based on environmental factors.",
+            },
+            {
+              title: "File Upload & Management",
+              description:
+                "Users can securely upload custom files such as maintenance logs, technical reports, or energy production documents into the platform. This central repository ensures that all critical documentation is stored and easily accessible, streamlining internal processes.",
+            },
+            {
+              title: "Real-Time Notifications",
+              description:
+                "The platform sends timely notifications via desktop and mobile devices for any energy production anomalies, device malfunctions, or security concerns. This ensures that users remain informed of any critical changes as they occur, allowing for immediate action and minimizing downtime.",
+            },
+          ],
+        },
+      },
+      {
+        type: "CAROUSEL",
+        name: "How Are You Feeling Today?",
+        sectionDetails: {
+          title: "Progressive Web App",
+          subtitle:
+            "The Revenue web app is fully responsive and features a Progressive Web App (PWA) version for mobile use, enabling energy management on the go. Explore the key mobile screens",
+          images: [
+            {
+              imageSrc:
+                "https://cdn.lazyre.com/images/work/revenue/revenue-authentication.webp",
+              altText: "Authentication page",
+              fit: "contain",
+              bgColor: "#151F2B",
+              paddingValue: "20px",
+            },
+            {
+              imageSrc:
+                "https://cdn.lazyre.com/images/work/revenue/revenue-dashboard.webp",
+              altText: "Dashboard page",
+              fit: "contain",
+              bgColor: "#151F2B",
+              paddingValue: "20px",
+            },
+            {
+              imageSrc:
+                "https://cdn.lazyre.com/images/work/revenue/revenue-weather-card.webp",
+              altText: "Weather page",
+              fit: "contain",
+              bgColor: "#151F2B",
+              paddingValue: "20px",
+            },
+            {
+              imageSrc:
+                "https://cdn.lazyre.com/images/work/revenue/revenue-downloads.webp",
+              altText: "Search page",
+              fit: "contain",
+              bgColor: "#151F2B",
+              paddingValue: "20px",
+            },
+            {
+              imageSrc:
+                "https://cdn.lazyre.com/images/work/revenue/revenue-files.webp",
+              altText: "Files page",
+              fit: "contain",
+              bgColor: "#151F2B",
+              paddingValue: "20px",
+            },
+          ],
+        },
+      },
+      {
+        type: "INFOPANE",
+        sectionDetails: {
+          title: "Multilingual Support for Dutch",
+          subtitle:
+            "Understanding the diverse needs of international clients, Lazyre ensured that Revenue offers full multilingual support, including Dutch. This localized experience helps users in the Netherlands seamlessly navigate the platform in their native language, ensuring ease of use and comfort. From the onboarding experience to detailed system alerts and reports, every element of the platform is available in Dutch, helping non-English speakers fully leverage the platform’s capabilities. The addition of multilingual support not only improves accessibility but also makes Revenue a powerful tool for teams that work across linguistic barriers, boosting internal collaboration and reducing any communication gaps. By catering to Dutch-speaking users, the platform creates an inclusive environment that enhances the overall user experience and facilitates smoother operation.",
+          sectionImage: {
+            imageSrc:
+              "https://cdn.lazyre.com/images/work/revenue/revenue-language-dutch.webp",
+            altText: "Revenue dutch language showcase",
+            fit: "cover",
+            bgColor: "#151F2B",
+          },
+        },
+      },
+      {
+        type: "OVERVIEWGRID",
+        sectionDetails: {
+          subtitle:
+            "Delivering Seamless Energy Management: A Technical Journey",
+          title:
+            "Harnessing Cutting-Edge Technology to Power Renewable Solutions",
+          description: [
+            "To create Revenue, Lazyre leveraged the latest in web technologies and cloud computing, ensuring the platform could handle complex real-time data streams from multiple sources without compromising speed or reliability. We started by designing a flexible, card-based UI using NextJs, which allowed users to customize their dashboards according to their unique monitoring needs. The app's backend was built on Node.js, handling API integration for solar and wind energy data, IoT devices, and security camera feeds. For real-time weather updates and notifications, we integrated a third-party weather API and established WebSocket connections to push critical alerts and ensure uninterrupted monitoring.",
+            "In addition to scalability and performance, data security and compliance were top priorities. Lazyre implemented AWS Cloud Infrastructure to provide secure, scalable storage and computational power, ensuring the app could handle high traffic and heavy data loads. MQTT protocols were used for efficient IoT communication, enabling seamless connectivity across devices.",
+          ],
+        },
+      },
+      {
+        type: "HEADING",
+        sectionDetails: {
+          title: "Outcome",
+          subtitle:
+            "Revenue platform has become an integral part of the client’s energy and security management strategy. Its flexibility and scalability allowed the client to streamline energy production monitoring and optimize system performance, leading to improved operational efficiency. With real-time notifications, the client could quickly address any issues, minimizing downtime and maximizing energy output. The seamless integration of weather data and IoT device monitoring gave the team deeper insights, allowing them to plan and act on accurate data in real-time.",
+        },
+      },
+    ],
+    testimonial: {
+      author: "vanessa de vries",
+      content:
+        "The platform's intuitive, customizable layout and real-time data tracking allow us to stay on top of our renewable energy production and ensure all our IoT systems are functioning optimally. Their attention to detail and commitment to understanding our unique requirements set them apart from other developers we’ve worked with. We’re also thrilled with the multilingual support, which ensures that our Dutch-speaking team members can use the app seamlessly. Lazyre's professionalism, technical expertise, and dedication to delivering a superior solution made this project an overwhelming success.",
+      designation: "Operations Manager",
+    },
+    nextWorkId: "job-cards",
+  },
+  {
+    id: "job-cards",
+    title: "Job Cards",
+    client: "LMN Company",
+    tags: ["Social Media Strategy", "Content Creation", "Campaign Management"],
+    image: "https://cdn.lazyre.com/images/work/job-cards/job-cards-cover.webp",
+    coverImage:
+      "https://cdn.lazyre.com/images/work/job-cards/job-cards-dashboard-showcase.webp",
+    overview: {
+      heading: "Social Media Marketing for LMN Company",
+      description:
+        "An effective social media marketing strategy to enhance LMN Company's online presence, engage the target audience, and drive business growth.",
+    },
+    section: [
+      {
+        type: "COVERIMAGE",
+        name: "Brand Identity",
+        sectionDetails: {
+          title: "Comprehensive Brand Identity",
+          subtitle: "Reflecting our values",
+        },
+      },
+      {
+        type: "FEATURES",
+        name: "Key Features",
+        sectionDetails: {
+          title: "Key Features",
+          subtitle: "Check out our top offerings",
+          features: [
+            {
+              title: "Real-Time Health Monitoring ",
+
+              description:
+                "SafeShift enabled daily health check-ins for workers, tracking symptoms and temperature data across all factory sites. This real-time monitoring system provided crucial insights that helped prevent COVID-19 outbreaks and ensured smooth factory operations. ",
+            },
+            {
+              title: "AI-Powered Self-Diagnosis & Incident Reporting ",
+              description:
+                "The app featured a self-diagnosis tool built with Python, empowering workers to report symptoms and receive instant advice on whether they could attend work or seek medical care. It also included a feature for incident reporting, allowing rapid response to potential COVID-19 exposure. ",
+            },
+            {
+              title: "Digital Access Pass System ",
+              description:
+                "Only employees who passed the daily health checks received a digital access pass, allowing safe entry into the factories. This feature significantly reduced the risk of COVID transmission, as symptomatic employees were denied access and instructed to self-isolate. ",
+            },
+          ],
+        },
+      },
+      {
+        type: "SHOWCASE",
+        name: "showcase",
+        sectionDetails: {
+          title: "Comprehensive Protection",
+          subtitle: "Explore our security features",
+          showcase: [
+            {
+              imageSrc:
+                "https://cdn.lazyre.com/images/work/job-cards/dashboard/job-cards-all-cards.webp",
+              altText: "Temperature Input",
+              fit: "contain",
+              bgColor: "#0235A1",
+              paddingValue: "20px",
+              description:
+                "Employees could select their body temperature using a slider interface.",
+              isSquare: true,
+            },
+            {
+              imageSrc:
+                "https://cdn.lazyre.com/images/work/job-cards/dashboard/job-cards-authentication.webp",
+              altText: "Sleep Level Rating",
+              fit: "contain",
+              bgColor: "#0235A1",
+              paddingValue: "20px",
+              description:
+                "Workers rated their sleep quality on a scale of 1 to 5, giving managers insights into fatigue levels.",
+              isSquare: false,
+            },
+            {
+              imageSrc:
+                "https://cdn.lazyre.com/images/work/job-cards/dashboard/job-cards-card-print.webp",
+              altText: "Symptom Reporting",
+              fit: "contain",
+              bgColor: "#0235A1",
+              paddingValue: "20px",
+              description:
+                "If symptoms were present, users could report specific details, including comments, helping management better assess the situation.",
+              isSquare: true,
+            },
+            {
+              imageSrc:
+                "https://cdn.lazyre.com/images/work/job-cards/dashboard/job-cards-details-1.webp",
+              altText: "Symptom Reporting",
+              fit: "contain",
+              bgColor: "#0235A1",
+              paddingValue: "20px",
+              description:
+                "If symptoms were present, users could report specific details, including comments, helping management better assess the situation.",
+              isSquare: false,
+            },
+            {
+              imageSrc:
+                "https://cdn.lazyre.com/images/work/job-cards/dashboard/job-cards-details-2.webp",
+              altText: "Symptom Reporting",
+              fit: "contain",
+              bgColor: "#0235A1",
+              paddingValue: "20px",
+              description:
+                "If symptoms were present, users could report specific details, including comments, helping management better assess the situation.",
+              isSquare: true,
+            },
+            {
+              imageSrc:
+                "https://cdn.lazyre.com/images/work/job-cards/dashboard/job-cards-details-3.webp",
+              altText: "Symptom Reporting",
+              fit: "contain",
+              bgColor: "#0235A1",
+              paddingValue: "20px",
+              description:
+                "If symptoms were present, users could report specific details, including comments, helping management better assess the situation.",
+              isSquare: false,
+            },
+          ],
+        },
+      },
+      {
+        type: "COVERIMAGE",
+        name: "Cover Image",
+        sectionDetails: {
+          title: "Stunning Cover Image",
+          subtitle: "Discover the beauty of our website",
+          sectionImage: {
+            imageSrc:
+              "https://cdn.lazyre.com/images/work/job-cards/job-cards-print-pdf.webp",
+            altText: "",
+          },
+        },
+      },
+      {
+        type: "OVERVIEWGRID",
+        name: "Vaccine Integration",
+        sectionDetails: {
+          title: "Seamless Vaccine Verification for a Safer Workplace",
+          subtitle: "Vaccine Integration: A Crucial Step Forward",
+          description: [
+            "As COVID-19 vaccines became available in 2021, Æon Enterprises needed a solution to monitor their workforce’s vaccination status and ensure ongoing health safety. Lazyre integrated a Vaccine Verification System within the existing COVID-19 tracker, allowing employees to securely upload vaccination certificates and schedule doses. This system automated vaccine reminders, ensuring that employees were alerted to receive their second doses. With real-time updates, management could track vaccination progress, helping the company align with government mandates while keeping the factory operational.",
+            "Handling sensitive health data required careful adherence to privacy regulations, especially GDPR. The vaccine integration was built with advanced encryption methods to protect employee data from unauthorized access. Only authorized personnel could view vaccination statuses, and any changes to personal health information were securely logged. This emphasis on security, coupled with features like automated certificate validation and seamless updates, gave Æon Enterprises the assurance of meeting compliance requirements, while maintaining the health and safety of their workforce in the face of evolving pandemic challenges.",
+          ],
+        },
+      },
+    ],
+    testimonial: {
+      author: "Sarah Thompson",
+      content:
+        "The social media marketing work by your team has significantly boosted our online presence and engagement. We're seeing tangible results in terms of increased brand awareness and customer interaction.",
+      designation: "Marketing Manager, LMN Company",
+      link: "https://example.com/testimonial4",
+    },
+    nextWorkId: "pharma-souq",
+  },
+  {
+    id: "pharma-souq",
+    title: "Pharma Souq",
+    client: "Nature Explorers",
+    tags: ["Photography", "Nature", "Landscape"],
+    image:
+      "https://cdn.lazyre.com/images/work/pharma-souq/pharma-souq-cover.webp",
+    coverImage:
+      "https://cdn.lazyre.com/images/work/pharma-souq/pharma-souq-dashboard-showcase.webp",
+    overview: {
+      heading: "Capturing the Wonders of Nature",
+      description:
+        "A collection of breathtaking nature photographs showcasing the beauty and diversity of our natural world.",
+    },
+    section: [
+      {
+        type: "FEATURES",
+        sectionDetails: {
+          title: "Key Features",
+          subtitle: "Check out our top offerings",
+          features: [
+            {
+              title: "Real-Time Health Monitoring ",
+
+              description:
+                "SafeShift enabled daily health check-ins for workers, tracking symptoms and temperature data across all factory sites. This real-time monitoring system provided crucial insights that helped prevent COVID-19 outbreaks and ensured smooth factory operations. ",
+            },
+            {
+              title: "AI-Powered Self-Diagnosis & Incident Reporting ",
+              description:
+                "The app featured a self-diagnosis tool built with Python, empowering workers to report symptoms and receive instant advice on whether they could attend work or seek medical care. It also included a feature for incident reporting, allowing rapid response to potential COVID-19 exposure. ",
+            },
+            {
+              title: "Digital Access Pass System ",
+              description:
+                "Only employees who passed the daily health checks received a digital access pass, allowing safe entry into the factories. This feature significantly reduced the risk of COVID transmission, as symptomatic employees were denied access and instructed to self-isolate. ",
+            },
+          ],
+        },
+      },
+      {
+        type: "SHOWCASE",
+        sectionDetails: {
+          title: "Comprehensive Protection",
+          subtitle: "Explore our security features",
+          showcase: [
+            {
+              imageSrc:
+                "https://cdn.lazyre.com/images/work/pharma-souq/pos/cart/pharma-souq-printing-card.webp",
+              altText: "Temperature Input",
+              fit: "contain",
+              bgColor: "#22C55E",
+              paddingValue: "20px",
+              description:
+                "Employees could select their body temperature using a slider interface.",
+              isSquare: true,
+            },
+            {
+              imageSrc:
+                "https://cdn.lazyre.com/images/work/pharma-souq/pos/cart/pharma-souq-cart-card.webp",
+              altText: "Sleep Level Rating",
+              fit: "contain",
+              bgColor: "#22C55E",
+              paddingValue: "20px",
+              description:
+                "Workers rated their sleep quality on a scale of 1 to 5, giving managers insights into fatigue levels.",
+              isSquare: false,
+            },
+            {
+              imageSrc:
+                "https://cdn.lazyre.com/images/work/pharma-souq/pos/cart/pharma-souq-done-card.webp",
+              altText: "Symptom Reporting",
+              fit: "contain",
+              bgColor: "#22C55E",
+              paddingValue: "20px",
+              description:
+                "If symptoms were present, users could report specific details, including comments, helping management better assess the situation.",
+              isSquare: true,
+            },
+          ],
+        },
+      },
+      {
+        type: "FULLCAROUSEL",
+        sectionDetails: {
+          title: "Featured Products",
+          subtitle: "Check out our top offerings",
+          images: [
+            {
+              imageSrc:
+                "https://cdn.lazyre.com/images/work/pharma-souq/pos/pharma-souq-inventory.webp",
+              altText: "Inventory page",
+              fit: "contain",
+              bgColor: "#22C55E",
+              paddingValue: "20px",
+            },
+            {
+              imageSrc:
+                "https://cdn.lazyre.com/images/work/pharma-souq/pos/pharma-souq-add-item.webp",
+              altText: "Add Entry modal page 1",
+              fit: "contain",
+              bgColor: "#22C55E",
+              paddingValue: "20px",
+            },
+            {
+              imageSrc:
+                "https://cdn.lazyre.com/images/work/pharma-souq/pos/pharma-souq-add-item-2.webp",
+              altText: "Add Entry modal page 2",
+              fit: "contain",
+              bgColor: "#22C55E",
+              paddingValue: "20px",
+            },
+            {
+              imageSrc:
+                "https://cdn.lazyre.com/images/work/pharma-souq/pos/pharma-souq-add-item-success.webp",
+              altText: "Add Entry modal confirmation",
+              fit: "contain",
+              bgColor: "#22C55E",
+              paddingValue: "20px",
+            },
+          ],
+        },
+      },
+      {
+        type: "INFOPANE",
+        sectionDetails: {
+          title: "Initial Digital Pass System",
+          subtitle:
+            "The digital access pass system was designed with versatility to cater to the diverse needs of employees, allowing them to request passes for various factory zones based on their health status and operational requirements. It included two types of passes: the Day Pass, which provided standard access to the general factory areas, and the Custom Pass, a specialized permit for high-security or restricted zones, granted according to job roles and individual health assessments. This innovative system played a crucial role in maintaining production safety by ensuring that workers could only enter designated areas after successfully passing a health check, thereby enhancing the overall safety and efficiency of factory operations.",
+          sectionImage: {
+            imageSrc:
+              "https://cdn.lazyre.com/images/work/pharma-souq/pos/pharma-souq-dashboard-arabic.webp",
+            altText: "",
+            fit: "cover",
+            bgColor: "#22C55E",
+          },
+        },
+      },
+    ],
+    testimonial: {
+      author: "John Roberts",
+      content:
+        "The nature photography by your team is truly remarkable. Each photograph tells a story and transports me to the breathtaking beauty of the natural world.",
+      designation: "Nature Enthusiast",
+      link: "https://example.com/testimonial5",
+    },
     nextWorkId: "bloeiende-werelden",
   },
   {
@@ -432,26 +927,16 @@ const workData: workDataType[] = [
     title: "Bloeiende Werelden Ecommerce & Branding",
     client: "Bloeiende Werelden",
     tags: ["Web Design", "User Experience", "Content Management"],
-    image: "/images/work/bloeiende-werelden/cover2.png",
-    coverImage: "/images/work/bloeiende-werelden/cover.png",
-    lightAccentColor: "#FFC107",
-    darkAccentColor: "#263238",
+    image:
+      "https://cdn.lazyre.com/images/work/bloeiende-werelden/bloeiende-werelden-cover.webp",
+    coverImage:
+      "https://cdn.lazyre.com/images/work/bloeiende-werelden/bloeiende-werelden-website-showcase.webp",
     overview: {
-      heading: "Website for XYZ Corporation",
+      heading: "Overview",
       description:
-        "A visually stunning and intuitive website designed to represent XYZ Corporation's brand and offerings.",
-      links: ["https://example.com", "https://example.com/portfolio"],
+        "In early 2023, Bloeiende Werelden, a vibrant florist from the Netherlands, turned to Lazyre Design to develop a cutting-edge e-commerce platform that would highlight their beautiful floral arrangements while enhancing their brand identity. Our mission was to create a visually captivating and intuitive website that provided a seamless shopping experience for customers looking for flowers, bouquets, and gift combinations. By focusing on design aesthetics and user experience, we successfully crafted an online presence that not only showcased their offerings but also engaged customers, making floral shopping a delightful experience.",
     },
     section: [
-      {
-        type: "HEADING",
-        name: "Introduction",
-        sectionDetails: {
-          title: "Overview",
-          subtitle:
-            "In early 2023, Bloeiende Werelden, a vibrant florist from the Netherlands, turned to Lazyre Design to develop a cutting-edge e-commerce platform that would highlight their beautiful floral arrangements while enhancing their brand identity. Our mission was to create a visually captivating and intuitive website that provided a seamless shopping experience for customers looking for flowers, bouquets, and gift combinations. By focusing on design aesthetics and user experience, we successfully crafted an online presence that not only showcased their offerings but also engaged customers, making floral shopping a delightful experience.",
-        },
-      },
       {
         type: "COVERIMAGE",
         name: "Brand Image",
@@ -495,25 +980,33 @@ const workData: workDataType[] = [
             "Our AI-powered self-diagnosis feature used an interactive approach to assess workers' health through a How Are You Feeling Today? section. A carousel of well crafted and animated emotions allowed employees to report their well-being in a simple, fun, intuitive manner.",
           images: [
             {
-              imageSrc: "/images/work/bloeiende-werelden/1.png",
+              imageSrc:
+                "https://cdn.lazyre.com/images/work/bloeiende-werelden/bloeiende-werelden-splash-screen.webp",
+              altText: "Splash screen",
               fit: "contain",
               bgColor: "#FFD1A9",
               paddingValue: "20px",
             },
             {
-              imageSrc: "/images/work/bloeiende-werelden/2.png",
+              imageSrc:
+                "https://cdn.lazyre.com/images/work/bloeiende-werelden/bloeiende-werelden-home-page.webp",
+              altText: "Home page",
               fit: "contain",
               bgColor: "#D3C3F3",
               paddingValue: "20px",
             },
             {
-              imageSrc: "/images/work/bloeiende-werelden/3.png",
+              imageSrc:
+                "https://cdn.lazyre.com/images/work/bloeiende-werelden/bloeiende-werelden-product-page.webp",
+              altText: "Product page",
               fit: "contain",
               bgColor: "#FFD1A9",
               paddingValue: "20px",
             },
             {
-              imageSrc: "/images/work/bloeiende-werelden/4.png",
+              imageSrc:
+                "https://cdn.lazyre.com/images/work/bloeiende-werelden/bloeiende-werelden-checkout-page.webp",
+              altText: "Checkout page",
               fit: "contain",
               bgColor: "#D3C3F3",
               paddingValue: "20px",
@@ -528,7 +1021,9 @@ const workData: workDataType[] = [
           title: "Stunning Cover Image",
           subtitle: "Discover the beauty of our website",
           sectionImage: {
-            imageSrc: "/images/work/bloeiende-werelden/web.png",
+            imageSrc:
+              "https://cdn.lazyre.com/images/work/bloeiende-werelden/bloeiende-werelden-ecommerce.webp",
+            altText: "",
           },
         },
       },
@@ -550,465 +1045,6 @@ const workData: workDataType[] = [
       content:
         "The team at XYZ Corporation delivered an exceptional website that perfectly captures our brand essence. It has greatly enhanced our online presence.",
       designation: "Marketing Director, XYZ Corporation",
-      link: "https://example.com/testimonial2",
-    },
-    nextWorkId: "revenue",
-  },
-  {
-    id: "revenue",
-    title: "Revenue Dashboard",
-    client: "PQR Enterprises",
-    tags: ["Brand Strategy", "Logo Design", "Visual Identity"],
-    image: "/images/work/revenue/cover3.png",
-    coverImage: "/images/work/revenue/cover2.png",
-    lightAccentColor: "#4CAF50",
-    darkAccentColor: "#263238",
-    overview: {
-      heading: "Branding for PQR Enterprises",
-      description:
-        "A comprehensive brand identity that reflects the essence of PQR Enterprises and communicates its unique value proposition.",
-      links: ["https://example.com", "https://example.com/portfolio"],
-    },
-    section: [
-      {
-        type: "HEADING",
-        name: "Introduction",
-        sectionDetails: {
-          title: "Discover PQR Enterprises",
-          subtitle: "Unveiling our unique identity",
-        },
-      },
-      {
-        type: "COVERIMAGE",
-        name: "Brand Identity",
-        sectionDetails: {
-          title: "Comprehensive Brand Identity",
-          subtitle: "Reflecting our values",
-        },
-      },
-      {
-        type: "FEATURES",
-        name: "Key Features",
-        sectionDetails: {
-          title: "Key Features",
-          subtitle: "Check out our top offerings",
-          features: [
-            {
-              title: "Real-Time Health Monitoring ",
-
-              description:
-                "SafeShift enabled daily health check-ins for workers, tracking symptoms and temperature data across all factory sites. This real-time monitoring system provided crucial insights that helped prevent COVID-19 outbreaks and ensured smooth factory operations. ",
-            },
-            {
-              title: "AI-Powered Self-Diagnosis & Incident Reporting ",
-              description:
-                "The app featured a self-diagnosis tool built with Python, empowering workers to report symptoms and receive instant advice on whether they could attend work or seek medical care. It also included a feature for incident reporting, allowing rapid response to potential COVID-19 exposure. ",
-            },
-            {
-              title: "Digital Access Pass System ",
-              description:
-                "Only employees who passed the daily health checks received a digital access pass, allowing safe entry into the factories. This feature significantly reduced the risk of COVID transmission, as symptomatic employees were denied access and instructed to self-isolate. ",
-            },
-          ],
-        },
-      },
-      {
-        type: "CAROUSEL",
-        name: "How Are You Feeling Today?",
-        sectionDetails: {
-          title: "How Are You Feeling Today?",
-          subtitle:
-            "Our AI-powered self-diagnosis feature used an interactive approach to assess workers' health through a How Are You Feeling Today? section. A carousel of well crafted and animated emotions allowed employees to report their well-being in a simple, fun, intuitive manner.",
-          images: [
-            {
-              imageSrc: "/images/work/revenue/1.png",
-              fit: "contain",
-              bgColor: "#151F2B",
-              paddingValue: "20px",
-            },
-            {
-              imageSrc: "/images/work/revenue/2.png",
-              fit: "contain",
-              bgColor: "#151F2B",
-              paddingValue: "20px",
-            },
-            {
-              imageSrc: "/images/work/revenue/3.png",
-              fit: "contain",
-              bgColor: "#151F2B",
-              paddingValue: "20px",
-            },
-            {
-              imageSrc: "/images/work/revenue/4.png",
-              fit: "contain",
-              bgColor: "#151F2B",
-              paddingValue: "20px",
-            },
-            {
-              imageSrc: "/images/work/revenue/5.png",
-              fit: "contain",
-              bgColor: "#151F2B",
-              paddingValue: "20px",
-            },
-          ],
-        },
-      },
-      {
-        type: "INFOPANE",
-        name: "Initial Digital Pass System",
-        sectionDetails: {
-          title: "Initial Digital Pass System",
-          subtitle:
-            "The digital access pass system was designed with versatility to cater to the diverse needs of employees, allowing them to request passes for various factory zones based on their health status and operational requirements. It included two types of passes: the Day Pass, which provided standard access to the general factory areas, and the Custom Pass, a specialized permit for high-security or restricted zones, granted according to job roles and individual health assessments. This innovative system played a crucial role in maintaining production safety by ensuring that workers could only enter designated areas after successfully passing a health check, thereby enhancing the overall safety and efficiency of factory operations.",
-          sectionImage: {
-            imageSrc: "/images/work/revenue/lang2.png",
-            fit: "cover",
-            bgColor: "#151F2B",
-          },
-        },
-      },
-    ],
-    testimonial: {
-      author: "Alex Johnson",
-      content:
-        "The branding work delivered by your team was exceptional. Our brand now has a strong identity that resonates with our target audience.",
-      designation: "CEO, PQR Enterprises",
-      link: "https://example.com/testimonial3",
-    },
-    nextWorkId: "job-cards",
-  },
-  {
-    id: "job-cards",
-    title: "Job Cards",
-    client: "LMN Company",
-    tags: ["Social Media Strategy", "Content Creation", "Campaign Management"],
-    image: "/images/work/job-cards/cover.png",
-    coverImage: "/images/work/job-cards/cover3.png",
-    lightAccentColor: "#2196F3",
-    darkAccentColor: "#FFFFFF",
-    overview: {
-      heading: "Social Media Marketing for LMN Company",
-      description:
-        "An effective social media marketing strategy to enhance LMN Company's online presence, engage the target audience, and drive business growth.",
-      links: ["https://example.com", "https://example.com/portfolio"],
-    },
-    section: [
-      {
-        type: "HEADING",
-        name: "Introduction",
-        sectionDetails: {
-          title: "Unlock the Power of Social Media",
-          subtitle: "Our strategy for LMN Company",
-        },
-      },
-      {
-        type: "COVERIMAGE",
-        name: "Brand Identity",
-        sectionDetails: {
-          title: "Comprehensive Brand Identity",
-          subtitle: "Reflecting our values",
-        },
-      },
-      {
-        type: "FEATURES",
-        name: "Key Features",
-        sectionDetails: {
-          title: "Key Features",
-          subtitle: "Check out our top offerings",
-          features: [
-            {
-              title: "Real-Time Health Monitoring ",
-
-              description:
-                "SafeShift enabled daily health check-ins for workers, tracking symptoms and temperature data across all factory sites. This real-time monitoring system provided crucial insights that helped prevent COVID-19 outbreaks and ensured smooth factory operations. ",
-            },
-            {
-              title: "AI-Powered Self-Diagnosis & Incident Reporting ",
-              description:
-                "The app featured a self-diagnosis tool built with Python, empowering workers to report symptoms and receive instant advice on whether they could attend work or seek medical care. It also included a feature for incident reporting, allowing rapid response to potential COVID-19 exposure. ",
-            },
-            {
-              title: "Digital Access Pass System ",
-              description:
-                "Only employees who passed the daily health checks received a digital access pass, allowing safe entry into the factories. This feature significantly reduced the risk of COVID transmission, as symptomatic employees were denied access and instructed to self-isolate. ",
-            },
-          ],
-        },
-      },
-      {
-        type: "SHOWCASE",
-        name: "showcase",
-        sectionDetails: {
-          title: "Comprehensive Protection",
-          subtitle: "Explore our security features",
-          showcase: [
-            {
-              imageSrc: "/images/work/job-cards/dashboard/2.png",
-              altText: "Temperature Input",
-              fit: "contain",
-              bgColor: "#E80054",
-              paddingValue: "20px",
-              description:
-                "Employees could select their body temperature using a slider interface.",
-              isSquare: true,
-            },
-            {
-              imageSrc: "/images/work/job-cards/dashboard/angle1.png",
-              altText: "Sleep Level Rating",
-              fit: "contain",
-              bgColor: "#313159",
-              paddingValue: "20px",
-              description:
-                "Workers rated their sleep quality on a scale of 1 to 5, giving managers insights into fatigue levels.",
-              isSquare: false,
-            },
-            {
-              imageSrc: "/images/work/job-cards/dashboard/6.png",
-              altText: "Symptom Reporting",
-              fit: "contain",
-              bgColor: "#228B22",
-              paddingValue: "20px",
-              description:
-                "If symptoms were present, users could report specific details, including comments, helping management better assess the situation.",
-              isSquare: true,
-            },
-            {
-              imageSrc: "/images/work/job-cards/dashboard/3.png",
-              altText: "Symptom Reporting",
-              fit: "contain",
-              bgColor: "#228B22",
-              paddingValue: "20px",
-              description:
-                "If symptoms were present, users could report specific details, including comments, helping management better assess the situation.",
-              isSquare: false,
-            },
-            {
-              imageSrc: "/images/work/job-cards/dashboard/4.png",
-              altText: "Symptom Reporting",
-              fit: "contain",
-              bgColor: "#228B22",
-              paddingValue: "20px",
-              description:
-                "If symptoms were present, users could report specific details, including comments, helping management better assess the situation.",
-              isSquare: true,
-            },
-            {
-              imageSrc: "/images/work/job-cards/dashboard/5.png",
-              altText: "Symptom Reporting",
-              fit: "contain",
-              bgColor: "#228B22",
-              paddingValue: "20px",
-              description:
-                "If symptoms were present, users could report specific details, including comments, helping management better assess the situation.",
-              isSquare: false,
-            },
-          ],
-        },
-      },
-      {
-        type: "COVERIMAGE",
-        name: "Cover Image",
-        sectionDetails: {
-          title: "Stunning Cover Image",
-          subtitle: "Discover the beauty of our website",
-          sectionImage: {
-            imageSrc: "/images/work/job-cards/cover2.png",
-          },
-        },
-      },
-      {
-        type: "OVERVIEWGRID",
-        name: "Vaccine Integration",
-        sectionDetails: {
-          title: "Seamless Vaccine Verification for a Safer Workplace",
-          subtitle: "Vaccine Integration: A Crucial Step Forward",
-          description: [
-            "As COVID-19 vaccines became available in 2021, Æon Enterprises needed a solution to monitor their workforce’s vaccination status and ensure ongoing health safety. Lazyre integrated a Vaccine Verification System within the existing COVID-19 tracker, allowing employees to securely upload vaccination certificates and schedule doses. This system automated vaccine reminders, ensuring that employees were alerted to receive their second doses. With real-time updates, management could track vaccination progress, helping the company align with government mandates while keeping the factory operational.",
-            "Handling sensitive health data required careful adherence to privacy regulations, especially GDPR. The vaccine integration was built with advanced encryption methods to protect employee data from unauthorized access. Only authorized personnel could view vaccination statuses, and any changes to personal health information were securely logged. This emphasis on security, coupled with features like automated certificate validation and seamless updates, gave Æon Enterprises the assurance of meeting compliance requirements, while maintaining the health and safety of their workforce in the face of evolving pandemic challenges.",
-          ],
-        },
-      },
-      {
-        type: "HEADING",
-        name: "Moving Forward",
-        sectionDetails: {
-          title: "Outcome",
-          subtitle:
-            "As the pandemic subsided in 2024, Æon Enterprises Group sought to repurpose the COVID-19 tracker into a comprehensive Digital Pass System to meet their evolving operational needs. We are gradually updating the app to include:",
-        },
-      },
-    ],
-    testimonial: {
-      author: "Sarah Thompson",
-      content:
-        "The social media marketing work by your team has significantly boosted our online presence and engagement. We're seeing tangible results in terms of increased brand awareness and customer interaction.",
-      designation: "Marketing Manager, LMN Company",
-      link: "https://example.com/testimonial4",
-    },
-    nextWorkId: "pharma-souq",
-  },
-  {
-    id: "pharma-souq",
-    title: "Pharma Souq",
-    client: "Nature Explorers",
-    tags: ["Photography", "Nature", "Landscape"],
-    image: "/images/work/pharma-souq/cover.png",
-    coverImage: "/images/work/pharma-souq/cover.png",
-    lightAccentColor: "#8BC34A",
-    darkAccentColor: "#263238",
-    overview: {
-      heading: "Capturing the Wonders of Nature",
-      description:
-        "A collection of breathtaking nature photographs showcasing the beauty and diversity of our natural world.",
-      links: ["https://example.com", "https://example.com/portfolio"],
-    },
-    section: [
-      {
-        type: "HEADING",
-        name: "Introduction",
-        sectionDetails: {
-          title: "Journey into Nature's Beauty",
-          subtitle: "Explore our photography collection",
-        },
-      },
-      {
-        type: "INFOPANE",
-        name: "Nature Photography Collection",
-        sectionDetails: {
-          title: "Breathtaking Moments",
-          subtitle: "A glimpse into the beauty of nature",
-          images: [{ imageSrc: "/images/brand/lab.jpg" }],
-        },
-      },
-      {
-        type: "VIDEOSHOWCASE",
-        name: "Behind the Lens",
-        sectionDetails: {
-          title: "Behind the Scenes",
-          subtitle: "Discover the stories behind the photographs",
-          video: {
-            videoSrc: "/videos/Lazyre_Final_Logo_Pc_Final_abyie3.mp4",
-            autoplay: true,
-          },
-        },
-      },
-    ],
-    testimonial: {
-      author: "John Roberts",
-      content:
-        "The nature photography by your team is truly remarkable. Each photograph tells a story and transports me to the breathtaking beauty of the natural world.",
-      designation: "Nature Enthusiast",
-      link: "https://example.com/testimonial5",
-    },
-    nextWorkId: "work6",
-  },
-  {
-    id: "work6",
-    title: "Ecommerce Website Development",
-    client: "XYZ Store",
-    tags: ["Ecommerce", "Online Retail", "Web Development"],
-    image: "/images/work/work6.webp",
-    coverImage: "/images/work/work6.webp",
-    lightAccentColor: "#FF9800",
-    darkAccentColor: "#263238",
-    overview: {
-      heading: "Online Shopping Made Easy",
-      description:
-        "An intuitive and user-friendly ecommerce website that offers a seamless shopping experience for customers of XYZ Store.",
-      links: ["https://example.com", "https://example.com/portfolio"],
-    },
-    section: [
-      {
-        type: "HEADING",
-        name: "Introduction",
-        sectionDetails: {
-          title: "Welcome to XYZ Store",
-          subtitle: "Discover a new way to shop online",
-        },
-      },
-      {
-        type: "INFOPANE",
-        name: "Ecommerce Showcase",
-        sectionDetails: {
-          title: "Seamless Shopping Experience",
-          subtitle: "Explore our user-friendly website",
-          images: [{ imageSrc: "/images/brand/studio.jpg" }],
-        },
-      },
-      {
-        type: "VIDEOSHOWCASE",
-        name: "Shopping Guide",
-        sectionDetails: {
-          title: "Navigate with Ease",
-          subtitle: "Watch our guide for a smooth shopping experience",
-          video: {
-            videoSrc: "/videos/Lazyre_Final_Logo_Pc_Final_abyie3.mp4",
-            autoplay: true,
-          },
-        },
-      },
-    ],
-    testimonial: {
-      author: "Emily Johnson",
-      content:
-        "The ecommerce website developed by your team has greatly enhanced our online presence and boosted sales. Our customers find it easy to navigate and make purchases, resulting in a seamless shopping experience.",
-      designation: "CEO, XYZ Store",
-      link: "https://example.com/testimonial6",
-    },
-    nextWorkId: "work7",
-  },
-  {
-    id: "work7",
-    title: "Network Security Solutions",
-    client: "ABC Corporation",
-    tags: ["Network Security", "Cybersecurity", "Risk Assessment"],
-    image: "/images/work/work7.webp",
-    coverImage: "/images/work/work7.webp",
-    lightAccentColor: "#607D8B",
-    darkAccentColor: "#FFFFFF",
-    overview: {
-      heading: "Protecting Your Network",
-      description:
-        "Comprehensive network security solutions that safeguard ABC Corporation's digital assets and ensure data confidentiality, integrity, and availability.",
-      links: ["https://example.com", "https://example.com/portfolio"],
-    },
-    section: [
-      {
-        type: "HEADING",
-        name: "Introduction",
-        sectionDetails: {
-          title: "Ensuring Digital Security",
-          subtitle: "Discover our network security solutions",
-        },
-      },
-      {
-        type: "INFOPANE",
-        name: "Security Measures",
-        sectionDetails: {
-          title: "Comprehensive Protection",
-          subtitle: "Explore our security features",
-          images: [{ imageSrc: "/images/brand/web.jpg" }],
-        },
-      },
-      {
-        type: "VIDEOSHOWCASE",
-        name: "Security Overview",
-        sectionDetails: {
-          title: "Securing Your Digital Future",
-          subtitle: "Watch our security overview video",
-          video: {
-            videoSrc: "/videos/Lazyre_Final_Logo_Pc_Final_abyie3.mp4",
-            autoplay: false,
-          },
-        },
-      },
-    ],
-    testimonial: {
-      author: "Mark Davis",
-      content:
-        "The network security solutions provided by your team have been instrumental in safeguarding our digital assets. We now have peace of mind knowing that our network is protected against potential threats and vulnerabilities.",
-      designation: "CTO, ABC Corporation",
-      link: "https://example.com/testimonial7",
     },
     nextWorkId: "safe-shift",
   },

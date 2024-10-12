@@ -16,7 +16,7 @@ const NextWork: React.FC<NextWorkProps> = ({ workId }) => {
     let { title, coverImage } = workDetails;
     return (
       <Link href={`/work/${workId}`} key={`work-${workId}`}>
-        <div className="relative min-h-screen w-full">
+        <div className="relative min-h-screen w-full text-white">
           <CoverImage src={coverImage} alt={`${title}-image`} />
           <div className="absolute inset-0 w-full bg-gradient-to-t from-black  via-black/60 to-black/30"></div>
           <div className=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">

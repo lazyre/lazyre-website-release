@@ -32,12 +32,12 @@ export interface workDataType {
   tags: Array<string>;
   image: string;
   coverImage: string;
-  lightAccentColor: string;
-  darkAccentColor: string;
-  overview: { heading: string; description: string; links: Array<string> };
+  lightAccentColor?: string;
+  darkAccentColor?: string;
+  overview: { heading: string; description: string; links?: Array<string> };
   section: Array<{
     type: string;
-    name: string;
+    name?: string;
     sectionDetails: {
       title: string;
       subtitle: string;
@@ -45,6 +45,7 @@ export interface workDataType {
       largeHeading?: boolean;
       sectionImage?: {
         imageSrc: string;
+        altText: string;
         description?: string;
         fit?: "cover" | "contain";
         bgColor?: string;
@@ -52,6 +53,7 @@ export interface workDataType {
       };
       images?: Array<{
         imageSrc: string;
+        altText: string;
         description?: string;
         fit?: "cover" | "contain";
         bgColor?: string;
@@ -68,6 +70,14 @@ export interface workDataType {
         description?: string;
         isSquare: boolean;
         fit?: "cover" | "contain";
+        bgColor?: string;
+        paddingValue?: string;
+      }>;
+      videoShowcase?: Array<{
+        videoSrc: string;
+        altText: string;
+        description?: string;
+        isSquare: boolean;
         bgColor?: string;
         paddingValue?: string;
       }>;

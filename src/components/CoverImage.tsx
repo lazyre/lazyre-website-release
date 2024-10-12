@@ -48,6 +48,7 @@ export default function CoverImage({
           }`}
           onLoad={handleImageLoad}
           onError={handleImageError}
+          unoptimized
         />
       )}
     </div>

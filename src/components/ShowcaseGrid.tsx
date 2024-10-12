@@ -1,8 +1,10 @@
 import Image from "next/image";
 import RoundedImage from "./RoundedImage";
+import VideoPlayer from "./VideoPlayer";
 
 interface ShowcaseItemProps {
-  imageSrc: string;
+  imageSrc?: string;
+  videoSrc?: string;
   altText: string;
   description?: string;
   isSquare?: boolean;
@@ -13,6 +15,7 @@ interface ShowcaseItemProps {
 
 function ShowcaseItem({
   imageSrc,
+  videoSrc,
   altText,
   description,
   isSquare = true,
@@ -34,13 +37,23 @@ function ShowcaseItem({
           style={{ objectFit: "cover" }}
         />
       </div> */}
-      <RoundedImage
-        image={imageSrc}
-        alt={altText}
-        fit={fit}
-        bgColor={bgColor}
-        paddingValue={paddingValue}
-      />
+      {imageSrc ? (
+        <RoundedImage
+          image={imageSrc}
+          alt={altText}
+          fit={fit}
+          bgColor={bgColor}
+          paddingValue={paddingValue}
+        />
+      ) : (
+        <VideoPlayer
+          src={videoSrc}
+          autoPlay={true}
+          loop={true}
+          muted={true}
+          className="w-full"
+        />
+      )}
       <div className="mt-4">
         <p className="text-xl">{description}</p>
       </div>

@@ -18,8 +18,16 @@ type workDetailsProps = {
 };
 
 const WorkDetails: React.FC<workDetailsProps> = ({ work }) => {
-  const { title, client, image, coverImage, section, testimonial, nextWorkId } =
-    work;
+  const {
+    title,
+    client,
+    image,
+    coverImage,
+    overview,
+    section,
+    testimonial,
+    nextWorkId,
+  } = work;
   return (
     <>
       <ContentWrapper>
@@ -31,6 +39,16 @@ const WorkDetails: React.FC<workDetailsProps> = ({ work }) => {
           workHero
         />
       </ContentWrapper>
+      <ContentWrapper>
+        <SectionHeading
+          title={overview.heading}
+          subtitle={overview.description}
+          workHeading
+        />
+      </ContentWrapper>
+
+      <CoverImage src={coverImage} alt={`${title} cover image`} />
+
       {section.map((section, index) => {
         switch (section.type) {
           case "HEADING":
@@ -44,18 +62,16 @@ const WorkDetails: React.FC<workDetailsProps> = ({ work }) => {
               </ContentWrapper>
             );
           case "COVERIMAGE":
-            return (
-              <div key={`coverimage-${index}`}>
-                <CoverImage
-                  src={
-                    section.sectionDetails.sectionImage
-                      ? section.sectionDetails.sectionImage.imageSrc
-                      : coverImage
-                  }
-                  alt={`${client} cover image`}
-                />
-              </div>
-            );
+            if (section.sectionDetails.sectionImage) {
+              return (
+                <div key={`coverimage-${index}`}>
+                  <CoverImage
+                    src={section.sectionDetails.sectionImage.imageSrc}
+                    alt={section.sectionDetails.sectionImage.altText}
+                  />
+                </div>
+              );
+            }
           case "FEATURES":
             if (section.sectionDetails.features) {
               return (
@@ -70,6 +86,12 @@ const WorkDetails: React.FC<workDetailsProps> = ({ work }) => {
               return (
                 <ContentWrapper key={`showcase-${index}`}>
                   <ShowcaseGrid items={section.sectionDetails.showcase} />
+                </ContentWrapper>
+              );
+            } else if (section.sectionDetails.videoShowcase) {
+              return (
+                <ContentWrapper key={`showcase-${index}`}>
+                  <ShowcaseGrid items={section.sectionDetails.videoShowcase} />
                 </ContentWrapper>
               );
             }
@@ -130,7 +152,10 @@ const WorkDetails: React.FC<workDetailsProps> = ({ work }) => {
           case "OVERVIEWGRID":
             if (section.sectionDetails.description) {
               return (
-                <div className="min-h-screen flex justify-center items-center bg-black text-white">
+                <div
+                  key={`overview-${index}`}
+                  className="min-h-screen flex justify-center items-center bg-black text-white"
+                >
                   <div className="container">
                     <OverviewGrid
                       title={section.sectionDetails.title}
