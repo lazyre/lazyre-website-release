@@ -6,7 +6,7 @@ const workData: workDataType[] = [
     title: "Safe Shift",
     client: "Æon Enterprises",
 
-    tags: ["App Development", "AI", "Responsive Design"],
+    tags: ["App Development", "AI", "Branding", "Enterprise", "Logo Design"],
     image:
       "https://cdn.lazyre.com/images/work/safe-shift/safeshift-work-image.webp",
     coverImage:
@@ -243,7 +243,7 @@ const workData: workDataType[] = [
     id: "voxel-verse",
     title: "Voxel Verse",
     client: "Kaleidoscope Digital Creations",
-    tags: ["3D Design", "Blockchain", "NFT"],
+    tags: ["3D Design", "Blockchain", "NFT", "Logo Design"],
     image:
       "https://cdn.lazyre.com/images/work/voxel-verse/voxel-verse-cover.webp",
     coverImage:
@@ -458,12 +458,16 @@ const workData: workDataType[] = [
     },
     nextWorkId: "revenue",
   },
-
   {
     id: "revenue",
     title: "Revenue Dashboard",
-    client: "PQR Enterprises",
-    tags: ["Brand Strategy", "Logo Design", "Visual Identity"],
+    client: "Revenue",
+    tags: [
+      "Enterprise",
+      "Web Development",
+      "Progressive Web App",
+      "Logo Design",
+    ],
     image: "https://cdn.lazyre.com/images/work/revenue/revenue-cover.webp",
     coverImage:
       "https://cdn.lazyre.com/images/work/revenue/revenue-dashboard-cover.webp",
@@ -586,6 +590,18 @@ const workData: workDataType[] = [
         },
       },
       {
+        type: "COVERIMAGE",
+        sectionDetails: {
+          title: "Stunning Cover Image",
+          subtitle: "Discover the beauty of our website",
+          sectionImage: {
+            imageSrc:
+              "https://cdn.lazyre.com/images/work/revenue/revenue-technology-cover.webp",
+            altText: "Dubai birds eye view",
+          },
+        },
+      },
+      {
         type: "OVERVIEWGRID",
         sectionDetails: {
           subtitle:
@@ -598,14 +614,14 @@ const workData: workDataType[] = [
           ],
         },
       },
-      {
-        type: "HEADING",
-        sectionDetails: {
-          title: "Outcome",
-          subtitle:
-            "Revenue platform has become an integral part of the client’s energy and security management strategy. Its flexibility and scalability allowed the client to streamline energy production monitoring and optimize system performance, leading to improved operational efficiency. With real-time notifications, the client could quickly address any issues, minimizing downtime and maximizing energy output. The seamless integration of weather data and IoT device monitoring gave the team deeper insights, allowing them to plan and act on accurate data in real-time.",
-        },
-      },
+      // {
+      //   type: "HEADING",
+      //   sectionDetails: {
+      //     title: "Outcome",
+      //     subtitle:
+      //       "Revenue platform has become an integral part of the client’s energy and security management strategy. Its flexibility and scalability allowed the client to streamline energy production monitoring and optimize system performance, leading to improved operational efficiency. With real-time notifications, the client could quickly address any issues, minimizing downtime and maximizing energy output. The seamless integration of weather data and IoT device monitoring gave the team deeper insights, allowing them to plan and act on accurate data in real-time.",
+      //   },
+      // },
     ],
     testimonial: {
       author: "vanessa de vries",
@@ -618,15 +634,15 @@ const workData: workDataType[] = [
   {
     id: "job-cards",
     title: "Job Cards",
-    client: "LMN Company",
-    tags: ["Social Media Strategy", "Content Creation", "Campaign Management"],
+    client: "Midtec Trading & Contracting",
+    tags: ["Enterprise", "Inventory", "ERP", "Web Development"],
     image: "https://cdn.lazyre.com/images/work/job-cards/job-cards-cover.webp",
     coverImage:
       "https://cdn.lazyre.com/images/work/job-cards/job-cards-dashboard-showcase.webp",
     overview: {
-      heading: "Social Media Marketing for LMN Company",
+      heading: "Overview",
       description:
-        "An effective social media marketing strategy to enhance LMN Company's online presence, engage the target audience, and drive business growth.",
+        "Lazyre partnered with Midtec, a leading manufacturing and engineering firm in Qatar, to develop a custom ERP system named Job Cards. Designed to streamline work order management, Job Cards was crafted to meet Midtec’s unique operational needs, allowing them to efficiently handle their day-to-day processes. This bespoke ERP solution provided comprehensive tools for creating, managing, and tracking work orders, along with dynamic profit calculation and inventory management. Built with scalability and precision, it enhanced Midtec's operational efficiency, financial insight, and resource planning.",
     },
     section: [
       {
@@ -645,20 +661,34 @@ const workData: workDataType[] = [
           subtitle: "Check out our top offerings",
           features: [
             {
-              title: "Real-Time Health Monitoring ",
-
+              title: "Comprehensive Work Order Management",
               description:
-                "SafeShift enabled daily health check-ins for workers, tracking symptoms and temperature data across all factory sites. This real-time monitoring system provided crucial insights that helped prevent COVID-19 outbreaks and ensured smooth factory operations. ",
+                "Job Cards allows Midtec to create and manage work orders from inception to completion. Users can seamlessly update job statuses—marking orders as 'Open' or 'Closed'—while tracking job progression in real-time. The system also provides easy labeling for payment statuses, ensuring that every project stage is accounted for.",
             },
             {
-              title: "AI-Powered Self-Diagnosis & Incident Reporting ",
+              title: "Dynamic Profit Calculations",
               description:
-                "The app featured a self-diagnosis tool built with Python, empowering workers to report symptoms and receive instant advice on whether they could attend work or seek medical care. It also included a feature for incident reporting, allowing rapid response to potential COVID-19 exposure. ",
+                "The system integrates a robust dynamic profit calculation engine. As work orders are updated with new data, such as materials used or services rendered, the ERP recalculates profits in real-time, offering a precise overview of each project’s financial performance.",
             },
             {
-              title: "Digital Access Pass System ",
+              title: "Payment Status Management",
               description:
-                "Only employees who passed the daily health checks received a digital access pass, allowing safe entry into the factories. This feature significantly reduced the risk of COVID transmission, as symptomatic employees were denied access and instructed to self-isolate. ",
+                "Job Cards facilitates efficient payment tracking, enabling users to easily adjust and manage payment statuses throughout the project lifecycle.",
+            },
+            {
+              title: "Inventory Tracking",
+              description:
+                "The system includes a basic inventory management feature that monitors material availability, alerting users when stock levels are low and aiding in effective resource allocation.",
+            },
+            {
+              title: "Integrated Product Database for Pricing",
+              description:
+                "To ensure accuracy in work order creation, the system dynamically fetches product details and pricing from a central database. This feature guarantees that each order is generated using the most up-to-date information, minimizing errors and maximizing operational efficiency.",
+            },
+            {
+              title: "Customizable Printables for Work Orders",
+              description:
+                "Based on Midtec's request, Lazyre added a printable work order feature. Users can easily generate print-friendly versions of their orders, providing a clean and professional format for on-site use or client sharing. This includes detailed breakdowns of job items, services, pricing, and payment statuses.",
             },
           ],
         },
@@ -678,7 +708,7 @@ const workData: workDataType[] = [
               bgColor: "#0235A1",
               paddingValue: "20px",
               description:
-                "Employees could select their body temperature using a slider interface.",
+                "Job Cards dashboard displays all work orders with labels indicating payment and job statuses, providing an at-a-glance overview for efficient tracking.",
               isSquare: true,
             },
             {
@@ -689,7 +719,7 @@ const workData: workDataType[] = [
               bgColor: "#0235A1",
               paddingValue: "20px",
               description:
-                "Workers rated their sleep quality on a scale of 1 to 5, giving managers insights into fatigue levels.",
+                "Secure login interface for authenticated access, ensuring data protection and user-specific access rights.",
               isSquare: false,
             },
             {
@@ -700,7 +730,7 @@ const workData: workDataType[] = [
               bgColor: "#0235A1",
               paddingValue: "20px",
               description:
-                "If symptoms were present, users could report specific details, including comments, helping management better assess the situation.",
+                "Preview of a print-friendly work order format, designed for easy sharing and record-keeping.",
               isSquare: true,
             },
             {
@@ -711,7 +741,7 @@ const workData: workDataType[] = [
               bgColor: "#0235A1",
               paddingValue: "20px",
               description:
-                "If symptoms were present, users could report specific details, including comments, helping management better assess the situation.",
+                "Detailed view of a specific work order, showing job information, client information, and status updates.",
               isSquare: false,
             },
             {
@@ -722,7 +752,7 @@ const workData: workDataType[] = [
               bgColor: "#0235A1",
               paddingValue: "20px",
               description:
-                "If symptoms were present, users could report specific details, including comments, helping management better assess the situation.",
+                "Breakdown of items and services in the work order, with dynamic profit calculations displayed for real-time financial insights.",
               isSquare: true,
             },
             {
@@ -733,7 +763,7 @@ const workData: workDataType[] = [
               bgColor: "#0235A1",
               paddingValue: "20px",
               description:
-                "If symptoms were present, users could report specific details, including comments, helping management better assess the situation.",
+                "Section for recording important remarks and updating payment details, ensuring full transparency and financial clarity.",
               isSquare: false,
             },
           ],
@@ -754,13 +784,12 @@ const workData: workDataType[] = [
       },
       {
         type: "OVERVIEWGRID",
-        name: "Vaccine Integration",
         sectionDetails: {
-          title: "Seamless Vaccine Verification for a Safer Workplace",
-          subtitle: "Vaccine Integration: A Crucial Step Forward",
+          title: "Enhancing Workflow through Efficient Printing Solutions",
+          subtitle: "Streamlined Printables Feature for Work Orders",
           description: [
-            "As COVID-19 vaccines became available in 2021, Æon Enterprises needed a solution to monitor their workforce’s vaccination status and ensure ongoing health safety. Lazyre integrated a Vaccine Verification System within the existing COVID-19 tracker, allowing employees to securely upload vaccination certificates and schedule doses. This system automated vaccine reminders, ensuring that employees were alerted to receive their second doses. With real-time updates, management could track vaccination progress, helping the company align with government mandates while keeping the factory operational.",
-            "Handling sensitive health data required careful adherence to privacy regulations, especially GDPR. The vaccine integration was built with advanced encryption methods to protect employee data from unauthorized access. Only authorized personnel could view vaccination statuses, and any changes to personal health information were securely logged. This emphasis on security, coupled with features like automated certificate validation and seamless updates, gave Æon Enterprises the assurance of meeting compliance requirements, while maintaining the health and safety of their workforce in the face of evolving pandemic challenges.",
+            "During the development process, Midtec requested the ability to generate printable versions of their work orders, enhancing their workflow by enabling them to provide physical copies for internal and client-related use. In response, Lazyre integrated a feature that allowed users to preview and print work orders directly from the ERP system. This functionality generates a clean, easy-to-read format that includes detailed breakdowns of work order items, services, and costs, as well as the calculated profit and payment statuses.",
+            "This printable feature has proven invaluable for Midtec’s field operations and client interactions. By ensuring that work orders are accessible both digitally and in print, the system has increased transparency and operational efficiency across departments. Midtec staff can now produce hard copies quickly for on-site workers, while maintaining a digital record for future reference.",
           ],
         },
       },
@@ -778,15 +807,21 @@ const workData: workDataType[] = [
     id: "pharma-souq",
     title: "Pharma Souq",
     client: "Nature Explorers",
-    tags: ["Photography", "Nature", "Landscape"],
+    tags: [
+      "Point Of Sale",
+      "Inventory",
+      "Branding",
+      "Enterprise",
+      "Logo Design",
+    ],
     image:
       "https://cdn.lazyre.com/images/work/pharma-souq/pharma-souq-cover.webp",
     coverImage:
       "https://cdn.lazyre.com/images/work/pharma-souq/pharma-souq-dashboard-showcase.webp",
     overview: {
-      heading: "Capturing the Wonders of Nature",
+      heading: "Overview",
       description:
-        "A collection of breathtaking nature photographs showcasing the beauty and diversity of our natural world.",
+        "Lazyre partnered with a leading pharmacy in Saudi Arabia to create Pharma Souq, a fully customizable sales and inventory tracking solution designed to meet the unique demands of pharmaceutical retail. Built for speed, security, and efficiency, Pharma Souq offers a seamless experience for both customers and pharmacy staff, combining real-time data tracking, automation, and user-friendly design. This robust system enhances customer service while ensuring accurate inventory management and regulatory compliance.",
     },
     section: [
       {
@@ -796,20 +831,29 @@ const workData: workDataType[] = [
           subtitle: "Check out our top offerings",
           features: [
             {
-              title: "Real-Time Health Monitoring ",
-
+              title: "Prescription Scanning & Management",
               description:
-                "SafeShift enabled daily health check-ins for workers, tracking symptoms and temperature data across all factory sites. This real-time monitoring system provided crucial insights that helped prevent COVID-19 outbreaks and ensured smooth factory operations. ",
+                "Automate the intake process by scanning prescriptions to instantly populate product details, reducing manual data entry errors and saving valuable time for pharmacists.",
             },
             {
-              title: "AI-Powered Self-Diagnosis & Incident Reporting ",
+              title: "Multiple Waitlists & Counter Segregation",
               description:
-                "The app featured a self-diagnosis tool built with Python, empowering workers to report symptoms and receive instant advice on whether they could attend work or seek medical care. It also included a feature for incident reporting, allowing rapid response to potential COVID-19 exposure. ",
+                "Handle high customer volumes efficiently by assigning individuals to separate waitlists and specific service counters, optimizing workflow and customer flow management.",
             },
             {
-              title: "Digital Access Pass System ",
+              title: "Barcode & RFID Scanning",
               description:
-                "Only employees who passed the daily health checks received a digital access pass, allowing safe entry into the factories. This feature significantly reduced the risk of COVID transmission, as symptomatic employees were denied access and instructed to self-isolate. ",
+                "Expedite checkout processes with barcode and RFID scanning for quick and accurate product identification, minimizing errors at the point of sale.",
+            },
+            {
+              title: "Bill Printing",
+              description:
+                "Integrated with compatible printers, Pharma Souq provides seamless, on-demand bill printing, delivering receipts instantly to customers while reducing operational delays.",
+            },
+            {
+              title: "Discount & Coupon Handling",
+              description:
+                "Manage promotions, discounts, and loyalty programs effortlessly by integrating them directly into the POS, allowing for personalized customer experiences and increased engagement.",
             },
           ],
         },
@@ -828,7 +872,7 @@ const workData: workDataType[] = [
               bgColor: "#22C55E",
               paddingValue: "20px",
               description:
-                "Employees could select their body temperature using a slider interface.",
+                "Seamless transactions: The integrated printer produces the bill seamlessly",
               isSquare: true,
             },
             {
@@ -839,7 +883,7 @@ const workData: workDataType[] = [
               bgColor: "#22C55E",
               paddingValue: "20px",
               description:
-                "Workers rated their sleep quality on a scale of 1 to 5, giving managers insights into fatigue levels.",
+                "Efficient and accurate: Product details are automatically populated from scanned prescriptions or can be manually entered, ensuring a smooth checkout process",
               isSquare: false,
             },
             {
@@ -850,8 +894,42 @@ const workData: workDataType[] = [
               bgColor: "#22C55E",
               paddingValue: "20px",
               description:
-                "If symptoms were present, users could report specific details, including comments, helping management better assess the situation.",
+                "All set: The checkout process concludes with a simple All Done card, completing the sale.",
               isSquare: true,
+            },
+          ],
+        },
+      },
+      {
+        type: "FEATURES",
+        sectionDetails: {
+          title: "Key Features",
+          subtitle: "Check out our top offerings",
+          features: [
+            {
+              title: "Low Stock Alerts & Automated Reordering",
+              description:
+                "Prevent stockouts with real-time inventory tracking. Receive low-stock alerts and generate automated purchase orders to suppliers, ensuring key pharmaceuticals are always in stock.",
+            },
+            {
+              title: "Profile Management & Authentication",
+              description:
+                "Secure login and role-based profile management ensure that pharmacy staff access the system according to their responsibilities, enhancing data security and user accountability.",
+            },
+            {
+              title: "Sales Analytics & Reporting",
+              description:
+                "Leverage detailed analytics on sales trends, inventory movements, and customer behavior, allowing management to make data-driven decisions to optimize stock and sales strategies.",
+            },
+            {
+              title: "Real-Time Inventory Management",
+              description:
+                "Monitor and update inventory levels in real-time, helping staff quickly adjust stock counts, add new products, and process incoming orders with ease.",
+            },
+            {
+              title: "Multilingual Support",
+              description:
+                "Ensure seamless operation for staff and customers with support for both Arabic and English, allowing for wider usability across different language preferences.",
             },
           ],
         },
@@ -859,8 +937,9 @@ const workData: workDataType[] = [
       {
         type: "FULLCAROUSEL",
         sectionDetails: {
-          title: "Featured Products",
-          subtitle: "Check out our top offerings",
+          title: "Inventory Management Flow",
+          subtitle:
+            "Pharma Souq’s real-time inventory management system is a game-changer for pharmacies. Staff can track stock levels with precision, receiving automatic low-stock alerts and effortlessly adding new products to the system. The intuitive dashboard allows pharmacy staff to manage existing inventory, adjust stock quantities, and upload new product details with barcode or RFID integration.Whenever a product falls below a preset threshold, the system sends a notification. This proactive approach saves time and helps prevent stockouts of critical medications, ensuring that customers can always find what they need.",
           images: [
             {
               imageSrc:
@@ -900,9 +979,9 @@ const workData: workDataType[] = [
       {
         type: "INFOPANE",
         sectionDetails: {
-          title: "Initial Digital Pass System",
+          title: "Multilingual Support for Arabic and English",
           subtitle:
-            "The digital access pass system was designed with versatility to cater to the diverse needs of employees, allowing them to request passes for various factory zones based on their health status and operational requirements. It included two types of passes: the Day Pass, which provided standard access to the general factory areas, and the Custom Pass, a specialized permit for high-security or restricted zones, granted according to job roles and individual health assessments. This innovative system played a crucial role in maintaining production safety by ensuring that workers could only enter designated areas after successfully passing a health check, thereby enhancing the overall safety and efficiency of factory operations.",
+            "Pharma Souq was developed with multilingual support to cater to the diverse population of Saudi Arabia. The system seamlessly integrates both Arabic and English languages, offering a user-friendly experience for pharmacy staff and customers alike. Staff can easily switch between languages, making the system accessible to all employees regardless of their preferred language. Furthermore, all customer-facing elements, such as receipts and communications, are available in either language, ensuring that customers receive accurate and comprehensible service. This bilingual design not only improves usability but also ensures that Pharma Souq aligns with regional linguistic preferences, enhancing the pharmacy’s ability to serve a wider audience. By offering language flexibility, Pharma Souq meets both the operational needs of the pharmacy and the communication needs of its customer base.",
           sectionImage: {
             imageSrc:
               "https://cdn.lazyre.com/images/work/pharma-souq/pos/pharma-souq-dashboard-arabic.webp",
@@ -912,21 +991,50 @@ const workData: workDataType[] = [
           },
         },
       },
+      {
+        type: "COVERIMAGE",
+        sectionDetails: {
+          title: "Stunning Cover Image",
+          subtitle: "Discover the beauty of our website",
+          sectionImage: {
+            imageSrc:
+              "https://cdn.lazyre.com/images/work/pharma-souq/pharma-souq-security-showcase.webp",
+            altText: "Dubai birds eye view",
+          },
+        },
+      },
+      {
+        type: "OVERVIEWGRID",
+        sectionDetails: {
+          title: "Robust Compliance",
+          subtitle: "Ensuring Secure Processing of Sensitive Patient Data",
+          description: [
+            "In the healthcare and pharmaceutical industry, safeguarding sensitive patient data is not just a priority but a legal obligation. With the development of Pharma Souq, Lazyre took special care to build a system that handles patient data securely, ensuring that every aspect of the prescription process is compliant with industry standards and regulations. Sensitive information, including prescription details and patient profiles, is encrypted end-to-end, both during transmission and while at rest. By utilizing advanced encryption protocols, the software minimizes the risk of unauthorized access, providing secure data storage and protecting it from potential breaches. The platform also incorporates role-based authentication, ensuring that only authorized personnel can access or modify sensitive information. These measures help pharmacies ensure data confidentiality, integrity, and availability, which are key to maintaining trust and safety in patient care.",
+            "Recognizing the evolving landscape of data privacy, we enhanced Pharma Souq in a future update to align with SDAIA’s (Saudi Data and Artificial Intelligence Authority) Personal Data Protection Law. This new law introduced more stringent guidelines for handling personal information in the Kingdom of Saudi Arabia, and Lazyre proactively adapted Pharma Souq’s security protocols and terms to comply. These updates included implementing more comprehensive data privacy policies, revising consent mechanisms for patient data collection, and ensuring secure cross-border data transfers, where applicable. By remaining in compliance with the latest legal frameworks, Pharma Souq gives pharmacies and patients the confidence that their sensitive data is protected, securely processed, and handled in full accordance with national regulations, positioning it as a reliable and forward-thinking solution for the healthcare sector.",
+          ],
+        },
+      },
     ],
     testimonial: {
-      author: "John Roberts",
+      author: "Mariyam Sheikh",
       content:
-        "The nature photography by your team is truly remarkable. Each photograph tells a story and transports me to the breathtaking beauty of the natural world.",
-      designation: "Nature Enthusiast",
+        "From day one, their team was responsive, detail-oriented, and genuinely invested in improving our operations. The custom POS solution they created transformed how we manage everything—from prescription processing to inventory control. Pharma Souq has not only streamlined our workflow but also significantly reduced our checkout times, making both staff and customers happier. We couldn’t be more pleased with the results.",
+      designation: "Pharmacy Operations Manager",
       link: "https://example.com/testimonial5",
     },
     nextWorkId: "bloeiende-werelden",
   },
   {
     id: "bloeiende-werelden",
-    title: "Bloeiende Werelden Ecommerce & Branding",
+    title: "Bloeiende Werelden Store",
     client: "Bloeiende Werelden",
-    tags: ["Web Design", "User Experience", "Content Management"],
+    tags: [
+      "Ecommerce",
+      "Branding",
+      "Progressive Web App",
+      "Web Development",
+      "Logo Design",
+    ],
     image:
       "https://cdn.lazyre.com/images/work/bloeiende-werelden/bloeiende-werelden-cover.webp",
     coverImage:
@@ -934,7 +1042,7 @@ const workData: workDataType[] = [
     overview: {
       heading: "Overview",
       description:
-        "In early 2023, Bloeiende Werelden, a vibrant florist from the Netherlands, turned to Lazyre Design to develop a cutting-edge e-commerce platform that would highlight their beautiful floral arrangements while enhancing their brand identity. Our mission was to create a visually captivating and intuitive website that provided a seamless shopping experience for customers looking for flowers, bouquets, and gift combinations. By focusing on design aesthetics and user experience, we successfully crafted an online presence that not only showcased their offerings but also engaged customers, making floral shopping a delightful experience.",
+        "In 2023 Lazyre partnered with Bloeiende Werelden, a Netherlands-based florist, to create a full-fledged e-commerce platform and an entirely new brand identity. The objective was to design a localized, feature-rich website and mobile PWA (Progressive Web App) to deliver an exceptional online shopping experience, while staying true to the vibrant nature of their floral business. From seamless mobile shopping to a responsive web platform, Lazyre ensured that every element was crafted to fit Bloeiende Werelden’s specific business needs, focusing on local market appeal.",
     },
     section: [
       {
@@ -947,37 +1055,35 @@ const workData: workDataType[] = [
       },
       {
         type: "FEATURES",
-        name: "Key Features",
         sectionDetails: {
           title: "Key Features",
           subtitle: "Check out our top offerings",
           features: [
             {
-              title: "Real-Time Health Monitoring ",
-
+              title: "Personalized Recommendations",
               description:
-                "SafeShift enabled daily health check-ins for workers, tracking symptoms and temperature data across all factory sites. This real-time monitoring system provided crucial insights that helped prevent COVID-19 outbreaks and ensured smooth factory operations. ",
+                "The platform includes a smart recommendation engine that analyzes user preferences and offers personalized floral suggestions, significantly boosting customer engagement by showcasing relevant products at the right time.",
             },
             {
-              title: "AI-Powered Self-Diagnosis & Incident Reporting ",
+              title: "Real-time Stock Management",
               description:
-                "The app featured a self-diagnosis tool built with Python, empowering workers to report symptoms and receive instant advice on whether they could attend work or seek medical care. It also included a feature for incident reporting, allowing rapid response to potential COVID-19 exposure. ",
+                "Real-time inventory updates ensure customers only see available products, keeping the catalog fresh and reducing abandoned carts due to out-of-stock items.",
             },
             {
-              title: "Digital Access Pass System ",
+              title: "Mobile-Optimized PWA",
               description:
-                "Only employees who passed the daily health checks received a digital access pass, allowing safe entry into the factories. This feature significantly reduced the risk of COVID transmission, as symptomatic employees were denied access and instructed to self-isolate. ",
+                "The mobile Progressive Web App offers an app-like experience across devices, featuring quick load times, offline access to selected pages, and push notifications for an enhanced mobile experience.",
             },
           ],
         },
       },
       {
         type: "CAROUSEL",
-        name: "How Are You Feeling Today?",
+        name: "Stunning Mobile Experience",
         sectionDetails: {
-          title: "How Are You Feeling Today?",
+          title: "Stunning Mobile Experience",
           subtitle:
-            "Our AI-powered self-diagnosis feature used an interactive approach to assess workers' health through a How Are You Feeling Today? section. A carousel of well crafted and animated emotions allowed employees to report their well-being in a simple, fun, intuitive manner.",
+            "The mobile version of the website was designed to offer a smooth, interactive experience, mimicking native app functionality. Below are the key screens:",
           images: [
             {
               imageSrc:
@@ -1015,6 +1121,30 @@ const workData: workDataType[] = [
         },
       },
       {
+        type: "FEATURES",
+        sectionDetails: {
+          title: "Key Features",
+          subtitle: "Check out our top offerings",
+          features: [
+            {
+              title: "Combos & Seasonal Discounts",
+              description:
+                "Bloeiende Werelden frequently introduces new floral bundles and seasonal promotions, allowing customers to easily build customizable combos, apply discount codes, and redeem special offers during checkout.",
+            },
+            {
+              title: "Localized Shopping Experience",
+              description:
+                "The e-commerce platform is localized for Dutch and English, with location-based features to limit orders within the Netherlands, ensuring smooth transactions for local customers.",
+            },
+            {
+              title: "Coupons & Loyalty Programs",
+              description:
+                "A built-in coupon and loyalty program system rewards recurring customers with personalized offers and referral bonuses, encouraging repeat business and new customer acquisition.",
+            },
+          ],
+        },
+      },
+      {
         type: "COVERIMAGE",
         name: "Cover Image",
         sectionDetails: {
@@ -1029,22 +1159,21 @@ const workData: workDataType[] = [
       },
       {
         type: "OVERVIEWGRID",
-        name: "Vaccine Integration",
         sectionDetails: {
-          title: "Seamless Vaccine Verification for a Safer Workplace",
-          subtitle: "Vaccine Integration: A Crucial Step Forward",
+          title: "Your Local Floral Experience",
+          subtitle: "Multilingual & Localized E-commerce Experience",
           description: [
-            "As COVID-19 vaccines became available in 2021, Æon Enterprises needed a solution to monitor their workforce’s vaccination status and ensure ongoing health safety. Lazyre integrated a Vaccine Verification System within the existing COVID-19 tracker, allowing employees to securely upload vaccination certificates and schedule doses. This system automated vaccine reminders, ensuring that employees were alerted to receive their second doses. With real-time updates, management could track vaccination progress, helping the company align with government mandates while keeping the factory operational.",
-            "Handling sensitive health data required careful adherence to privacy regulations, especially GDPR. The vaccine integration was built with advanced encryption methods to protect employee data from unauthorized access. Only authorized personnel could view vaccination statuses, and any changes to personal health information were securely logged. This emphasis on security, coupled with features like automated certificate validation and seamless updates, gave Æon Enterprises the assurance of meeting compliance requirements, while maintaining the health and safety of their workforce in the face of evolving pandemic challenges.",
+            "In today’s e-commerce world, localization plays a key role in maximizing customer engagement and ensuring smooth communication. Lazyre integrated multilingual support for Dutch and English across Bloeiende Werelden’s platform, offering an intuitive language switcher for customers to easily toggle between the two. The entire interface, from product descriptions to checkout instructions, was carefully translated, ensuring a natural and authentic experience in both languages. This feature caters to the local market, while ensuring that non-Dutch speakers living in the Netherlands can also comfortably shop for flowers.",
+            "Because Bloeiende Werelden operates exclusively within the Netherlands and does not offer international shipping, Lazyre developed a fully localized platform. The system is geolocation-aware, meaning it limits orders to regions within the Netherlands. This hyper-focused localization ensures a seamless shopping experience for domestic customers. Moreover, localized payment methods popular in the country were integrated, offering a culturally relevant and user-friendly checkout process. By ensuring that the e-commerce platform speaks to the needs of the local market, Lazyre helped Bloeiende Werelden connect more deeply with their customers, strengthening brand loyalty and improving sales conversions.",
           ],
         },
       },
     ],
     testimonial: {
-      author: "Jane Smith",
+      author: "Lotte van der Meer",
       content:
-        "The team at XYZ Corporation delivered an exceptional website that perfectly captures our brand essence. It has greatly enhanced our online presence.",
-      designation: "Marketing Director, XYZ Corporation",
+        "The team took the time to understand the essence of what we do and transformed that into a beautiful, functional platform. From the logo that perfectly captures the vibrancy of our flowers, to the intuitive mobile experience that has made online shopping easy for our customers, Lazyre delivered on every front.",
+      designation: "CEO, Bloeiende Werelden",
     },
     nextWorkId: "safe-shift",
   },

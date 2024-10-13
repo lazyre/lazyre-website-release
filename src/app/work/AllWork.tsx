@@ -81,7 +81,7 @@ function AllWork({ workData }: Props) {
       <section className="relative min-h-screen" aria-labelledby="All Work">
         <HeroHeading
           title="All works"
-          subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras accumsan consectetur posuere. Vestibulum fermentum iaculis libero, non venenatis nibh mattis sit amet."
+          subtitle="Discover Lazyre's extensive portfolio, featuring innovative projects that highlight our expertise in design and creativity. Explore our diverse works to see how we elevate brands through exceptional craftsmanship and tailored solutions."
           workHero
         />
         <div className="container mb-8 flex flex-col sm:flex-row gap-4">
