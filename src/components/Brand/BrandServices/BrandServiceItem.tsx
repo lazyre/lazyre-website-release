@@ -29,9 +29,11 @@ const BrandServiceItem: React.FC<BrandServiceItemProps> = ({ id }) => {
       </div>
       <div className="min-h-screen flex justify-center items-center">
         <div className="container flex flex-col xl:flex-row xl:gap-12">
-          <div className="xl:w-1/2">
-            <ServiceImages />
-          </div>
+          {serviceDetails.images && (
+            <div className="xl:w-1/2">
+              <ServiceImages images={serviceDetails.images} />
+            </div>
+          )}
           <div className="xl:w-1/2">
             <p className="text-xl mt-12 xl:mt-0">
               {serviceDetails.description}

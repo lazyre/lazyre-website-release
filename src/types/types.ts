@@ -20,7 +20,14 @@ export interface brandDataType {
 export interface servicesDataType {
   id: string;
   title: string;
-  images: Array<string>;
+  images?: Array<{
+    imageSrc: string;
+    altText: string;
+    description?: string;
+    fit?: "cover" | "contain";
+    bgColor?: string;
+    paddingValue?: string;
+  }>;
   description: string;
   serviceList: Array<string>;
 }

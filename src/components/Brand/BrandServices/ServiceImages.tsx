@@ -1,40 +1,58 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
-const gridLayouts = [
-  ["", "", "col-span-2"],
-  ["row-span-2", "", "col-start-2"],
-  ["col-span-2", "row-start-2", "row-start-2"],
-  ["", "col-start-1 row-start-2", "row-span-2 col-start-2 row-start-1"],
-];
+type ImageInfo = {
+  imageSrc: string;
+  altText: string;
+  description?: string;
+  fit?: "cover" | "contain";
+  bgColor?: string;
+  paddingValue?: string;
+};
 
-const ServiceImages: React.FC = () => {
-  const [classArray, setClassArray] = useState<string[]>(["", "", ""]);
+type ServiceImagesProps = {
+  images: ImageInfo[];
+};
 
-  useEffect(() => {
-    const randomIndex = Math.floor(Math.random() * gridLayouts.length);
-    setClassArray(gridLayouts[randomIndex]);
-  }, []);
-
+export default function ServiceImages({ images }: ServiceImagesProps) {
   return (
-    <div className="grid grid-cols-2 grid-rows-2 gap-4 md:gap-6 rounded-xl overflow-hidden">
-      {classArray.map((className, index) => (
+    <section
+      aria-label="Service Images"
+      className="grid grid-cols-2 grid-rows-2 gap-4 md:gap-6 rounded-xl overflow-hidden"
+    >
+      {images.slice(0, 4).map((image, index) => (
         <div
           key={index}
           className={cn(
-            "min-h-[150px] md:min-h-[200px] lg:min-h-[250px] xl:min-h-[300px] w-full",
-            className,
-            index === 0
-              ? "bg-amber-300"
-              : index === 1
-              ? "bg-rose-300"
-              : "bg-fuchsia-400"
+            "relative min-h-[150px] md:min-h-[200px] lg:min-h-[250px] xl:min-h-[300px] w-full",
+            { "row-span-2": index === 0 }
           )}
-          aria-hidden="true"
-        />
+          style={{
+            padding: image.paddingValue || "0px",
+            backgroundColor: image.bgColor,
+          }}
+        >
+          <div className="relative w-full h-full">
+            <Image
+              src={image.imageSrc}
+              alt={image.altText}
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              className={cn("object-cover", {
+                "object-contain": image.fit === "contain",
+              })}
+              priority={index === 0}
+              loading={index === 0 ? "eager" : "lazy"}
+            />
+          </div>
+          {image.description && (
+            <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-2 text-sm">
+              {image.description}
+            </div>
+          )}
+        </div>
       ))}
-    </div>
+    </section>
   );
-};
-
-export default ServiceImages;
+}

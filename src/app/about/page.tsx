@@ -33,7 +33,7 @@ interface ShowcaseItemProps {
 
 const showcaseItems: ShowcaseItemProps[] = [
   {
-    imageSrc: "/images/brand/lazyre_build_cover.webp",
+    imageSrc: "/images/brand/build/lazyre_build_cover.webp",
     altText: "card in hand",
     fit: "contain",
     bgColor: "#C8D5B9",
@@ -43,7 +43,7 @@ const showcaseItems: ShowcaseItemProps[] = [
     isSquare: false,
   },
   {
-    imageSrc: "/images/brand/lazyre_design_cover.webp",
+    imageSrc: "/images/brand/design/lazyre_design_cover.webp",
     altText: "cards",
     isSquare: true,
   },
@@ -195,7 +195,7 @@ const Page: React.FC<PageProps> = ({ params }) => {
       </ContentWrapper>
       <div className="xl:py-12">
         <CoverImage
-          src={"/images/brand/lazyre_build_cover.webp"}
+          src={"/images/brand/build/lazyre_build_cover.webp"}
           alt={`About us cover image`}
         />
       </div>
@@ -224,12 +224,12 @@ const Page: React.FC<PageProps> = ({ params }) => {
       {/* <div className="xl:py-12"> */}
       <ImageGrid
         images={[
-          { src: "/images/brand/lazyre_tech_cover.webp", alt: "" },
-          { src: "/images/brand/lazyre_build_cover.webp", alt: "" },
-          { src: "/images/brand/lazyre_web_cover.webp", alt: "" },
-          { src: "/images/brand/lazyre_design_cover.webp", alt: "" },
-          { src: "/images/brand/lazyre_studios_cover.webp", alt: "" },
-          { src: "/images/brand/lazyre_lab_cover.webp", alt: "" },
+          { src: "/images/brand/tech/lazyre_tech_cover.webp", alt: "" },
+          { src: "/images/brand/build/lazyre_build_cover.webp", alt: "" },
+          { src: "/images/brand/web/lazyre_web_cover.webp", alt: "" },
+          { src: "/images/brand/design/lazyre_design_cover.webp", alt: "" },
+          { src: "/images/brand/studios/lazyre_studios_cover.webp", alt: "" },
+          { src: "/images/brand/lab/lazyre_lab_cover.webp", alt: "" },
         ]}
       />
       {/* </div> */}

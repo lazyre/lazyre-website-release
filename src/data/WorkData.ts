@@ -806,7 +806,7 @@ const workData: workDataType[] = [
   {
     id: "pharma-souq",
     title: "Pharma Souq",
-    client: "Nature Explorers",
+    client: "HH Group",
     tags: [
       "Point Of Sale",
       "Inventory",

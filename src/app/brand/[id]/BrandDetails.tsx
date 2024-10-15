@@ -43,9 +43,9 @@ const BrandDetails: React.FC<BrandDetailsProps> = ({ brand }) => {
       <ContentWrapper>
         <SectionHeading title={subHeading} subtitle={subDescription} />
       </ContentWrapper>
-      <div className="xl:py-12">
+      {/* <div className="xl:py-12">
         <CoverImage src={coverImage} alt={`${title} cover image`} />
-      </div>
+      </div> */}
       <BrandServices services={services} />
       <ContentWrapper>
         <SectionHeading title={toolsHeading} subtitle={toolsDescription} />
