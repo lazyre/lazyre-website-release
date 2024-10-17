@@ -33,28 +33,60 @@ interface ShowcaseItemProps {
 
 const showcaseItems: ShowcaseItemProps[] = [
   {
-    imageSrc: "/images/brand/build/lazyre_build_cover.webp",
-    altText: "card in hand",
-    fit: "contain",
-    bgColor: "#C8D5B9",
-    paddingValue: "20px",
+    imageSrc: "/images/work/revenue/revenue-dashboard-cover.webp",
+    altText: "Revenue cover image",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices maximus tortor eu posuere.",
+      "Clean, user-friendly dashboard for real-time energy and IoT management insights.",
+    isSquare: true,
+  },
+  {
+    imageSrc: "/images/work/job-cards/job-cards-dashboard-showcase.webp",
+    altText: "Job cards cover image",
+    description:
+      "Streamlined ERP system designed for efficient work order and payment management.",
     isSquare: false,
   },
   {
-    imageSrc: "/images/brand/design/lazyre_design_cover.webp",
-    altText: "cards",
+    imageSrc: "/images/work/safe-shift/safeshift-cover-image.webp",
+    altText: "Safe shift cover image",
+    description:
+      "Digital pass system for workplace health tracking and incident management.",
     isSquare: true,
+  },
+  {
+    imageSrc:
+      "/images/work/bloeiende-werelden/bloeiende-werelden-ecommerce.webp",
+    altText: "Bloeiende werelden cover image",
+    fit: "cover",
+    description:
+      "Localized e-commerce platform offering a personalized floral shopping experience.",
+    isSquare: false,
+  },
+  {
+    imageSrc: "/images/work/pharma-souq/pharma-souq-security-showcase.webp",
+    altText: "Pharma souq cover image",
+    fit: "cover",
+    bgColor: "#22C55E",
+    description:
+      "POS system with secure prescription scanning and inventory management for pharmacies.",
+    isSquare: true,
+  },
+  {
+    imageSrc: "/images/work/voxel-verse/voxel-verse-arab-showcase.webp",
+    altText: "Voxel verse cover image",
+    fit: "cover",
+    description:
+      "Voxel-based digital art showcasing Dubai’s cityscape in stunning detail.",
+    isSquare: false,
   },
 ];
 
 const introData = {
-  headline: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  ",
-  subheadline: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  ",
+  headline: "Empowering Ideas, Building Innovation",
+  subheadline: "Where Creativity Meets Technology",
   description: [
-    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis porro repudiandae, ipsum fuga quaerat sed iure neque veritatis impedit incidunt inventore sapiente repellendus excepturi quae et consectetur, molestias eos dolore Sapiente impedit iure, fugit corrupti consequatur est dolorum. Dolorem temporibus libero esse. Beatae animi architecto a blanditiis dicta ea neque possimus. In excepturi fugiat omnis dignissimos laborum quod harum tempora. ",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices maximus tortor eu posuere. ",
+    "Lazyre is a dynamic software development company driven by a passion for innovation and creativity. We specialize in providing tailored digital solutions that blend cutting-edge technology with thoughtful design. Our team is committed to delivering exceptional quality across a range of services, from custom app development to branding and marketing.",
+    "At Lazyre, we don’t just follow trends—we set them, ensuring that every project we take on is not only functional but also forward-thinking. Our mission is to help businesses thrive in an ever-evolving digital landscape.",
   ],
   stats: [
     { value: "10+", label: "members", description: "" },
@@ -64,61 +96,60 @@ const introData = {
 };
 
 const portfolioData = {
-  headline: "Lorem ipsum dolor sit amet. ",
+  headline: "A Journey of Collaboration",
   companies: [
     {
-      logo: "/images/logos/logoipsum-220.svg",
+      logo: "/images/client/almishkal.svg",
       name: "Name",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices maximus tortor eu posuere. ",
+        "Voxel-based design to create stunning 3D representations of iconic landmarks and cultural elements",
     },
     {
-      logo: "/images/logos/logoipsum-220.svg",
+      logo: "/images/client/bw-logo.svg",
       name: "Name",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices maximus tortor eu posuere. ",
+        "Developed an e-commerce platform with multilingual support.",
     },
     {
-      logo: "/images/logos/logoipsum-220.svg",
+      logo: "/images/client/netflix-logo.svg",
       name: "Name",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices maximus tortor eu posuere. ",
+        "Creation of engaging promotional cover images and thumbnails for new shows and movies",
     },
     {
-      logo: "/images/logos/logoipsum-220.svg",
+      logo: "/images/client/kupdae_logo.svg",
       name: "Name",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices maximus tortor eu posuere. ",
+        "Delivered complete branding solutions and T-shirt designs to establish a vibrant brand identity.",
     },
     {
-      logo: "/images/logos/logoipsum-220.svg",
+      logo: "/images/client/toys-r-us-logo.svg",
       name: "Name",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices maximus tortor eu posuere. ",
+        "Creation of promotional flyers and in-store signage for sales events and special offers.",
     },
     {
-      logo: "/images/logos/logoipsum-220.svg",
+      logo: "/images/client/byteachip.svg",
       name: "Name",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices maximus tortor eu posuere. ",
+        "Developed an ERP solution for efficient inventory tracking, enhancing operational workflow and accuracy.",
     },
     {
-      logo: "/images/logos/logoipsum-220.svg",
+      logo: "/images/client/MC-logo-large.svg",
       name: "Name",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices maximus tortor eu posuere. ",
+        "Designed basic branding elements and office stationery to establish a professional identity.",
     },
     {
-      logo: "/images/logos/logoipsum-220.svg",
+      logo: "/images/client/aeon-logo.svg",
       name: "Name",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices maximus tortor eu posuere. ",
+        "Developed a custom health monitoring app for factory workers.",
     },
     {
-      logo: "/images/logos/logoipsum-220.svg",
+      logo: "/images/client/midtec_logo.svg",
       name: "Name",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices maximus tortor eu posuere. ",
+      description: "Implemented a comprehensive ERP solution for work orders.",
     },
   ],
   buttonText: "All Outcomes",
@@ -127,42 +158,58 @@ const portfolioData = {
 const features = [
   {
     number: "01",
-
+    title: "Tailored Innovation",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices maximus tortor eu posuere.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices maximus tortor eu posuere.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices maximus tortor eu posuere. ",
+      "Innovative solutions tailored to your business needs. We combine creativity and technology to deliver forward-thinking products that go beyond the ordinary.",
   },
   {
     number: "02",
-    title: "Why choose us?",
+    title: "Collaborative Approach",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices maximus tortor eu posuere.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices maximus tortor eu posuere.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices maximus tortor eu posuere. ",
+      "We prioritize collaboration and transparency, ensuring you’re involved in every step of the process. Our expert team provides dedicated support to bring your vision to life.",
   },
   {
     number: "03",
+    title: "Quality & Reliability",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices maximus tortor eu posuere.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices maximus tortor eu posuere.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices maximus tortor eu posuere. ",
+      "Quality and reliability are at the core of everything we do. With extensive experience in multiple industries, we ensure seamless delivery of projects on time and within budget.",
   },
 ];
 
 const faqData = {
   title: "Frequently Asked Questions",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora consectetur possimus libero distinctio officiis assumenda qui quidem quisquam saepe eligendi fuga, nulla tempore voluptatibus ipsum voluptates doloremque maiores impedit eius. Doloremque, deserunt odio. Vitae a esse reprehenderit ipsa consequatur et obcaecati, placeat accusantium recusandae saepe quibusdam totam ducimus! Libero placeat voluptatum aspernatur atque amet deleniti maxime nisi aliquid officia sed?",
+    "We understand that every project is unique, and you likely have questions before getting started. Below, we’ve compiled answers to the most common questions we receive about our services, processes, and what you can expect when working with us. If you don’t see your question here, don’t hesitate to reach out. We’re always happy to discuss your specific needs and how we can help bring your vision to life.",
   faqs: [
     {
-      question: "Lorem ipsum dolor sit amet.",
+      question: "What services does Lazyre specialize in?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, doloribus cupiditate? Placeat nisi impedit error ratione temporibus nemo eius corrupti nesciunt esse voluptatum odit dolore, tenetur exercitationem. Harum, dignissimos quia?",
+        "Lazyre offers a comprehensive range of services, including custom software development, branding and design, web development, digital marketing, and AI-powered solutions. Each of our services is backed by a specialized brand to ensure expert attention. Whether you need an e-commerce platform, a mobile app, or a complete rebranding strategy, we have the skills and experience to tailor our solutions to your business needs. Our holistic approach ensures that your project gets the dedicated focus it deserves while benefiting from the synergy of our diverse expertise.",
     },
     {
-      question: "Lorem ipsum dolor sit amet.",
+      question: "How does Lazyre manage to offer such diverse services?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices maximus tortor eu posuere.",
+        "Lazyre’s strength lies in its specialized brands, each focused on a specific area of expertise. This structure allows us to handle a wide range of services efficiently while maintaining high standards. Our team members are not only skilled in their respective fields but also collaborate seamlessly across brands. This synergy enables us to combine different skill sets and knowledge, resulting in innovative solutions that cater to diverse client needs. By fostering a culture of continuous learning and adaptation, we stay ahead of industry trends, ensuring that our diverse offerings remain relevant and effective.",
     },
     {
-      question: "Lorem ipsum dolor sit amet.",
+      question: "How do you handle project timelines and delivery?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices maximus tortor eu posuere.",
+        "We work closely with our clients to establish clear timelines and milestones at the outset of each project. Our process is highly collaborative, ensuring that you're always aware of the project's progress. We follow an agile development methodology, which allows us to remain flexible and responsive to changes. If adjustments are needed along the way, we communicate openly and adjust our workflows to accommodate new requirements. Ultimately, we strive to deliver on time without compromising quality, making sure that the final product aligns with your vision.",
+    },
+    {
+      question: "Can Lazyre handle projects of any size?",
+      answer:
+        "Yes, Lazyre is equipped to handle projects of any scale. Whether you're a startup looking for a single-page website or an established business in need of an advanced enterprise-level solution, we tailor our services to match the scope of your project. We take the time to understand your goals and apply the appropriate resources to ensure a successful outcome. Even as a small team, our brand-based structure allows us to maintain efficiency while delivering high-quality results for projects big or small.",
+    },
+    {
+      question: "How do you ensure the quality of your work?",
+      answer:
+        "Quality assurance is an integral part of our workflow. Each project is assigned to a specialized team within one of our brands, ensuring a focused approach. We conduct thorough testing and revisions during every stage of the development process to ensure that the final product is polished and meets your expectations. Additionally, we maintain regular communication with you to gather feedback and make improvements along the way. This collaborative process, combined with our attention to detail, guarantees a final result that not only functions flawlessly but also elevates your business.",
+    },
+    {
+      question: "What industries have you worked with?",
+      answer:
+        "We’ve had the privilege of working across a wide array of industries, from healthcare and energy to retail, e-commerce, and beyond. Our experience enables us to understand the specific challenges and opportunities within each sector. Whether it’s building a secure pharmacy POS system, creating an intuitive e-commerce platform, or designing a digital health pass system, we bring industry-specific expertise to each project. Our ability to adapt to different industries ensures that the solutions we provide are always relevant, efficient, and impactful.",
     },
   ],
 };
@@ -195,7 +242,7 @@ const Page: React.FC<PageProps> = ({ params }) => {
       </ContentWrapper>
       <div className="xl:py-12">
         <CoverImage
-          src={"/images/brand/build/lazyre_build_cover.webp"}
+          src={"/images/about/cover.webp"}
           alt={`About us cover image`}
         />
       </div>
@@ -213,9 +260,9 @@ const Page: React.FC<PageProps> = ({ params }) => {
         <div className="container">
           <OverviewGrid
             title=""
-            heading="Celebrating the magic once more"
-            description1="After the success that was Disney Upfront 2022 for both Disney and Raxo, we had the joy of collaborating again with the company for its Disney Upfront 2023 event, a gala that showcases and celebrates the many brands, shows, movies, characters and IPs that live under the vast, magical Disney umbrella."
-            description2="The goal of the Upfront is to celebrate Disney's distinctive, innovative approach to dynamic storytelling backed by technology. For this purpose, they were missing the visual compass and identity for the event, which included branding and brand guidelines, logo and key visuals, such as backgrounds, transitions and video assets."
+            heading="Our Brands, Our Expertise"
+            description1="We, even as a small team, prioritize efficiency by dividing our work into specialized brands. Each brand is focused on a particular area of expertise, allowing us to streamline processes and deliver top-quality solutions. Whether it’s innovative design, cutting-edge technology, or impactful marketing, our brands help us to bring a higher level of precision and dedication to every project."
+            description2="This structure ensures that every aspect of your project is handled by experts who are passionate about their field. By segregating our work, we can provide a tailored approach, ensuring no detail is overlooked. From app development to branding and beyond, our focused teams guarantee that we deliver the best results, while maintaining a seamless workflow throughout."
           />
         </div>
       </div>

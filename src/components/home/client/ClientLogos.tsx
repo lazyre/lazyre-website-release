@@ -8,44 +8,44 @@ import { useTheme } from "next-themes";
 
 const logoSets = [
   [
-    "/images/logos/logoipsum-220.svg",
-    "/images/logos/logoipsum-239.svg",
-    "/images/logos/logoipsum-263.svg",
+    "/images/client/almishkal.svg",
+    "/images/client/bw-logo.svg",
+    "/images/client/netflix-logo.svg",
   ],
   [
-    "/images/logos/logoipsum-220.svg",
-    "/images/logos/logoipsum-239.svg",
-    "/images/logos/logoipsum-263.svg",
+    "/images/client/kupdae_logo.svg",
+    "/images/client/toys-r-us-logo.svg",
+    "/images/client/byteachip.svg",
   ],
   [
-    "/images/logos/logoipsum-220.svg",
-    "/images/logos/logoipsum-239.svg",
-    "/images/logos/logoipsum-263.svg",
+    "/images/client/MC-logo-large.svg",
+    "/images/client/aeon-logo.svg",
+    "/images/client/midtec_logo.svg",
   ],
   [
-    "/images/logos/logoipsum-220.svg",
-    "/images/logos/logoipsum-239.svg",
-    "/images/logos/logoipsum-263.svg",
+    "/images/client/netflix-logo.svg",
+    "/images/client/almishkal.svg",
+    "/images/client/byteachip.svg",
   ],
   [
-    "/images/logos/logoipsum-220.svg",
-    "/images/logos/logoipsum-239.svg",
-    "/images/logos/logoipsum-263.svg",
+    "/images/client/bw-logo.svg",
+    "/images/client/kupdae_logo.svg",
+    "/images/client/MC-logo-large.svg",
   ],
   [
-    "/images/logos/logoipsum-220.svg",
-    "/images/logos/logoipsum-239.svg",
-    "/images/logos/logoipsum-263.svg",
+    "/images/client/toys-r-us-logo.svg",
+    "/images/client/midtec_logo.svg",
+    "/images/client/aeon-logo.svg",
   ],
   [
-    "/images/logos/logoipsum-220.svg",
-    "/images/logos/logoipsum-239.svg",
-    "/images/logos/logoipsum-263.svg",
+    "/images/client/byteachip.svg",
+    "/images/client/netflix-logo.svg",
+    "/images/client/kupdae_logo.svg",
   ],
   [
-    "/images/logos/logoipsum-220.svg",
-    "/images/logos/logoipsum-239.svg",
-    "/images/logos/logoipsum-263.svg",
+    "/images/client/midtec_logo.svg",
+    "/images/client/almishkal.svg",
+    "/images/client/bw-logo.svg",
   ],
 ];
 
@@ -118,7 +118,7 @@ const ClientLogos: React.FC = () => {
                 alt={`Client logo ${index + 1}`}
                 fill
                 style={{ objectFit: "contain" }}
-                className="invert"
+                className="invert opacity-75"
               />
             </motion.div>
           </AnimatePresence>

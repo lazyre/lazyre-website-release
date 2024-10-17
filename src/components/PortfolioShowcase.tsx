@@ -27,14 +27,14 @@ export default function PortfolioShowcase({
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-16">
         {companies.map((company, index) => (
           <div key={index} className="flex flex-col">
-            <div className="h-12 mb-4 ">
+            <div className="h-8 mb-4 ">
               <Image
                 src={company.logo}
                 alt={`${company.name} logo`}
-                width={150}
-                height={48}
-                objectFit="contain"
-                className="filter invert"
+                width={100}
+                height={32}
+                fill={false}
+                className="filter invert opacity-50"
               />
             </div>
             <p className="text-sm  text-foreground-muted mt-2">

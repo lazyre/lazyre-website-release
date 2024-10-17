@@ -22,6 +22,7 @@ export default function BrandItem({
   services,
   setBrandInView,
   lightAccentColor,
+  subDescription,
 }: BrandItemProps) {
   const ref = useRef<HTMLAnchorElement>(null);
   const isInView = useInView(ref, { amount: 0.5 });
@@ -85,21 +86,13 @@ export default function BrandItem({
           >
             {title}
           </h3>
-          <p className="mt-6 xl:hidden">
+          {/* <p className="mt-6 xl:hidden">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta
             laboriosam consequuntur architecto asperiores perspiciatis
             dignissimos temporibus eius eum vel est maxime tempore voluptates
             animi quo ut, sint repellendus totam libero!
-          </p>
-          <p className="mt-6 2xl:text-lg hidden xl:block">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta
-            laboriosam consequuntur architecto asperiores perspiciatis
-            dignissimos temporibus eius eum vel est maxime tempore voluptates
-            animi quo ut, sint repellendus totam libero! Lorem ipsum dolor sit
-            amet consectetur adipisicing elit. Eaque ipsa voluptatem explicabo
-            aut rem inventore tempora sed magnam veritatis, similique omnis,
-            porro quidem laborum ullam, praesentium fugiat soluta ipsam quod!
-          </p>
+          </p> */}
+          <p className="mt-6 2xl:text-lg ">{subDescription}</p>
           <ul className="mt-6">
             {services.map((service) => (
               <li

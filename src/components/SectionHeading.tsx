@@ -1,7 +1,9 @@
 import React from "react";
 import { cn } from "@/lib/utils";
-import { Quote } from "lucide-react";
+import { ArrowUpRight, Quote } from "lucide-react";
 import ArrowButton from "./buttons/ArrowButton";
+import Link from "next/link";
+import TransitionLink from "./TransitionLink";
 
 interface SectionHeadingProps {
   title: string;
@@ -10,6 +12,7 @@ interface SectionHeadingProps {
   titleId?: string;
   subtitleId?: string;
   ctaButton?: string;
+  ctaLink?: string;
   workHeading?: boolean;
   stackContent?: boolean;
   testimonialAuthor?: string;
@@ -23,6 +26,7 @@ const SectionHeading: React.FC<SectionHeadingProps> = ({
   titleId,
   subtitleId,
   ctaButton,
+  ctaLink,
   workHeading,
   stackContent,
   testimonialAuthor,
@@ -63,10 +67,19 @@ const SectionHeading: React.FC<SectionHeadingProps> = ({
             )}
           </h1>
 
-          {ctaButton && (
-            <div className="mt-4 sm:mt-6 group">
-              <ArrowButton buttonText={ctaButton} />
-            </div>
+          {ctaButton && ctaLink && (
+            // <div className="mt-4 sm:mt-6 group">
+            //   <ArrowButton buttonText={ctaButton} />
+            // </div>
+            <TransitionLink
+              href={ctaLink}
+              className="group inline-flex items-center mt-4 text-2xl  sm:mt-6 hover:text-primary transition-colors"
+            >
+              <span className="underline decoration-primary">{ctaButton}</span>
+              <span className="ml-2 inline-block group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">
+                <ArrowUpRight className="text-primary" aria-hidden="true" />
+              </span>
+            </TransitionLink>
           )}
         </div>
         <div

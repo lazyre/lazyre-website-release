@@ -242,7 +242,7 @@ const workData: workDataType[] = [
   {
     id: "voxel-verse",
     title: "Voxel Verse",
-    client: "Kaleidoscope Digital Creations",
+    client: "Almishkal Digital Creations",
     tags: ["3D Design", "Blockchain", "NFT", "Logo Design"],
     image:
       "https://cdn.lazyre.com/images/work/voxel-verse/voxel-verse-cover.webp",
@@ -454,7 +454,7 @@ const workData: workDataType[] = [
       author: "Sahar Al mansoori",
       content:
         "Lazyre Studios delivered far beyond our expectations with VoxelVerse. Their intricate attention to detail, from the roads of Dubai to the soaring Burj Khalifa, transformed our vision into a breathtaking reality. The Dubai model became the centerpiece of our NFT collection, captivating collectors worldwide. Lazyre’s mastery of voxel art and digital rendering made VoxelVerse a pioneering project in the NFT space.",
-      designation: "Creative Director, Kaleidoscope Digital Creations",
+      designation: "Creative Director, Almishkal Digital Creations",
     },
     nextWorkId: "revenue",
   },

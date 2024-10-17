@@ -202,12 +202,13 @@ const Header: React.FC = () => {
         <div className={containerClasses}>
           <TransitionLink href="/" aria-label="Home">
             <Image
-              src="https://res.cloudinary.com/lazyre/image/upload/v1596660652/Lazyre/logo/lazyre_tech_logo_light_ciuerh.svg"
+              src="https://cdn.lazyre.com/logos/lazyre_logo.svg"
               alt="Lazyre logo"
               width={100}
               height={100}
               style={{ objectFit: "contain", objectPosition: "center" }}
               priority
+              className={cn(currentTheme === "dark" && "filter invert")}
             />
           </TransitionLink>
           <motion.ul

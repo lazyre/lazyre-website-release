@@ -5,6 +5,7 @@ import servicesData from "@/data/ServicesData";
 import ServiceImages from "./ServiceImages";
 import ServiceFeatures from "./ServiceFeatures";
 import ParallaxText from "@/components/ui/animations/ParallaxText";
+import ContentWrapper from "@/components/ContentWrapper";
 
 type BrandServiceItemProps = {
   id: string;
@@ -27,31 +28,33 @@ const BrandServiceItem: React.FC<BrandServiceItemProps> = ({ id }) => {
           </h3>
         </ParallaxText>
       </div>
-      <div className="min-h-screen flex justify-center items-center">
-        <div className="container flex flex-col xl:flex-row xl:gap-12">
-          {serviceDetails.images && (
+      <ContentWrapper>
+        <div className=" flex justify-center items-center">
+          <div className="container flex flex-col xl:flex-row xl:gap-12">
+            {serviceDetails.images && (
+              <div className="xl:w-1/2">
+                <ServiceImages images={serviceDetails.images} />
+              </div>
+            )}
             <div className="xl:w-1/2">
-              <ServiceImages images={serviceDetails.images} />
+              <p className="text-xl mt-12 xl:mt-0">
+                {serviceDetails.description}
+              </p>
+              <ul>
+                {serviceDetails.serviceList.map((item, index) => (
+                  <ServiceFeatures
+                    key={index}
+                    index={index}
+                    item={item}
+                    expanded={expanded}
+                    setExpanded={setExpanded}
+                  />
+                ))}
+              </ul>
             </div>
-          )}
-          <div className="xl:w-1/2">
-            <p className="text-xl mt-12 xl:mt-0">
-              {serviceDetails.description}
-            </p>
-            <ul>
-              {serviceDetails.serviceList.map((item, index) => (
-                <ServiceFeatures
-                  key={index}
-                  index={index}
-                  item={item}
-                  expanded={expanded}
-                  setExpanded={setExpanded}
-                />
-              ))}
-            </ul>
           </div>
         </div>
-      </div>
+      </ContentWrapper>
     </article>
   );
 };

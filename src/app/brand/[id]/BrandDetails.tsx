@@ -47,17 +47,20 @@ const BrandDetails: React.FC<BrandDetailsProps> = ({ brand }) => {
         <CoverImage src={coverImage} alt={`${title} cover image`} />
       </div> */}
       <BrandServices services={services} />
-      <ContentWrapper>
-        <SectionHeading title={toolsHeading} subtitle={toolsDescription} />
-      </ContentWrapper>
-      <BrandTools tools={tools} />
+      <div className="min-h-screen xl:min-h-fit items-center mb-12">
+        <ContentWrapper>
+          <SectionHeading title={toolsHeading} subtitle={toolsDescription} />
+        </ContentWrapper>
+        <BrandTools tools={tools} />
+      </div>
       <ContentWrapper>
         <SectionHeading
           title={workHeading}
           subtitle={workDescription}
           ctaButton="See All Work"
+          ctaLink="/work"
         />
-        <div className="mt-12">
+        <div className="mt-12 ">
           <BrandRelatedWork relatedWork={relatedWork} />
         </div>
       </ContentWrapper>

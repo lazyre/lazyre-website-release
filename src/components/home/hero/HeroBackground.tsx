@@ -14,27 +14,27 @@ interface VideoSource {
 
 const videoSources = {
   dark: {
-    large: { src: "/videos/mascot/mascot_large_dark.mp4", loopStart: 22.5 },
-    medium: { src: "/videos/mascot/mascot_medium_dark.mp4", loopStart: 22.5 },
-    small: { src: "/videos/mascot/mascot_small_dark.mp4", loopStart: 22.5 },
+    large: { src: "/videos/mascot/mascot-large-dark.webm", loopStart: 22.5 },
+    medium: { src: "/videos/mascot/mascot-medium-dark.webm", loopStart: 22.5 },
+    small: { src: "/videos/mascot/mascot-small-dark.webm", loopStart: 22.5 },
   },
   light: {
-    large: { src: "/videos/mascot/mascot_large_light.mp4", loopStart: 22.5 },
-    medium: { src: "/videos/mascot/mascot_medium_light.mp4", loopStart: 22.5 },
-    small: { src: "/videos/mascot/mascot_small_light.mp4", loopStart: 22.5 },
+    large: { src: "/videos/mascot/mascot-large-light.webm", loopStart: 22.5 },
+    medium: { src: "/videos/mascot/mascot-medium-light.webm", loopStart: 22.5 },
+    small: { src: "/videos/mascot/mascot-small-light.webm", loopStart: 22.5 },
   },
 };
 
 const imageSources = {
   dark: {
-    large: "/images/mascot/mascot_large_dark.png",
-    medium: "/images/mascot/mascot_medium_dark.png",
-    small: "/images/mascot/mascot_small_dark.png",
+    large: "/images/mascot/mascot-large-dark.webp",
+    medium: "/images/mascot/mascot-medium-dark.webp",
+    small: "/images/mascot/mascot-small-dark.webp",
   },
   light: {
-    large: "/images/mascot/mascot_large_light.png",
-    medium: "/images/mascot/mascot_medium_light.png",
-    small: "/images/mascot/mascot_small_light.png",
+    large: "/images/mascot/mascot-large-light.webp",
+    medium: "/images/mascot/mascot-medium-light.webp",
+    small: "/images/mascot/mascot-small-light.webp",
   },
 };
 
@@ -42,8 +42,7 @@ export default function HeroBackground() {
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme } = useTheme();
   const [videoLoaded, setVideoLoaded] = useState(false);
-  //! Change this to false
-  const [videoError, setVideoError] = useState(true);
+  const [videoError, setVideoError] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   const [currentSource, setCurrentSource] = useState<VideoSource | null>(null);
   const [isFirstPlay, setIsFirstPlay] = useState(true);
