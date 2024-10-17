@@ -13,6 +13,8 @@ const workData: workDataType[] = [
       "https://cdn.lazyre.com/images/work/safe-shift/safeshift-cover-image.webp",
     overview: {
       heading: "Overview",
+      excerpt:
+        "In 2020, Æon Enterprises Group enlisted Lazyre to create a COVID-19 tracker for their 500 factory workers. This comprehensive solution included real-time health monitoring, AI-driven self-diagnosis, and a digital access pass system. By prioritizing employee safety, the tracker enabled uninterrupted production during the pandemic, safeguarding health while maintaining operational continuity.",
       description:
         "In 2020, during the height of the global pandemic, Æon Enterprises Group, a mid-sized manufacturer based in the UK, turned to us for a critical solution: a COVID-19 tracker to safeguard their workforce of over 500 factory workers. Faced with the challenge of maintaining employee health and ensuring operational continuity in a high-risk environment, we developed a comprehensive system that addressed these urgent needs. Our COVID-19 tracker featured real-time health monitoring, AI-powered self-diagnosis tools, and an intuitive digital access pass system to efficiently regulate factory entry. This robust solution not only protected the health of the workforce but also enabled Æon Enterprises Group to maintain uninterrupted production during a crucial time.",
     },
@@ -250,6 +252,8 @@ const workData: workDataType[] = [
       "https://cdn.lazyre.com/images/work/voxel-verse/voxel-verse-arab-showcase.webp",
     overview: {
       heading: "Overview",
+      excerpt:
+        "Lazyre Studios developed VoxelVerse, a voxel-based 3D city model collection for the NFT market. The Dubai Edition, commissioned by a prominent art collector, highlights the city’s iconic skyline and cultural richness. Rendered in Blender, this centerpiece showcases Dubai alongside other cities like New York and Paris, blending traditional culture with modern voxel art.",
       description:
         "At Lazyre Studios, we were commissioned to create VoxelVerse, a global collection of voxel-based 3D city models designed for the NFT boom. At the heart of this series was the Dubai Edition, the crown jewel of the collection, representing the UAE’s most iconic city. Commissioned by an influential Dubai-based art collector and NFT investor, this voxel model was meticulously crafted to capture the essence of Dubai’s vibrant skyline, cultural richness, and futuristic allure. Rendered using Blender, these digital art pieces became part of an exclusive NFT collection. The Dubai model stood as the centerpiece of the VoxelVerse collection, which featured cities such as New York, Paris, and Tokyo. Dubai’s unique combination of cultural heritage and cutting-edge modernity made it the focal point, embodying the client’s vision of showcasing world-class cities through the lens of voxel art. ",
     },
@@ -473,6 +477,8 @@ const workData: workDataType[] = [
       "https://cdn.lazyre.com/images/work/revenue/revenue-dashboard-cover.webp",
     overview: {
       heading: "Overview",
+      excerpt:
+        "Lazyre designed Revenue, an internal web application for a Dutch energy company to optimize renewable energy management. This platform consolidates data from solar panels and wind turbines, providing a customizable dashboard for tracking KPIs and real-time alerts. With scalability and multilingual support, Revenue empowers stakeholders to make informed, data-driven decisions while enhancing operational efficiency.",
       description:
         "Revenue, an innovative internal web application developed to transform the way renewable energy is monitored and managed. This platform was designed for a prominent energy company based in Eindhoven, Netherlands, to centralize data collection from solar panels, wind turbines, IoT devices, and security cameras. Through a fully customizable interface, users can track key performance indicators (KPIs), view real-time weather conditions, and manage security, all while receiving instant alerts for critical events. Revenue bridges the gap between sustainability and cutting-edge technology by offering a card-like customizable dashboard that enables seamless navigation and powerful data visualization. Designed to scale, this solution not only optimizes energy production and security but also supports multilingual capabilities, including Dutch, for broader usability. It empowers stakeholders to make data-driven decisions, ensuring operational efficiency in real-time. ",
     },
@@ -641,6 +647,8 @@ const workData: workDataType[] = [
       "https://cdn.lazyre.com/images/work/job-cards/job-cards-dashboard-showcase.webp",
     overview: {
       heading: "Overview",
+      excerpt:
+        "Lazyre partnered with Midtec in Qatar to create Job Cards, a custom ERP system designed for work order management. This solution streamlines creating, tracking, and managing orders while offering dynamic profit calculations and inventory oversight. Tailored to Midtec’s needs, Job Cards enhances operational efficiency and resource planning, ensuring precision in day-to-day processes.",
       description:
         "Lazyre partnered with Midtec, a leading manufacturing and engineering firm in Qatar, to develop a custom ERP system named Job Cards. Designed to streamline work order management, Job Cards was crafted to meet Midtec’s unique operational needs, allowing them to efficiently handle their day-to-day processes. This bespoke ERP solution provided comprehensive tools for creating, managing, and tracking work orders, along with dynamic profit calculation and inventory management. Built with scalability and precision, it enhanced Midtec's operational efficiency, financial insight, and resource planning.",
     },
@@ -820,6 +828,8 @@ const workData: workDataType[] = [
       "https://cdn.lazyre.com/images/work/pharma-souq/pharma-souq-dashboard-showcase.webp",
     overview: {
       heading: "Overview",
+      excerpt:
+        "Lazyre collaborated with a top Saudi pharmacy to develop Pharma Souq, a customizable sales and inventory tracking system for pharmaceutical retail. This robust platform prioritizes speed, security, and user-friendliness, offering real-time data tracking and automation. By improving customer service and ensuring regulatory compliance, Pharma Souq provides an efficient solution for pharmacy operations.",
       description:
         "Lazyre partnered with a leading pharmacy in Saudi Arabia to create Pharma Souq, a fully customizable sales and inventory tracking solution designed to meet the unique demands of pharmaceutical retail. Built for speed, security, and efficiency, Pharma Souq offers a seamless experience for both customers and pharmacy staff, combining real-time data tracking, automation, and user-friendly design. This robust system enhances customer service while ensuring accurate inventory management and regulatory compliance.",
     },
@@ -1041,6 +1051,8 @@ const workData: workDataType[] = [
       "https://cdn.lazyre.com/images/work/bloeiende-werelden/bloeiende-werelden-website-showcase.webp",
     overview: {
       heading: "Overview",
+      excerpt:
+        "In 2023, Lazyre joined forces with Bloeiende Werelden, a Netherlands-based florist, to launch an e-commerce platform and new brand identity. The project featured a localized website and mobile PWA designed for an engaging shopping experience. Every element was crafted to meet the florist’s specific needs, emphasizing local appeal and reflecting the vibrant floral business.",
       description:
         "In 2023 Lazyre partnered with Bloeiende Werelden, a Netherlands-based florist, to create a full-fledged e-commerce platform and an entirely new brand identity. The objective was to design a localized, feature-rich website and mobile PWA (Progressive Web App) to deliver an exceptional online shopping experience, while staying true to the vibrant nature of their floral business. From seamless mobile shopping to a responsive web platform, Lazyre ensured that every element was crafted to fit Bloeiende Werelden’s specific business needs, focusing on local market appeal.",
     },

@@ -16,7 +16,9 @@ function TableOfContents({ content }: Props) {
 
   return (
     <nav aria-label="Table of Contents" className="mb-8">
-      <h2 className="text-xl font-bold mb-4">Table of Contents</h2>
+      <h2 className="text-xl font-bold mb-4 text-foreground">
+        Table of Contents
+      </h2>
       <ul className="list-none pl-0">
         {headings.map((heading, index) => (
           <li
@@ -25,7 +27,7 @@ function TableOfContents({ content }: Props) {
           >
             <a
               href={`#heading-${index}`}
-              className="text-blue-600 hover:underline"
+              className="text-blue-500 hover:underline"
             >
               {heading.text}
             </a>

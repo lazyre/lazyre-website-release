@@ -30,7 +30,11 @@ export default function BlogList() {
               <BlogItem
                 key={blog.id}
                 id={blog.article.slug}
-                image="/images/brand/lazyre_lab_cover.webp"
+                image={
+                  blog.article.featured_image_url
+                    ? blog.article.featured_image_url
+                    : ""
+                }
                 title={blog.article.title}
                 category={blog.category.name}
               />

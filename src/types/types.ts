@@ -41,7 +41,12 @@ export interface workDataType {
   coverImage: string;
   lightAccentColor?: string;
   darkAccentColor?: string;
-  overview: { heading: string; description: string; links?: Array<string> };
+  overview: {
+    heading: string;
+    description: string;
+    excerpt: string;
+    links?: Array<string>;
+  };
   section: Array<{
     type: string;
     name?: string;

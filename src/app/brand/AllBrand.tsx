@@ -16,6 +16,7 @@ type BrandItem = {
     name: string;
   }[];
   image: string;
+  description: string;
   lightAccentColor: string;
 };
 
@@ -30,7 +31,7 @@ function AllBrand({ brandData }: Props) {
       <section className="relative min-h-screen" aria-labelledby="All Brands">
         <HeroHeading
           title="All brands"
-          subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras accumsan consectetur posuere. Vestibulum fermentum iaculis libero, non venenatis nibh mattis sit amet."
+          subtitle="Discover the Unique Solutions Behind Each Brand, Tailored to Elevate Your Experience."
           workHero
         />
         <div className="container grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -70,14 +71,8 @@ function AllBrand({ brandData }: Props) {
                   >
                     {brand.title}
                   </h3>
-                  <p className="mt-6 xl:hidden">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Soluta laboriosam consequuntur architecto asperiores
-                    perspiciatis dignissimos temporibus eius eum vel est maxime
-                    tempore voluptates animi quo ut, sint repellendus totam
-                    libero!
-                  </p>
-                  <p className="mt-6 2xl:text-lg hidden xl:block">
+                  <p className="mt-6 2xl:text-lg">{brand.description}</p>
+                  {/* <p className="mt-6 2xl:text-lg hidden xl:block">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                     Soluta laboriosam consequuntur architecto asperiores
                     perspiciatis dignissimos temporibus eius eum vel est maxime
@@ -86,7 +81,7 @@ function AllBrand({ brandData }: Props) {
                     elit. Eaque ipsa voluptatem explicabo aut rem inventore
                     tempora sed magnam veritatis, similique omnis, porro quidem
                     laborum ullam, praesentium fugiat soluta ipsam quod!
-                  </p>
+                  </p> */}
                   <ul className="mt-6">
                     {brand.services.map((service) => (
                       <li

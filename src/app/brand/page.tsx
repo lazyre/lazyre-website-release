@@ -23,6 +23,7 @@ export default function workPage() {
       title: brand.title,
       services: brand.services,
       image: brand.image,
+      description: brand.subDescription,
       lightAccentColor: brand.lightAccentColor,
     };
   });

@@ -161,7 +161,7 @@ export default function WorkContainer() {
                     currentTheme === "dark" ? "" : "text-background"
                   )}
                 >
-                  {selectedWorkDetails.overview.description}
+                  {selectedWorkDetails.overview.excerpt}
                 </motion.p>
                 <motion.ul
                   initial={{ opacity: 0, y: 20 }}
@@ -286,7 +286,7 @@ export default function WorkContainer() {
                 />
               </div>
               <div className="text-6xl text-white">
-                {selectedWorkDetails ? selectedWorkDetails.id.slice(-1) : "0"}
+                {selectedWorkDetails ? activeIndex : "0"}
               </div>
             </div>
           </div>
