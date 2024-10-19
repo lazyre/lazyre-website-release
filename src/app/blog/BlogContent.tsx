@@ -69,34 +69,41 @@ export default function BlogContent({
   return (
     <>
       <FeaturedArticles featuredArticles={featuredArticles} />
-      <h2 className="text-3xl font-bold mt-12 mb-6">Latest Articles</h2>
-      <Separator className="mb-8" />
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {isLoading
-          ? Array.from({ length: pageSize }).map((_, index) => (
-              <ArticleLoadingState key={index} />
-            ))
-          : articles.map((article: Article) => (
-              <ArticleCard
-                key={article.id}
-                article={article}
-                setCursorType={setCursorType}
-                setCursorText={setCursorText}
-              />
-            ))}
-      </div>
-      {hasNextPage && (
-        <div className="flex justify-center mt-8">
-          <Button onClick={() => fetchNextPage()} disabled={isFetchingNextPage}>
-            {isFetchingNextPage ? "Loading..." : "Load More"}
-          </Button>
-        </div>
-      )}
-      {totalArticles && (
-        <p className="text-center mt-4 text-muted-foreground">
-          Showing {articles.length} of {totalArticles - featuredArticles.length}{" "}
-          articles
-        </p>
+      {articles.length > 0 && (
+        <>
+          <h2 className="text-3xl font-bold mt-12 mb-6">Latest Articles</h2>
+          <Separator className="mb-8" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {isLoading
+              ? Array.from({ length: pageSize }).map((_, index) => (
+                  <ArticleLoadingState key={index} />
+                ))
+              : articles.map((article: Article) => (
+                  <ArticleCard
+                    key={article.id}
+                    article={article}
+                    setCursorType={setCursorType}
+                    setCursorText={setCursorText}
+                  />
+                ))}
+          </div>
+          {hasNextPage && (
+            <div className="flex justify-center mt-8">
+              <Button
+                onClick={() => fetchNextPage()}
+                disabled={isFetchingNextPage}
+              >
+                {isFetchingNextPage ? "Loading..." : "Load More"}
+              </Button>
+            </div>
+          )}
+          {totalArticles && (
+            <p className="text-center mt-4 text-muted-foreground">
+              Showing {articles.length} of{" "}
+              {totalArticles - featuredArticles.length} articles
+            </p>
+          )}
+        </>
       )}
     </>
   );

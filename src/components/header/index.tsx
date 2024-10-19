@@ -365,10 +365,10 @@ const Header: React.FC = () => {
                       <p className="mb-2">
                         Email us at: <br />
                         <a
-                          href="mailto:contact@lazyre.com"
+                          href="mailto:info@lazyre.com"
                           className="text-xl font-bold hover:text-white transition-colors"
                         >
-                          contact@lazyre.com
+                          info@lazyre.com
                         </a>
                       </p>
                     </motion.li>

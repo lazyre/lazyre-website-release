@@ -78,12 +78,12 @@ export default function AnimatedGreeting() {
 
       <div className="text-base xl:text-4xl">
         <div className="flex justify-between w-full mb-8 pt-8 border-t-2 border-primary">
-          <span className="">Email Us:</span>
+          <span className="">mailto:info@lazyre.com</span>
           <a
             href=""
             className="text-muted-foreground hover:text-primary transition-colors"
           >
-            info@da.com
+            info@lazyre.com
           </a>
         </div>
         <div className="flex justify-between w-full mb-8 pt-8 border-t-2 border-primary">

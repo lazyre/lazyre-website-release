@@ -94,7 +94,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                   className="w-full h-auto rounded-lg shadow-md"
                 />
               )}
-              <TableOfContents content={article.content} />
+              {/* <TableOfContents content={article.content} /> */}
               <ArticleContent content={article.content} />
               {article.tags.length > 0 && (
                 <div>
@@ -120,7 +120,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                     {moreArticles.map((article, index) => (
                       <li key={article.id}>
                         <Link
-                          href="#"
+                          href={`/blog/${article.slug}`}
                           className="text-foreground hover:text-primary hover:underline"
                         >
                           {article.title}

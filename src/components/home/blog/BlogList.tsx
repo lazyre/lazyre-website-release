@@ -3,7 +3,7 @@
 import React from "react";
 import BlogItem from "./BlogItem";
 import { useQuery } from "@tanstack/react-query";
-import { getFeaturedArticles } from "@/utils/api";
+import { getHomeArticles } from "@/utils/api";
 import CustomCarousel from "@/components/CustomCarousel";
 import { Card, CardContent } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -14,8 +14,8 @@ export default function BlogList() {
     isLoading,
     error,
   } = useQuery({
-    queryKey: ["featuredArticles"],
-    queryFn: getFeaturedArticles,
+    queryKey: ["homeArticles"],
+    queryFn: getHomeArticles,
   });
   if (error) return <></>;
 
@@ -29,13 +29,9 @@ export default function BlogList() {
           : blogData?.map((blog) => (
               <BlogItem
                 key={blog.id}
-                id={blog.article.slug}
-                image={
-                  blog.article.featured_image_url
-                    ? blog.article.featured_image_url
-                    : ""
-                }
-                title={blog.article.title}
+                id={blog.slug}
+                image={blog.featured_image_url ? blog.featured_image_url : ""}
+                title={blog.title}
                 category={blog.category.name}
               />
             ))}

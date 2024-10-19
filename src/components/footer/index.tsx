@@ -86,10 +86,10 @@ const Footer: React.FC = () => {
             <p className="mb-2">
               Email us at: <br />
               <a
-                href="mailto:contact@a.com"
+                href="mailto:info@lazyre.com.com"
                 className="text-xl font-bold hover:text-white transition-colors"
               >
-                contact@lazyre.com
+                info@lazyre.com
               </a>
             </p>
             <p>

@@ -71,7 +71,6 @@ export async function getArticles(
   if (categoryId) {
     query = query.eq("category_id", categoryId);
   }
-  console.log("Get Article running");
 
   const { data, error } = await query;
 
@@ -155,12 +154,25 @@ export async function getFeaturedArticles(): Promise<FeaturedArticle[]> {
     // .eq("status", "published") had to remove this
     .order("priority", { ascending: true })
     .limit(5);
-  console.log("Get Featured Article running");
 
   const { data, error } = await query;
 
   if (error) throw error;
   return data as FeaturedArticle[];
+}
+
+export async function getHomeArticles(): Promise<Article[]> {
+  let query = supabase
+    .from("articles")
+    .select("*, author:authors(*), category:categories(*)")
+    .eq("status", "published")
+    .order("published_at", { ascending: false })
+    .limit(5);
+
+  const { data, error } = await query;
+
+  if (error) throw error;
+  return data as Article[];
 }
 
 export async function getCategoryById(
