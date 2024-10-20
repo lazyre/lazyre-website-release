@@ -7,7 +7,7 @@ import { getData } from "@/lib/getData";
 import BlogQueryWrapper from "./BlogQueryWrapper";
 
 export default function Brand() {
-  const headingData = getData("sectionHeading", "client");
+  const headingData = getData("sectionHeading", "blog");
 
   return (
     <section aria-labelledby="blog-section-heading" className="xl:mb-0">

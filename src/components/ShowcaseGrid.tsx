@@ -55,7 +55,7 @@ function ShowcaseItem({
         />
       )}
       <div className="mt-4">
-        <p className="text-xl">{description}</p>
+        <p className="text-base sm:text-lg md:text-xl">{description}</p>
       </div>
     </div>
   );

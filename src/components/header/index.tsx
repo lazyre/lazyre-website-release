@@ -250,7 +250,6 @@ const Header: React.FC = () => {
                 </TransitionLink>
               </motion.li>
             ))}
-            <ToggleThemeButton />
           </motion.ul>
           <button
             className={hamburgerClasses}
@@ -279,13 +278,7 @@ const Header: React.FC = () => {
           aria-hidden="true"
         />
       </div>
-      <nav
-        className={cn(
-          navClasses,
-          "z-[80]",
-          isInView ? "" : "pointer-events-none"
-        )}
-      >
+      <nav className={cn(navClasses, "z-[80]")}>
         <div
           className={cn(
             "lg:w-1/2 w-full h-screen fixed top-0 right-0 overflow-y-auto lg:overflow-y-hidden",
@@ -305,7 +298,7 @@ const Header: React.FC = () => {
                     className="lg:w-1/3 p-4 flex flex-col"
                     variants={itemVariants}
                   >
-                    <h2 className="text-xl font-bold mb-4 opacity-50">
+                    <h2 className="text-2xl font-bold mb-4 opacity-50">
                       Our Brands
                     </h2>
                     <ul className="space-y-2 flex-grow overflow-y-auto">
@@ -321,6 +314,12 @@ const Header: React.FC = () => {
                         </motion.li>
                       ))}
                     </ul>
+                    <div className="mt-8">
+                      <h2 className="text-2xl font-bold mb-4 opacity-50">
+                        Select Theme
+                      </h2>
+                      <ToggleThemeButton />
+                    </div>
                   </motion.div>
                   <motion.div
                     className="lg:w-2/3 p-4 flex flex-col"
@@ -379,10 +378,10 @@ const Header: React.FC = () => {
                       <p>
                         Call us at: <br />
                         <a
-                          href="tel:+911234567890"
+                          href="tel:+918310766833"
                           className="text-xl font-bold hover:text-white transition-colors"
                         >
-                          +91 1234567890
+                          +91 8310766833
                         </a>
                       </p>
                     </motion.li>

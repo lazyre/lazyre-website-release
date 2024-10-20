@@ -14,48 +14,10 @@ interface FAQSectionProps {
   faqs: FAQItem[];
 }
 
-// const AccordionItem = ({
-//   item,
-//   isOpen,
-//   onToggle,
-// }: {
-//   item: FAQItem;
-//   isOpen: boolean;
-//   onToggle: () => void;
-// }) => {
-//   return (
-//     <div className="border-b border-gray-200">
-//       <button
-//         className="flex justify-end items-center w-full py-16 text-left gap-4 px-6 md:px-12 xl:px-0"
-//         onClick={onToggle}
-//       >
-//         <span className="text-base sm:text-lg md:text-xl font-bold ">
-//           {item.question}
-//         </span>
-//         <motion.span
-//           animate={{ rotate: isOpen ? 180 : 0 }}
-//           transition={{ duration: 0.3 }}
-//         >
-//           <ChevronDown className="w-6 h-6" />
-//         </motion.span>
-//       </button>
-//       <AnimatePresence>
-//         {isOpen && (
-//           <motion.div
-//             initial={{ height: 0, opacity: 0 }}
-//             animate={{ height: "auto", opacity: 1 }}
-//             exit={{ height: 0, opacity: 0 }}
-//             transition={{ duration: 0.3 }}
-//           >
-//             <p className="py-4 text-base sm:text-lg md:text-xl leading-relaxed px-6 md:px-12 xl:px-0">
-//               {item.answer}
-//             </p>
-//           </motion.div>
-//         )}
-//       </AnimatePresence>
-//     </div>
-//   );
-// };
+interface FAQItem {
+  question: string;
+  answer: string;
+}
 
 export default function FAQSection({
   title,
@@ -63,7 +25,7 @@ export default function FAQSection({
   faqs,
 }: FAQSectionProps) {
   return (
-    <section className="py-12 sm:py-16 md:py-20 lg:py-24 ">
+    <section className="py-12 sm:py-16 md:py-20 lg:py-24">
       <div className="container mx-auto">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-12 max-w-3xl px-6 md:px-12 xl:px-0">
           {title}
@@ -85,10 +47,6 @@ export default function FAQSection({
   );
 }
 
-interface FAQItem {
-  question: string;
-  answer: string;
-}
 interface AccordionElementProps {
   item: FAQItem;
   id: number;
@@ -97,8 +55,8 @@ interface AccordionElementProps {
 const AccordionElement: React.FC<AccordionElementProps> = ({ item, id }) => {
   return (
     <AccordionItem value={String(id)} className="border-b border-foreground">
-      <AccordionTrigger className="flex justify-end items-center w-full py-16 text-left gap-4 px-6 md:px-12 xl:px-0 text-base sm:text-lg md:text-xl font-bold">
-        {item.question}
+      <AccordionTrigger className="flex justify-between items-center w-full py-8 text-left px-6 md:px-12 xl:px-0 text-base sm:text-lg md:text-xl font-bold">
+        <span className="text-left pr-4">{item.question}</span>
       </AccordionTrigger>
       <AccordionContent className="py-4 text-base sm:text-lg md:text-xl leading-relaxed px-6 md:px-12 xl:px-0">
         {item.answer}

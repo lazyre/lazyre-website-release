@@ -37,7 +37,7 @@ const BrandServiceItem: React.FC<BrandServiceItemProps> = ({ id }) => {
               </div>
             )}
             <div className="xl:w-1/2">
-              <p className="text-xl mt-12 xl:mt-0">
+              <p className="text-base sm:text-lg md:text-xl mt-12 xl:mt-0">
                 {serviceDetails.description}
               </p>
               <ul>

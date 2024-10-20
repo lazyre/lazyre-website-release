@@ -99,7 +99,7 @@ const portfolioData = {
   headline: "A Journey of Collaboration",
   companies: [
     {
-      logo: "/images/client/almishkal.svg",
+      logo: "/images/client/almishkal-logo.svg",
       name: "Name",
       description:
         "Voxel-based design to create stunning 3D representations of iconic landmarks and cultural elements",
@@ -117,7 +117,7 @@ const portfolioData = {
         "Creation of engaging promotional cover images and thumbnails for new shows and movies",
     },
     {
-      logo: "/images/client/kupdae_logo.svg",
+      logo: "/images/client/kupdae-logo.svg",
       name: "Name",
       description:
         "Delivered complete branding solutions and T-shirt designs to establish a vibrant brand identity.",
@@ -129,13 +129,13 @@ const portfolioData = {
         "Creation of promotional flyers and in-store signage for sales events and special offers.",
     },
     {
-      logo: "/images/client/byteachip.svg",
+      logo: "/images/client/byte-logo.svg",
       name: "Name",
       description:
         "Developed an ERP solution for efficient inventory tracking, enhancing operational workflow and accuracy.",
     },
     {
-      logo: "/images/client/MC-logo-large.svg",
+      logo: "/images/client/mc-logo.svg",
       name: "Name",
       description:
         "Designed basic branding elements and office stationery to establish a professional identity.",
@@ -147,7 +147,7 @@ const portfolioData = {
         "Developed a custom health monitoring app for factory workers.",
     },
     {
-      logo: "/images/client/midtec_logo.svg",
+      logo: "/images/client/midtec-logo.svg",
       name: "Name",
       description: "Implemented a comprehensive ERP solution for work orders.",
     },

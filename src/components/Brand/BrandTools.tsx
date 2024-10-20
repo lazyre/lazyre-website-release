@@ -18,11 +18,11 @@ const BrandTools: React.FC<BrandToolsProps> = ({ tools }) => {
           text={`${toolCategory.category} ${toolCategory.toolList.join(" ")}`}
         >
           <div className="flex justify-center items-center mt-6">
-            <h3 className="text-4xl bg-primary py-3 px-6 rounded-full">
+            <h3 className="text-base sm:text-lg md:text-xl bg-primary py-3 px-6 rounded-full">
               {toolCategory.category}
             </h3>
             {toolCategory.toolList.map((tool) => (
-              <p key={tool} className="ml-12 text-3xl">
+              <p key={tool} className="text-base sm:text-lg md:text-xl ml-12 ">
                 {tool}
               </p>
             ))}

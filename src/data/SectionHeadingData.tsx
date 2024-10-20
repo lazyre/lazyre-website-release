@@ -6,7 +6,7 @@ const sectionHeadingData: sectionHeadingDataType[] = [
     title: "Building Bridges, Forging Success",
     titleHighlight: 2,
     subtitle:
-      "Meet our esteemed clientele, encompassing startups and enterprises, who place their trust in us to leverage cutting-edge technologies and achieve extraordinary outcomes. Join forces with us to unleash the full potential of your business in the dynamic digital landscape.",
+      "Partnering with Visionaries for Digital Growth Discover the startups and enterprises that have trusted Lazyre with their digital transformation. With expertise across multiple industries, we’ve built lasting relationships by delivering cutting-edge technology solutions that drive success.",
   },
   {
     id: "about",
@@ -17,10 +17,10 @@ const sectionHeadingData: sectionHeadingDataType[] = [
   },
   {
     id: "work",
-    title: "Unveiling Our Digital Legacy, Inspiring Future Ventures",
+    title: "Digital Showcase: Shaping the Future",
     titleHighlight: 2,
     subtitle:
-      "Discover our digital portfolio, a testament to our expertise in bleeding-edge technologies. From captivating designs to groundbreaking software solutions, our past projects showcase our commitment to innovation. Explore the realm of possibilities we've created for our clients and be inspired for your own digital journey.",
+      "Innovative Solutions, Proven Excellence Dive into our digital portfolio and witness a legacy of innovation. From world-class designs to transformative software solutions, our projects highlight how we push the boundaries of possibility. Be inspired by our journey and let us bring your vision to life.",
   },
   {
     id: "cta",
@@ -31,17 +31,17 @@ const sectionHeadingData: sectionHeadingDataType[] = [
   },
   {
     id: "brand",
-    title: "Our Brands, Expanding Limits",
+    title: "Our Brands, Expanding Horizons",
     titleHighlight: 2,
     subtitle:
-      "Going beyond the norm of a software development company, Lazyre is a comprehensive full-service agency powered by a diverse pool of exceptional talents. Equipped to collaboratively drive your project and achieve your goals, we offer a wide range of services, ensuring the actualization of your project and desired outcomes.",
+      "Your Gateway to Full-Service Innovation Explore Lazyre’s diverse portfolio of brands, each specializing in cutting-edge solutions across design, technology, and marketing. Discover how our team of experts goes beyond conventional boundaries to deliver exceptional results tailored to your business needs.",
   },
   {
     id: "blog",
-    title: "Our Brands, Expanding Limits",
+    title: "Exploring Ideas, Shaping Tomorrow",
     titleHighlight: 2,
     subtitle:
-      "Going beyond the norm of a software development company, Lazyre is a comprehensive full-service agency powered by a diverse pool of exceptional talents. Equipped to collaboratively drive your project and achieve your goals, we offer a wide range of services, ensuring the actualization of your project and desired outcomes.",
+      "Stay ahead with our in-depth articles, expert guides, and the latest industry trends. From Artificial Intelligence to design innovations, our blog serves as a knowledge hub to fuel your digital transformation. Whether you're a startup or a seasoned enterprise, unlock valuable insights and discover how you can navigate the evolving digital landscape with confidence.",
   },
 ];
 

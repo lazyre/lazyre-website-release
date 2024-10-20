@@ -39,7 +39,7 @@ const BrandRelatedWork: React.FC<BrandRelatedWorkProps> = ({ relatedWork }) => {
             <div>
               <ArrowButton buttonText={work.title} justifyBetween={true} />
             </div>
-            <div className="w-full flex flex-wrap flex-grow text-lg text-text/80 font-light">
+            <div className="w-full flex flex-wrap flex-grow text-base sm:text-lg md:text-xl text-text/80 font-light">
               {work.tags.slice(0, 4).map((tag, index) => (
                 <div key={index} className="relative flex opacity-80 w-full">
                   <span className="w-full">{tag}</span>

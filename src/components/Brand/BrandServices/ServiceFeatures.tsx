@@ -28,7 +28,7 @@ const ServiceFeatures: React.FC<ServiceFeaturesProps> = ({
         whileTap={{ scale: 0.95 }}
         aria-expanded={isOpen}
       >
-        <p className="text-xl p-6">{title}</p>
+        <p className="text-base sm:text-lg md:text-xl p-6 text-left">{title}</p>
         <motion.div
           animate={{ rotate: isOpen ? "180deg" : "0deg" }}
           transition={{ duration: 0.4 }}
@@ -59,7 +59,9 @@ const ServiceFeatures: React.FC<ServiceFeaturesProps> = ({
             }}
             transition={{ duration: 0.4, ease: [0.04, 0.62, 0.23, 0.98] }}
           >
-            <p className="text-xl pt-12 px-12">{description}</p>
+            <p className="text-base sm:text-lg md:text-xl pt-12 px-12">
+              {description}
+            </p>
           </motion.section>
         )}
       </AnimatePresence>

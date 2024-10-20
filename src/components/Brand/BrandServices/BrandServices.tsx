@@ -10,7 +10,7 @@ type BrandServicesProps = {
 
 const BrandServices: React.FC<BrandServicesProps> = ({ services }) => {
   return (
-    <section className="xl:py-24" aria-labelledby="services-heading">
+    <section aria-labelledby="services-heading">
       <h2 id="services-heading" className="sr-only">
         Our Services
       </h2>

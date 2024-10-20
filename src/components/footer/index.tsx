@@ -14,7 +14,7 @@ import { ArrowUpRight } from "lucide-react";
 const Footer: React.FC = () => {
   return (
     <footer className="w-full bg-black text-white py-12 px-6 md:px-12 lg:px-24 ">
-      <div className="relative max-w-[100rem] mx-auto z-[60]">
+      <div className="relative max-w-[100rem] mx-auto z-50">
         <div className="mb-12">
           <h2 className="font-bold text-3xl md:text-5xl lg:text-7xl mb-4">
             Got an idea?
@@ -95,10 +95,10 @@ const Footer: React.FC = () => {
             <p>
               Call us at: <br />
               <a
-                href="tel:+911234567890"
+                href="tel:+918310766833"
                 className="text-xl font-bold hover:text-white transition-colors"
               >
-                +91 1234567890
+                +91 8310766833
               </a>
             </p>
           </div>

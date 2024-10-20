@@ -47,7 +47,7 @@ const BrandDetails: React.FC<BrandDetailsProps> = ({ brand }) => {
         <CoverImage src={coverImage} alt={`${title} cover image`} />
       </div> */}
       <BrandServices services={services} />
-      <div className="min-h-screen xl:min-h-fit items-center mb-12">
+      <div className="mb-12">
         <ContentWrapper>
           <SectionHeading title={toolsHeading} subtitle={toolsDescription} />
         </ContentWrapper>
@@ -60,7 +60,7 @@ const BrandDetails: React.FC<BrandDetailsProps> = ({ brand }) => {
           ctaButton="See All Work"
           ctaLink="/work"
         />
-        <div className="mt-12 ">
+        <div className="mt-12 xl:mt-24 ">
           <BrandRelatedWork relatedWork={relatedWork} />
         </div>
       </ContentWrapper>
