@@ -279,20 +279,47 @@ export default function ContactForm() {
     [files, router]
   );
 
+  // const handleFileChange = useCallback(
+  //   (event: React.ChangeEvent<HTMLInputElement>) => {
+  //     const selectedFiles = event.target.files;
+  //     if (selectedFiles) {
+  //       const newFiles = Array.from(selectedFiles).map((file) => ({
+  //         name: file.name,
+  //         size: file.size,
+  //         type: file.type,
+  //         file,
+  //       }));
+  //       setFiles((prevFiles) => [...prevFiles, ...newFiles]);
+  //     }
+  //   },
+  //   []
+  // );
   const handleFileChange = useCallback(
     (event: React.ChangeEvent<HTMLInputElement>) => {
       const selectedFiles = event.target.files;
       if (selectedFiles) {
-        const newFiles = Array.from(selectedFiles).map((file) => ({
-          name: file.name,
-          size: file.size,
-          type: file.type,
-          file,
-        }));
+        const newFiles = Array.from(selectedFiles)
+          .filter((file) => {
+            if (file.size > MAX_FILE_SIZE) {
+              toast({
+                title: "File too large",
+                description: `${file.name} exceeds the 5MB limit.`,
+                variant: "destructive",
+              });
+              return false;
+            }
+            return true;
+          })
+          .map((file) => ({
+            name: file.name,
+            size: file.size,
+            type: file.type,
+            file,
+          }));
         setFiles((prevFiles) => [...prevFiles, ...newFiles]);
       }
     },
-    []
+    [toast]
   );
 
   const removeFile = useCallback((index: number) => {
@@ -308,21 +335,49 @@ export default function ContactForm() {
     event.currentTarget.classList.remove("border-primary");
   };
 
-  const handleDrop = (event: React.DragEvent<HTMLLabelElement>) => {
-    event.preventDefault();
-    event.currentTarget.classList.remove("border-primary");
-    if (event.dataTransfer.files) {
-      const newFiles = Array.from(event.dataTransfer.files)
-        .filter((file) => file.size <= MAX_FILE_SIZE)
-        .map((file) => ({
-          name: file.name,
-          size: file.size,
-          type: file.type,
-          file,
-        }));
-      setFiles((prevFiles) => [...prevFiles, ...newFiles]);
-    }
-  };
+  // const handleDrop = (event: React.DragEvent<HTMLLabelElement>) => {
+  //   event.preventDefault();
+  //   event.currentTarget.classList.remove("border-primary");
+  //   if (event.dataTransfer.files) {
+  //     const newFiles = Array.from(event.dataTransfer.files)
+  //       .filter((file) => file.size <= MAX_FILE_SIZE)
+  //       .map((file) => ({
+  //         name: file.name,
+  //         size: file.size,
+  //         type: file.type,
+  //         file,
+  //       }));
+  //     setFiles((prevFiles) => [...prevFiles, ...newFiles]);
+  //   }
+  // };
+  const handleDrop = useCallback(
+    (event: React.DragEvent<HTMLLabelElement>) => {
+      event.preventDefault();
+      event.currentTarget.classList.remove("border-primary");
+      if (event.dataTransfer.files) {
+        const newFiles = Array.from(event.dataTransfer.files)
+          .filter((file) => {
+            if (file.size > MAX_FILE_SIZE) {
+              toast({
+                title: "File too large",
+                description: `${file.name} exceeds the 5MB limit.`,
+                variant: "destructive",
+              });
+              return false;
+            }
+            return true;
+          })
+          .map((file) => ({
+            name: file.name,
+            size: file.size,
+            type: file.type,
+            file,
+          }));
+        setFiles((prevFiles) => [...prevFiles, ...newFiles]);
+      }
+    },
+    [toast]
+  );
 
   const formatFileSize = useCallback((bytes: number) => {
     if (bytes < 1024) return bytes + " bytes";

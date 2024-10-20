@@ -18,6 +18,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronDown, X } from "lucide-react";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Badge } from "@/components/ui/badge";
+import TransitionLink from "@/components/TransitionLink";
 
 type WorkItem = {
   id: string;
@@ -146,7 +147,7 @@ function AllWork({ workData }: Props) {
         </div>
         <div className="container grid grid-cols-1 xl:grid-cols-3 gap-8">
           {filteredWork.map((work) => (
-            <Link
+            <TransitionLink
               key={work.id}
               href={`/work/${work.id}`}
               className="w-full flex flex-col overflow-hidden rounded-xl p-6 bg-foreground text-background group cursor-pointer"
@@ -172,7 +173,7 @@ function AllWork({ workData }: Props) {
                   </div>
                 ))}
               </div>
-            </Link>
+            </TransitionLink>
           ))}
         </div>
       </section>

@@ -105,11 +105,11 @@ const Footer: React.FC = () => {
           <div>
             <Link href="/" className="inline-block mb-4">
               <Image
-                src="https://res.cloudinary.com/lazyre/image/upload/v1596660652/Lazyre/logo/lazyre_tech_logo_light_ciuerh.svg"
+                src="https://cdn.lazyre.com/logos/lazyre_logo.svg"
                 alt="Lazyre logo"
                 width={150}
                 height={32}
-                className="h-8 w-auto"
+                className="h-8 w-auto filter invert"
               />
             </Link>
             <p className="mb-4">
