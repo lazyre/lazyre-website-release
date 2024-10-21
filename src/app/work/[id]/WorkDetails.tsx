@@ -35,7 +35,7 @@ const WorkDetails: React.FC<workDetailsProps> = ({ work }) => {
           title={title}
           subtitle={client}
           image={image}
-          altText={`${client} project hero image`}
+          altText={`${title} project hero image`}
           workHero
         />
       </ContentWrapper>
@@ -101,7 +101,7 @@ const WorkDetails: React.FC<workDetailsProps> = ({ work }) => {
             if (section.sectionDetails.images) {
               const imageArray = section.sectionDetails.images.map((item) => ({
                 src: item.imageSrc,
-                alt: `${client} carousel image`,
+                alt: item.altText,
                 fit: item.fit,
                 bgColor: item.bgColor,
                 paddingValue: item.paddingValue,
@@ -121,7 +121,7 @@ const WorkDetails: React.FC<workDetailsProps> = ({ work }) => {
             if (section.sectionDetails.images) {
               const imageArray = section.sectionDetails.images.map((item) => ({
                 src: item.imageSrc,
-                alt: `${client} grid image`,
+                alt: item.altText,
               }));
               return (
                 <ImageGrid key={`imagegrid-${index}`} images={imageArray} />
@@ -134,7 +134,7 @@ const WorkDetails: React.FC<workDetailsProps> = ({ work }) => {
                 <ContentWrapper key={`infopane-${index}`}>
                   <RoundedPanes
                     image={section.sectionDetails.sectionImage.imageSrc}
-                    imageAlt={`${client} info pane image`}
+                    imageAlt={section.sectionDetails.sectionImage.altText}
                     bgColor={section.sectionDetails.sectionImage.bgColor}
                     fit={section.sectionDetails.sectionImage.fit}
                     paddingValue={

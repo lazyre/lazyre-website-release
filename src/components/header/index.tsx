@@ -40,10 +40,9 @@ const brandItems = [
   { href: "/brand/tech", label: "Lazyre Tech" },
   { href: "/brand/design", label: "Lazyre Design" },
   { href: "/brand/build", label: "Lazyre Build" },
-  { href: "/brand/mechatronics", label: "Lazyre Mechatronics" },
   { href: "/brand/web", label: "Lazyre Web" },
   { href: "/brand/digitalytics", label: "Lazyre Digitalytics" },
-  { href: "/brand/studio", label: "Lazyre Studio" },
+  { href: "/brand/studios", label: "Lazyre Studios" },
   { href: "/brand/lab", label: "Lazyre Lab" },
 ] as const;
 
@@ -394,7 +393,10 @@ const Header: React.FC = () => {
       </nav>
       {isOpen && (
         <motion.div
-          onClick={() => setOpen(false)}
+          onClick={() => {
+            setOpen(false);
+            document.body.style.overflow = "";
+          }}
           className="fixed inset-0 z-50 bg-black/50"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

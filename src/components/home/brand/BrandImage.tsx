@@ -36,6 +36,7 @@ export default function BrandImage({
                 sizes="(max-width: 1200px) 100vw, 50vw"
                 className="object-cover object-center"
                 priority
+                unoptimized
               />
             </div>
           </motion.div>
@@ -51,6 +52,7 @@ export default function BrandImage({
               alt={`${prevBrand.title} brand image`}
               sizes="(max-width: 1200px) 100vw, 50vw"
               className="object-cover object-center"
+              unoptimized
             />
           </div>
         </div>
@@ -65,6 +67,7 @@ export default function BrandImage({
               alt={`${nextBrand.title} brand image`}
               sizes="(max-width: 1200px) 100vw, 50vw"
               className="object-cover object-center"
+              unoptimized
             />
           </div>
         </div>

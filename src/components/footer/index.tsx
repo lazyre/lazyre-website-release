@@ -11,6 +11,24 @@ import {
 import { FaLinkedinIn } from "react-icons/fa";
 import { ArrowUpRight } from "lucide-react";
 
+const menuItems = [
+  { href: "/about", label: "Us" },
+  { href: "/work", label: "Work" },
+  { href: "/blog", label: "Blog" },
+  { href: "/contact", label: "Contact" },
+  { href: "/privacy", label: "Privacy" },
+] as const;
+
+const brandItems = [
+  { href: "/brand/tech", label: "Lazyre Tech" },
+  { href: "/brand/design", label: "Lazyre Design" },
+  { href: "/brand/build", label: "Lazyre Build" },
+  { href: "/brand/web", label: "Lazyre Web" },
+  { href: "/brand/digitalytics", label: "Lazyre Digitalytics" },
+  { href: "/brand/studios", label: "Lazyre Studios" },
+  { href: "/brand/lab", label: "Lazyre Lab" },
+] as const;
+
 const Footer: React.FC = () => {
   return (
     <footer className="w-full bg-black text-white py-12 px-6 md:px-12 lg:px-24 ">
@@ -36,6 +54,18 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-bold mb-4">Services</h3>
             <ul className="space-y-2">
+              {brandItems.map(({ href, label }) => (
+                <li key={label}>
+                  <Link
+                    href={href}
+                    className="hover:text-primary hover:underline transition-colors"
+                  >
+                    {label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            {/* <ul className="space-y-2">
               {[
                 "Tech",
                 "Design",
@@ -49,37 +79,40 @@ const Footer: React.FC = () => {
                 <li key={item}>
                   <Link
                     href={`/brand/${item.toLowerCase()}`}
-                    className="hover:text-black transition-colors"
+                    className="hover:text-primary hover:underline transition-colors"
                   >
                     {item}
                   </Link>
                 </li>
               ))}
-            </ul>
+            </ul> */}
           </div>
           <div>
             <h3 className="text-lg font-bold mb-4">About</h3>
             <ul className="space-y-2">
-              {[
-                "Work",
-                "Clients",
-                "Culture",
-                "Blogs",
-                "News",
-                "Team",
-                "Contact",
-                "Terms",
-              ].map((item) => (
+              {menuItems.map(({ href, label }) => (
+                <li key={label}>
+                  <Link
+                    href={href}
+                    className="hover:text-primary hover:underline transition-colors"
+                  >
+                    {label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            {/* <ul className="space-y-2">
+              {["Us", "Work", "Blogs", "Contact", "Terms"].map((item) => (
                 <li key={item}>
                   <Link
                     href={`/${item.toLowerCase()}`}
-                    className="hover:text-black transition-colors"
+                    className="hover:text-primary hover:underline transition-colors"
                   >
                     {item}
                   </Link>
                 </li>
               ))}
-            </ul>
+            </ul> */}
           </div>
           <div>
             <h3 className="text-lg font-bold mb-4">Contact Us</h3>
@@ -87,7 +120,7 @@ const Footer: React.FC = () => {
               Email us at: <br />
               <a
                 href="mailto:info@lazyre.com.com"
-                className="text-xl font-bold hover:text-white transition-colors"
+                className="text-xl font-bold hover:text-primary hover:underline transition-colors"
               >
                 info@lazyre.com
               </a>
@@ -96,7 +129,7 @@ const Footer: React.FC = () => {
               Call us at: <br />
               <a
                 href="tel:+918310766833"
-                className="text-xl font-bold hover:text-white transition-colors"
+                className="text-xl font-bold hover:text-primary hover:underline transition-colors"
               >
                 +91 8310766833
               </a>
@@ -116,9 +149,9 @@ const Footer: React.FC = () => {
               Full service tech agency based in{" "}
               <span className="block">Mangalore, India</span>
             </p>
-            <div className="flex gap-4">
+            {/* <div className="flex gap-4">
               <SocialLink
-                href="https://instagram.com"
+                href="https://www.instagram.com/lazyre.tech/"
                 aria-label="Follow us on Instagram"
               >
                 <AiOutlineInstagram />
@@ -142,12 +175,12 @@ const Footer: React.FC = () => {
                 <AiOutlineBehance />
               </SocialLink>
               <SocialLink
-                href="https://dribbble.com"
+                href="https://dribbble.com/lazyre"
                 aria-label="Check our designs on Dribbble"
               >
                 <AiOutlineDribbble />
               </SocialLink>
-            </div>
+            </div> */}
           </div>
         </div>
 

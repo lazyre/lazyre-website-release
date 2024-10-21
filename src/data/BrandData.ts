@@ -34,16 +34,16 @@ const brandData: brandDataType[] = [
     tools: [
       {
         category: "App Development",
-        toolList: ["Flutter", "React Native", "Xamarin", "Swift", "Kotlin"],
+        toolList: ["Flutter", "React Native", "Swift", "Kotlin", "Xamarin"],
       },
       {
-        category: "Cloud Solutions",
+        category: "Artificial Intelligence",
         toolList: [
-          "AWS",
-          "Microsoft Azure",
-          "Google Cloud",
-          "IBM Cloud",
-          "Heroku",
+          "Open AI",
+          "Facebook LLama",
+          "Stable Diffusion",
+          "Tensor Flow",
+          "Hugging Face",
         ],
       },
     ],
@@ -87,8 +87,8 @@ const brandData: brandDataType[] = [
           "Adobe Photoshop",
           "Adobe Illustrator",
           "Figma",
-          "Sketch",
-          "CorelDRAW",
+          "DaVinci Resolve",
+          "Canva",
         ],
       },
       {
@@ -96,8 +96,8 @@ const brandData: brandDataType[] = [
         toolList: [
           "Blender",
           "AutoCAD",
-          "Tinkercad",
-          "Cinema 4D",
+          "FlowFrames",
+          "Unreal Engine",
           "MagicaVoxel",
         ],
       },
@@ -106,7 +106,7 @@ const brandData: brandDataType[] = [
     workHeading: "Explore Some of Our Most Creative Work",
     workDescription:
       "Discover a selection of projects that showcase our ability to combine creativity with functionality. From visual design to complex projects, these works highlight the diverse capabilities we bring to every task. Check out our portfolio to see how we turn ideas into impactful results.",
-    relatedWork: ["safe-shift", "revenue", "job-cards"],
+    relatedWork: ["voxel-verse", "bloeiende-werelden", "pharma-souq"],
   },
   {
     id: "build",
@@ -154,7 +154,7 @@ const brandData: brandDataType[] = [
     workHeading: "See How We Build Brands That Last",
     workDescription:
       "Explore a range of successful branding projects that highlight our approach to creating lasting and memorable identities. From strategy to execution, our work is focused on building brands that resonate with audiences. Dive into our portfolio to see how we craft strong, enduring brands.",
-    relatedWork: ["work1", "work3", "work5"],
+    relatedWork: ["bloeiende-werelden", "safe-shift"],
   },
   {
     id: "web",
@@ -164,10 +164,9 @@ const brandData: brandDataType[] = [
       { id: "frontend-development", name: "Front-End Development" },
       { id: "backend-development", name: "Back-End Development" },
       { id: "ecommerce-solutions", name: "E-Commerce Solutions" },
-      { id: "crm-solutions", name: "Custom CRM Solutions" },
-      // { id: "web-applications", name: "Web Applications" },
+      { id: "erp-solutions", name: "ERP Solutions" },
       { id: "cms-development", name: "CMS Development" },
-      { id: "web-hosting-deployment", name: "Web Deployment & Maintenance" },
+      { id: "web-hosting-deployment", name: "Web Hosting & Deployment" },
     ],
     lightAccentColor: "#9eb6e0",
     darkAccentColor: "#1f3761",
@@ -183,18 +182,18 @@ const brandData: brandDataType[] = [
     tools: [
       {
         category: "Frontend Development",
-        toolList: ["HTML5", "CSS3", "JavaScript", "React.js", "Vue.js"],
+        toolList: ["Next.js", "AngularJs", "ASP.NET", "Svelte", "React.js"],
       },
       {
         category: "Backend Development",
-        toolList: ["Node.js", "Django", "Flask", "Laravel", "Ruby on Rails"],
+        toolList: ["Node.js", "Docker", "Python", "MongoDB", "Kubernetes"],
       },
     ],
 
     workHeading: "Browse Our Outstanding Digital Projects",
     workDescription:
       "Take a look at our diverse range of projects that reflect our passion for crafting excellent digital experiences. Whether it’s websites or applications, each project demonstrates our commitment to delivering performance and usability. Explore our portfolio to see the results of our web expertise.",
-    relatedWork: ["work1", "work3", "work5"],
+    relatedWork: ["job-cards", "bloeiende-werelden", "revenue"],
   },
   {
     id: "digitalytics",
@@ -229,7 +228,7 @@ const brandData: brandDataType[] = [
         toolList: [
           "Google Analytics",
           "SEMrush",
-          "Moz",
+          "Google Search Console",
           "Ahrefs",
           "Screaming Frog",
         ],
@@ -239,9 +238,9 @@ const brandData: brandDataType[] = [
         toolList: [
           "Hootsuite",
           "Buffer",
+          "Meta Business Suite",
+          "Google Ads",
           "Sprout Social",
-          "Later",
-          "SocialBee",
         ],
       },
     ],
@@ -249,7 +248,7 @@ const brandData: brandDataType[] = [
     workHeading: "Discover Our Impactful Campaigns",
     workDescription:
       "Browse through our portfolio of successful projects, where strategic thinking meets creativity. Our results-driven work spans across various industries and showcases how we turn insights into impactful solutions. Check out our best work and see how we create value for clients.",
-    relatedWork: ["work1", "work3", "work5"],
+    relatedWork: ["voxel-verse", "bloeiende-werelden"],
   },
   {
     id: "studios",
@@ -259,7 +258,7 @@ const brandData: brandDataType[] = [
       { id: "photography", name: "Photography" },
       { id: "video-production", name: "Video Production" },
       { id: "video-photo-editing", name: "Photo & Video Editing" },
-      { id: "3d-prototyping", name: "3D Prototyping" },
+      { id: "generative-ai", name: "Generative AI" },
       { id: "brand-photography", name: "Brand Photography" },
       { id: "showreels", name: "Showreels" },
     ],
@@ -286,27 +285,30 @@ const brandData: brandDataType[] = [
         ],
       },
       {
-        category: "3D Rendering & Animation",
-        toolList: ["Maya", "Blender", "Cinema 4D", "Houdini", "3ds Max"],
+        category: "Animation & Resources",
+        toolList: ["Blender", "Procreate", "Krita", "Adobe Stock", "Unsplash"],
       },
     ],
 
     workHeading: "Discover the Power of Visual Storytelling",
     workDescription:
       "Our portfolio presents a selection of visually-driven projects that demonstrate our ability to tell compelling stories through media. Whether through photography, video, or other visual mediums, our work highlights creativity and technical expertise. Explore some of our best projects and see our vision in action.",
-    relatedWork: ["work1", "work3", "work5"],
+    relatedWork: ["voxel-verse", "safe-shift", "pharma-souq"],
   },
   {
     id: "lab",
     title: "Lazyre Lab",
     image: "/images/brand/lab/lazyre_lab_cover.webp",
     services: [
-      { id: "augmented-reality", name: "Augmented Reality (AR)" },
-      { id: "virtual-reality", name: "Virtual Reality (VR)" },
-      { id: "internet-of-things", name: "Internet of Things (IoT)" },
-      { id: "machine-learning-lab", name: "Machine Learning" },
-      // { id: "blockchain-development-lab", name: "Blockchain Development" },
       { id: "artificial-intelligence-lab", name: "Artificial Intelligence" },
+      { id: "machine-learning-lab", name: "Machine Learning" },
+      {
+        id: "experimental-software-development",
+        name: "Experimental Software Development",
+      },
+      { id: "saas-product-development", name: "SaaS Product Development" },
+      { id: "ar-vr-development", name: "AR/VR Development" },
+      { id: "internet-of-things", name: "Internet of Things (IoT)" },
     ],
     lightAccentColor: "#dea1b7",
     darkAccentColor: "#5e2138",
@@ -314,11 +316,11 @@ const brandData: brandDataType[] = [
       "Pioneering cutting-edge technologies to create intelligent, interactive solutions for the next generation of business.",
     subHeading: "Innovative Solutions with Emerging Technologies.",
     subDescription:
-      "Lazyre Lab explores the frontier of technology, from AI and machine learning to augmented and virtual reality. We experiment with emerging tech to build innovative solutions that transform industries and redefine how businesses operate. With a focus on AI-powered automation and interactive experiences, Lazyre Lab is your gateway to staying ahead in the tech-driven future.",
+      "Lazyre Lab is where experimentation meets innovation. We develop internal tools, build public-ready software products, and create SaaS applications that push the boundaries of technology. From AR and VR to AI and IoT, we explore a wide range of cutting-edge tech. Our goal is to craft tools that are not only cutting-edge but also helpful to the broader community. In the near future, we plan to open-source select projects to contribute to global tech development.",
     coverImage: "/images/brand/tech.jpg",
-    toolsHeading: "Tech Tools for Emerging Solutions",
+    toolsHeading: "Tools We Use to Shape the Future",
     toolsDescription:
-      "At Lazyre Lab, we utilize a wide range of innovative tools to explore cutting-edge technologies. Whether it's AI or augmented reality, our tools help create intelligent, immersive solutions for businesses of the future.",
+      "At Lazyre Lab, we utilize a broad spectrum of tools and platforms to bring our innovative ideas to life. From AI to IoT frameworks, our tech stack supports cutting-edge experimentation and development.",
     tools: [
       {
         category: "Artificial Intelligence",
@@ -331,15 +333,15 @@ const brandData: brandDataType[] = [
         ],
       },
       {
-        category: "Augmented Reality",
-        toolList: ["ARCore", "ARKit", "Unity", "Vuforia", "Spark AR"],
+        category: "AR/VR",
+        toolList: ["ARCore", "ARKit", "Unity", "Blender", "RealityKit"],
       },
     ],
 
-    workHeading: "Explore Our Groundbreaking Innovations",
+    workHeading: "Exploring the Edge of Innovation",
     workDescription:
-      "Our portfolio features cutting-edge projects that explore the frontiers of technology and innovation. From experimental solutions to breakthrough ideas, we’re pushing boundaries across a range of fields. Browse through our work to see the innovative solutions we’ve created.",
-    relatedWork: ["work1", "work3", "work5"],
+      "At Lazyre Lab, we are committed to pushing the boundaries of technology. Explore our diverse range of innovative projects that span artificial intelligence, immersive AR/VR experiences, IoT solutions, and more. Each endeavor reflects our dedication to experimentation and our pursuit of cutting-edge technologies that can transform industries and enhance everyday life.",
+    relatedWork: ["safe-shift", "voxel-verse", "job-cards"],
   },
 ];
 

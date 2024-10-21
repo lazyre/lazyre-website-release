@@ -92,7 +92,7 @@ export default function AnimatedGreeting() {
             href=""
             className="text-muted-foreground hover:text-primary transition-colors"
           >
-            +1 1234567890
+            +91 8310766833
           </a>
         </div>
       </div>

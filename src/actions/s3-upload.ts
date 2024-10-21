@@ -1,40 +1,95 @@
-import { S3Client } from "@aws-sdk/client-s3";
-import { Upload } from "@aws-sdk/lib-storage";
+"use client";
 
-const s3Client = new S3Client({
-  region: process.env.NEXT_PUBLIC_AWS_REGION!,
-  credentials: {
-    accessKeyId: process.env.NEXT_PUBLIC_AWS_ACCESS_KEY_ID!,
-    secretAccessKey: process.env.NEXT_PUBLIC_AWS_SECRET_ACCESS_KEY!,
-  },
-});
+import { useState } from "react";
 
-export async function uploadToS3(
+interface UploadResult {
+  url: string;
+  sharableLink: string;
+}
+
+async function getPresignedUrls(
+  fileName: string,
+  fileType: string,
+  filePath: string
+): Promise<{ uploadUrl: string; sharableLink: string }> {
+  const response = await fetch("/api/get-presigned-url", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ fileName, fileType, filePath }),
+  });
+
+  if (!response.ok) {
+    throw new Error("Failed to get presigned URLs");
+  }
+
+  const { uploadUrl, sharableLink } = await response.json();
+  return { uploadUrl, sharableLink };
+}
+
+async function uploadToS3(
   file: File,
+  filePath: string,
   progressCallback: (progress: number) => void
-): Promise<{ url: string }> {
-  const fileName = `${Date.now()}-${file.name}`;
-  const params = {
-    Bucket: process.env.NEXT_PUBLIC_AWS_S3_BUCKET_NAME!,
-    Key: fileName,
-    Body: file,
-    ContentType: file.type,
+): Promise<UploadResult> {
+  const { uploadUrl, sharableLink } = await getPresignedUrls(
+    file.name,
+    file.type,
+    filePath
+  );
+
+  return new Promise((resolve, reject) => {
+    const xhr = new XMLHttpRequest();
+    xhr.open("PUT", uploadUrl);
+
+    xhr.upload.onprogress = (event) => {
+      if (event.lengthComputable) {
+        const percentComplete = (event.loaded / event.total) * 100;
+        progressCallback(percentComplete);
+      }
+    };
+
+    xhr.onload = () => {
+      if (xhr.status === 200) {
+        // The URL where the file can be accessed
+        const fileUrl = uploadUrl.split("?")[0];
+        resolve({ url: fileUrl, sharableLink });
+      } else {
+        reject(new Error("Upload failed"));
+      }
+    };
+
+    xhr.onerror = () => {
+      reject(new Error("Upload failed"));
+    };
+
+    xhr.send(file);
+  });
+}
+
+export function useS3Upload() {
+  const [uploadProgress, setUploadProgress] = useState<{
+    [key: string]: number;
+  }>({});
+
+  const upload = async (
+    file: File,
+    filePath: string
+  ): Promise<UploadResult> => {
+    try {
+      const result = await uploadToS3(file, filePath, (progress) => {
+        setUploadProgress((prev) => ({
+          ...prev,
+          [file.name]: progress,
+        }));
+      });
+      return result;
+    } catch (error) {
+      console.error("Upload error:", error);
+      throw error;
+    }
   };
 
-  const upload = new Upload({
-    client: s3Client,
-    params: params,
-  });
-
-  upload.on("httpUploadProgress", (progress) => {
-    if (progress.loaded && progress.total) {
-      const percentProgress = (progress.loaded / progress.total) * 100;
-      progressCallback(percentProgress);
-    }
-  });
-
-  await upload.done();
-
-  const url = `https://${process.env.NEXT_PUBLIC_AWS_S3_BUCKET_NAME}.s3.${process.env.NEXT_PUBLIC_AWS_REGION}.amazonaws.com/${fileName}`;
-  return { url };
+  return { upload, uploadProgress };
 }

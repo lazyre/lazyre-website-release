@@ -3,27 +3,31 @@ import { getData } from "@/lib/getData";
 import { workDataType } from "@/types/types";
 import { Metadata } from "next";
 import WorkDetails from "./WorkDetails";
+import { workerData } from "worker_threads";
 
 export async function generateMetadata({
   params,
 }: {
   params: { id: string };
 }): Promise<Metadata> {
-  const workData = getData("work", params.id) as workDataType;
-  if (!workData) return { title: "work Not Found" };
-
-  return {
-    title: `${workData.title} | Our work`,
-    description: workData.overview.description,
-  };
+  try {
+    const workData = getData("work", params.id) as workDataType;
+    return {
+      title: `${workData.title} | Our Brand`,
+      description: workerData.subDescription,
+    };
+  } catch (error) {
+    return {
+      title: "Work Not Found",
+    };
+  }
 }
 
 export default function workPage({ params }: { params: { id: string } }) {
-  const workData = getData("work", params.id) as workDataType;
-
-  if (!workData) {
+  try {
+    const workData = getData("work", params.id) as workDataType;
+    return <WorkDetails work={workData} />;
+  } catch (error) {
     notFound();
   }
-
-  return <WorkDetails work={workData} />;
 }

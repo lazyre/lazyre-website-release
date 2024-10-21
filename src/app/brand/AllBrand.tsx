@@ -59,7 +59,7 @@ function AllBrand({ brandData }: Props) {
                   <Image
                     src={brand.image}
                     fill
-                    alt={`${brand.title} brand image`}
+                    alt={`${brand.title} cover image`}
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover object-center"
                   />
@@ -72,16 +72,6 @@ function AllBrand({ brandData }: Props) {
                     {brand.title}
                   </h3>
                   <p className="mt-6 2xl:text-lg">{brand.description}</p>
-                  {/* <p className="mt-6 2xl:text-lg hidden xl:block">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Soluta laboriosam consequuntur architecto asperiores
-                    perspiciatis dignissimos temporibus eius eum vel est maxime
-                    tempore voluptates animi quo ut, sint repellendus totam
-                    libero! Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit. Eaque ipsa voluptatem explicabo aut rem inventore
-                    tempora sed magnam veritatis, similique omnis, porro quidem
-                    laborum ullam, praesentium fugiat soluta ipsam quod!
-                  </p> */}
                   <ul className="mt-6">
                     {brand.services.map((service) => (
                       <li

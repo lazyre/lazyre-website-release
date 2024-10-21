@@ -271,12 +271,30 @@ const Page: React.FC<PageProps> = ({ params }) => {
       {/* <div className="xl:py-12"> */}
       <ImageGrid
         images={[
-          { src: "/images/brand/tech/lazyre_tech_cover.webp", alt: "" },
-          { src: "/images/brand/build/lazyre_build_cover.webp", alt: "" },
-          { src: "/images/brand/web/lazyre_web_cover.webp", alt: "" },
-          { src: "/images/brand/design/lazyre_design_cover.webp", alt: "" },
-          { src: "/images/brand/studios/lazyre_studios_cover.webp", alt: "" },
-          { src: "/images/brand/lab/lazyre_lab_cover.webp", alt: "" },
+          {
+            src: "/images/brand/tech/lazyre_tech_cover.webp",
+            alt: "Lazyre Tech Cover",
+          },
+          {
+            src: "/images/brand/build/lazyre_build_cover.webp",
+            alt: "Lazyre Build Cover",
+          },
+          {
+            src: "/images/brand/web/lazyre_web_cover.webp",
+            alt: "Lazyre Web Cover",
+          },
+          {
+            src: "/images/brand/design/lazyre_design_cover.webp",
+            alt: "Lazyre Design Cover",
+          },
+          {
+            src: "/images/brand/studios/lazyre_studios_cover.webp",
+            alt: "Lazyre Studios Cover",
+          },
+          {
+            src: "/images/brand/lab/lazyre_lab_cover.webp",
+            alt: "Lazyre Lab Cover",
+          },
         ]}
       />
       {/* </div> */}

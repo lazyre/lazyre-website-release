@@ -8,44 +8,44 @@ import { useTheme } from "next-themes";
 
 const logoSets = [
   [
-    "/images/client/almishkal-logo.svg",
-    "/images/client/bw-logo.svg",
-    "/images/client/netflix-logo.svg",
+    { src: "/images/client/almishkal-logo.svg", alt: "Almishkal logo" },
+    { src: "/images/client/bw-logo.svg", alt: "BW logo" },
+    { src: "/images/client/netflix-logo.svg", alt: "Netflix logo" },
   ],
   [
-    "/images/client/kupdae-logo.svg",
-    "/images/client/toys-r-us-logo.svg",
-    "/images/client/byte-logo.svg",
+    { src: "/images/client/kupdae-logo.svg", alt: "Kupdae logo" },
+    { src: "/images/client/toys-r-us-logo.svg", alt: "Toys R Us logo" },
+    { src: "/images/client/byte-logo.svg", alt: "Byte logo" },
   ],
   [
-    "/images/client/mc-logo.svg",
-    "/images/client/aeon-logo.svg",
-    "/images/client/midtec-logo.svg",
+    { src: "/images/client/mc-logo.svg", alt: "MC logo" },
+    { src: "/images/client/aeon-logo.svg", alt: "Aeon logo" },
+    { src: "/images/client/midtec-logo.svg", alt: "Midtec logo" },
   ],
   [
-    "/images/client/netflix-logo.svg",
-    "/images/client/almishkal-logo.svg",
-    "/images/client/byte-logo.svg",
+    { src: "/images/client/netflix-logo.svg", alt: "Netflix logo" },
+    { src: "/images/client/almishkal-logo.svg", alt: "Almishkal logo" },
+    { src: "/images/client/byte-logo.svg", alt: "Byte logo" },
   ],
   [
-    "/images/client/bw-logo.svg",
-    "/images/client/kupdae-logo.svg",
-    "/images/client/mc-logo.svg",
+    { src: "/images/client/bw-logo.svg", alt: "BW logo" },
+    { src: "/images/client/kupdae-logo.svg", alt: "Kupdae logo" },
+    { src: "/images/client/mc-logo.svg", alt: "MC logo" },
   ],
   [
-    "/images/client/toys-r-us-logo.svg",
-    "/images/client/midtec-logo.svg",
-    "/images/client/aeon-logo.svg",
+    { src: "/images/client/toys-r-us-logo.svg", alt: "Toys R Us logo" },
+    { src: "/images/client/midtec-logo.svg", alt: "Midtec logo" },
+    { src: "/images/client/aeon-logo.svg", alt: "Aeon logo" },
   ],
   [
-    "/images/client/byte-logo.svg",
-    "/images/client/netflix-logo.svg",
-    "/images/client/kupdae-logo.svg",
+    { src: "/images/client/byte-logo.svg", alt: "Byte logo" },
+    { src: "/images/client/netflix-logo.svg", alt: "Netflix logo" },
+    { src: "/images/client/kupdae-logo.svg", alt: "Kupdae logo" },
   ],
   [
-    "/images/client/midtec-logo.svg",
-    "/images/client/almishkal-logo.svg",
-    "/images/client/bw-logo.svg",
+    { src: "/images/client/midtec-logo.svg", alt: "Midtec logo" },
+    { src: "/images/client/almishkal-logo.svg", alt: "Almishkal logo" },
+    { src: "/images/client/bw-logo.svg", alt: "BW logo" },
   ],
 ];
 
@@ -62,12 +62,12 @@ const ClientLogos: React.FC = () => {
     ? theme === "system"
       ? resolvedTheme
       : theme
-    : "dark"; // Default to 'light' for SSR
+    : "dark"; // Default to 'dark' for SSR
 
   // Start with a fixed initial state
-  const [currentLogoArray, setCurrentLogoArray] = useState<string[]>(() =>
-    logoSets.map((set) => set[0])
-  );
+  const [currentLogoArray, setCurrentLogoArray] = useState<
+    { src: string; alt: string }[]
+  >(() => logoSets.map((set) => set[0]));
 
   const updateLogos = useCallback(() => {
     setCurrentLogoArray((prevLogos) =>
@@ -76,7 +76,7 @@ const ClientLogos: React.FC = () => {
         let newLogo;
         do {
           newLogo = set[Math.floor(Math.random() * set.length)];
-        } while (newLogo === logo);
+        } while (newLogo.src === logo.src);
         return newLogo;
       })
     );
@@ -106,7 +106,7 @@ const ClientLogos: React.FC = () => {
         >
           <AnimatePresence mode="wait">
             <motion.div
-              key={logo}
+              key={logo.src}
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
@@ -114,8 +114,8 @@ const ClientLogos: React.FC = () => {
               className="absolute inset-0"
             >
               <Image
-                src={logo}
-                alt={`Client logo ${index + 1}`}
+                src={logo.src}
+                alt={logo.alt}
                 fill
                 style={{ objectFit: "contain" }}
                 className="invert opacity-75"

@@ -19,7 +19,7 @@ const servicesData: servicesDataType[] = [
       },
     ],
     description:
-      "At Lazyre Tech, we specialize in developing custom applications tailored to your business needs. Whether you're looking for a robust enterprise solution or a seamless mobile app, our team ensures that the final product is scalable, secure, and user-friendly. We have delivered successful projects like the Æon Enterprises COVID-19 tracker, which helped manage health compliance and workforce productivity, showcasing our ability to adapt to dynamic operational challenges.",
+      "At Lazyre Tech, we specialize in developing custom applications tailored to your business needs. Whether you're looking for a robust enterprise solution or a seamless mobile app, our team ensures that the final product is scalable, secure, and user-friendly. We have delivered successful projects like the Safe Shift, which helped manage health compliance and workforce productivity, showcasing our ability to adapt to dynamic operational challenges.",
     serviceList: [
       "Enterprise Applications: We design scalable apps to manage complex business processes, ensuring efficiency and ease of use.",
       "Mobile App Development: Building intuitive, feature-rich mobile apps for iOS and Android with a focus on seamless user experiences.",
@@ -684,7 +684,7 @@ const servicesData: servicesDataType[] = [
       "Lazyre Web offers cutting-edge front-end development services to create fast, responsive, and visually appealing websites. Our focus is on delivering seamless user experiences through clean code and intuitive designs. We specialize in crafting dynamic interfaces that adapt across devices, ensuring your website looks great and functions flawlessly on any platform.",
     serviceList: [
       "Responsive Web Design: Developing websites that automatically adjust to any screen size, delivering a consistent user experience across all devices.",
-      "Interactive UI: Creating engaging, dynamic user interfaces with modern technologies like React.js, enhancing user interaction and engagement.",
+      "Interactive UI: Creating engaging, dynamic user interfaces with modern technologies like Next.js, enhancing user interaction and engagement.",
       "Performance Optimization: Ensuring your website is optimized for speed, reducing load times and improving overall performance.",
     ],
   },
@@ -731,7 +731,8 @@ const servicesData: servicesDataType[] = [
         altText: "eCommerce platform illustration",
       },
       {
-        imageSrc: "/images/brand/web/ecommerce-solutions/payment-gateway.webp",
+        imageSrc:
+          "/images/brand/web/ecommerce-solutions/payment-gateway-integration.webp",
         altText: "payment gateway illustration",
       },
     ],
@@ -770,29 +771,54 @@ const servicesData: servicesDataType[] = [
       "CMS Maintenance & Support: Providing ongoing support and updates for your CMS, ensuring security and optimal performance over time.",
     ],
   },
+  // {
+  //   id: "crm-solutions",
+  //   title: "CRM Solutions",
+  //   images: [
+  //     {
+  //       imageSrc: "/images/brand/web/crm-solutions/crm-development.webp",
+  //       altText: "CRM development illustration",
+  //     },
+  //     {
+  //       imageSrc: "/images/brand/web/crm-solutions/crm-analytics.webp",
+  //       altText: "CRM analytics illustration",
+  //     },
+  //     {
+  //       imageSrc: "/images/brand/web/crm-solutions/crm-integration.webp",
+  //       altText: "CRM integration illustration",
+  //     },
+  //   ],
+  //   description:
+  //     "Lazyre Web delivers custom CRM solutions designed to help you manage customer relationships and streamline business processes. Our CRM systems provide valuable insights into customer interactions, helping you improve service, boost sales, and retain clients. We design CRM platforms that are tailored to your specific business needs, enhancing communication and customer engagement.",
+  //   serviceList: [
+  //     "Custom CRM Development: Creating bespoke CRM platforms that align with your business model, offering features like contact management, task automation, and sales tracking.",
+  //     "CRM Integrations: Integrating CRM software with other tools like email marketing platforms, accounting systems, and customer support channels.",
+  //     "CRM Analytics: Providing detailed analytics and reports on customer behavior, enabling you to make informed decisions for growth.",
+  //   ],
+  // },
   {
-    id: "crm-solutions",
-    title: "CRM Solutions",
+    id: "erp-solutions",
+    title: "ERP Solutions",
     images: [
       {
-        imageSrc: "/images/brand/web/crm-solutions/crm-development.webp",
-        altText: "CRM development illustration",
+        imageSrc: "/images/brand/web/erp-solutions/custom-erp-development.webp",
+        altText: "erp development illustration",
       },
       {
         imageSrc: "/images/brand/web/crm-solutions/crm-analytics.webp",
-        altText: "CRM analytics illustration",
+        altText: "crm analytics illustration",
       },
       {
-        imageSrc: "/images/brand/web/crm-solutions/crm-integration.webp",
-        altText: "CRM integration illustration",
+        imageSrc: "/images/brand/web/erp-solutions/cloud-based-erp.webp",
+        altText: "cloud based erp illustration",
       },
     ],
     description:
-      "Lazyre Web delivers custom CRM solutions designed to help you manage customer relationships and streamline business processes. Our CRM systems provide valuable insights into customer interactions, helping you improve service, boost sales, and retain clients. We design CRM platforms that are tailored to your specific business needs, enhancing communication and customer engagement.",
+      "Lazyre Web specializes in providing robust ERP solutions that streamline your business processes and enhance operational efficiency. Our team designs and implements customized ERP systems tailored to your specific needs, integrating various functions such as finance, HR, supply chain, and customer relationship management into a single cohesive platform. With our experience in deploying ERP solutions, we help businesses improve data visibility and decision-making, ensuring you stay competitive in today's market.",
     serviceList: [
-      "Custom CRM Development: Creating bespoke CRM platforms that align with your business model, offering features like contact management, task automation, and sales tracking.",
-      "CRM Integrations: Integrating CRM software with other tools like email marketing platforms, accounting systems, and customer support channels.",
-      "CRM Analytics: Providing detailed analytics and reports on customer behavior, enabling you to make informed decisions for growth.",
+      "Custom ERP Development: We create tailored ERP solutions that fit your business model, ensuring a seamless integration of all essential functions.",
+      "Cloud-Based ERP Solutions: Deploying ERP systems on the cloud for improved accessibility, scalability, and reduced IT costs.",
+      "ERP Integration: Connecting your existing systems with our ERP solutions to enhance functionality and data flow across departments.",
     ],
   },
   {
@@ -1068,13 +1094,39 @@ const servicesData: servicesDataType[] = [
         altText: "artificial photography illustration",
       },
     ],
-
     description:
-      "At Lazyre Studios, our photography services capture the essence of your brand, products, or events with stunning visuals. We specialize in professional-grade photography for a wide range of needs, including product shoots, corporate events, lifestyle photography, and more. Whether you need high-quality images for your website, social media, or marketing materials, our team delivers captivating visuals that tell your story.",
+      "At Lazyre Studios, our photography services capture the essence of your brand, products, or events with stunning visuals. We specialize in professional-grade photography for a wide range of needs, including product shoots, corporate events, lifestyle photography, and more. Whether you need high-quality images for your website, social media, or marketing materials, our team delivers captivating visuals that tell your story. Please note that this service is subject to location and availability.",
     serviceList: [
       "Product Photography: Capturing high-quality, detailed images of your products that highlight features and enhance your marketing efforts.",
-      "Event Photography: Providing professional coverage of corporate events, brand launches, and other key moments with stunning visuals.",
+      "Artificial Photography: Creating visually stunning and creatively composed images using digital techniques that push the boundaries of traditional photography.",
       "Lifestyle Photography: Creating authentic, engaging lifestyle images that resonate with your audience and reflect your brand values.",
+    ],
+  },
+  {
+    id: "generative-ai",
+    title: "Generative AI",
+    images: [
+      {
+        imageSrc: "/images/brand/studios/generative-ai/ai-generated-art.webp",
+        altText: "AI-generated art illustration",
+      },
+      {
+        imageSrc:
+          "/images/brand/studios/generative-ai/ai-soundscape-composition.webp",
+        altText: "AI soundscape composition illustration",
+      },
+      {
+        imageSrc:
+          "/images/brand/studios/generative-ai/ai-content-creation.webp",
+        altText: "AI content creation illustration",
+      },
+    ],
+    description:
+      "At Lazyre Studios, we harness the power of generative AI to create innovative and unique content across various mediums. From AI-generated art that pushes creative boundaries to automated soundscape composition and content creation, our team explores the potential of artificial intelligence to revolutionize the creative process. We strive to deliver one-of-a-kind solutions that reflect the latest advancements in technology and creativity.",
+    serviceList: [
+      "AI-Generated Art: Utilizing generative algorithms to produce stunning visual artwork that challenges traditional artistic boundaries.",
+      "AI Soundscape Composition: Creating original music pieces using AI algorithms to deliver fresh and innovative soundscapes.",
+      "AI Content Creation: Automating the content generation process, from written articles to social media posts, enhancing efficiency and creativity.",
     ],
   },
   {
@@ -1106,41 +1158,6 @@ const servicesData: servicesDataType[] = [
       "Explainer Videos: Developing clear, concise explainer videos that simplify complex ideas and engage your audience through storytelling.",
     ],
   },
-  // {
-  //   id: "3d-prototyping",
-  //   title: "3D Prototyping",
-  //   images: [
-  //     {
-  //       imageSrc: "/images/brand/tech/app-development/revenue-dashboard.webp",
-  //       altText: "alternative text",
-  //       fit: "contain",
-  //       bgColor: "#151F2B",
-  //       paddingValue: "10px",
-  //     },
-  //     {
-  //       imageSrc:
-  //         "/images/work/bloeiende-werelden/bloeiende-werelden-splash-screen.webp",
-  //       altText: "alternative text",
-  //       fit: "contain",
-  //       bgColor: "#FFD1A9",
-  //       paddingValue: "10px",
-  //     },
-  //     {
-  //       imageSrc: "/images/brand/tech/app-development/safe-shift-home.webp",
-  //       altText: "alternative text",
-  //       fit: "contain",
-  //       bgColor: "#228B22",
-  //       paddingValue: "10px",
-  //     },
-  //   ],
-  //   description:
-  //     "Lazyre Studios offers 3D prototyping services to bring your ideas to life with precision and innovation. Our team creates detailed 3D models that allow you to visualize concepts and test designs before full-scale production. Whether you're developing a product prototype or showcasing a design for marketing purposes, our 3D prototyping solutions help you communicate your vision effectively.",
-  //   serviceList: [
-  //     "Product Prototyping: Developing detailed 3D models of your product ideas to test designs and functionality before production.",
-  //     "Architectural Visualization: Creating immersive 3D models of buildings or environments to help clients visualize spaces and design concepts.",
-  //     "Marketing Prototypes: Crafting 3D visualizations to showcase product concepts for marketing campaigns and investor presentations.",
-  //   ],
-  // },
   {
     id: "brand-photography",
     title: "Brand Photography",
@@ -1167,7 +1184,7 @@ const servicesData: servicesDataType[] = [
     serviceList: [
       "Website Photography: Producing high-quality images for your website that align with your brand’s tone and message.",
       "Social Media Photography: Creating custom images for social media campaigns to increase engagement and maintain brand consistency.",
-      "Team & Office Photography: Capturing professional team portraits and office environments to humanize your brand and build trust.",
+      "Stock Image & Video Curation: Gathering and editing stock images and videos tailored to your brand's needs, ensuring a professional and polished visual presence.",
     ],
   },
   {
@@ -1225,57 +1242,84 @@ const servicesData: servicesDataType[] = [
       "Motion Graphics: Incorporating animations and visual effects into your videos to create a more dynamic and engaging viewer experience.",
     ],
   },
+  // {
+  //   id: "augmented-reality",
+  //   title: "Augmented Reality (AR)",
+  //   images: [
+  //     {
+  //       imageSrc: "/images/brand/lab/augmented-reality/ar-corporate.webp",
+  //       altText: "AR corporate illustration",
+  //     },
+  //     {
+  //       imageSrc:
+  //         "/images/brand/lab/augmented-reality/ar-product-visualization.webp",
+  //       altText: "AR product visualization illustration",
+  //     },
+  //     {
+  //       imageSrc: "/images/brand/lab/augmented-reality/ar-marketing.webp",
+  //       altText: "AR marketing illustration",
+  //     },
+  //   ],
+
+  //   description:
+  //     "At Lazyre Lab, we specialize in creating immersive Augmented Reality (AR) experiences that blend the digital and physical worlds. Our AR solutions help businesses engage customers with interactive content, from product visualizations and training simulations to virtual tours and marketing campaigns. We leverage the latest AR technology to bring your ideas to life in exciting, innovative ways that captivate your audience.",
+  //   serviceList: [
+  //     "AR Product Visualizations: Allow customers to explore and interact with 3D models of your products in real-world environments.",
+  //     "AR Marketing Campaigns: Engage your audience with creative, interactive marketing campaigns that use AR to leave a lasting impression.",
+  //     "AR Training Simulations: Enhance training programs with AR simulations that provide hands-on learning experiences in a virtual environment.",
+  //   ],
+  // },
+  // {
+  //   id: "virtual-reality",
+  //   title: "Virtual Reality (VR)",
+  //   images: [
+  //     {
+  //       imageSrc: "/images/brand/lab/virtual-reality/vr-training.webp",
+  //       altText: "VR training illustration",
+  //     },
+  // {
+  //   imageSrc: "/images/brand/lab/virtual-reality/vr-product.webp",
+  //   altText: "VR product illustration",
+  // },
+  //     {
+  //       imageSrc: "/images/brand/lab/virtual-reality/virtual-walkthrough.webp",
+  //       altText: "virtual walkthrough illustration",
+  //     },
+  //   ],
+
+  //   description:
+  //     "Lazyre Lab offers cutting-edge Virtual Reality (VR) solutions that transport users into fully immersive digital environments. Whether for entertainment, training, or product demonstrations, our VR experiences are designed to engage and excite your audience. From interactive walkthroughs to VR simulations, we create dynamic virtual worlds that offer endless possibilities for businesses and brands.",
+  //   serviceList: [
+  //     "VR Training Solutions: Providing immersive VR training modules that offer real-time practice in a safe, controlled virtual environment.",
+  //     "Virtual Walkthroughs: Creating fully interactive 3D virtual tours of spaces, from real estate properties to architectural designs.",
+  //     "VR Product Demonstrations: Allowing customers to experience and interact with products in a virtual setting, boosting engagement and understanding.",
+  //   ],
+  // },
+
   {
-    id: "augmented-reality",
-    title: "Augmented Reality (AR)",
+    id: "ar-vr-development",
+    title: "AR/VR Development",
     images: [
       {
         imageSrc: "/images/brand/lab/augmented-reality/ar-corporate.webp",
         altText: "AR corporate illustration",
       },
       {
-        imageSrc:
-          "/images/brand/lab/augmented-reality/ar-product-visualization.webp",
-        altText: "AR product visualization illustration",
-      },
-      {
-        imageSrc: "/images/brand/lab/augmented-reality/ar-marketing.webp",
-        altText: "AR marketing illustration",
-      },
-    ],
-
-    description:
-      "At Lazyre Lab, we specialize in creating immersive Augmented Reality (AR) experiences that blend the digital and physical worlds. Our AR solutions help businesses engage customers with interactive content, from product visualizations and training simulations to virtual tours and marketing campaigns. We leverage the latest AR technology to bring your ideas to life in exciting, innovative ways that captivate your audience.",
-    serviceList: [
-      "AR Product Visualizations: Allow customers to explore and interact with 3D models of your products in real-world environments.",
-      "AR Marketing Campaigns: Engage your audience with creative, interactive marketing campaigns that use AR to leave a lasting impression.",
-      "AR Training Simulations: Enhance training programs with AR simulations that provide hands-on learning experiences in a virtual environment.",
-    ],
-  },
-  {
-    id: "virtual-reality",
-    title: "Virtual Reality (VR)",
-    images: [
-      {
-        imageSrc: "/images/brand/lab/virtual-reality/vr-training.webp",
-        altText: "VR training illustration",
-      },
-      {
         imageSrc: "/images/brand/lab/virtual-reality/vr-product.webp",
         altText: "VR product illustration",
       },
       {
-        imageSrc: "/images/brand/lab/virtual-reality/virtual-walkthrough.webp",
-        altText: "virtual walkthrough illustration",
+        imageSrc:
+          "/images/brand/lab/augmented-reality/ar-product-visualization.webp",
+        altText: "AR product visualization illustration",
       },
     ],
-
     description:
-      "Lazyre Lab offers cutting-edge Virtual Reality (VR) solutions that transport users into fully immersive digital environments. Whether for entertainment, training, or product demonstrations, our VR experiences are designed to engage and excite your audience. From interactive walkthroughs to VR simulations, we create dynamic virtual worlds that offer endless possibilities for businesses and brands.",
+      "At Lazyre Lab, we push the boundaries of reality by crafting immersive augmented and virtual reality experiences. Our AR and VR solutions are designed to enhance engagement and bridge the gap between digital and physical worlds. From virtual tours to augmented product visualizations, we help businesses tap into this emerging technology to create impactful user experiences.",
     serviceList: [
-      "VR Training Solutions: Providing immersive VR training modules that offer real-time practice in a safe, controlled virtual environment.",
-      "Virtual Walkthroughs: Creating fully interactive 3D virtual tours of spaces, from real estate properties to architectural designs.",
-      "VR Product Demonstrations: Allowing customers to experience and interact with products in a virtual setting, boosting engagement and understanding.",
+      "Augmented Reality: Developing AR applications that overlay digital content onto the real world, enhancing interaction and engagement.",
+      "Virtual Reality: Crafting fully immersive VR environments that provide a new level of user experience for gaming, training, or simulations.",
+      "Mixed Reality: Blending AR and VR to create interactive experiences that merge the physical and digital worlds seamlessly.",
     ],
   },
   {
@@ -1305,41 +1349,6 @@ const servicesData: servicesDataType[] = [
     ],
   },
   {
-    id: "blockchain-development-lab",
-    title: "Blockchain Development",
-    images: [
-      {
-        imageSrc: "/images/brand/tech/app-development/revenue-dashboard.webp",
-        altText: "alternative text",
-        fit: "contain",
-        bgColor: "#151F2B",
-        paddingValue: "10px",
-      },
-      {
-        imageSrc:
-          "/images/work/bloeiende-werelden/bloeiende-werelden-splash-screen.webp",
-        altText: "alternative text",
-        fit: "contain",
-        bgColor: "#FFD1A9",
-        paddingValue: "10px",
-      },
-      {
-        imageSrc: "/images/brand/tech/app-development/safe-shift-home.webp",
-        altText: "alternative text",
-        fit: "contain",
-        bgColor: "#228B22",
-        paddingValue: "10px",
-      },
-    ],
-    description:
-      "Lazyre Lab offers custom blockchain development services to create secure, decentralized solutions for your business. Whether you're looking to develop blockchain-based applications, smart contracts, or secure payment systems, we provide expertise in building solutions that enhance security and transparency. Our team ensures your blockchain projects are scalable, efficient, and aligned with your business goals.",
-    serviceList: [
-      "Smart Contract Development: Creating self-executing contracts with blockchain technology to automate processes and improve trust.",
-      "Decentralized Applications (dApps): Building secure, scalable dApps that offer transparency and reliability for businesses and consumers.",
-      "Blockchain Payment Systems: Implementing secure blockchain-based payment solutions that offer greater security and lower transaction costs.",
-    ],
-  },
-  {
     id: "artificial-intelligence-lab",
     title: "Artificial Intelligence (AI)",
     images: [
@@ -1358,7 +1367,7 @@ const servicesData: servicesDataType[] = [
     ],
 
     description:
-      "At Lazyre Lab, we harness the power of Artificial Intelligence to deliver innovative solutions that automate tasks, analyze data, and improve decision-making. From chatbots and voice assistants to generative AI for creative content, our AI services help businesses stay ahead in the digital age. Our solutions are designed to boost efficiency, enhance customer experiences, and unlock new opportunities for growth.",
+      "At Lazyre Lab, we design AI-driven solutions that enhance business operations and decision-making. Our artificial intelligence services include creating intelligent systems that can automate tasks, improve customer interactions, and analyze complex datasets. From conversational AI to generative models, we provide solutions that adapt to your unique needs.",
     serviceList: [
       "Generative AI Solutions: Developing AI models that create unique content, from text and images to music and design, for creative applications.",
       "AI Chatbots & Assistants: Creating intelligent, conversational chatbots and virtual assistants that enhance customer service and engagement.",
@@ -1384,11 +1393,65 @@ const servicesData: servicesDataType[] = [
     ],
 
     description:
-      "Lazyre Lab's Machine Learning services help businesses harness the power of data for predictive analytics, automation, and personalized solutions. Our machine learning models are built to process large datasets and uncover patterns, enabling smarter decision-making and better customer experiences. From recommendation systems to fraud detection, we design solutions that drive innovation across industries.",
+      "Machine learning powers automation, data-driven decision-making, and pattern recognition across industries. At Lazyre Lab, we build machine learning models tailored to solve your business challenges. Whether you're aiming to improve operational efficiency or develop smarter products, our machine learning solutions help you unlock the potential hidden within your data.",
     serviceList: [
       "Recommendation Systems: Building personalized recommendation systems that improve customer engagement and sales for e-commerce, media, and other industries.",
       "Predictive Analytics: Implementing machine learning models to forecast business trends, customer behavior, and operational outcomes based on historical data.",
       "Fraud Detection Solutions: Using machine learning to detect fraudulent activities in real-time, offering advanced security solutions for finance, e-commerce, and more.",
+    ],
+  },
+  {
+    id: "saas-product-development",
+    title: "SaaS Product Development",
+    images: [
+      {
+        imageSrc:
+          "/images/brand/lab/saas-development/saas-application-dev.webp",
+        altText: "saas application development illustration",
+      },
+      {
+        imageSrc: "/images/brand/lab/saas-development/saas-subscription.webp",
+        altText: "saas subscription illustration",
+      },
+      {
+        imageSrc: "/images/brand/lab/saas-development/saas-data-security.webp",
+        altText: "saas data security illustration",
+      },
+    ],
+    description:
+      "At Lazyre Lab, we specialize in developing SaaS applications that solve real-world problems with scalability and efficiency. Our SaaS products are designed to provide businesses with flexible, subscription-based solutions that can adapt to their needs. Whether it's productivity tools, e-commerce platforms, or enterprise software, our SaaS products are built with user experience, security, and performance in mind.",
+    serviceList: [
+      "SaaS Application Development: Creating cloud-based software that delivers business solutions through scalable, on-demand services.",
+      "Subscription-Based Models: Implementing flexible pricing models that enable businesses to access the software they need when they need it.",
+      "Data Security & Compliance: Ensuring that all SaaS applications are built with top-level security and compliance to industry standards.",
+    ],
+  },
+  {
+    id: "experimental-software-development",
+    title: "Experimental Software Development",
+    images: [
+      {
+        imageSrc:
+          "/images/brand/lab/experimental-software-development/public-software-tools.webp",
+        altText: "public software tools illustration",
+      },
+      {
+        imageSrc:
+          "/images/brand/lab/experimental-software-development/open-source-projects.webp",
+        altText: "open source projects illustration",
+      },
+      {
+        imageSrc:
+          "/images/brand/lab/experimental-software-development/prototyping-experimentation-projects.webp",
+        altText: "prototyping and experimenting illustration",
+      },
+    ],
+    description:
+      "Innovation is at the core of Lazyre Lab's DNA. We continuously explore new technologies and experiment with software development to test ideas and push boundaries. Whether it's for internal use or public release, our experimental projects often pave the way for new possibilities. Our commitment to innovation means we're not afraid to explore bold, untested concepts, turning them into working solutions.",
+    serviceList: [
+      "Prototyping & Experimentation: Developing software prototypes to test emerging ideas and concepts in real-world scenarios.",
+      "Open Source Projects: Creating and sharing experimental tools with the community to drive collaboration and innovation.",
+      "Public Software Tools: Launching polished, innovative software products that solve unique problems and enhance user experiences.",
     ],
   },
 ];

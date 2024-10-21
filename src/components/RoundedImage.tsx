@@ -11,6 +11,7 @@ interface RoundedImageProps {
   bgColor?: string;
   paddingValue?: string;
   priority?: boolean;
+  unoptimized?: boolean;
 }
 
 export default function RoundedImage({
@@ -22,6 +23,7 @@ export default function RoundedImage({
   bgColor,
   paddingValue,
   priority = false,
+  unoptimized = false,
 }: RoundedImageProps) {
   const containerClasses = cn(
     "relative rounded-xl overflow-hidden",
@@ -44,6 +46,7 @@ export default function RoundedImage({
         alt={alt}
         sizes={imageSizes}
         priority={priority}
+        unoptimized={unoptimized}
         style={{
           objectFit: fit,
           backgroundColor: bgColor,

@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { submitForm } from "@/actions/submit-form";
-import { uploadToS3 } from "@/actions/s3-upload";
+import { useS3Upload } from "@/actions/s3-upload";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -48,6 +48,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { FloatingLabelInput } from "../FloatingInput";
 import { CustomInputButton } from "../CustomInputButton";
 import { useToast } from "@/hooks/use-toast";
+import { nanoid } from "nanoid";
 
 const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
 const ACCEPTED_FILE_TYPES = [
@@ -81,13 +82,6 @@ const formSchema = z.object({
   projectIdea: z
     .string()
     .min(10, { message: "Please provide more details about your idea" }),
-  // budget: z.enum([
-  //   "<$50K",
-  //   "$50K - $100K",
-  //   "$100K - $200K",
-  //   ">$200K",
-  //   "LET'S DISCUSS",
-  // ]),
   services: z
     .array(
       z.enum([
@@ -124,64 +118,26 @@ interface Country {
   flag: string;
 }
 
+const generateInquiryNumber = () => {
+  const now = new Date();
+  const year = now.getFullYear().toString().slice(-2);
+  const month = (now.getMonth() + 1).toString().padStart(2, "0");
+  const date = now.getDate().toString().padStart(2, "0");
+  const uniqueNumber = nanoid(8);
+
+  return `PI${year}${month}${date}${uniqueNumber}`;
+};
+
 export default function ContactForm() {
   const [countries, setCountries] = useState<Country[]>([]);
   const [isLoadingCountries, setIsLoadingCountries] = useState(true);
   const [step, setStep] = useState<number>(1);
   const [files, setFiles] = useState<FileInfo[]>([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  // const [submitResult, setSubmitResult] = useState<{
-  //   success: boolean;
-  //   message: string;
-  // } | null>(null);
   const { toast } = useToast();
-  const [uploadProgress, setUploadProgress] = useState<{
-    [key: string]: number;
-  }>({});
   const fileInputRef = useRef<HTMLInputElement>(null);
-  // const turnstileRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
-  // const [isTurnstileVisible, setIsTurnstileVisible] = useState(false);
-
-  // const [turnstileWidgetId, setTurnstileWidgetId] = useState<
-  //   string | null | void
-  // >(null);
-
-  // useEffect(() => {
-  //   if (step === 2) {
-  //     setIsTurnstileVisible(true);
-  //   } else {
-  //     setIsTurnstileVisible(false);
-  //     if (turnstileWidgetId) {
-  //       window.turnstile.remove(turnstileWidgetId);
-  //       setTurnstileWidgetId(null);
-  //     }
-  //   }
-  // }, [step, turnstileWidgetId]);
-
-  // useEffect(() => {
-  //   if (isTurnstileVisible) {
-  //     renderTurnstile();
-  //   }
-  // }, [isTurnstileVisible]);
-
-  // const renderTurnstile = () => {
-  //   if (
-  //     typeof window !== "undefined" &&
-  //     window.turnstile &&
-  //     turnstileRef.current
-  //   ) {
-  //     if (turnstileWidgetId) {
-  //       window.turnstile.remove(turnstileWidgetId);
-  //     }
-  //     const widgetId = window.turnstile.render(turnstileRef.current, {
-  //       sitekey: process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY,
-  //       theme: "light",
-  //     });
-  //     console.log(typeof widgetId);
-  //     setTurnstileWidgetId(widgetId);
-  //   }
-  // };
+  const { upload, uploadProgress } = useS3Upload();
 
   useEffect(() => {
     async function fetchCountries() {
@@ -210,7 +166,6 @@ export default function ContactForm() {
       email: "",
       companyName: "",
       projectIdea: "",
-      // budget: "<$50K",
       services: [],
       referral: [],
       deadline: "ASAP",
@@ -220,54 +175,33 @@ export default function ContactForm() {
   const onSubmit = useCallback(
     async (data: FormData) => {
       setIsSubmitting(true);
-      // const turnstileElement = turnstileRef.current?.querySelector(
-      //   'input[name="cf-turnstile-response"]'
-      // ) as HTMLInputElement | null;
-      // const token = turnstileElement?.value;
-
-      // if (!token) {
-      //   setSubmitResult({
-      //     success: false,
-      //     message: "Please complete the Turnstile challenge",
-      //   });
-      //   setIsSubmitting(false);
-      //   return;
-      // }
-
       try {
+        const inquiryNumber = generateInquiryNumber();
+
         const uploadedFiles = await Promise.all(
           files.map(async (file) => {
-            const { url } = await uploadToS3(file.file, (progress) => {
-              setUploadProgress((prev) => ({
-                ...prev,
-                [file.name]: progress,
-              }));
-            });
-            return url;
+            const { url, sharableLink } = await upload(
+              file.file,
+              `${inquiryNumber}/${file.name}`
+            );
+            return { url, sharableLink };
           })
         );
-
-        const formDataWithFiles = {
+        const result = await submitForm({
           ...data,
+          inquiryNumber: inquiryNumber,
           files: uploadedFiles,
-        };
-
-        const result = await submitForm(formDataWithFiles);
-        // setSubmitResult(result);
+        });
 
         if (result.success) {
           toast({
             title: "Thank you!",
-            description: "Your form has been submitted successfully.",
+            description: `Your form has been submitted successfully. Your enquiry number is ${inquiryNumber}.`,
           });
           await new Promise((resolve) => setTimeout(resolve, 1000));
           router.push("/");
         }
       } catch (error) {
-        // setSubmitResult({
-        //   success: false,
-        //   message: "An error occurred while submitting the form",
-        // });
         toast({
           title: "Error",
           variant: "destructive",
@@ -276,24 +210,9 @@ export default function ContactForm() {
       }
       setIsSubmitting(false);
     },
-    [files, router]
+    [files, router, toast, upload]
   );
 
-  // const handleFileChange = useCallback(
-  //   (event: React.ChangeEvent<HTMLInputElement>) => {
-  //     const selectedFiles = event.target.files;
-  //     if (selectedFiles) {
-  //       const newFiles = Array.from(selectedFiles).map((file) => ({
-  //         name: file.name,
-  //         size: file.size,
-  //         type: file.type,
-  //         file,
-  //       }));
-  //       setFiles((prevFiles) => [...prevFiles, ...newFiles]);
-  //     }
-  //   },
-  //   []
-  // );
   const handleFileChange = useCallback(
     (event: React.ChangeEvent<HTMLInputElement>) => {
       const selectedFiles = event.target.files;
@@ -335,21 +254,6 @@ export default function ContactForm() {
     event.currentTarget.classList.remove("border-primary");
   };
 
-  // const handleDrop = (event: React.DragEvent<HTMLLabelElement>) => {
-  //   event.preventDefault();
-  //   event.currentTarget.classList.remove("border-primary");
-  //   if (event.dataTransfer.files) {
-  //     const newFiles = Array.from(event.dataTransfer.files)
-  //       .filter((file) => file.size <= MAX_FILE_SIZE)
-  //       .map((file) => ({
-  //         name: file.name,
-  //         size: file.size,
-  //         type: file.type,
-  //         file,
-  //       }));
-  //     setFiles((prevFiles) => [...prevFiles, ...newFiles]);
-  //   }
-  // };
   const handleDrop = useCallback(
     (event: React.DragEvent<HTMLLabelElement>) => {
       event.preventDefault();
@@ -395,7 +299,7 @@ export default function ContactForm() {
   return (
     <div className="bg-foreground h-full p-6 xl:p-20 font-bold overflow-y-hidden">
       <h2 className="text-background text-4xl lg:text-6xl xl:text-6xl">
-        Lets begin something great together
+        Let's begin something great together
       </h2>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -481,7 +385,7 @@ export default function ContactForm() {
                                 role="combobox"
                                 aria-expanded={openCountryPopover}
                                 className={cn(
-                                  " h-16 xl:w-[200px] justify-between",
+                                  "h-16 xl:w-[200px] justify-between",
                                   !field.value?.country &&
                                     "text-muted-foreground"
                                 )}
@@ -522,7 +426,7 @@ export default function ContactForm() {
                                     <span className="hidden xl:block">
                                       Select country
                                     </span>
-                                    <span className="block xl:hidden text-xs  ">
+                                    <span className="block xl:hidden text-xs">
                                       Country
                                     </span>
                                   </>
@@ -531,7 +435,7 @@ export default function ContactForm() {
                               </Button>
                             </FormControl>
                           </PopoverTrigger>
-                          <PopoverContent className="w-[200px] p-0 z-[60] ">
+                          <PopoverContent className="w-[200px] p-0 z-[60]">
                             <Command>
                               <CommandInput placeholder="Search country..." />
                               <CommandList>
@@ -583,7 +487,7 @@ export default function ContactForm() {
                         </Popover>
                         <FormControl>
                           <div className="flex-1 flex relative h-16">
-                            <div className="bg-muted  text-slate-500 border-b-transparent border-b-2  rounded-l-md px-3 py-2 flex items-center">
+                            <div className="bg-muted text-slate-500 border-b-transparent border-b-2 rounded-l-md px-3 py-2 flex items-center">
                               {countries.find(
                                 (c) => c.value === field.value?.country
                               )?.code || <span className="opacity-0">+</span>}
@@ -750,39 +654,6 @@ export default function ContactForm() {
                   </AnimatePresence>
                 </FormItem>
 
-                {/* <FormField
-                  control={form.control}
-                  name="budget"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-base mb-4">Budget</FormLabel>
-                      <div className="flex flex-wrap gap-2">
-                        {(
-                          [
-                            "<$50K",
-                            "$50K - $100K",
-                            "$100K - $200K",
-                            ">$200K",
-                            "LET'S DISCUSS",
-                          ] as const
-                        ).map((option) => (
-                          <FormItem key={option}>
-                            <FormControl>
-                              <CustomInputButton
-                                type="radio"
-                                label={option.toUpperCase()}
-                                checked={field.value === option}
-                                onChange={() => field.onChange(option)}
-                              />
-                            </FormControl>
-                          </FormItem>
-                        ))}
-                      </div>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                /> */}
-
                 <FormField
                   control={form.control}
                   name="services"
@@ -930,11 +801,10 @@ export default function ContactForm() {
               </motion.div>
             )}
           </AnimatePresence>
-          {/* {isTurnstileVisible && <div ref={turnstileRef}></div>} */}
 
           {isSubmitting &&
-            files.map((file, index) => (
-              <motion.li className=" list-none" key={file.name}>
+            files.map((file) => (
+              <motion.li className="list-none" key={file.name}>
                 <Progress value={uploadProgress[file.name] || 0} max={100} />
                 <p className="text-xs text-slate-500">
                   {uploadProgress[file.name]
@@ -943,22 +813,6 @@ export default function ContactForm() {
                 </p>
               </motion.li>
             ))}
-
-          {/* {submitResult && submitResult.success && (
-            <Alert>
-              <AlertTitle>Thank You!</AlertTitle>
-              <AlertDescription>
-                Your form has been submitted successfully.
-              </AlertDescription>
-            </Alert>
-          )} */}
-
-          {/* {submitResult && !submitResult.success && (
-            <Alert variant="destructive">
-              <AlertTitle>Error</AlertTitle>
-              <AlertDescription>{submitResult.message}</AlertDescription>
-            </Alert>
-          )} */}
         </form>
       </Form>
     </div>

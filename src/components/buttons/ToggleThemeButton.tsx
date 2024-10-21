@@ -20,13 +20,13 @@ export default function ToggleThemeButton() {
         className={`relative w-16 h-8 rounded-full p-1 transition-colors duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-background focus:ring-primary ${
           theme === "dark" ? "bg-primary" : "bg-gray-200"
         }`}
-        animate={{ backgroundColor: theme === "dark" ? "#000" : "#fff" }}
+        animate={{ backgroundColor: theme === "dark" ? "#000" : "#e0e1dd" }}
       >
         <motion.div
           className="absolute left-1 top-1 w-6 h-6 rounded-full bg-white flex items-center justify-center"
           animate={{
             x: theme === "dark" ? 32 : 0,
-            backgroundColor: theme === "dark" ? "#fff" : "#000",
+            backgroundColor: theme === "dark" ? "#e0e1dd" : "#000",
           }}
           transition={{ type: "spring", stiffness: 700, damping: 30 }}
         >

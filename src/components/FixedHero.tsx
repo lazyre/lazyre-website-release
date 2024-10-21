@@ -26,8 +26,8 @@ export default function FixedHero({
     <section className="relative" aria-labelledby="hero-title">
       <HeroHeading title={title} subtitle={subtitle} workHero={workHero} />
       {image && (
-        <div className="mt-8">
-          <RoundedImage image={image} alt={altText} priority />
+        <div>
+          <RoundedImage image={image} alt={altText} priority unoptimized />
         </div>
       )}
       {video && (

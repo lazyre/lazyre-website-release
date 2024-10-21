@@ -156,7 +156,7 @@ function AllWork({ workData }: Props) {
                 <Image
                   src={work.image}
                   fill
-                  alt={`${work.title} project image`}
+                  alt={`${work.title} project cover`}
                   style={{
                     objectFit: "cover",
                     objectPosition: "center",
