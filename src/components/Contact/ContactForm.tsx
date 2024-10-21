@@ -75,7 +75,10 @@ const formSchema = z.object({
     .object({
       country: z.string(),
       code: z.string(),
-      number: z.string().regex(/^\d+$/, "Invalid phone number").optional(),
+      number: z
+        .string()
+        .regex(/^\d+$/, "Phone number must contain only digits")
+        .optional(),
     })
     .optional(),
   companyName: z.string().optional(),
@@ -165,6 +168,7 @@ export default function ContactForm() {
       name: "",
       email: "",
       companyName: "",
+      mobileNumber: { country: "", code: "", number: "" },
       projectIdea: "",
       services: [],
       referral: [],
@@ -289,10 +293,33 @@ export default function ContactForm() {
     else return (bytes / 1048576).toFixed(1) + " MB";
   }, []);
 
-  const isFirstStepValid =
-    form.watch(["name", "email"]).every(Boolean) &&
-    !form.formState.errors.name &&
-    !form.formState.errors.email;
+  // const isFirstStepValid =
+  //   form.watch(["name", "email"]).every(Boolean) &&
+  //   !form.formState.errors.name &&
+  //   !form.formState.errors.email;
+
+  const isFirstStepValid = useCallback(() => {
+    const { name, email, mobileNumber } = form.getValues();
+    const nameValid = name && !form.formState.errors.name;
+    const emailValid = email && !form.formState.errors.email;
+    const phoneValid =
+      !mobileNumber?.number ||
+      (mobileNumber.number && !form.formState.errors.mobileNumber);
+
+    return nameValid && emailValid && phoneValid;
+  }, [form]);
+
+  const handleNextStep = useCallback(() => {
+    if (isFirstStepValid()) {
+      setStep(2);
+    } else {
+      toast({
+        title: "Invalid Input",
+        description: "Please check your inputs and try again.",
+        variant: "destructive",
+      });
+    }
+  }, [isFirstStepValid, toast]);
 
   const [openCountryPopover, setOpenCountryPopover] = useState(false);
 
@@ -523,8 +550,8 @@ export default function ContactForm() {
                   data-cursor-text="RightIcon"
                   type="button"
                   className="disabled:bg-slate-500 disabled:cursor-not-allowed h-16"
-                  onClick={() => setStep(2)}
-                  disabled={!isFirstStepValid}
+                  onClick={handleNextStep}
+                  disabled={!isFirstStepValid()}
                 >
                   Explain Project Idea
                   <ChevronRight className="ml-2" />

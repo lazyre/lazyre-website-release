@@ -4,7 +4,7 @@ const brandData: brandDataType[] = [
   {
     id: "tech",
     title: "Lazyre Tech",
-    image: "/images/brand/tech/lazyre_tech_cover.webp",
+    image: "https://cdn.lazyre.com/images/brand/tech/lazyre_tech_cover.webp",
     services: [
       { id: "app-development", name: "App Development" },
       { id: "cloud-solutions", name: "Cloud Solutions" },
@@ -27,7 +27,7 @@ const brandData: brandDataType[] = [
     subDescription:
       "Lazyre Tech offers cutting-edge technological solutions tailored to meet the evolving needs of modern businesses. From app development and cloud solutions to advanced network security, we ensure your digital infrastructure is future-proof. With a focus on efficiency and scalability, our team builds systems that grow with your business, helping you innovate and compete in today’s fast-paced digital world.",
 
-    coverImage: "/images/brand/tech.jpg",
+    coverImage: "https://cdn.lazyre.com/images/brand/tech.jpg",
     toolsHeading: "Advanced Tech Solutions",
     toolsDescription:
       "Lazyre Tech utilizes a range of cutting-edge tools to develop efficient, scalable, and secure solutions. Our tools help streamline app development, cloud infrastructure, and more, ensuring modern businesses are equipped for the future.",
@@ -56,7 +56,8 @@ const brandData: brandDataType[] = [
   {
     id: "design",
     title: "Lazyre Design",
-    image: "/images/brand/design/lazyre_design_cover.webp",
+    image:
+      "https://cdn.lazyre.com/images/brand/design/lazyre_design_cover.webp",
     services: [
       { id: "logo-creation", name: "Logo Creation" },
       { id: "ui-ux-design", name: "UI UX design" },
@@ -76,7 +77,7 @@ const brandData: brandDataType[] = [
     subHeading: "Designs that Elevate Your Brand.",
     subDescription:
       "Lazyre Design is where creativity meets strategy. Our team specializes in delivering impactful visuals that resonate with your audience. From logo creation to UI/UX design and 3D prototypes, we blend aesthetics with functionality, ensuring that every design we produce reflects your brand's unique identity. Whether it's a sleek logo or an immersive digital interface, our designs speak for themselves, setting you apart in a crowded marketplace.",
-    coverImage: "/images/brand/tech.jpg",
+    coverImage: "https://cdn.lazyre.com/images/brand/tech.jpg",
     toolsHeading: "Design Tools for Impactful Creations",
     toolsDescription:
       "At Lazyre Design, we leverage top-tier design tools that enable us to create visually stunning and meaningful designs. These tools empower us to deliver everything from logos to complex 3D prototypes with precision and creativity.",
@@ -111,7 +112,7 @@ const brandData: brandDataType[] = [
   {
     id: "build",
     title: "Lazyre Build",
-    image: "/images/brand/build/lazyre_build_cover.webp",
+    image: "https://cdn.lazyre.com/images/brand/build/lazyre_build_cover.webp",
     services: [
       { id: "business-strategy", name: "Business Strategy" },
       { id: "target-audience-research", name: "Target Audience Research" },
@@ -131,7 +132,7 @@ const brandData: brandDataType[] = [
     subHeading: "Building Brands That Resonate.",
     subDescription:
       "Lazyre Build is all about creating cohesive and memorable brand identities. We handle everything from brand naming and logo design to messaging and positioning, ensuring your brand stands out. With a strategic approach to every element of branding, we help businesses connect emotionally with their target audience, driving loyalty and recognition across all touchpoints.",
-    coverImage: "/images/brand/tech.jpg",
+    coverImage: "https://cdn.lazyre.com/images/brand/tech.jpg",
     toolsHeading: "Brand Tools for Powerful Identities",
     toolsDescription:
       "Lazyre Build employs an array of strategic tools to create cohesive and impactful brand identities. These tools assist us in developing unique brand messaging, logos, and effective communication strategies.",
@@ -159,7 +160,7 @@ const brandData: brandDataType[] = [
   {
     id: "web",
     title: "Lazyre Web",
-    image: "/images/brand/web/lazyre_web_cover.webp",
+    image: "https://cdn.lazyre.com/images/brand/web/lazyre_web_cover.webp",
     services: [
       { id: "frontend-development", name: "Front-End Development" },
       { id: "backend-development", name: "Back-End Development" },
@@ -175,7 +176,7 @@ const brandData: brandDataType[] = [
     subHeading: "High-Performance Web Experiences.",
     subDescription:
       "Lazyre Web is dedicated to creating seamless, responsive websites and web applications that prioritize user experience and performance. Our web solutions are built to scale with your business, offering customized e-commerce platforms, content management systems, and more. We focus on delivering fast, secure, and optimized websites that ensure your brand’s digital presence is powerful and effective.",
-    coverImage: "/images/brand/tech.jpg",
+    coverImage: "https://cdn.lazyre.com/images/brand/tech.jpg",
     toolsHeading: "Web Tools for Seamless Experiences",
     toolsDescription:
       "Lazyre Web harnesses powerful tools to create responsive, high-performance websites and web applications. Our toolkit enables us to deliver scalable, secure, and optimized digital experiences for businesses across all sectors.",
@@ -198,7 +199,8 @@ const brandData: brandDataType[] = [
   {
     id: "digitalytics",
     title: "Lazyre Digitalytics",
-    image: "/images/brand/digitalytics/lazyre_digitalytics_cover.webp",
+    image:
+      "https://cdn.lazyre.com/images/brand/digitalytics/lazyre_digitalytics_cover.webp",
     services: [
       { id: "seo", name: "Search Engine Optimization (SEO)" },
       { id: "ppc", name: "Pay-Per-Click Advertising (PPC)" },
@@ -218,7 +220,7 @@ const brandData: brandDataType[] = [
     subHeading: "Data-Driven Digital Marketing Solutions.",
     subDescription:
       "Lazyre Digitalytics specializes in crafting comprehensive digital marketing strategies that deliver real results. Our expertise spans SEO, PPC, content marketing, and social media management, all designed to enhance your online presence. We focus on data-driven decision-making to drive traffic, improve engagement, and increase conversions, ensuring your marketing efforts translate into measurable success.",
-    coverImage: "/images/brand/tech.jpg",
+    coverImage: "https://cdn.lazyre.com/images/brand/tech.jpg",
     toolsHeading: "Marketing Tools for Maximum Reach",
     toolsDescription:
       "At Lazyre Digitalytics, we use advanced marketing tools to optimize and measure digital campaigns. Our toolkit allows us to enhance SEO, manage PPC ads, and track audience engagement effectively.",
@@ -253,7 +255,8 @@ const brandData: brandDataType[] = [
   {
     id: "studios",
     title: "Lazyre Studios",
-    image: "/images/brand/studios/lazyre_studios_cover.webp",
+    image:
+      "https://cdn.lazyre.com/images/brand/studios/lazyre_studios_cover.webp",
     services: [
       { id: "photography", name: "Photography" },
       { id: "video-production", name: "Video Production" },
@@ -269,7 +272,7 @@ const brandData: brandDataType[] = [
     subHeading: "Compelling Visual Storytelling for Brands.",
     subDescription:
       "Lazyre Studios transforms your brand’s story into visually compelling content that engages and excites your audience. From professional photography to high-quality videography and 3D brand experiences, we deliver media that enhances your brand’s image. Our creative team specializes in producing content that tells your story in a way that captivates and resonates across digital platforms.",
-    coverImage: "/images/brand/tech.jpg",
+    coverImage: "https://cdn.lazyre.com/images/brand/tech.jpg",
     toolsHeading: "Visual Tools for Stunning Content",
     toolsDescription:
       "Lazyre Studios leverages cutting-edge tools to bring your brand's story to life through visual storytelling. Our suite of media tools ensures professional-grade photography and videography that enhance your brand’s image.",
@@ -298,7 +301,7 @@ const brandData: brandDataType[] = [
   {
     id: "lab",
     title: "Lazyre Lab",
-    image: "/images/brand/lab/lazyre_lab_cover.webp",
+    image: "https://cdn.lazyre.com/images/brand/lab/lazyre_lab_cover.webp",
     services: [
       { id: "artificial-intelligence-lab", name: "Artificial Intelligence" },
       { id: "machine-learning-lab", name: "Machine Learning" },
@@ -317,7 +320,7 @@ const brandData: brandDataType[] = [
     subHeading: "Innovative Solutions with Emerging Technologies.",
     subDescription:
       "Lazyre Lab is where experimentation meets innovation. We develop internal tools, build public-ready software products, and create SaaS applications that push the boundaries of technology. From AR and VR to AI and IoT, we explore a wide range of cutting-edge tech. Our goal is to craft tools that are not only cutting-edge but also helpful to the broader community. In the near future, we plan to open-source select projects to contribute to global tech development.",
-    coverImage: "/images/brand/tech.jpg",
+    coverImage: "https://cdn.lazyre.com/images/brand/tech.jpg",
     toolsHeading: "Tools We Use to Shape the Future",
     toolsDescription:
       "At Lazyre Lab, we utilize a broad spectrum of tools and platforms to bring our innovative ideas to life. From AI to IoT frameworks, our tech stack supports cutting-edge experimentation and development.",

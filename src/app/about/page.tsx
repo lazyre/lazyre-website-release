@@ -33,21 +33,24 @@ interface ShowcaseItemProps {
 
 const showcaseItems: ShowcaseItemProps[] = [
   {
-    imageSrc: "/images/work/revenue/revenue-dashboard-cover.webp",
+    imageSrc:
+      "https://cdn.lazyre.com/images/work/revenue/revenue-dashboard-cover.webp",
     altText: "Revenue cover image",
     description:
       "Clean, user-friendly dashboard for real-time energy and IoT management insights.",
     isSquare: true,
   },
   {
-    imageSrc: "/images/work/job-cards/job-cards-dashboard-showcase.webp",
+    imageSrc:
+      "https://cdn.lazyre.com/images/work/job-cards/job-cards-dashboard-showcase.webp",
     altText: "Job cards cover image",
     description:
       "Streamlined ERP system designed for efficient work order and payment management.",
     isSquare: false,
   },
   {
-    imageSrc: "/images/work/safe-shift/safeshift-cover-image.webp",
+    imageSrc:
+      "https://cdn.lazyre.com/images/work/safe-shift/safeshift-cover-image.webp",
     altText: "Safe shift cover image",
     description:
       "Digital pass system for workplace health tracking and incident management.",
@@ -55,7 +58,7 @@ const showcaseItems: ShowcaseItemProps[] = [
   },
   {
     imageSrc:
-      "/images/work/bloeiende-werelden/bloeiende-werelden-ecommerce.webp",
+      "https://cdn.lazyre.com/images/work/bloeiende-werelden/bloeiende-werelden-ecommerce.webp",
     altText: "Bloeiende werelden cover image",
     fit: "cover",
     description:
@@ -63,7 +66,8 @@ const showcaseItems: ShowcaseItemProps[] = [
     isSquare: false,
   },
   {
-    imageSrc: "/images/work/pharma-souq/pharma-souq-security-showcase.webp",
+    imageSrc:
+      "https://cdn.lazyre.com/images/work/pharma-souq/pharma-souq-security-showcase.webp",
     altText: "Pharma souq cover image",
     fit: "cover",
     bgColor: "#22C55E",
@@ -72,7 +76,8 @@ const showcaseItems: ShowcaseItemProps[] = [
     isSquare: true,
   },
   {
-    imageSrc: "/images/work/voxel-verse/voxel-verse-arab-showcase.webp",
+    imageSrc:
+      "https://cdn.lazyre.com/images/work/voxel-verse/voxel-verse-arab-showcase.webp",
     altText: "Voxel verse cover image",
     fit: "cover",
     description:
@@ -99,55 +104,55 @@ const portfolioData = {
   headline: "A Journey of Collaboration",
   companies: [
     {
-      logo: "/images/client/almishkal-logo.svg",
+      logo: "https://cdn.lazyre.com/images/client/almishkal-logo.svg",
       name: "Name",
       description:
         "Voxel-based design to create stunning 3D representations of iconic landmarks and cultural elements",
     },
     {
-      logo: "/images/client/bw-logo.svg",
+      logo: "https://cdn.lazyre.com/images/client/bw-logo.svg",
       name: "Name",
       description:
         "Developed an e-commerce platform with multilingual support.",
     },
     {
-      logo: "/images/client/netflix-logo.svg",
+      logo: "https://cdn.lazyre.com/images/client/netflix-logo.svg",
       name: "Name",
       description:
         "Creation of engaging promotional cover images and thumbnails for new shows and movies",
     },
     {
-      logo: "/images/client/kupdae-logo.svg",
+      logo: "https://cdn.lazyre.com/images/client/kupdae-logo.svg",
       name: "Name",
       description:
         "Delivered complete branding solutions and T-shirt designs to establish a vibrant brand identity.",
     },
     {
-      logo: "/images/client/toys-r-us-logo.svg",
+      logo: "https://cdn.lazyre.com/images/client/toys-r-us-logo.svg",
       name: "Name",
       description:
         "Creation of promotional flyers and in-store signage for sales events and special offers.",
     },
     {
-      logo: "/images/client/byte-logo.svg",
+      logo: "https://cdn.lazyre.com/images/client/byte-logo.svg",
       name: "Name",
       description:
         "Developed an ERP solution for efficient inventory tracking, enhancing operational workflow and accuracy.",
     },
     {
-      logo: "/images/client/mc-logo.svg",
+      logo: "https://cdn.lazyre.com/images/client/mc-logo.svg",
       name: "Name",
       description:
         "Designed basic branding elements and office stationery to establish a professional identity.",
     },
     {
-      logo: "/images/client/aeon-logo.svg",
+      logo: "https://cdn.lazyre.com/images/client/aeon-logo.svg",
       name: "Name",
       description:
         "Developed a custom health monitoring app for factory workers.",
     },
     {
-      logo: "/images/client/midtec-logo.svg",
+      logo: "https://cdn.lazyre.com/images/client/midtec-logo.svg",
       name: "Name",
       description: "Implemented a comprehensive ERP solution for work orders.",
     },
@@ -228,21 +233,12 @@ const Page: React.FC<PageProps> = ({ params }) => {
           workHero
         />
       </ContentWrapper>
-      {/* <ContentWrapper>
-        <SectionHeading
-          title={"Our Goal"}
-          subtitle={
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed diam ligula, sollicitudin ac sollicitudin eu, faucibus eget magna. Etiam blandit, ligula sit amet suscipit viverra, nisl ipsum blandit dolor, nec hendrerit lectus ante eu purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod tellus ligula, id volutpat ligula tristique vel. Vestibulum iaculis tortor tempor nulla porta, sed fermentum augue vestibulum. Nam vulputate, nisl at auctor egestas, velit neque laoreet nibh, dapibus facilisis neque diam eu ligula. Vivamus a leo quis ipsum porttitor fringilla."
-          }
-          workHeading
-        />
-      </ContentWrapper> */}
       <ContentWrapper>
         <CompanyIntro {...introData} />
       </ContentWrapper>
       <div className="xl:py-12">
         <CoverImage
-          src={"/images/about/cover.webp"}
+          src={"https://cdn.lazyre.com/images/about/cover.webp"}
           alt={`About us cover image`}
         />
       </div>
@@ -272,27 +268,27 @@ const Page: React.FC<PageProps> = ({ params }) => {
       <ImageGrid
         images={[
           {
-            src: "/images/brand/tech/lazyre_tech_cover.webp",
+            src: "https://cdn.lazyre.com/images/brand/tech/lazyre_tech_cover.webp",
             alt: "Lazyre Tech Cover",
           },
           {
-            src: "/images/brand/build/lazyre_build_cover.webp",
+            src: "https://cdn.lazyre.com/images/brand/build/lazyre_build_cover.webp",
             alt: "Lazyre Build Cover",
           },
           {
-            src: "/images/brand/web/lazyre_web_cover.webp",
+            src: "https://cdn.lazyre.com/images/brand/web/lazyre_web_cover.webp",
             alt: "Lazyre Web Cover",
           },
           {
-            src: "/images/brand/design/lazyre_design_cover.webp",
+            src: "https://cdn.lazyre.com/images/brand/design/lazyre_design_cover.webp",
             alt: "Lazyre Design Cover",
           },
           {
-            src: "/images/brand/studios/lazyre_studios_cover.webp",
+            src: "https://cdn.lazyre.com/images/brand/studios/lazyre_studios_cover.webp",
             alt: "Lazyre Studios Cover",
           },
           {
-            src: "/images/brand/lab/lazyre_lab_cover.webp",
+            src: "https://cdn.lazyre.com/images/brand/lab/lazyre_lab_cover.webp",
             alt: "Lazyre Lab Cover",
           },
         ]}

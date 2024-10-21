@@ -78,7 +78,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 
     return (
       <Suspense fallback={<Loading />}>
-        <main id="main-content" className="my-16 xl:my-24">
+        <main id="main-content" className="my-24">
           <ContentWrapper>
             <article className="prose prose-lg prose-indigo mx-auto">
               <Badge variant={"default"}>{article.category.name}</Badge>

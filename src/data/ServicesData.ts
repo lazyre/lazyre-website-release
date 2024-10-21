@@ -6,15 +6,18 @@ const servicesData: servicesDataType[] = [
     title: "Custom App Development",
     images: [
       {
-        imageSrc: "/images/brand/tech/app-development/cross-platform-app.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/tech/app-development/cross-platform-app.webp",
         altText: "Cross platform illustration",
       },
       {
-        imageSrc: "/images/brand/tech/app-development/enterprise-app-dev.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/tech/app-development/enterprise-app-dev.webp",
         altText: "Enterprise app illustration",
       },
       {
-        imageSrc: "/images/brand/tech/app-development/mobile-app-dev.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/tech/app-development/mobile-app-dev.webp",
         altText: "Mobile app dev illustration",
       },
     ],
@@ -31,15 +34,18 @@ const servicesData: servicesDataType[] = [
     title: "Cloud Solutions",
     images: [
       {
-        imageSrc: "/images/brand/tech/cloud-solutions/cloud-migration.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/tech/cloud-solutions/cloud-migration.webp",
         altText: "AWS logo",
       },
       {
-        imageSrc: "/images/brand/tech/cloud-solutions/cloud-dev.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/tech/cloud-solutions/cloud-dev.webp",
         altText: "Azure logo",
       },
       {
-        imageSrc: "/images/brand/tech/cloud-solutions/cloud-storage.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/tech/cloud-solutions/cloud-storage.webp",
         altText: "Google cloud logo",
       },
     ],
@@ -56,15 +62,18 @@ const servicesData: servicesDataType[] = [
     title: "Network Security & Cybersecurity",
     images: [
       {
-        imageSrc: "/images/brand/tech/network-security/firewall.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/tech/network-security/firewall.webp",
         altText: "Firewall integration",
       },
       {
-        imageSrc: "/images/brand/tech/network-security/data-encryption.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/tech/network-security/data-encryption.webp",
         altText: "Data encryption illustration",
       },
       {
-        imageSrc: "/images/brand/tech/network-security/network-security.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/tech/network-security/network-security.webp",
         altText: "Network security illustartion",
       },
     ],
@@ -81,15 +90,18 @@ const servicesData: servicesDataType[] = [
     title: "API Integrations",
     images: [
       {
-        imageSrc: "/images/brand/tech/api-integration/real-time-sync.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/tech/api-integration/real-time-sync.webp",
         altText: "Real time sync illustration",
       },
       {
-        imageSrc: "/images/brand/tech/api-integration/api-integration.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/tech/api-integration/api-integration.webp",
         altText: "API integration illustration",
       },
       {
-        imageSrc: "/images/brand/tech/api-integration/third-party-api.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/tech/api-integration/third-party-api.webp",
         altText: "Third party API integration illustration",
       },
     ],
@@ -106,16 +118,18 @@ const servicesData: servicesDataType[] = [
     title: "Data Management & Analysis",
     images: [
       {
-        imageSrc: "/images/brand/tech/data-management/data-analytics.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/tech/data-management/data-analytics.webp",
         altText: "Data analytics illustration",
       },
       {
         imageSrc:
-          "/images/brand/tech/data-management/database-restructuring.webp",
+          "https://cdn.lazyre.com/images/brand/tech/data-management/database-restructuring.webp",
         altText: "Database restructuring illustration",
       },
       {
-        imageSrc: "/images/brand/tech/data-management/data-security.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/tech/data-management/data-security.webp",
         altText: "Data security illustration",
       },
     ],
@@ -132,15 +146,18 @@ const servicesData: servicesDataType[] = [
     title: "Blockchain Solutions",
     images: [
       {
-        imageSrc: "/images/brand/tech/blockchain/blockchain.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/tech/blockchain/blockchain.webp",
         altText: "Blockchain illustration",
       },
       {
-        imageSrc: "/images/brand/tech/blockchain/smart-contract.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/tech/blockchain/smart-contract.webp",
         altText: "Smart contract illustration",
       },
       {
-        imageSrc: "/images/brand/tech/blockchain/d-apps.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/tech/blockchain/d-apps.webp",
         altText: "D-apps illustration",
       },
     ],
@@ -158,17 +175,17 @@ const servicesData: servicesDataType[] = [
     images: [
       {
         imageSrc:
-          "/images/brand/tech/artificial-intelligence/generative-ai.webp",
+          "https://cdn.lazyre.com/images/brand/tech/artificial-intelligence/generative-ai.webp",
         altText: "Generative AI illustration",
       },
       {
         imageSrc:
-          "/images/brand/tech/artificial-intelligence/ai-automation.webp",
+          "https://cdn.lazyre.com/images/brand/tech/artificial-intelligence/ai-automation.webp",
         altText: "AI automation illustration",
       },
       {
         imageSrc:
-          "/images/brand/tech/artificial-intelligence/natural-language-processing.webp",
+          "https://cdn.lazyre.com/images/brand/tech/artificial-intelligence/natural-language-processing.webp",
         altText: "NLP illustration",
       },
     ],
@@ -186,16 +203,17 @@ const servicesData: servicesDataType[] = [
     images: [
       {
         imageSrc:
-          "/images/brand/tech/machine-learning/recommendation-system.webp",
+          "https://cdn.lazyre.com/images/brand/tech/machine-learning/recommendation-system.webp",
         altText: "Recommendation system illustration",
       },
       {
         imageSrc:
-          "/images/brand/tech/machine-learning/predective-analysis.webp",
+          "https://cdn.lazyre.com/images/brand/tech/machine-learning/predective-analysis.webp",
         altText: "Predective analysis illustration",
       },
       {
-        imageSrc: "/images/brand/tech/machine-learning/computer-vision.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/tech/machine-learning/computer-vision.webp",
         altText: "Computer vision illustration",
       },
     ],
@@ -212,15 +230,18 @@ const servicesData: servicesDataType[] = [
     title: "Logo Creation",
     images: [
       {
-        imageSrc: "/images/brand/design/logo-creation/custom-logo-design.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/design/logo-creation/custom-logo-design.webp",
         altText: "custom logo design illustration",
       },
       {
-        imageSrc: "/images/brand/design/logo-creation/logo-variants.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/design/logo-creation/logo-variants.webp",
         altText: "logo variants illustration",
       },
       {
-        imageSrc: "/images/brand/design/logo-creation/rebranding.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/design/logo-creation/rebranding.webp",
         altText: "rebranding illustration",
       },
     ],
@@ -238,15 +259,18 @@ const servicesData: servicesDataType[] = [
     title: "UI/UX Design",
     images: [
       {
-        imageSrc: "/images/brand/design/ui-ux-design/wireframing.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/design/ui-ux-design/wireframing.webp",
         altText: "wireframing illustration",
       },
       {
-        imageSrc: "/images/brand/design/ui-ux-design/prototyping.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/design/ui-ux-design/prototyping.webp",
         altText: "prototyping illustration",
       },
       {
-        imageSrc: "/images/brand/design/ui-ux-design/responsive-design.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/design/ui-ux-design/responsive-design.webp",
         altText: "responsive design illustration",
       },
     ],
@@ -264,16 +288,18 @@ const servicesData: servicesDataType[] = [
     title: "Mockups & Prototypes",
     images: [
       {
-        imageSrc: "/images/brand/design/mockups-prototype/product-mockup.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/design/mockups-prototype/product-mockup.webp",
         altText: "product mockup illustration",
       },
       {
-        imageSrc: "/images/brand/design/mockups-prototype/website-mockup.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/design/mockups-prototype/website-mockup.webp",
         altText: "website mockup illustration",
       },
       {
         imageSrc:
-          "/images/brand/design/mockups-prototype/user-testing-mockup.webp",
+          "https://cdn.lazyre.com/images/brand/design/mockups-prototype/user-testing-mockup.webp",
         altText: "user testing mockup illustration",
       },
     ],
@@ -291,17 +317,18 @@ const servicesData: servicesDataType[] = [
     title: "3D Prototyping",
     images: [
       {
-        imageSrc: "/images/brand/design/3d-prototyping/3d-modelling.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/design/3d-prototyping/3d-modelling.webp",
         altText: "3D modelling illustration",
       },
       {
         imageSrc:
-          "/images/brand/design/3d-prototyping/architectural-visualization.webp",
+          "https://cdn.lazyre.com/images/brand/design/3d-prototyping/architectural-visualization.webp",
         altText: "architectural visualization illustration",
       },
       {
         imageSrc:
-          "/images/brand/design/3d-prototyping/conceptual-prototypes.webp",
+          "https://cdn.lazyre.com/images/brand/design/3d-prototyping/conceptual-prototypes.webp",
         altText: "conceptual prototypes illustration",
       },
     ],
@@ -319,16 +346,18 @@ const servicesData: servicesDataType[] = [
     title: "Business Cards & Stationery",
     images: [
       {
-        imageSrc: "/images/brand/design/bc-stationery/print-ready-designs.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/design/bc-stationery/print-ready-designs.webp",
         altText: "print ready designs illustration",
       },
       {
         imageSrc:
-          "/images/brand/design/bc-stationery/custom-business-cards.webp",
+          "https://cdn.lazyre.com/images/brand/design/bc-stationery/custom-business-cards.webp",
         altText: "custom business cards illustration",
       },
       {
-        imageSrc: "/images/brand/design/bc-stationery/branded-stationery.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/design/bc-stationery/branded-stationery.webp",
         altText: "branded stationery illustration",
       },
     ],
@@ -346,15 +375,18 @@ const servicesData: servicesDataType[] = [
     title: "Brochures, Flyers & Posters",
     images: [
       {
-        imageSrc: "/images/brand/design/brochures-flyers-posters/flyer.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/design/brochures-flyers-posters/flyer.webp",
         altText: "flyer illustration",
       },
       {
-        imageSrc: "/images/brand/design/brochures-flyers-posters/poster.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/design/brochures-flyers-posters/poster.webp",
         altText: "poster illustration",
       },
       {
-        imageSrc: "/images/brand/design/brochures-flyers-posters/brochure.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/design/brochures-flyers-posters/brochure.webp",
         altText: "brochure illustration",
       },
     ],
@@ -373,17 +405,17 @@ const servicesData: servicesDataType[] = [
     images: [
       {
         imageSrc:
-          "/images/brand/design/animation-motion-graphics/explainer-videos.webp",
+          "https://cdn.lazyre.com/images/brand/design/animation-motion-graphics/explainer-videos.webp",
         altText: "explainer videos illustration",
       },
       {
         imageSrc:
-          "/images/brand/design/animation-motion-graphics/marketing-videos.webp",
+          "https://cdn.lazyre.com/images/brand/design/animation-motion-graphics/marketing-videos.webp",
         altText: "marketing videos illustration",
       },
       {
         imageSrc:
-          "/images/brand/design/animation-motion-graphics/animated-logos.webp",
+          "https://cdn.lazyre.com/images/brand/design/animation-motion-graphics/animated-logos.webp",
         altText: "animated logos illustration",
       },
     ],
@@ -401,17 +433,18 @@ const servicesData: servicesDataType[] = [
     title: "Business Strategy",
     images: [
       {
-        imageSrc: "/images/brand/build/business-strategy/market-research.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/build/business-strategy/market-research.webp",
         altText: "market research illustration",
       },
       {
         imageSrc:
-          "/images/brand/build/business-strategy/brand-positioning.webp",
+          "https://cdn.lazyre.com/images/brand/build/business-strategy/brand-positioning.webp",
         altText: "brand positioning illustration",
       },
       {
         imageSrc:
-          "/images/brand/build/business-strategy/goal-setting-roadmap.webp",
+          "https://cdn.lazyre.com/images/brand/build/business-strategy/goal-setting-roadmap.webp",
         altText: "goal setting roadmap illustration",
       },
     ],
@@ -430,16 +463,17 @@ const servicesData: servicesDataType[] = [
     images: [
       {
         imageSrc:
-          "/images/brand/build/target-audience-reach/demographic-analysis.webp",
+          "https://cdn.lazyre.com/images/brand/build/target-audience-reach/demographic-analysis.webp",
         altText: "demographic analysis illustration",
       },
       {
-        imageSrc: "/images/brand/build/target-audience-reach/profiling.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/build/target-audience-reach/profiling.webp",
         altText: "profiling illustration",
       },
       {
         imageSrc:
-          "/images/brand/build/target-audience-reach/buyer-persona-development.webp",
+          "https://cdn.lazyre.com/images/brand/build/target-audience-reach/buyer-persona-development.webp",
         altText: "buyer persona development illustration",
       },
     ],
@@ -458,17 +492,17 @@ const servicesData: servicesDataType[] = [
     images: [
       {
         imageSrc:
-          "/images/brand/build/brand-positioning/competetive-analysis.webp",
+          "https://cdn.lazyre.com/images/brand/build/brand-positioning/competetive-analysis.webp",
         altText: "competitive analysis illustration",
       },
       {
         imageSrc:
-          "/images/brand/build/brand-positioning/value-proposition.webp",
+          "https://cdn.lazyre.com/images/brand/build/brand-positioning/value-proposition.webp",
         altText: "value proposition illustration",
       },
       {
         imageSrc:
-          "/images/brand/build/brand-positioning/brand-story-telling.webp",
+          "https://cdn.lazyre.com/images/brand/build/brand-positioning/brand-story-telling.webp",
         altText: "brand storytelling illustration",
       },
     ],
@@ -486,7 +520,7 @@ const servicesData: servicesDataType[] = [
   //   title: "Brand Messaging",
   //   images: [
   //     {
-  //       imageSrc: "/images/brand/tech/app-development/revenue-dashboard.webp",
+  //       imageSrc: "https://cdn.lazyre.com/images/brand/tech/app-development/revenue-dashboard.webp",
   //       altText: "alternative text",
   //       fit: "contain",
   //       bgColor: "#151F2B",
@@ -494,14 +528,14 @@ const servicesData: servicesDataType[] = [
   //     },
   //     {
   //       imageSrc:
-  //         "/images/work/bloeiende-werelden/bloeiende-werelden-splash-screen.webp",
+  //         "https://cdn.lazyre.com/images/work/bloeiende-werelden/bloeiende-werelden-splash-screen.webp",
   //       altText: "alternative text",
   //       fit: "contain",
   //       bgColor: "#FFD1A9",
   //       paddingValue: "10px",
   //     },
   //     {
-  //       imageSrc: "/images/brand/tech/app-development/safe-shift-home.webp",
+  //       imageSrc: "https://cdn.lazyre.com/images/brand/tech/app-development/safe-shift-home.webp",
   //       altText: "alternative text",
   //       fit: "contain",
   //       bgColor: "#228B22",
@@ -521,7 +555,7 @@ const servicesData: servicesDataType[] = [
   //   title: "Naming & Taglines",
   //   images: [
   //     {
-  //       imageSrc: "/images/brand/tech/app-development/revenue-dashboard.webp",
+  //       imageSrc: "https://cdn.lazyre.com/images/brand/tech/app-development/revenue-dashboard.webp",
   //       altText: "alternative text",
   //       fit: "contain",
   //       bgColor: "#151F2B",
@@ -529,14 +563,14 @@ const servicesData: servicesDataType[] = [
   //     },
   //     {
   //       imageSrc:
-  //         "/images/work/bloeiende-werelden/bloeiende-werelden-splash-screen.webp",
+  //         "https://cdn.lazyre.com/images/work/bloeiende-werelden/bloeiende-werelden-splash-screen.webp",
   //       altText: "alternative text",
   //       fit: "contain",
   //       bgColor: "#FFD1A9",
   //       paddingValue: "10px",
   //     },
   //     {
-  //       imageSrc: "/images/brand/tech/app-development/safe-shift-home.webp",
+  //       imageSrc: "https://cdn.lazyre.com/images/brand/tech/app-development/safe-shift-home.webp",
   //       altText: "alternative text",
   //       fit: "contain",
   //       bgColor: "#228B22",
@@ -556,15 +590,18 @@ const servicesData: servicesDataType[] = [
     title: "Brand Naming & Taglines",
     images: [
       {
-        imageSrc: "/images/brand/build/brand-naming/trademark-research.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/build/brand-naming/trademark-research.webp",
         altText: "trademark research illustration",
       },
       {
-        imageSrc: "/images/brand/build/brand-naming/tagline-development.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/build/brand-naming/tagline-development.webp",
         altText: "tagline development illustration",
       },
       {
-        imageSrc: "/images/brand/build/brand-naming/brand-name-creation.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/build/brand-naming/brand-name-creation.webp",
         altText: "brand name creation illustration",
       },
     ],
@@ -583,16 +620,17 @@ const servicesData: servicesDataType[] = [
     images: [
       {
         imageSrc:
-          "/images/brand/build/brand-identity-design/brand-color-schemes.webp",
+          "https://cdn.lazyre.com/images/brand/build/brand-identity-design/brand-color-schemes.webp",
         altText: "brand color schemes illustration",
       },
       {
         imageSrc:
-          "/images/brand/build/brand-identity-design/visual-guidelines.webp",
+          "https://cdn.lazyre.com/images/brand/build/brand-identity-design/visual-guidelines.webp",
         altText: "visual guidelines illustration",
       },
       {
-        imageSrc: "/images/brand/build/brand-identity-design/logo-design.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/build/brand-identity-design/logo-design.webp",
         altText: "logo design illustration",
       },
     ],
@@ -610,15 +648,18 @@ const servicesData: servicesDataType[] = [
     title: "Content Strategy",
     images: [
       {
-        imageSrc: "/images/brand/build/content-strategy/content-planning.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/build/content-strategy/content-planning.webp",
         altText: "content planning illustration",
       },
       {
-        imageSrc: "/images/brand/build/content-strategy/content-creation.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/build/content-strategy/content-creation.webp",
         altText: "content creation illustration",
       },
       {
-        imageSrc: "/images/brand/build/content-strategy/seo-optimization.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/build/content-strategy/seo-optimization.webp",
         altText: "SEO optimization illustration",
       },
     ],
@@ -637,17 +678,17 @@ const servicesData: servicesDataType[] = [
     images: [
       {
         imageSrc:
-          "/images/brand/build/website-digital-presence/digital-branding.webp",
+          "https://cdn.lazyre.com/images/brand/build/website-digital-presence/digital-branding.webp",
         altText: "digital branding illustration",
       },
       {
         imageSrc:
-          "/images/brand/build/website-digital-presence/custom-website-design.webp",
+          "https://cdn.lazyre.com/images/brand/build/website-digital-presence/custom-website-design.webp",
         altText: "custom website design illustration",
       },
       {
         imageSrc:
-          "/images/brand/build/website-digital-presence/seo-integration.webp",
+          "https://cdn.lazyre.com/images/brand/build/website-digital-presence/seo-integration.webp",
         altText: "SEO integration illustration",
       },
     ],
@@ -666,16 +707,17 @@ const servicesData: servicesDataType[] = [
     images: [
       {
         imageSrc:
-          "/images/brand/web/frontend-development/responsive-design.webp",
+          "https://cdn.lazyre.com/images/brand/web/frontend-development/responsive-design.webp",
         altText: "responsive design illustration",
       },
       {
-        imageSrc: "/images/brand/web/frontend-development/interactive-ui.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/web/frontend-development/interactive-ui.webp",
         altText: "interactive UI illustration",
       },
       {
         imageSrc:
-          "/images/brand/web/frontend-development/performance-optimization.webp",
+          "https://cdn.lazyre.com/images/brand/web/frontend-development/performance-optimization.webp",
         altText: "performance optimization illustration",
       },
     ],
@@ -694,16 +736,17 @@ const servicesData: servicesDataType[] = [
     images: [
       {
         imageSrc:
-          "/images/brand/web/backend-development/authentication-security.webp",
+          "https://cdn.lazyre.com/images/brand/web/backend-development/authentication-security.webp",
         altText: "authentication and security illustration",
       },
       {
         imageSrc:
-          "/images/brand/web/backend-development/database-management.webp",
+          "https://cdn.lazyre.com/images/brand/web/backend-development/database-management.webp",
         altText: "database management illustration",
       },
       {
-        imageSrc: "/images/brand/web/backend-development/api-management.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/web/backend-development/api-management.webp",
         altText: "API management illustration",
       },
     ],
@@ -722,17 +765,17 @@ const servicesData: servicesDataType[] = [
     images: [
       {
         imageSrc:
-          "/images/brand/web/ecommerce-solutions/inventory-management.webp",
+          "https://cdn.lazyre.com/images/brand/web/ecommerce-solutions/inventory-management.webp",
         altText: "inventory management illustration",
       },
       {
         imageSrc:
-          "/images/brand/web/ecommerce-solutions/ecommerce-platform.webp",
+          "https://cdn.lazyre.com/images/brand/web/ecommerce-solutions/ecommerce-platform.webp",
         altText: "eCommerce platform illustration",
       },
       {
         imageSrc:
-          "/images/brand/web/ecommerce-solutions/payment-gateway-integration.webp",
+          "https://cdn.lazyre.com/images/brand/web/ecommerce-solutions/payment-gateway-integration.webp",
         altText: "payment gateway illustration",
       },
     ],
@@ -750,15 +793,18 @@ const servicesData: servicesDataType[] = [
     title: "CMS Development",
     images: [
       {
-        imageSrc: "/images/brand/web/cms-solutions/cms-support.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/web/cms-solutions/cms-support.webp",
         altText: "CMS support illustration",
       },
       {
-        imageSrc: "/images/brand/web/cms-solutions/drag-and-drop-cms.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/web/cms-solutions/drag-and-drop-cms.webp",
         altText: "drag and drop CMS illustration",
       },
       {
-        imageSrc: "/images/brand/web/cms-solutions/cms-development.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/web/cms-solutions/cms-development.webp",
         altText: "CMS development illustration",
       },
     ],
@@ -776,15 +822,15 @@ const servicesData: servicesDataType[] = [
   //   title: "CRM Solutions",
   //   images: [
   //     {
-  //       imageSrc: "/images/brand/web/crm-solutions/crm-development.webp",
+  //       imageSrc: "https://cdn.lazyre.com/images/brand/web/crm-solutions/crm-development.webp",
   //       altText: "CRM development illustration",
   //     },
   //     {
-  //       imageSrc: "/images/brand/web/crm-solutions/crm-analytics.webp",
+  //       imageSrc: "https://cdn.lazyre.com/images/brand/web/crm-solutions/crm-analytics.webp",
   //       altText: "CRM analytics illustration",
   //     },
   //     {
-  //       imageSrc: "/images/brand/web/crm-solutions/crm-integration.webp",
+  //       imageSrc: "https://cdn.lazyre.com/images/brand/web/crm-solutions/crm-integration.webp",
   //       altText: "CRM integration illustration",
   //     },
   //   ],
@@ -801,15 +847,18 @@ const servicesData: servicesDataType[] = [
     title: "ERP Solutions",
     images: [
       {
-        imageSrc: "/images/brand/web/erp-solutions/custom-erp-development.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/web/erp-solutions/custom-erp-development.webp",
         altText: "erp development illustration",
       },
       {
-        imageSrc: "/images/brand/web/crm-solutions/crm-analytics.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/web/crm-solutions/crm-analytics.webp",
         altText: "crm analytics illustration",
       },
       {
-        imageSrc: "/images/brand/web/erp-solutions/cloud-based-erp.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/web/erp-solutions/cloud-based-erp.webp",
         altText: "cloud based erp illustration",
       },
     ],
@@ -826,17 +875,18 @@ const servicesData: servicesDataType[] = [
     title: "Web Hosting & Deployment",
     images: [
       {
-        imageSrc: "/images/brand/web/web-hosting-deployment/cloud-hosting.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/web/web-hosting-deployment/cloud-hosting.webp",
         altText: "cloud hosting illustration",
       },
       {
         imageSrc:
-          "/images/brand/web/web-hosting-deployment/cloud-security.webp",
+          "https://cdn.lazyre.com/images/brand/web/web-hosting-deployment/cloud-security.webp",
         altText: "cloud security illustration",
       },
       {
         imageSrc:
-          "/images/brand/web/web-hosting-deployment/continuous-cloud-deployment.webp",
+          "https://cdn.lazyre.com/images/brand/web/web-hosting-deployment/continuous-cloud-deployment.webp",
         altText: "continuous cloud deployment illustration",
       },
     ],
@@ -854,7 +904,7 @@ const servicesData: servicesDataType[] = [
   //   title: "Data Storage & Management",
   //   images: [
   //     {
-  //       imageSrc: "/images/brand/tech/app-development/revenue-dashboard.webp",
+  //       imageSrc: "https://cdn.lazyre.com/images/brand/tech/app-development/revenue-dashboard.webp",
   //       altText: "alternative text",
   //       fit: "contain",
   //       bgColor: "#151F2B",
@@ -862,14 +912,14 @@ const servicesData: servicesDataType[] = [
   //     },
   //     {
   //       imageSrc:
-  //         "/images/work/bloeiende-werelden/bloeiende-werelden-splash-screen.webp",
+  //         "https://cdn.lazyre.com/images/work/bloeiende-werelden/bloeiende-werelden-splash-screen.webp",
   //       altText: "alternative text",
   //       fit: "contain",
   //       bgColor: "#FFD1A9",
   //       paddingValue: "10px",
   //     },
   //     {
-  //       imageSrc: "/images/brand/tech/app-development/safe-shift-home.webp",
+  //       imageSrc: "https://cdn.lazyre.com/images/brand/tech/app-development/safe-shift-home.webp",
   //       altText: "alternative text",
   //       fit: "contain",
   //       bgColor: "#228B22",
@@ -889,15 +939,18 @@ const servicesData: servicesDataType[] = [
     title: "SEO (Search Engine Optimization)",
     images: [
       {
-        imageSrc: "/images/brand/digitalytics/seo/on-page-seo.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/digitalytics/seo/on-page-seo.webp",
         altText: "on-page SEO illustration",
       },
       {
-        imageSrc: "/images/brand/digitalytics/seo/keyword-research.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/digitalytics/seo/keyword-research.webp",
         altText: "keyword research illustration",
       },
       {
-        imageSrc: "/images/brand/digitalytics/seo/technical-seo.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/digitalytics/seo/technical-seo.webp",
         altText: "technical SEO illustration",
       },
     ],
@@ -915,17 +968,18 @@ const servicesData: servicesDataType[] = [
     title: "PPC (Pay-Per-Click) Advertising",
     images: [
       {
-        imageSrc: "/images/brand/digitalytics/ppc/google-ads-campaign.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/digitalytics/ppc/google-ads-campaign.webp",
         altText: "Google Ads campaign illustration",
       },
       {
         imageSrc:
-          "/images/brand/digitalytics/ppc/social-media-advertising.webp",
+          "https://cdn.lazyre.com/images/brand/digitalytics/ppc/social-media-advertising.webp",
         altText: "social media advertising illustration",
       },
       {
         imageSrc:
-          "/images/brand/digitalytics/ppc/ppc-performance-optimization.webp",
+          "https://cdn.lazyre.com/images/brand/digitalytics/ppc/ppc-performance-optimization.webp",
         altText: "PPC performance optimization illustration",
       },
     ],
@@ -943,15 +997,18 @@ const servicesData: servicesDataType[] = [
     title: "Social Media Marketing (SMM)",
     images: [
       {
-        imageSrc: "/images/brand/digitalytics/smm/social-media-strategy.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/digitalytics/smm/social-media-strategy.webp",
         altText: "social media strategy illustration",
       },
       {
-        imageSrc: "/images/brand/digitalytics/smm/content-creation.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/digitalytics/smm/content-creation.webp",
         altText: "content creation illustration",
       },
       {
-        imageSrc: "/images/brand/digitalytics/smm/social-media-ads.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/digitalytics/smm/social-media-ads.webp",
         altText: "social media ads illustration",
       },
     ],
@@ -970,17 +1027,17 @@ const servicesData: servicesDataType[] = [
     images: [
       {
         imageSrc:
-          "/images/brand/digitalytics/content-marketing/blog-creation.webp",
+          "https://cdn.lazyre.com/images/brand/digitalytics/content-marketing/blog-creation.webp",
         altText: "blog creation illustration",
       },
       {
         imageSrc:
-          "/images/brand/digitalytics/content-marketing/video-marketing.webp",
+          "https://cdn.lazyre.com/images/brand/digitalytics/content-marketing/video-marketing.webp",
         altText: "video marketing illustration",
       },
       {
         imageSrc:
-          "/images/brand/digitalytics/content-marketing/infographic-design.webp",
+          "https://cdn.lazyre.com/images/brand/digitalytics/content-marketing/infographic-design.webp",
         altText: "infographic design illustration",
       },
     ],
@@ -998,16 +1055,18 @@ const servicesData: servicesDataType[] = [
     title: "Conversion Rate Optimization (CRO)",
     images: [
       {
-        imageSrc: "/images/brand/digitalytics/cro/ab-testing.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/digitalytics/cro/ab-testing.webp",
         altText: "A/B testing illustration",
       },
       {
-        imageSrc: "/images/brand/digitalytics/cro/user-behaviour-analysis.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/digitalytics/cro/user-behaviour-analysis.webp",
         altText: "user behavior analysis illustration",
       },
       {
         imageSrc:
-          "/images/brand/digitalytics/cro/landing-page-optimization.webp",
+          "https://cdn.lazyre.com/images/brand/digitalytics/cro/landing-page-optimization.webp",
         altText: "landing page optimization illustration",
       },
     ],
@@ -1026,17 +1085,17 @@ const servicesData: servicesDataType[] = [
     images: [
       {
         imageSrc:
-          "/images/brand/digitalytics/email-marketing/list-segmentation.webp",
+          "https://cdn.lazyre.com/images/brand/digitalytics/email-marketing/list-segmentation.webp",
         altText: "list segmentation illustration",
       },
       {
         imageSrc:
-          "/images/brand/digitalytics/email-marketing/email-campaign.webp",
+          "https://cdn.lazyre.com/images/brand/digitalytics/email-marketing/email-campaign.webp",
         altText: "email campaign illustration",
       },
       {
         imageSrc:
-          "/images/brand/digitalytics/email-marketing/automatic-drip-campaign.webp",
+          "https://cdn.lazyre.com/images/brand/digitalytics/email-marketing/automatic-drip-campaign.webp",
         altText: "automatic drip campaign illustration",
       },
     ],
@@ -1054,15 +1113,18 @@ const servicesData: servicesDataType[] = [
     title: "Online Reputation Management (ORM)",
     images: [
       {
-        imageSrc: "/images/brand/digitalytics/orm/crisis-management.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/digitalytics/orm/crisis-management.webp",
         altText: "crisis management illustration",
       },
       {
-        imageSrc: "/images/brand/digitalytics/orm/review-monitoring.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/digitalytics/orm/review-monitoring.webp",
         altText: "review monitoring illustration",
       },
       {
-        imageSrc: "/images/brand/digitalytics/orm/reputation-building.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/digitalytics/orm/reputation-building.webp",
         altText: "reputation building illustration",
       },
     ],
@@ -1081,16 +1143,17 @@ const servicesData: servicesDataType[] = [
     images: [
       {
         imageSrc:
-          "/images/brand/studios/photography/lifestyle-photography.webp",
+          "https://cdn.lazyre.com/images/brand/studios/photography/lifestyle-photography.webp",
         altText: "lifestyle photography illustration",
       },
       {
-        imageSrc: "/images/brand/studios/photography/product-photography.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/studios/photography/product-photography.webp",
         altText: "product photography illustration",
       },
       {
         imageSrc:
-          "/images/brand/studios/photography/artificial-photography.webp",
+          "https://cdn.lazyre.com/images/brand/studios/photography/artificial-photography.webp",
         altText: "artificial photography illustration",
       },
     ],
@@ -1107,17 +1170,18 @@ const servicesData: servicesDataType[] = [
     title: "Generative AI",
     images: [
       {
-        imageSrc: "/images/brand/studios/generative-ai/ai-generated-art.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/studios/generative-ai/ai-generated-art.webp",
         altText: "AI-generated art illustration",
       },
       {
         imageSrc:
-          "/images/brand/studios/generative-ai/ai-soundscape-composition.webp",
+          "https://cdn.lazyre.com/images/brand/studios/generative-ai/ai-soundscape-composition.webp",
         altText: "AI soundscape composition illustration",
       },
       {
         imageSrc:
-          "/images/brand/studios/generative-ai/ai-content-creation.webp",
+          "https://cdn.lazyre.com/images/brand/studios/generative-ai/ai-content-creation.webp",
         altText: "AI content creation illustration",
       },
     ],
@@ -1135,17 +1199,17 @@ const servicesData: servicesDataType[] = [
     images: [
       {
         imageSrc:
-          "/images/brand/studios/video-production/corporate-videos.webp",
+          "https://cdn.lazyre.com/images/brand/studios/video-production/corporate-videos.webp",
         altText: "corporate videos illustration",
       },
       {
         imageSrc:
-          "/images/brand/studios/video-production/promotional-videos.webp",
+          "https://cdn.lazyre.com/images/brand/studios/video-production/promotional-videos.webp",
         altText: "promotional videos illustration",
       },
       {
         imageSrc:
-          "/images/brand/studios/video-production/explainer-videos.webp",
+          "https://cdn.lazyre.com/images/brand/studios/video-production/explainer-videos.webp",
         altText: "explainer videos illustration",
       },
     ],
@@ -1164,17 +1228,17 @@ const servicesData: servicesDataType[] = [
     images: [
       {
         imageSrc:
-          "/images/brand/studios/brand-photography/brand-photography.webp",
+          "https://cdn.lazyre.com/images/brand/studios/brand-photography/brand-photography.webp",
         altText: "brand photography illustration",
       },
       {
         imageSrc:
-          "/images/brand/studios/brand-photography/website-photography.webp",
+          "https://cdn.lazyre.com/images/brand/studios/brand-photography/website-photography.webp",
         altText: "website photography illustration",
       },
       {
         imageSrc:
-          "/images/brand/studios/brand-photography/social-media-photography.webp",
+          "https://cdn.lazyre.com/images/brand/studios/brand-photography/social-media-photography.webp",
         altText: "social media photography illustration",
       },
     ],
@@ -1192,15 +1256,18 @@ const servicesData: servicesDataType[] = [
     title: "Showreels",
     images: [
       {
-        imageSrc: "/images/brand/studios/showreel/portfolio-showreel.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/studios/showreel/portfolio-showreel.webp",
         altText: "portfolio showreel illustration",
       },
       {
-        imageSrc: "/images/brand/studios/showreel/event-showreel.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/studios/showreel/event-showreel.webp",
         altText: "event showreel illustration",
       },
       {
-        imageSrc: "/images/brand/studios/showreel/showreel.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/studios/showreel/showreel.webp",
         altText: "showreel illustration",
       },
     ],
@@ -1219,17 +1286,17 @@ const servicesData: servicesDataType[] = [
     images: [
       {
         imageSrc:
-          "/images/brand/studios/video-photo-editing/video-post-production.webp",
+          "https://cdn.lazyre.com/images/brand/studios/video-photo-editing/video-post-production.webp",
         altText: "video post-production illustration",
       },
       {
         imageSrc:
-          "/images/brand/studios/video-photo-editing/photo-retouching.webp",
+          "https://cdn.lazyre.com/images/brand/studios/video-photo-editing/photo-retouching.webp",
         altText: "photo retouching illustration",
       },
       {
         imageSrc:
-          "/images/brand/studios/video-photo-editing/motion-graphics.webp",
+          "https://cdn.lazyre.com/images/brand/studios/video-photo-editing/motion-graphics.webp",
         altText: "motion graphics illustration",
       },
     ],
@@ -1247,16 +1314,16 @@ const servicesData: servicesDataType[] = [
   //   title: "Augmented Reality (AR)",
   //   images: [
   //     {
-  //       imageSrc: "/images/brand/lab/augmented-reality/ar-corporate.webp",
+  //       imageSrc: "https://cdn.lazyre.com/images/brand/lab/augmented-reality/ar-corporate.webp",
   //       altText: "AR corporate illustration",
   //     },
   //     {
   //       imageSrc:
-  //         "/images/brand/lab/augmented-reality/ar-product-visualization.webp",
+  //         "https://cdn.lazyre.com/images/brand/lab/augmented-reality/ar-product-visualization.webp",
   //       altText: "AR product visualization illustration",
   //     },
   //     {
-  //       imageSrc: "/images/brand/lab/augmented-reality/ar-marketing.webp",
+  //       imageSrc: "https://cdn.lazyre.com/images/brand/lab/augmented-reality/ar-marketing.webp",
   //       altText: "AR marketing illustration",
   //     },
   //   ],
@@ -1274,15 +1341,15 @@ const servicesData: servicesDataType[] = [
   //   title: "Virtual Reality (VR)",
   //   images: [
   //     {
-  //       imageSrc: "/images/brand/lab/virtual-reality/vr-training.webp",
+  //       imageSrc: "https://cdn.lazyre.com/images/brand/lab/virtual-reality/vr-training.webp",
   //       altText: "VR training illustration",
   //     },
   // {
-  //   imageSrc: "/images/brand/lab/virtual-reality/vr-product.webp",
+  //   imageSrc: "https://cdn.lazyre.com/images/brand/lab/virtual-reality/vr-product.webp",
   //   altText: "VR product illustration",
   // },
   //     {
-  //       imageSrc: "/images/brand/lab/virtual-reality/virtual-walkthrough.webp",
+  //       imageSrc: "https://cdn.lazyre.com/images/brand/lab/virtual-reality/virtual-walkthrough.webp",
   //       altText: "virtual walkthrough illustration",
   //     },
   //   ],
@@ -1301,16 +1368,18 @@ const servicesData: servicesDataType[] = [
     title: "AR/VR Development",
     images: [
       {
-        imageSrc: "/images/brand/lab/augmented-reality/ar-corporate.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/lab/augmented-reality/ar-corporate.webp",
         altText: "AR corporate illustration",
       },
       {
-        imageSrc: "/images/brand/lab/virtual-reality/vr-product.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/lab/virtual-reality/vr-product.webp",
         altText: "VR product illustration",
       },
       {
         imageSrc:
-          "/images/brand/lab/augmented-reality/ar-product-visualization.webp",
+          "https://cdn.lazyre.com/images/brand/lab/augmented-reality/ar-product-visualization.webp",
         altText: "AR product visualization illustration",
       },
     ],
@@ -1327,15 +1396,18 @@ const servicesData: servicesDataType[] = [
     title: "Internet of Things (IoT)",
     images: [
       {
-        imageSrc: "/images/brand/lab/iot/smart-device-integration.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/lab/iot/smart-device-integration.webp",
         altText: "smart device integration illustration",
       },
       {
-        imageSrc: "/images/brand/lab/iot/iot-data-analysis.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/lab/iot/iot-data-analysis.webp",
         altText: "IoT data analysis illustration",
       },
       {
-        imageSrc: "/images/brand/lab/iot/iot-automation.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/lab/iot/iot-automation.webp",
         altText: "IoT automation illustration",
       },
     ],
@@ -1353,15 +1425,18 @@ const servicesData: servicesDataType[] = [
     title: "Artificial Intelligence (AI)",
     images: [
       {
-        imageSrc: "/images/brand/lab/ai-lab/ai-chatbots-assistants.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/lab/ai-lab/ai-chatbots-assistants.webp",
         altText: "AI chatbots and assistants illustration",
       },
       {
-        imageSrc: "/images/brand/lab/ai-lab/predictive-analytics.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/lab/ai-lab/predictive-analytics.webp",
         altText: "predictive analytics illustration",
       },
       {
-        imageSrc: "/images/brand/lab/ai-lab/generative-ai.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/lab/ai-lab/generative-ai.webp",
         altText: "generative AI illustration",
       },
     ],
@@ -1379,15 +1454,18 @@ const servicesData: servicesDataType[] = [
     title: "Machine Learning",
     images: [
       {
-        imageSrc: "/images/brand/lab/ml-lab/predictive-analysis.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/lab/ml-lab/predictive-analysis.webp",
         altText: "predictive analysis illustration",
       },
       {
-        imageSrc: "/images/brand/lab/ml-lab/fraud-detection-solution.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/lab/ml-lab/fraud-detection-solution.webp",
         altText: "fraud detection solution illustration",
       },
       {
-        imageSrc: "/images/brand/lab/ml-lab/recommendation-systems.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/lab/ml-lab/recommendation-systems.webp",
         altText: "recommendation systems illustration",
       },
     ],
@@ -1406,15 +1484,17 @@ const servicesData: servicesDataType[] = [
     images: [
       {
         imageSrc:
-          "/images/brand/lab/saas-development/saas-application-dev.webp",
+          "https://cdn.lazyre.com/images/brand/lab/saas-development/saas-application-dev.webp",
         altText: "saas application development illustration",
       },
       {
-        imageSrc: "/images/brand/lab/saas-development/saas-subscription.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/lab/saas-development/saas-subscription.webp",
         altText: "saas subscription illustration",
       },
       {
-        imageSrc: "/images/brand/lab/saas-development/saas-data-security.webp",
+        imageSrc:
+          "https://cdn.lazyre.com/images/brand/lab/saas-development/saas-data-security.webp",
         altText: "saas data security illustration",
       },
     ],
@@ -1432,17 +1512,17 @@ const servicesData: servicesDataType[] = [
     images: [
       {
         imageSrc:
-          "/images/brand/lab/experimental-software-development/public-software-tools.webp",
+          "https://cdn.lazyre.com/images/brand/lab/experimental-software-development/public-software-tools.webp",
         altText: "public software tools illustration",
       },
       {
         imageSrc:
-          "/images/brand/lab/experimental-software-development/open-source-projects.webp",
+          "https://cdn.lazyre.com/images/brand/lab/experimental-software-development/open-source-projects.webp",
         altText: "open source projects illustration",
       },
       {
         imageSrc:
-          "/images/brand/lab/experimental-software-development/prototyping-experimentation-projects.webp",
+          "https://cdn.lazyre.com/images/brand/lab/experimental-software-development/prototyping-experimentation-projects.webp",
         altText: "prototyping and experimenting illustration",
       },
     ],

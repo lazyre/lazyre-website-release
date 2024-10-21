@@ -1,7 +1,8 @@
 "use client";
+
+import React from "react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
-import React from "react";
 import {
   AiOutlineCopy,
   AiOutlineFacebook,
@@ -16,8 +17,52 @@ type Props = {
   shareUrl: string;
 };
 
-function ShareLinks({ title, shareUrl }: Props) {
+export default function ShareLinks({ title, shareUrl }: Props) {
   const { toast } = useToast();
+
+  const copyToClipboard = async (text: string) => {
+    if (navigator.clipboard && window.isSecureContext) {
+      try {
+        await navigator.clipboard.writeText(text);
+        toast({ title: "Link copied to clipboard!" });
+      } catch (err) {
+        console.error("Failed to copy: ", err);
+        toast({ title: "Failed to copy link", variant: "destructive" });
+      }
+    } else {
+      // Fallback for older browsers or non-HTTPS environments
+      const textArea = document.createElement("textarea");
+      textArea.value = text;
+      textArea.style.position = "fixed";
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      try {
+        // Use a type assertion to avoid the deprecation warning
+        (document as any).execCommand("copy");
+        toast({ title: "Link copied to clipboard!" });
+      } catch (err) {
+        console.error("Failed to copy: ", err);
+        toast({ title: "Failed to copy link", variant: "destructive" });
+      }
+      document.body.removeChild(textArea);
+    }
+  };
+
+  const shareContent = () => {
+    if (navigator.share) {
+      navigator
+        .share({
+          title: title,
+          url: shareUrl,
+        })
+        .then(() => console.log("Successful share"))
+        .catch((error) => console.log("Error sharing", error));
+    } else {
+      copyToClipboard(shareUrl);
+    }
+  };
+
   return (
     <div className="flex space-x-2 my-4">
       <Button
@@ -28,7 +73,7 @@ function ShareLinks({ title, shareUrl }: Props) {
           window.open(
             `https://wa.me/?text=${encodeURIComponent(
               title
-            )}+${encodeURIComponent(shareUrl)}`,
+            )}%20${encodeURIComponent(shareUrl)}`,
             "_blank"
           )
         }
@@ -43,8 +88,8 @@ function ShareLinks({ title, shareUrl }: Props) {
         onClick={() =>
           window.open(
             `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-              title
-            )}+${encodeURIComponent(shareUrl)}`,
+              shareUrl
+            )}`,
             "_blank"
           )
         }
@@ -58,9 +103,9 @@ function ShareLinks({ title, shareUrl }: Props) {
         size="icon"
         onClick={() =>
           window.open(
-            `https://twitter.com/intent/tweet?url=${encodeURIComponent(
+            `https://twitter.com/intent/tweet?text=${encodeURIComponent(
               title
-            )}+${encodeURIComponent(shareUrl)}`,
+            )}&url=${encodeURIComponent(shareUrl)}`,
             "_blank"
           )
         }
@@ -88,18 +133,11 @@ function ShareLinks({ title, shareUrl }: Props) {
         className="text-muted-foreground"
         variant="ghost"
         size="icon"
-        onClick={() => {
-          navigator.clipboard.writeText(shareUrl);
-          toast({
-            title: "Link copied to clipboard!",
-          });
-        }}
+        onClick={shareContent}
       >
         <AiOutlineLink className="h-4 w-4" />
-        <span className="sr-only">Copy Link</span>
+        <span className="sr-only">Copy or Share Link</span>
       </Button>
     </div>
   );
 }
-
-export default ShareLinks;

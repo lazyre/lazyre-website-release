@@ -74,14 +74,14 @@ export const metadata: Metadata = {
       "Explore Lazyre's global services through its brands: Lazyre Design, Tech, Web, Digitalytics, Build, Studios, and Lab. Redefine your digital presence with our innovative solutions worldwide.",
     url: "https://www.lazyre.com",
     siteName: "Lazyre",
-    // images: [
-    //   {
-    //     url: '/opengraph-image.jpg',
-    //     width: 1200,
-    //     height: 630,
-    //     alt: 'Lazyre - Global Digital Presence Redefined',
-    //   },
-    // ],
+    images: [
+      {
+        url: "https://cdn.lazyre.com/images/brand/tech/lazyre_tech_cover.webp",
+        width: 1200,
+        height: 630,
+        alt: "Lazyre - Global Digital Presence Redefined",
+      },
+    ],
     locale: "en_US",
     type: "website",
   },
@@ -102,7 +102,7 @@ export const metadata: Metadata = {
     description:
       "Delivering impactful digital experiences globally through Lazyre’s Design, Tech, Web, Digitalytics, Build, Studios, and Lab brands, using cutting-edge technologies like AR, VR, AI, and blockchain.",
     creator: "@lazyre",
-    // images: ['/twitter-image.jpg'],
+    images: ["https://cdn.lazyre.com/images/brand/tech/lazyre_tech_cover.webp"],
   },
   // verification: {
   //   google: 'google-site-verification-code',

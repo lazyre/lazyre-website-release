@@ -1,6 +1,9 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { Skeleton } from "@/components/ui/skeleton";
 
 interface RoundedImageProps {
   image: string;
@@ -25,6 +28,8 @@ export default function RoundedImage({
   priority = false,
   unoptimized = false,
 }: RoundedImageProps) {
+  const [isLoading, setIsLoading] = useState(true);
+
   const containerClasses = cn(
     "relative rounded-xl overflow-hidden",
     sliderImages
@@ -40,6 +45,7 @@ export default function RoundedImage({
 
   return (
     <div className={containerClasses}>
+      {isLoading && <Skeleton className="absolute inset-0 bg-muted" />}
       <Image
         src={image}
         fill
@@ -47,12 +53,17 @@ export default function RoundedImage({
         sizes={imageSizes}
         priority={priority}
         unoptimized={unoptimized}
+        onLoad={() => setIsLoading(false)}
         style={{
           objectFit: fit,
           backgroundColor: bgColor,
           padding: paddingValue,
           objectPosition: "center",
         }}
+        className={cn(
+          "transition-opacity duration-300",
+          isLoading ? "opacity-0" : "opacity-100"
+        )}
       />
     </div>
   );

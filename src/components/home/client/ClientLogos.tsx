@@ -8,44 +8,101 @@ import { useTheme } from "next-themes";
 
 const logoSets = [
   [
-    { src: "/images/client/almishkal-logo.svg", alt: "Almishkal logo" },
-    { src: "/images/client/bw-logo.svg", alt: "BW logo" },
-    { src: "/images/client/netflix-logo.svg", alt: "Netflix logo" },
+    {
+      src: "https://cdn.lazyre.com/images/client/almishkal-logo.svg",
+      alt: "Almishkal logo",
+    },
+    { src: "https://cdn.lazyre.com/images/client/bw-logo.svg", alt: "BW logo" },
+    {
+      src: "https://cdn.lazyre.com/images/client/netflix-logo.svg",
+      alt: "Netflix logo",
+    },
   ],
   [
-    { src: "/images/client/kupdae-logo.svg", alt: "Kupdae logo" },
-    { src: "/images/client/toys-r-us-logo.svg", alt: "Toys R Us logo" },
-    { src: "/images/client/byte-logo.svg", alt: "Byte logo" },
+    {
+      src: "https://cdn.lazyre.com/images/client/kupdae-logo.svg",
+      alt: "Kupdae logo",
+    },
+    {
+      src: "https://cdn.lazyre.com/images/client/toys-r-us-logo.svg",
+      alt: "Toys R Us logo",
+    },
+    {
+      src: "https://cdn.lazyre.com/images/client/byte-logo.svg",
+      alt: "Byte logo",
+    },
   ],
   [
-    { src: "/images/client/mc-logo.svg", alt: "MC logo" },
-    { src: "/images/client/aeon-logo.svg", alt: "Aeon logo" },
-    { src: "/images/client/midtec-logo.svg", alt: "Midtec logo" },
+    { src: "https://cdn.lazyre.com/images/client/mc-logo.svg", alt: "MC logo" },
+    {
+      src: "https://cdn.lazyre.com/images/client/aeon-logo.svg",
+      alt: "Aeon logo",
+    },
+    {
+      src: "https://cdn.lazyre.com/images/client/midtec-logo.svg",
+      alt: "Midtec logo",
+    },
   ],
   [
-    { src: "/images/client/netflix-logo.svg", alt: "Netflix logo" },
-    { src: "/images/client/almishkal-logo.svg", alt: "Almishkal logo" },
-    { src: "/images/client/byte-logo.svg", alt: "Byte logo" },
+    {
+      src: "https://cdn.lazyre.com/images/client/netflix-logo.svg",
+      alt: "Netflix logo",
+    },
+    {
+      src: "https://cdn.lazyre.com/images/client/almishkal-logo.svg",
+      alt: "Almishkal logo",
+    },
+    {
+      src: "https://cdn.lazyre.com/images/client/byte-logo.svg",
+      alt: "Byte logo",
+    },
   ],
   [
-    { src: "/images/client/bw-logo.svg", alt: "BW logo" },
-    { src: "/images/client/kupdae-logo.svg", alt: "Kupdae logo" },
-    { src: "/images/client/mc-logo.svg", alt: "MC logo" },
+    { src: "https://cdn.lazyre.com/images/client/bw-logo.svg", alt: "BW logo" },
+    {
+      src: "https://cdn.lazyre.com/images/client/kupdae-logo.svg",
+      alt: "Kupdae logo",
+    },
+    { src: "https://cdn.lazyre.com/images/client/mc-logo.svg", alt: "MC logo" },
   ],
   [
-    { src: "/images/client/toys-r-us-logo.svg", alt: "Toys R Us logo" },
-    { src: "/images/client/midtec-logo.svg", alt: "Midtec logo" },
-    { src: "/images/client/aeon-logo.svg", alt: "Aeon logo" },
+    {
+      src: "https://cdn.lazyre.com/images/client/toys-r-us-logo.svg",
+      alt: "Toys R Us logo",
+    },
+    {
+      src: "https://cdn.lazyre.com/images/client/midtec-logo.svg",
+      alt: "Midtec logo",
+    },
+    {
+      src: "https://cdn.lazyre.com/images/client/aeon-logo.svg",
+      alt: "Aeon logo",
+    },
   ],
   [
-    { src: "/images/client/byte-logo.svg", alt: "Byte logo" },
-    { src: "/images/client/netflix-logo.svg", alt: "Netflix logo" },
-    { src: "/images/client/kupdae-logo.svg", alt: "Kupdae logo" },
+    {
+      src: "https://cdn.lazyre.com/images/client/byte-logo.svg",
+      alt: "Byte logo",
+    },
+    {
+      src: "https://cdn.lazyre.com/images/client/netflix-logo.svg",
+      alt: "Netflix logo",
+    },
+    {
+      src: "https://cdn.lazyre.com/images/client/kupdae-logo.svg",
+      alt: "Kupdae logo",
+    },
   ],
   [
-    { src: "/images/client/midtec-logo.svg", alt: "Midtec logo" },
-    { src: "/images/client/almishkal-logo.svg", alt: "Almishkal logo" },
-    { src: "/images/client/bw-logo.svg", alt: "BW logo" },
+    {
+      src: "https://cdn.lazyre.com/images/client/midtec-logo.svg",
+      alt: "Midtec logo",
+    },
+    {
+      src: "https://cdn.lazyre.com/images/client/almishkal-logo.svg",
+      alt: "Almishkal logo",
+    },
+    { src: "https://cdn.lazyre.com/images/client/bw-logo.svg", alt: "BW logo" },
   ],
 ];
 
