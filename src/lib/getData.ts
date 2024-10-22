@@ -9,16 +9,14 @@ import brandData from "@/data/BrandData";
 import servicesData from "@/data/ServicesData";
 import workData from "@/data/WorkData";
 import sectionHeadingData from "@/data/SectionHeadingData";
-import blogData from "@/data/BlogData";
 
-type DataType = "brand" | "services" | "work" | "sectionHeading" | "blog";
+type DataType = "brand" | "services" | "work" | "sectionHeading";
 
 type DataTypeMap = {
   brand: brandDataType;
   services: servicesDataType;
   work: workDataType;
   sectionHeading: sectionHeadingDataType;
-  blog: blogDataType;
 };
 
 const dataMap: { [K in DataType]: DataTypeMap[K][] } = {
@@ -26,7 +24,6 @@ const dataMap: { [K in DataType]: DataTypeMap[K][] } = {
   services: servicesData,
   work: workData,
   sectionHeading: sectionHeadingData,
-  blog: blogData,
 };
 
 export function getData<T extends DataType>(

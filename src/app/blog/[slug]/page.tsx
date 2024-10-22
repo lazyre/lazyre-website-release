@@ -17,48 +17,6 @@ interface ArticlePageProps {
   params: { slug: string };
 }
 
-// export async function generateMetadata({
-//   params,
-// }: ArticlePageProps): Promise<Metadata> {
-//   if (params.slug === "tag") {
-//     return {
-//       title: "All Tags",
-//     };
-//   }
-//   const article = await getArticleBySlug(params.slug);
-
-//   if (!article) {
-//     return {
-//       title: "Article Not Found",
-//     };
-//   }
-
-//   return {
-//     title: `${article.title} | Lazyre Blog`,
-//     description: article.excerpt,
-//     openGraph: {
-//       title: `${article.title} | Lazyre Blog`,
-//       description: article.excerpt || "",
-//       type: "article",
-//       url: `https://lazyre.com/blog/${article.slug}`,
-//       images: [
-//         {
-//           url: article.featured_image_url || "",
-//           width: 1200,
-//           height: 630,
-//           alt: article.title,
-//         },
-//       ],
-//     },
-//     twitter: {
-//       card: "summary_large_image",
-//       title: `${article.title} | Lazyre Blog`,
-//       description: article.excerpt || "",
-//       images: [article.featured_image_url || ""],
-//     },
-//   };
-// }
-
 export async function generateMetadata({
   params,
 }: ArticlePageProps): Promise<Metadata> {

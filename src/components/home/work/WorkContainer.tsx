@@ -20,8 +20,6 @@ export default function WorkContainer() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [prevSelectedWork, setPrevSelectedWork] = useState<string | null>(null);
   const carouselRef = useRef<HTMLUListElement>(null);
-  // const { data } = useData("work");
-  // const workData = (data as workDataType[]) || [];
   const workData = getData("work") as workDataType[];
   const { theme, resolvedTheme } = useTheme();
 
@@ -126,13 +124,6 @@ export default function WorkContainer() {
       )}
       {!selectedWorkDetails && !prevWorkDetails && (
         <div className="hidden z-0 xl:block absolute inset-0 h-full w-full">
-          {/* <Image
-            src="/placeholder.svg?height=1080&width=1920"
-            fill
-            alt="Cover Image"
-            sizes="100vw"
-            style={{ objectFit: "cover", objectPosition: "center" }}
-          /> */}
           <div className="absolute inset-0 w-full bg-gradient-to-r from-black from-20% via-black/60 to-black/30" />
         </div>
       )}

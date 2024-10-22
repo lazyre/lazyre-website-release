@@ -84,12 +84,6 @@ export async function generateMetadata({
       ],
     },
 
-    // Robots
-    robots: {
-      index: true,
-      follow: true,
-    },
-
     // Alternates and canonical
     alternates: {
       canonical: `https://lazyre.com/tag/${params.slug}`,
