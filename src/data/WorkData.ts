@@ -18,6 +18,16 @@ const workData: workDataType[] = [
       description:
         "In 2020, during the height of the global pandemic, Æon Enterprises Group, a mid-sized manufacturer based in the UK, turned to us for a critical solution: a COVID-19 tracker to safeguard their workforce of over 500 factory workers. Faced with the challenge of maintaining employee health and ensuring operational continuity in a high-risk environment, we developed a comprehensive system that addressed these urgent needs. Our COVID-19 tracker featured real-time health monitoring, AI-powered self-diagnosis tools, and an intuitive digital access pass system to efficiently regulate factory entry. This robust solution not only protected the health of the workforce but also enabled Æon Enterprises Group to maintain uninterrupted production during a crucial time.",
     },
+    keywords: [
+      "employee health monitoring app",
+      "digital access pass system",
+      "AI-powered self-diagnosis",
+      "COVID-19 tracking software",
+      "workplace health compliance",
+      "real-time health monitoring",
+      "vaccine verification app",
+      "factory worker safety",
+    ],
     section: [
       {
         type: "FEATURES",
@@ -257,6 +267,16 @@ const workData: workDataType[] = [
       description:
         "At Lazyre Studios, we were commissioned to create VoxelVerse, a global collection of voxel-based 3D city models designed for the NFT boom. At the heart of this series was the Dubai Edition, the crown jewel of the collection, representing the UAE’s most iconic city. Commissioned by an influential Dubai-based art collector and NFT investor, this voxel model was meticulously crafted to capture the essence of Dubai’s vibrant skyline, cultural richness, and futuristic allure. Rendered using Blender, these digital art pieces became part of an exclusive NFT collection. The Dubai model stood as the centerpiece of the VoxelVerse collection, which featured cities such as New York, Paris, and Tokyo. Dubai’s unique combination of cultural heritage and cutting-edge modernity made it the focal point, embodying the client’s vision of showcasing world-class cities through the lens of voxel art. ",
     },
+    keywords: [
+      "voxel-based art collection",
+      "Dubai city voxel model",
+      "NFT cityscapes",
+      "voxel NFT project",
+      "digital art in MagicaVoxel",
+      "3D cityscape NFTs",
+      "VoxelVerse NFT Dubai",
+      "Burj Khalifa voxel model",
+    ],
     section: [
       {
         type: "COVERIMAGE",
@@ -482,6 +502,16 @@ const workData: workDataType[] = [
       description:
         "Revenue, an innovative internal web application developed to transform the way renewable energy is monitored and managed. This platform was designed for a prominent energy company based in Eindhoven, Netherlands, to centralize data collection from solar panels, wind turbines, IoT devices, and security cameras. Through a fully customizable interface, users can track key performance indicators (KPIs), view real-time weather conditions, and manage security, all while receiving instant alerts for critical events. Revenue bridges the gap between sustainability and cutting-edge technology by offering a card-like customizable dashboard that enables seamless navigation and powerful data visualization. Designed to scale, this solution not only optimizes energy production and security but also supports multilingual capabilities, including Dutch, for broader usability. It empowers stakeholders to make data-driven decisions, ensuring operational efficiency in real-time. ",
     },
+    keywords: [
+      "solar energy tracking software",
+      "IoT monitoring dashboard",
+      "real-time energy analytics",
+      "wind energy dashboard",
+      "energy management app",
+      "customizable dashboard software",
+      "smart energy solutions",
+      "renewable energy monitoring",
+    ],
     section: [
       {
         type: "COVERIMAGE",
@@ -652,6 +682,16 @@ const workData: workDataType[] = [
       description:
         "Lazyre partnered with Midtec, a leading manufacturing and engineering firm in Qatar, to develop a custom ERP system named Job Cards. Designed to streamline work order management, Job Cards was crafted to meet Midtec’s unique operational needs, allowing them to efficiently handle their day-to-day processes. This bespoke ERP solution provided comprehensive tools for creating, managing, and tracking work orders, along with dynamic profit calculation and inventory management. Built with scalability and precision, it enhanced Midtec's operational efficiency, financial insight, and resource planning.",
     },
+    keywords: [
+      "work order management software",
+      "custom ERP solutions",
+      "dynamic profit calculations",
+      "inventory management system",
+      "AWS-hosted ERP system",
+      "Python-based work management",
+      "work order tracking ERP",
+      "payment status management",
+    ],
     section: [
       {
         type: "COVERIMAGE",
@@ -803,10 +843,10 @@ const workData: workDataType[] = [
       },
     ],
     testimonial: {
-      author: "Sarah Thompson",
+      author: "Zeeshan Ahmed",
       content:
-        "The social media marketing work by your team has significantly boosted our online presence and engagement. We're seeing tangible results in terms of increased brand awareness and customer interaction.",
-      designation: "Marketing Manager, LMN Company",
+        "Lazyre's Job Cards ERP system has revolutionized our work order management.Job Cards, transformed how we manage our work orders and inventory. From seamless order tracking to real-time payment status updates, every feature has been thoughtfully designed to meet our unique needs. The team’s expertise, responsiveness, and attention to detail were evident throughout the entire development process. We’ve seen immediate improvements in both workflow and profitability. Lazyre is truly a partner we can rely on.",
+      designation: "Operations Manager, Midtec",
       link: "https://example.com/testimonial4",
     },
     nextWorkId: "pharma-souq",
@@ -833,6 +873,16 @@ const workData: workDataType[] = [
       description:
         "Lazyre partnered with a leading pharmacy in Saudi Arabia to create Pharma Souq, a fully customizable sales and inventory tracking solution designed to meet the unique demands of pharmaceutical retail. Built for speed, security, and efficiency, Pharma Souq offers a seamless experience for both customers and pharmacy staff, combining real-time data tracking, automation, and user-friendly design. This robust system enhances customer service while ensuring accurate inventory management and regulatory compliance.",
     },
+    keywords: [
+      "pharmacy POS software",
+      "prescription scanning app",
+      "multiple waitlists system",
+      "pharmacy inventory management",
+      "SDAIA-compliant software",
+      "digital pharmacy solutions",
+      "barcode scanning POS",
+      "pharmacy counter management",
+    ],
     section: [
       {
         type: "FEATURES",
@@ -1056,6 +1106,16 @@ const workData: workDataType[] = [
       description:
         "In 2023 Lazyre partnered with Bloeiende Werelden, a Netherlands-based florist, to create a full-fledged e-commerce platform and an entirely new brand identity. The objective was to design a localized, feature-rich website and mobile PWA (Progressive Web App) to deliver an exceptional online shopping experience, while staying true to the vibrant nature of their floral business. From seamless mobile shopping to a responsive web platform, Lazyre ensured that every element was crafted to fit Bloeiende Werelden’s specific business needs, focusing on local market appeal.",
     },
+    keywords: [
+      "florist e-commerce website",
+      "personalized floral recommendations",
+      "flower shop online store",
+      "Dutch florist web design",
+      "localized flower delivery platform",
+      "floral brand identity",
+      "Dutch language e-commerce",
+      "florist branding and packaging",
+    ],
     section: [
       {
         type: "COVERIMAGE",

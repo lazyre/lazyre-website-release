@@ -7,11 +7,98 @@ import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { formatDate } from "@/utils/dateFormatter";
 import Image from "next/image";
+import { Metadata } from "next";
 
 export const revalidate = 3600; // Revalidate every hour
 
 interface ArticlePageProps {
   params: { slug: string };
+}
+
+function convertString(input: string) {
+  return input
+    .split("-") // Split the string by the hyphen
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1)) // Capitalize the first letter of each word
+    .join(" "); // Join the words with a space
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  // Fetch the tag data based on the slug (you may need to adjust this to match your data fetching logic)
+  const tagData = await getArticlesByTag(params.slug);
+
+  if (tagData.length == 0) {
+    return {
+      title: "Tag Not Found | Lazyre Blog",
+      description:
+        "The tag you're looking for does not exist. Explore our latest articles for more insights.",
+    };
+  }
+
+  return {
+    title: `${convertString(params.slug)} Articles | Lazyre Blog`,
+    description: `Discover articles related to ${convertString(
+      params.slug
+    )}. Explore insights and innovations on various topics.`,
+
+    // Open Graph
+    openGraph: {
+      title: `${convertString(params.slug)} Articles | Lazyre Blog`,
+      description: `Discover articles related to ${convertString(
+        params.slug
+      )}.`,
+      type: "website",
+      url: `https://lazyre.com/tag/${params.slug}`,
+      locale: "en_US",
+      siteName: "Lazyre Blog",
+      images: [
+        {
+          url: "https://cdn.lazyre.com/images/about/cover.webp",
+          width: 1200,
+          height: 630,
+          alt: "Lazyre Work Showcase",
+          type: "image/webp",
+          secureUrl: "https://cdn.lazyre.com/images/about/cover.webp",
+        },
+      ],
+    },
+
+    // Twitter
+    twitter: {
+      card: "summary",
+      title: `${params.slug} Articles | Lazyre Blog`,
+      description: `Discover articles related to ${convertString(
+        params.slug
+      )}.`,
+      site: "@Lazyre",
+      images: [
+        {
+          url: "https://cdn.lazyre.com/images/about/cover.webp",
+          alt: "Lazyre Work Showcase",
+          width: 800,
+          height: 418,
+        },
+      ],
+    },
+
+    // Robots
+    robots: {
+      index: true,
+      follow: true,
+    },
+
+    // Alternates and canonical
+    alternates: {
+      canonical: `https://lazyre.com/tag/${params.slug}`,
+      languages: {
+        "en-US": `https://lazyre.com/tag/${params.slug}`,
+        es: `https://lazyre.com/es/tag/${params.slug}`,
+      },
+    },
+  };
 }
 
 export default async function ArticlesByTagPage({ params }: ArticlePageProps) {

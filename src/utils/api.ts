@@ -46,6 +46,21 @@ export async function getArticleTags(articleId: string): Promise<Tag[]> {
   return tags;
 }
 
+export async function fetchAllArticles(): Promise<Article[]> {
+  const { data, error } = await supabase
+    .from("articles")
+    .select("*, author:authors(*), category:categories(*)")
+    .eq("status", "published")
+    .order("published_at", { ascending: false });
+
+  if (error) {
+    console.error("Error fetching all articles:", error);
+    throw error;
+  }
+
+  return data;
+}
+
 export async function getAuthors(): Promise<Author[]> {
   const { data, error } = await supabase
     .from("authors")

@@ -50,7 +50,7 @@ function useAnimation(isOpen: boolean) {
   const [scope, animate] = useAnimate();
 
   useEffect(() => {
-    const isMobile = window.innerWidth < 1024; // lg breakpoint
+    const isMobile = window.innerWidth < 1024;
     animate("#open-nav", {
       clipPath: isOpen
         ? isMobile
@@ -163,21 +163,11 @@ const Header: React.FC = () => {
     [isOpen, currentTheme]
   );
 
-  // const paths = useMemo(
-  //   () => pathname.split("/").filter((path) => path),
-  //   [pathname]
-  // );
-
   const paths = useMemo(() => {
     const pathArray = pathname.split("/").filter((path) => path);
-
-    // Check if the path starts with /blog/tag/
-    if (pathArray[0] === "blog" && pathArray[1] === "tag") {
-      // Remove the "tag" part
-      return ["blog", ...pathArray.slice(2)];
-    }
-
-    return pathArray;
+    return pathArray[0] === "blog" && pathArray[1] === "tag"
+      ? ["blog", ...pathArray.slice(2)]
+      : pathArray;
   }, [pathname]);
 
   return (
@@ -200,15 +190,17 @@ const Header: React.FC = () => {
       <nav className={cn(navClasses, "z-[90]")}>
         <div className={containerClasses}>
           <TransitionLink href="/" aria-label="Home">
-            <Image
-              src="https://cdn.lazyre.com/logos/lazyre_logo.svg"
-              alt="Lazyre logo"
-              width={100}
-              height={100}
-              style={{ objectFit: "contain", objectPosition: "center" }}
-              priority
-              className={cn(currentTheme === "dark" && "filter invert")}
-            />
+            <div className="w-[100px] h-[100px] relative">
+              <Image
+                src="https://cdn.lazyre.com/logos/lazyre_logo.svg"
+                alt="Lazyre logo"
+                fill
+                sizes="100px"
+                style={{ objectFit: "contain", objectPosition: "center" }}
+                priority
+                className={cn(currentTheme === "dark" && "filter invert")}
+              />
+            </div>
           </TransitionLink>
           <motion.ul
             variants={{

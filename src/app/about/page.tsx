@@ -16,9 +16,59 @@ type PageProps = {
 };
 
 export const metadata: Metadata = {
-  title: "About Us",
+  // Title and description optimized for "About Us" page
+  title: "About Us - Crafting Digital Excellence | Lazyre",
   description:
-    "We are humans creating remarkable digital products and brands for other humans.",
+    "Discover Lazyre, a global leader in innovative software development and digital solutions. We create remarkable digital products, blending cutting-edge technology with human-centered design to drive your business forward.",
+
+  keywords: [
+    "about Lazyre",
+    "software development team",
+    "digital solutions experts",
+    "innovative technology solutions",
+    "AI-powered services",
+    "cutting-edge software company",
+    "global digital solutions",
+  ],
+
+  // Open Graph metadata for social media sharing
+  openGraph: {
+    siteName: "Lazyre - Software Development & Digital Solutions",
+    locale: "en_US",
+    type: "website",
+    title: "About Lazyre - Leading Software Development & Digital Solutions",
+    description:
+      "Learn more about Lazyre, where innovation meets creativity. We specialize in software development, AI-powered solutions, cloud computing, and digital transformation. Let's create the future together.",
+    url: "https://lazyre.com/about",
+    images: [
+      {
+        url: "https://cdn.lazyre.com/images/about/cover.webp",
+        width: 1200,
+        height: 630,
+        alt: "Lazyre - About Us",
+        type: "image/webp",
+        secureUrl: "https://cdn.lazyre.com/images/about/cover.webp",
+      },
+    ],
+  },
+
+  // Twitter metadata optimized for engagement
+  twitter: {
+    card: "summary_large_image",
+    site: "@lazyrehub",
+    creator: "@lazyrehub",
+    title: "About Lazyre - Leading Software Development & AI Solutions",
+    description:
+      "Explore Lazyre's journey of innovation and excellence in software development, AI, cloud solutions, and digital marketing. Partner with us to elevate your business.",
+    images: [
+      {
+        url: "https://cdn.lazyre.com/images/about/cover.webp",
+        alt: "Lazyre - About Us",
+        width: 800,
+        height: 418,
+      },
+    ],
+  },
 };
 
 interface ShowcaseItemProps {

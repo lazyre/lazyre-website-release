@@ -149,38 +149,38 @@ const Footer: React.FC = () => {
               Full service tech agency based in{" "}
               <span className="block">Mangalore, India</span>
             </p>
-            {/* <div className="flex gap-4">
+            <div className="flex gap-4">
               <SocialLink
-                href="https://www.instagram.com/lazyre.tech/"
+                href="https://www.instagram.com/lazyrehub/"
                 aria-label="Follow us on Instagram"
               >
                 <AiOutlineInstagram />
               </SocialLink>
               <SocialLink
-                href="https://twitter.com"
+                href="https://x.com/lazyrehub"
                 aria-label="Follow us on Twitter"
               >
                 <AiOutlineTwitter />
               </SocialLink>
-              <SocialLink
+              {/* <SocialLink
                 href="https://linkedin.com"
                 aria-label="Connect with us on LinkedIn"
               >
                 <FaLinkedinIn />
-              </SocialLink>
+              </SocialLink> */}
               <SocialLink
-                href="https://behance.net"
+                href="https://www.behance.net/lazyrehub"
                 aria-label="View our work on Behance"
               >
                 <AiOutlineBehance />
               </SocialLink>
               <SocialLink
-                href="https://dribbble.com/lazyre"
+                href="https://dribbble.com/lazyrehub"
                 aria-label="Check our designs on Dribbble"
               >
                 <AiOutlineDribbble />
               </SocialLink>
-            </div> */}
+            </div>
           </div>
         </div>
 
@@ -201,7 +201,7 @@ const SocialLink: React.FC<{
     href={href}
     target="_blank"
     rel="noopener noreferrer"
-    className="text-2xl hover:text-black transition-colors"
+    className="text-2xl hover:text-primary transition-colors"
     aria-label={ariaLabel}
   >
     {children}

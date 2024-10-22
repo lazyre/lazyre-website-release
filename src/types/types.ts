@@ -15,6 +15,7 @@ export interface brandDataType {
   workHeading: string;
   workDescription: string;
   relatedWork: Array<string>;
+  keywords: Array<string>;
 }
 
 export interface servicesDataType {
@@ -41,6 +42,7 @@ export interface workDataType {
   coverImage: string;
   lightAccentColor?: string;
   darkAccentColor?: string;
+  keywords: Array<string>;
   overview: {
     heading: string;
     description: string;

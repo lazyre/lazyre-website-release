@@ -17,44 +17,132 @@ interface ArticlePageProps {
   params: { slug: string };
 }
 
+// export async function generateMetadata({
+//   params,
+// }: ArticlePageProps): Promise<Metadata> {
+//   if (params.slug === "tag") {
+//     return {
+//       title: "All Tags",
+//     };
+//   }
+//   const article = await getArticleBySlug(params.slug);
+
+//   if (!article) {
+//     return {
+//       title: "Article Not Found",
+//     };
+//   }
+
+//   return {
+//     title: `${article.title} | Lazyre Blog`,
+//     description: article.excerpt,
+//     openGraph: {
+//       title: `${article.title} | Lazyre Blog`,
+//       description: article.excerpt || "",
+//       type: "article",
+//       url: `https://lazyre.com/blog/${article.slug}`,
+//       images: [
+//         {
+//           url: article.featured_image_url || "",
+//           width: 1200,
+//           height: 630,
+//           alt: article.title,
+//         },
+//       ],
+//     },
+//     twitter: {
+//       card: "summary_large_image",
+//       title: `${article.title} | Lazyre Blog`,
+//       description: article.excerpt || "",
+//       images: [article.featured_image_url || ""],
+//     },
+//   };
+// }
+
 export async function generateMetadata({
   params,
 }: ArticlePageProps): Promise<Metadata> {
   if (params.slug === "tag") {
     return {
-      title: "All Tags",
+      title: "All Tags | Lazyre Blog",
+      description:
+        "Explore all tags for our articles, covering various topics including design, technology, AI, marketing, and more.",
     };
   }
+
   const article = await getArticleBySlug(params.slug);
 
   if (!article) {
     return {
-      title: "Article Not Found",
+      title: "Article Not Found | Lazyre Blog",
+      description:
+        "The article you're looking for could not be found. Explore our latest articles for more insights.",
     };
   }
 
   return {
     title: `${article.title} | Lazyre Blog`,
-    description: article.excerpt,
+    description:
+      article.excerpt ||
+      `Read about ${article.title}, part of Lazyre’s extensive work portfolio, featuring innovative solutions in design, technology, AI, and more.`,
+
     openGraph: {
       title: `${article.title} | Lazyre Blog`,
-      description: article.excerpt || "",
+      description:
+        article.excerpt ||
+        `Discover more about ${article.title} from Lazyre’s portfolio, showcasing innovative and impactful solutions in digital products and services.`,
       type: "article",
       url: `https://lazyre.com/blog/${article.slug}`,
+      publishedTime: article.published_at || new Date().toISOString(),
+      modifiedTime:
+        article.updated_at || article.published_at || new Date().toISOString(),
+      authors: [article.author.name],
+      tags: article.tags.map((tag) => tag.name),
+      siteName: "Lazyre Blog",
       images: [
         {
-          url: article.featured_image_url || "",
+          url:
+            article.featured_image_url ||
+            "https://cdn.lazyre.com/images/metadata/og/og-lazyre-cover.png",
           width: 1200,
           height: 630,
-          alt: article.title,
+          alt: article.title || "Lazyre Blog Article",
+          type: "image/webp",
+          secureUrl:
+            article.featured_image_url ||
+            "https://cdn.lazyre.com/images/metadata/og/og-lazyre-cover.png",
         },
       ],
     },
+
+    keywords: article.tags.map((tag) => tag.name),
+
+    // Article metadata
+    authors: [
+      {
+        name: article.author.name,
+        url: article.author.twitter_handle ? article.author.twitter_handle : "",
+      },
+    ],
+    publisher: "Lazyre",
+    creator: article.author.name,
+
     twitter: {
       card: "summary_large_image",
       title: `${article.title} | Lazyre Blog`,
-      description: article.excerpt || "",
-      images: [article.featured_image_url || ""],
+      description:
+        article.excerpt ||
+        `Explore insights on ${article.title} from Lazyre’s portfolio, featuring groundbreaking solutions in design, technology, and AI.`,
+      images: [
+        {
+          url:
+            article.featured_image_url ||
+            "https://cdn.lazyre.com/images/metadata/og/og-lazyre-cover.png",
+          alt: article.title || "Lazyre Blog Article",
+          width: 800,
+          height: 418,
+        },
+      ],
     },
   };
 }
